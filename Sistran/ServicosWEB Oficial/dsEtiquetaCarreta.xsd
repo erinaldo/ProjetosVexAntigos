@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsEtiquetaCarreta" targetNamespace="http://tempuri.org/dsEtiquetaCarreta.xsd" xmlns:mstns="http://tempuri.org/dsEtiquetaCarreta.xsd" xmlns="http://tempuri.org/dsEtiquetaCarreta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GrupoLogosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GrupoLogosConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GrupoLogosConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GrupoLogosConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select  Dt.IDdt, v.Placa, f.NomeComprovei, c.RazaoSocialNome Motorista, Dt.Emissao
+from Dt 
+Inner join DTTransferencia df on df.IdDt = dt.IDDT
+Inner join Filial f on f.IDFilial = df.IdFilial
+Inner join Veiculo v on v.IDVeiculo = dt.IDPrimeiroVeiculo
+Inner join Cadastro c on c.IDCadastro = v.IDMotorista
+where dt.IDDT=1012990
+order by f.Nome</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDdt" DataSetColumn="IDdt" />
+              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
+              <Mapping SourceColumn="NomeComprovei" DataSetColumn="NomeComprovei" />
+              <Mapping SourceColumn="Motorista" DataSetColumn="Motorista" />
+              <Mapping SourceColumn="Emissao" DataSetColumn="Emissao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsEtiquetaCarreta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsEtiquetaCarreta" msprop:Generator_UserDSName="dsEtiquetaCarreta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDdt" msprop:Generator_ColumnVarNameInTable="columnIDdt" msprop:Generator_ColumnPropNameInRow="IDdt" msprop:Generator_ColumnPropNameInTable="IDdtColumn" msprop:Generator_UserColumnName="IDdt" type="xs:int" />
+              <xs:element name="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnPropNameInTable="PlacaColumn" msprop:Generator_UserColumnName="Placa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NomeComprovei" msprop:Generator_ColumnVarNameInTable="columnNomeComprovei" msprop:Generator_ColumnPropNameInRow="NomeComprovei" msprop:Generator_ColumnPropNameInTable="NomeComproveiColumn" msprop:Generator_UserColumnName="NomeComprovei" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Motorista" msprop:Generator_ColumnVarNameInTable="columnMotorista" msprop:Generator_ColumnPropNameInRow="Motorista" msprop:Generator_ColumnPropNameInTable="MotoristaColumn" msprop:Generator_UserColumnName="Motorista" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Emissao" msprop:Generator_ColumnVarNameInTable="columnEmissao" msprop:Generator_ColumnPropNameInRow="Emissao" msprop:Generator_ColumnPropNameInTable="EmissaoColumn" msprop:Generator_UserColumnName="Emissao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Filiais" msprop:Generator_ColumnVarNameInTable="columnFiliais" msprop:Generator_ColumnPropNameInRow="Filiais" msprop:Generator_ColumnPropNameInTable="FiliaisColumn" msprop:Generator_UserColumnName="Filiais" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:IDdt" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://star-it.com.br/OperadorLogistico" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_SYN_OUT_PEDTRANS_IN" targetNamespace="http://star-it.com.br/OperadorLogistico" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_SYN_OUT_PEDTRANS_IN" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://star-it.com.br/OperadorLogistico" targetNamespace="http://star-it.com.br/OperadorLogistico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_PEDTRANS_IN_REQ" type="p1:DT_PEDTRANS_IN_REQ" />
+      <xsd:element name="MT_PEDTRANS_IN_RES" type="p1:DT_PEDTRANS_IN_RES" />
+      <xsd:complexType name="DT_PEDTRANS_IN_RES">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">755b9130315711ea86520000005df48a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="STATUS" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_PEDTRANS_IN_REQ">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">d6814fef315511ea86340000005df48a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="TIPO_PEDIDO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8ced8315711ea9ec600090faa0001</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="PEDIDO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8ced9315711ea999900090faa0001</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="DATA_PED" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8ceda315711ea81aa00090faa0001</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="PEDIDO_ELIMINADO" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8cedb315711ea848800090faa0001</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="FORNECEDOR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8cedc315711eac34300090faa0001</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ITEM">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee8315711eab78e00090faa0001</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="MATERIAL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cedd315711ea9eac00090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="DESC_MAT" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cede315711eacfd500090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="UM" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cedf315711eaba6700090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="FATOR" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee0315711ea901000090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="QTD" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee1315711eaad5e00090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="CENTRO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee2315711ea8a8600090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ITEM_ELIMINADO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee3315711ea9fa100090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="ITEM_FINALIZADO" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee4315711ea9c9c00090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="QTD_CONFERIDA" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee5315711ea933800090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="DATA_VENC" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee6315711eacbea00090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="EMBARQUE" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">40d8cee7315711eac06f00090faa0001</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_PEDTRANS_IN_REQ">
+    <wsdl:documentation />
+    <wsdl:part name="MT_PEDTRANS_IN_REQ" element="p1:MT_PEDTRANS_IN_REQ" />
+  </wsdl:message>
+  <wsdl:message name="MT_PEDTRANS_IN_RES">
+    <wsdl:documentation />
+    <wsdl:part name="MT_PEDTRANS_IN_RES" element="p1:MT_PEDTRANS_IN_RES" />
+  </wsdl:message>
+  <wsdl:portType name="SI_SYN_OUT_PEDTRANS_IN">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_SYN_OUT_PEDTRANS_IN">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_SYN_OUT_PEDTRANS_IN" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_PEDTRANS_IN_REQ" />
+      <wsdl:output message="p1:MT_PEDTRANS_IN_RES" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_SYN_OUT_PEDTRANS_INBinding" type="p1:SI_SYN_OUT_PEDTRANS_IN">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_SYN_OUT_PEDTRANS_IN">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_SYN_OUT_PEDTRANS_INService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_SYN_OUT_PEDTRANS_INBinding">
+      <address location="http://sappoqas.barbosa.com.br:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PEDTRANS_IN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SYN_OUT_PEDTRANS_IN&amp;interfaceNamespace=http%3A%2F%2Fstar-it.com.br%2FOperadorLogistico" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_SYN_OUT_PEDTRANS_INBinding">
+      <address location="https://sappoqas.barbosa.com.br:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PEDTRANS_IN&amp;receiverParty=&amp;receiverService=&amp;interface=SI_SYN_OUT_PEDTRANS_IN&amp;interfaceNamespace=http%3A%2F%2Fstar-it.com.br%2FOperadorLogistico" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

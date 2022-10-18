@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="StockServices" targetNamespace="http://www.accurate.com/acec/StockServices" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.accurate.com/acec/StockServices" xmlns:WL5G3N2="http://www.accurate.com/acec/ErrorLog" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:client="http://www.accurate.com/acec/StockServices" xmlns:error="http://www.accurate.com/acec/ErrorLog" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.accurate.com/acec/StockServices" schemaLocation="https://is-josapar-dev.a8e.net.br/b2b/stock?SCHEMA%2FB2BServices%2FXSD%2FStockServices"/>
+      <xsd:import namespace="http://www.accurate.com/acec/ErrorLog" schemaLocation="https://is-josapar-dev.a8e.net.br/b2b/stock?SCHEMA%2FB2BServices%2FXSD%2FErrorLog"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="SetStockRequestMessage">
+    <WL5G3N0:part element="WL5G3N1:setStockRequest" name="payload"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SetStockResponseMessage">
+    <WL5G3N0:part element="WL5G3N1:setStockResponse" name="payload"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SetStockFaultMessage">
+    <WL5G3N0:part element="WL5G3N2:error" name="payload"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="StockServices">
+    <WL5G3N0:operation name="setStock">
+      <WL5G3N0:input message="WL5G3N1:SetStockRequestMessage"/>
+      <WL5G3N0:output message="WL5G3N1:SetStockResponseMessage"/>
+      <WL5G3N0:fault message="WL5G3N1:SetStockFaultMessage" name="setStockFault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="StockServicesBinding" type="WL5G3N1:StockServices">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="setStock">
+      <WL5G3N3:operation soapAction="setStock" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="setStockFault">
+        <WL5G3N3:fault name="setStockFault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="StockServices">
+    <WL5G3N0:port binding="WL5G3N1:StockServicesBinding" name="StockServices_pt">
+      <WL5G3N3:address location="http://bus-josapar-dev.infracommerce.com.br:80/b2b/stock"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>
