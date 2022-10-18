@@ -1,0 +1,47 @@
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+D:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+G:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+G:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+G:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+G:\sistran\Sistram.Library\Sistram.Library\obj\Debug\ResolveAssemblyReference.cache
+G:\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+G:\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+M:\Projetos\Sistecno\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+F:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+F:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+F:\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+F:\sistran\Sistram.Library\Sistram.Library\obj\Debug\ResolveAssemblyReference.cache
+F:\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+F:\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+M:\Projetos\sistran - Cópia\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll.config
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Sistran.Library.pdb
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.Unity.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.dll
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.pdb
+M:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Debug\Sistran.Library.csprojResolveAssemblyReference.cache

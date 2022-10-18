@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:gips="WebServiceComprovei:getImportProtocolStatus" xmlns:urudk="WebServiceComprovei:uploadRouteUsingDocumentKey" xmlns:wsc="WebServiceComprovei" xmlns:docs="WebServiceComprovei:uploadDocuments" xmlns:routes="WebServiceComprovei:uploadRoute" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="WebServiceComprovei" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="WebServiceComprovei">
+      <xsd:import schemaLocation="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadDocuments.xsd" namespace="WebServiceComprovei:uploadDocuments" />
+      <xsd:import schemaLocation="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadRoute.xsd" namespace="WebServiceComprovei:uploadRoute" />
+      <xsd:import schemaLocation="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadRouteUsingDocumentKey.xsd" namespace="WebServiceComprovei:uploadRouteUsingDocumentKey" />
+      <xsd:import schemaLocation="http://soap.comprovei.com.br/importQueue/v2/schemas/getImportProtocolStatus.xsd" namespace="WebServiceComprovei:getImportProtocolStatus" />
+      <xsd:element name="Credenciais" type="wsc:Credenciais" />
+      <xsd:complexType name="Credenciais">
+        <xsd:sequence>
+          <xsd:element name="Usuario" type="xsd:string" />
+          <xsd:element name="Senha" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="uploadDocumentsRequest">
+    <part name="parameters" element="docs:uploadDocuments" />
+  </message>
+  <message name="uploadDocumentsResponse">
+    <part name="parameters" element="docs:uploadDocumentsResponse" />
+  </message>
+  <message name="uploadDocumentsCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <message name="uploadRouteRequest">
+    <part name="parameters" element="routes:uploadRoute" />
+  </message>
+  <message name="uploadRouteResponse">
+    <part name="parameters" element="routes:uploadRouteResponse" />
+  </message>
+  <message name="uploadRouteCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <message name="uploadRouteUsingDocumentKeyRequest">
+    <part name="parameters" element="urudk:uploadRouteUsingDocumentKey" />
+  </message>
+  <message name="uploadRouteUsingDocumentKeyResponse">
+    <part name="parameters" element="urudk:uploadRouteUsingDocumentKeyResponse" />
+  </message>
+  <message name="uploadRouteUsingDocumentKeyCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <message name="getImportProtocolStatusRequest">
+    <part name="parameters" element="gips:getImportProtocolStatus" />
+  </message>
+  <message name="getImportProtocolStatusResponse">
+    <part name="parameters" element="gips:getImportProtocolStatusResponse" />
+  </message>
+  <message name="getImportProtocolStatusCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <portType name="WebServiceComproveiPortType">
+    <operation name="uploadDocuments">
+      <documentation>Faz a importação de múltiplos documentos para o sistema</documentation>
+      <input message="wsc:uploadDocumentsRequest" />
+      <output message="wsc:uploadDocumentsResponse" />
+    </operation>
+    <operation name="uploadRoute">
+      <documentation>Faz a importação de rota para o sistema (v2)</documentation>
+      <input message="wsc:uploadRouteRequest" />
+      <output message="wsc:uploadRouteResponse" />
+    </operation>
+    <operation name="uploadRouteUsingDocumentKey">
+      <documentation>Faz a importação de rota para o sistema usando documentos pré cadastrados</documentation>
+      <input message="wsc:uploadRouteUsingDocumentKeyRequest" />
+      <output message="wsc:uploadRouteUsingDocumentKeyResponse" />
+    </operation>
+    <operation name="getImportProtocolStatus">
+      <documentation>Consulta, pelo protocolo fornecido, o resultado da importação</documentation>
+      <input message="wsc:getImportProtocolStatusRequest" />
+      <output message="wsc:getImportProtocolStatusResponse" />
+    </operation>
+  </portType>
+  <binding name="WebServiceComproveiBinding" type="wsc:WebServiceComproveiPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="uploadDocuments">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadDocuments" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:uploadDocumentsCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="uploadRoute">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadRoute" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:uploadRouteCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="uploadRouteUsingDocumentKey">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadRouteUsingDocumentKey" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:uploadRouteUsingDocumentKeyCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getImportProtocolStatus">
+      <soap:operation soapAction="urn:WebServiceComprovei#getImportProtocolStatus" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:getImportProtocolStatusCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WebServiceComprovei">
+    <port name="WebServiceComproveiPort" binding="wsc:WebServiceComproveiBinding">
+      <soap:address location="http://soap.comprovei.com.br/importQueue/v2/index.php" />
+    </port>
+  </service>
+</definitions>

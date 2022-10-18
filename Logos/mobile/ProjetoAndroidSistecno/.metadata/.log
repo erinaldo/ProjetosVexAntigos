@@ -1,0 +1,129 @@
+!SESSION 2013-11-22 10:03:11.152 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2013-11-22 10:03:30.637
+!MESSAGE An Android SDK is already being loaded. Please try again later.
+
+!ENTRY org.eclipse.ui 4 4 2013-11-22 10:04:04.262
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-11-22 10:04:08.022 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_25
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data M:\Projetos\ProjetoAndroidSistecno
+
+!ENTRY org.eclipse.ui 4 4 2013-11-22 10:05:39.071
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-10-03 13:19:52.519 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data M:\Projetos\ProjetoAndroidSistecno
+
+!ENTRY org.eclipse.ui 4 4 2014-10-03 13:20:46.966
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-10-03 13:22:22.624 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 4 4 2014-10-03 13:23:06.928
+!MESSAGE Exception occurred while saving project preferences: /RsMobileAndroid/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$2.run(ProjectPreferences.java:611)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:628)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:353)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:380)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2936)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:441)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-10-03 13:23:06.943
+!MESSAGE A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-10-03 13:23:06.943
+!MESSAGE Exception occurred while saving project preferences: /RsMobileAndroid/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$2.run(ProjectPreferences.java:611)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:628)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:353)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:380)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2936)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:443)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-10-03 13:23:06.943
+!MESSAGE A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-10-03 13:23:06.943
+!MESSAGE Exception occurred while saving project preferences: /RsMobileAndroid/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
+	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
+	at org.eclipse.core.internal.resources.ProjectPreferences$2.run(ProjectPreferences.java:611)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.core.internal.resources.ProjectPreferences.save(ProjectPreferences.java:628)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.flush(EclipsePreferences.java:353)
+	at org.eclipse.core.internal.resources.ProjectPreferences.flush(ProjectPreferences.java:380)
+	at org.eclipse.jdt.internal.core.JavaProject.setOption(JavaProject.java:2936)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.checkAndFixCompilerCompliance(ProjectHelper.java:445)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProjectClasspathEntries(ProjectHelper.java:350)
+	at com.android.ide.eclipse.adt.internal.project.ProjectHelper.fixProject(ProjectHelper.java:268)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createEclipseProject(NewProjectCreator.java:790)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.createProjectAsync(NewProjectCreator.java:626)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator.access$0(NewProjectCreator.java:559)
+	at com.android.ide.eclipse.adt.internal.wizards.newproject.NewProjectCreator$2.execute(NewProjectCreator.java:371)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-10-03 13:23:06.943
+!MESSAGE A resource already exists on disk 'M:\Projetos\ProjetoAndroidSistecno\mobile\Android\.settings'.
+
+!ENTRY org.eclipse.ui 4 4 2014-10-03 13:24:06.867
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2014-12-09 11:20:08.816 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2014-12-09 11:20:44.790
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.core.jobs 2 2 2014-12-09 11:20:47.968
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.android.ide.eclipse.adt.AdtPlugin$7

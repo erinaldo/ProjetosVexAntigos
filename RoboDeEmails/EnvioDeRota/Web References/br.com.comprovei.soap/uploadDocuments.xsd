@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:wscud="WebServiceComprovei:uploadDocuments" elementFormDefault="qualified" targetNamespace="WebServiceComprovei:uploadDocuments" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../../schemas/MultiDocument.xsd" />
+  <xsd:element name="uploadDocuments">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="wscud:Documentos" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="uploadDocumentsResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Code" type="xsd:string" />
+        <xsd:element name="Status" type="xsd:string" />
+        <xsd:element name="protocolo" type="xsd:string" />
+        <xsd:element name="Notifications" type="wscud:Notifications" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="Notifications">
+    <xsd:all>
+      <xsd:element minOccurs="0" maxOccurs="1" name="Error" type="wscud:ArrayNotifications" />
+      <xsd:element minOccurs="0" maxOccurs="1" name="Warning" type="wscud:ArrayNotifications" />
+    </xsd:all>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayNotifications">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="item">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Code" type="xsd:integer" />
+            <xsd:element name="Doc" type="xsd:string" />
+            <xsd:element name="Mensagem" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

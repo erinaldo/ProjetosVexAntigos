@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TesteWss.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TesteWss_wssRoge_ReposcicaoRoge" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.grupologos.com.br/Wss/WSS/ReposicaoRoge.asmx</Value>
+    </Setting>
+    <Setting Name="TesteWss_localhost_HR" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www2.logoslogistica.com.br/wss/homerefill/hr.asmx</Value>
+    </Setting>
+    <Setting Name="TesteWss_br_com_grupologos_www_wsLoginApp" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www2.logoslogistica.com.br/wss/wsLoginApp.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

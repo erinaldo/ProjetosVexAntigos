@@ -1,0 +1,11 @@
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\bin\Release\AprovacaoRequisicao.exe
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\bin\Release\AprovacaoRequisicao.pdb
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\bin\Release\AprovacaoRequisicao.Library.dll
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\bin\Release\AprovacaoRequisicao.Library.pdb
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.csprojResolveAssemblyReference.cache
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.Form1.resources
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.Properties.Resources.resources
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.TesteEmailscs.resources
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.csproj.GenerateResource.Cache
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.exe
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao\obj\x86\Release\AprovacaoRequisicao.pdb

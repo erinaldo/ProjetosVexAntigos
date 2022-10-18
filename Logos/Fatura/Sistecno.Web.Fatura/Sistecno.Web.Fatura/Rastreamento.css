@@ -1,0 +1,198 @@
+﻿body 
+{
+	font-family:Arial;
+	font-size:11px;
+	margin-left:0;
+	margin-top:0;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+.rowZebrado
+{
+	background-color:White;
+}
+
+.rowZebradoCor
+{
+	background-color:#FFE7BA;
+}
+.titulo
+{
+	font-family: Arial; 
+	font-size: 14px; 
+	font-weight: bold; 
+	text-align:center;
+	background-color:#EEC591;
+}
+
+.tablePgInteira
+{
+    width: 100%;
+    font-family:Arial;
+	font-size:8pt;
+	margin:0;		
+}
+
+.spanLabel
+{
+	font-family:Arial;
+	font-size:8pt;
+	margin:0;		
+	font-weight:bold;
+}
+
+#container
+{
+	width: 100%;
+	height:100%;
+	margin: 0 auto;
+	text-align: left; 
+	font-family:Verdana;
+	font-size:8pt;
+}
+
+.lableCabec
+{
+	font-family:Verdana;
+	font-size:10pt;
+}
+
+.coluna
+{
+    float: left;
+    width: 50%;
+    padding: 3px;
+   
+}
+
+.colunaInt
+{
+    float: left; 
+    width: 80%;
+}
+
+.coluna45
+{
+    float: left;
+    width: 48%;
+    padding: 3px;
+}
+.colunaLabels
+{
+    float: left;
+    width: 15%;
+    padding: 3px;
+}
+.linha
+{
+    clear: both;
+    font-family: Verdana;
+    font-size: 8pt;
+    width:100%;    
+}
+.textbox, .textarea, .fileUpload
+{
+    color: #333333;
+    font-weight: lighter;
+    font-size: 7pt;
+    border-width: 1px;
+    border-style: solid;
+    border-color: Silver;
+}
+.txt
+{
+    border: 1px solid #999999;
+    font-family: Arial;
+    font-size: 9px;
+    height: 53px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.button
+{
+    border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	color:Black;
+   	font-size:7pt; 
+   	font-weight:bold;
+   	font-family:Verdana;  
+   	background-color:#FFE7BA;
+   	/*background: url(../Imagens/vermelho.jpg); */
+}
+
+.link, .link:link, .link:active, .link:visited
+  {
+	font-size: 9px;
+	font-family: Arial;
+	font-weight: normal;
+	color: Black;
+	cursor: Hand;
+  }
+
+.link:hover
+  {
+	color: Gray;
+  }
+.table
+  {
+	background-color: #E0E0E0;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+  }
+  
+ .tdp
+  {
+	border: 0.1pt solid #FFFFFF;
+	font-size: 7pt;
+	font-family: Verdana;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+  }
+  
+.td_divisoria
+  {
+	border: 0pt solid #FFFFFF;
+	background-color: #999999;
+  }
+  
+  .header
+  {
+font-family: verdana;
+font-weight: bold;
+font-size: 8pt;
+background-color: red;
+color: white;
+  }
+  .normal
+  {
+font-family: Arial;
+font-size: 7px;
+background-color: White;
+color: black;
+  }
+  .normalAlt
+  {
+font-family: Arial;
+font-size: 7px;
+background-color: #FFE7BA;
+color: black;
+  }
+  .hover
+  {
+font-family: Arial;
+font-size: 30px;
+background-color: red;
+color: white;
+  }
+  .selected
+  {
+font-family: verdana;
+font-size: 8pt;
+background-color: blue;
+color: white;
+  }

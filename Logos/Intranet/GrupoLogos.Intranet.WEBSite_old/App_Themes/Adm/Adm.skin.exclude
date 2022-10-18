@@ -1,0 +1,32 @@
+﻿ <telerik:RadGrid runat="server" Skin="Telerik" BorderStyle="Solid" BorderWidth="1px" BorderColor="#E0E0E0" CellPadding="0" CellSpacing="0">
+                    <SortingSettings SortedAscToolTip="Ordem crescente" />
+                    <SortingSettings SortedDescToolTip="Ordem decrescente" />
+                    <SortingSettings SortToolTip="Clique para ordenar" />
+                     <PagerStyle PagerTextFormat="{4} |  Exibindo itens {2} a {3} de {5}." HorizontalAlign="Center" Mode="NextPrevAndNumeric"/>
+                    <ClientSettings><ClientMessages PagerTooltipFormatString="{0} de {1} páginas."  DropHereToReorder="Solte aqui para reordenar" DragToGroupOrReorder="Arraste e solte para cima para agrupar." /></ClientSettings>
+                    <HierarchySettings CollapseTooltip="Ocultar" />                    
+                    <HierarchySettings ExpandTooltip="Exibir" />
+                     <headerstyle  font-size="8pt" font-names="Verdana" />
+                     <itemstyle  font-size="7pt" font-names="Verdana" />
+                     <alternatingitemstyle  font-size="7pt" font-names="Verdana" />
+                     <MasterTableView>
+                    
+                    </MasterTableView>                   
+                    
+                    <MasterTableView>
+                        <NoRecordsTemplate>
+                            <table >
+                                <tr>
+                                  <td style="text-align: center">
+                                        Nenhum Registro Encontrado.</td>
+                                </tr>
+                            </table>
+                        </NoRecordsTemplate>
+                    </MasterTableView>
+                    
+                    <FilterMenu EnableTheming="True">
+                        <CollapseAnimation Type="OutQuint" Duration="200"></CollapseAnimation>
+                    </FilterMenu>
+
+</telerik:RadGrid>
+<telerik:RadSlider runat="server"  DecreaseText="Anterior" DragText="Arraste" IncreaseText="Próxima" /> 

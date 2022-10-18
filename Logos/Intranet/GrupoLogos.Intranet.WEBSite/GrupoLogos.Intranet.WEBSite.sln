@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GrupoLogos.Intranet.WEBSite", ".", "{8CCD78A2-64DB-4B75-AAF4-127A6E98B3A6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/GrupoLogos.Intranet.WEBSite"
+		Debug.AspNetCompiler.PhysicalPath = "D:\DotNetDesenvolvimento\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEBSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GrupoLogos.Intranet.WEBSite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/GrupoLogos.Intranet.WEBSite"
+		Release.AspNetCompiler.PhysicalPath = "D:\DotNetDesenvolvimento\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEBSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\GrupoLogos.Intranet.WEBSite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14974"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CCD78A2-64DB-4B75-AAF4-127A6E98B3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CCD78A2-64DB-4B75-AAF4-127A6E98B3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

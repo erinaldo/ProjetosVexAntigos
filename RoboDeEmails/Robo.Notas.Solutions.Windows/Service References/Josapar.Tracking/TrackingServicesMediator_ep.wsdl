@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.accurate.com/acec/TrakingServices" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.accurate.com/acec/Tracking" xmlns:s0="http://www.accurate.com/acec/TrackingServices" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://www.accurate.com/acec/InvoiceInfo" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.accurate.com/acec/TrakingServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.accurate.com/acec/TrackingServices">
+      <s:import namespace="http://www.accurate.com/acec/Tracking" />
+      <s:element name="captureTrackingRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" ref="s1:trackingList" />
+            <s:element minOccurs="0" maxOccurs="1" name="storeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="generateEventsInSameTransaction" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="captureTrackingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="success" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.accurate.com/acec/Tracking">
+      <s:import namespace="http://www.accurate.com/acec/InvoiceInfo" />
+      <s:element name="trackingList" type="s1:ArrayOfTracking" />
+      <s:complexType name="ArrayOfTracking">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="tracking" type="s1:Tracking" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Tracking">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="deliveryId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="controlPointId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="controlPointNm" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="occurrenceDt" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="carrierId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="carrierNm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contractId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="receiverNm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="carrierMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adjustedDeliveryDt" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="CTRCNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="carrierURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" ref="s2:invoiceInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="trackingPropertyList" type="s1:ArrayOfTrackingProperty" />
+          <s:element minOccurs="0" maxOccurs="1" name="skuDeliveryTrackingList" type="s1:ArrayOfSkuDeliveryTracking" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTrackingProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="trackingProperty" type="s1:trackingProperty" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="trackingProperty">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="trackingPropertyId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="trackingPropertyValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSkuDeliveryTracking">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="skuDeliveryTracking" type="s1:SkuDeliveryTracking" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SkuDeliveryTracking">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="orderId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="deliveryId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="skuId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="skuName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="preparedQt" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="unitPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="totalPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="kitSkuId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="occurrenceDt" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.accurate.com/acec/InvoiceInfo">
+      <s:element name="invoiceInfo" type="s2:InvoiceInfo" />
+      <s:complexType name="InvoiceInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="issuerDocumentNr" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceNumber" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceSerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceEmissionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceEletronicKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="objectDataList" type="s2:ArrayOfObjectData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjectData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="objectData" type="s2:ObjectData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjectData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="objectId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="captureTrackingSoapIn">
+    <wsdl:part name="captureTrackingRequest" element="s0:captureTrackingRequest" />
+  </wsdl:message>
+  <wsdl:message name="captureTrackingSoapOut">
+    <wsdl:part name="captureTrackingResult" element="s0:captureTrackingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TrackingServicesMediator_epSoap">
+    <wsdl:operation name="captureTracking">
+      <wsdl:input message="tns:captureTrackingSoapIn" />
+      <wsdl:output message="tns:captureTrackingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TrackingServicesMediator_epSoap" type="tns:TrackingServicesMediator_epSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="captureTracking">
+      <soap:operation soapAction="captureTracking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TrackingServicesMediator_epSoap12" type="tns:TrackingServicesMediator_epSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="captureTracking">
+      <soap12:operation soapAction="captureTracking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrackingServicesMediator_ep">
+    <wsdl:port name="TrackingServicesMediator_epSoap" binding="tns:TrackingServicesMediator_epSoap">
+      <soap:address location="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TrackingServicesMediator_epSoap12" binding="tns:TrackingServicesMediator_epSoap12">
+      <soap12:address location="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

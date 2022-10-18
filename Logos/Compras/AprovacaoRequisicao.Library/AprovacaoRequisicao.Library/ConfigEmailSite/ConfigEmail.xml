@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<email>
+  <cEmail id="RequisicaoCompra" 		  de="sistema@grupologos.com.br" 		smtp="mail.grupologos.com.br" 		senha="logos0902"  	apelido="Aprovação de Requisição" />
+  <cEmail id="CotacaoCompra" 			    de="sistema@grupologos.com.br" 		smtp="mail.grupologos.com.br" 		senha="logos0902" 	apelido="Cotação de Compra"/>
+  <cEmail id="AprovacaoPedidoCompra" 	de="sistema@grupologos.com.br" 		smtp="mail.grupologos.com.br" 		senha="logos0902" 	apelido="Pedido  de Compra"/>
+</email>
+

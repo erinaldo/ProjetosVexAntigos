@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="estaAtivo">
+        <s:complexType />
+      </s:element>
+      <s:element name="estaAtivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="estaAtivoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarAparelho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tempo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EnviaPosicaoZerada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumeroChip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EnviaFoto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarAparelhoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Verificar_Documento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUM_DC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NUM_PL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NUM_DT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Verificar_DocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Verificar_DocumentoResult" type="tns:ArrayOfVerificar_documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVerificar_documento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="verificar_documento" nillable="true" type="tns:verificar_documento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="verificar_documento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDDOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILIALATUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VOLUMES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PESOBRUTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROPLACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REMETENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Verificar_Aparelho">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Verificar_AparelhoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Verificar_AparelhoResult" type="tns:ArrayOfAparelho" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAparelho">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="aparelho" nillable="true" type="tns:aparelho" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="aparelho">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdRastreador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Chave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tempo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnviaPosicaoZerada" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroFone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnviaFoto" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Limpar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLACA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOCTRANSP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LimparResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Listar_Documentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PLACA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOCTRANSP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EQUIPAMENTO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listar_DocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Listar_DocumentosResult" type="tns:ArrayOfListar_documentos" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfListar_documentos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="listar_documentos" nillable="true" type="tns:listar_documentos" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="listar_documentos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDDOCUMENTOOCORRENCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDDOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILIALATUAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VOLUMES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PESOBRUTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLACANUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDDT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REMETENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENDERECO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BAIRRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OCORRENCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TEMPO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENVIAPOSICAOZERADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHAVEORIGEM" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Listar_All_Ocorrencias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listar_All_OcorrenciasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Listar_All_OcorrenciasResult" type="tns:ArrayOfOcorrencias" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOcorrencias">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ocorrencias" nillable="true" type="tns:Ocorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ocorrencias">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDOCORRENCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESPONSABILIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FINALIZADOR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="gravarDocumentoOcorrencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descricaoOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDFilial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraPosicao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataHoraOcorencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarDocumentoOcorrenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gravarDocumentoOcorrenciaResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetornarQtdNotasNoDt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="placa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ndt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarQtdNotasNoDtResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarQtdNotasNoDtResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrarvarTempoSincronizacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataFinal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrarvarTempoSincronizacaoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GrarvarUltimoEnvioDeDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrarvarUltimoEnvioDeDadosResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="gravarDocumentoOcorrenciaSemImagem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descricaoOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDFilial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraPosicao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarDocumentoOcorrenciaSemImagemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="gravarDocumentoOcorrenciaSemImagemResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarDocumentoOcorrenciaSemImagem_wce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descricaoOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDFilial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraPosicao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarDocumentoOcorrenciaSemImagem_wceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="gravarImagens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iddocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idocorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarImagensResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="gravarDocumentoOcorrencia_wce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descricaoOcorrencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDFilial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idDt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataHoraPosicao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataHoraOcorencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarDocumentoOcorrencia_wceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="gravarPosicaoOcorrencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDDT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LATITUDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LONGITUDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATAHORA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ptoOcoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarPosicaoOcorrenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="gravarPosicaoOcorrenciaInterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IDDT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LATITUDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LONGITUDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DATAHORA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cd_cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senhaSeguranca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ptoOcoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="gravarPosicaoOcorrenciaInternoResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="estaAtivoSoapIn">
+    <wsdl:part name="parameters" element="tns:estaAtivo" />
+  </wsdl:message>
+  <wsdl:message name="estaAtivoSoapOut">
+    <wsdl:part name="parameters" element="tns:estaAtivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarAparelhoSoapIn">
+    <wsdl:part name="parameters" element="tns:GravarAparelho" />
+  </wsdl:message>
+  <wsdl:message name="GravarAparelhoSoapOut">
+    <wsdl:part name="parameters" element="tns:GravarAparelhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Verificar_DocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:Verificar_Documento" />
+  </wsdl:message>
+  <wsdl:message name="Verificar_DocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:Verificar_DocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Verificar_AparelhoSoapIn">
+    <wsdl:part name="parameters" element="tns:Verificar_Aparelho" />
+  </wsdl:message>
+  <wsdl:message name="Verificar_AparelhoSoapOut">
+    <wsdl:part name="parameters" element="tns:Verificar_AparelhoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LimparSoapIn">
+    <wsdl:part name="parameters" element="tns:Limpar" />
+  </wsdl:message>
+  <wsdl:message name="LimparSoapOut">
+    <wsdl:part name="parameters" element="tns:LimparResponse" />
+  </wsdl:message>
+  <wsdl:message name="Listar_DocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:Listar_Documentos" />
+  </wsdl:message>
+  <wsdl:message name="Listar_DocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:Listar_DocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Listar_All_OcorrenciasSoapIn">
+    <wsdl:part name="parameters" element="tns:Listar_All_Ocorrencias" />
+  </wsdl:message>
+  <wsdl:message name="Listar_All_OcorrenciasSoapOut">
+    <wsdl:part name="parameters" element="tns:Listar_All_OcorrenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarQtdNotasNoDtSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarQtdNotasNoDt" />
+  </wsdl:message>
+  <wsdl:message name="RetornarQtdNotasNoDtSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarQtdNotasNoDtResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrarvarTempoSincronizacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:GrarvarTempoSincronizacao" />
+  </wsdl:message>
+  <wsdl:message name="GrarvarTempoSincronizacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:GrarvarTempoSincronizacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrarvarUltimoEnvioDeDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:GrarvarUltimoEnvioDeDados" />
+  </wsdl:message>
+  <wsdl:message name="GrarvarUltimoEnvioDeDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:GrarvarUltimoEnvioDeDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSemImagemSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrenciaSemImagem" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSemImagemSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrenciaSemImagemResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSemImagem_wceSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrenciaSemImagem_wce" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrenciaSemImagem_wceSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrenciaSemImagem_wceResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarImagensSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarImagens" />
+  </wsdl:message>
+  <wsdl:message name="gravarImagensSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarImagensResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrencia_wceSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrencia_wce" />
+  </wsdl:message>
+  <wsdl:message name="gravarDocumentoOcorrencia_wceSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarDocumentoOcorrencia_wceResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarPosicaoOcorrenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarPosicaoOcorrencia" />
+  </wsdl:message>
+  <wsdl:message name="gravarPosicaoOcorrenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarPosicaoOcorrenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="gravarPosicaoOcorrenciaInternoSoapIn">
+    <wsdl:part name="parameters" element="tns:gravarPosicaoOcorrenciaInterno" />
+  </wsdl:message>
+  <wsdl:message name="gravarPosicaoOcorrenciaInternoSoapOut">
+    <wsdl:part name="parameters" element="tns:gravarPosicaoOcorrenciaInternoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="estaAtivo">
+      <wsdl:input message="tns:estaAtivoSoapIn" />
+      <wsdl:output message="tns:estaAtivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarAparelho">
+      <wsdl:input message="tns:GravarAparelhoSoapIn" />
+      <wsdl:output message="tns:GravarAparelhoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Documento">
+      <wsdl:input message="tns:Verificar_DocumentoSoapIn" />
+      <wsdl:output message="tns:Verificar_DocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Aparelho">
+      <wsdl:input message="tns:Verificar_AparelhoSoapIn" />
+      <wsdl:output message="tns:Verificar_AparelhoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Limpar">
+      <wsdl:input message="tns:LimparSoapIn" />
+      <wsdl:output message="tns:LimparSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Documentos">
+      <wsdl:input message="tns:Listar_DocumentosSoapIn" />
+      <wsdl:output message="tns:Listar_DocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_All_Ocorrencias">
+      <wsdl:input message="tns:Listar_All_OcorrenciasSoapIn" />
+      <wsdl:output message="tns:Listar_All_OcorrenciasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia">
+      <wsdl:input message="tns:gravarDocumentoOcorrenciaSoapIn" />
+      <wsdl:output message="tns:gravarDocumentoOcorrenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarQtdNotasNoDt">
+      <wsdl:input message="tns:RetornarQtdNotasNoDtSoapIn" />
+      <wsdl:output message="tns:RetornarQtdNotasNoDtSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarTempoSincronizacao">
+      <wsdl:input message="tns:GrarvarTempoSincronizacaoSoapIn" />
+      <wsdl:output message="tns:GrarvarTempoSincronizacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarUltimoEnvioDeDados">
+      <wsdl:input message="tns:GrarvarUltimoEnvioDeDadosSoapIn" />
+      <wsdl:output message="tns:GrarvarUltimoEnvioDeDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem">
+      <wsdl:input message="tns:gravarDocumentoOcorrenciaSemImagemSoapIn" />
+      <wsdl:output message="tns:gravarDocumentoOcorrenciaSemImagemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem_wce">
+      <wsdl:input message="tns:gravarDocumentoOcorrenciaSemImagem_wceSoapIn" />
+      <wsdl:output message="tns:gravarDocumentoOcorrenciaSemImagem_wceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarImagens">
+      <wsdl:input message="tns:gravarImagensSoapIn" />
+      <wsdl:output message="tns:gravarImagensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia_wce">
+      <wsdl:input message="tns:gravarDocumentoOcorrencia_wceSoapIn" />
+      <wsdl:output message="tns:gravarDocumentoOcorrencia_wceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrencia">
+      <wsdl:input message="tns:gravarPosicaoOcorrenciaSoapIn" />
+      <wsdl:output message="tns:gravarPosicaoOcorrenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrenciaInterno">
+      <wsdl:input message="tns:gravarPosicaoOcorrenciaInternoSoapIn" />
+      <wsdl:output message="tns:gravarPosicaoOcorrenciaInternoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="estaAtivo">
+      <soap:operation soapAction="http://tempuri.org/estaAtivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarAparelho">
+      <soap:operation soapAction="http://tempuri.org/GravarAparelho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Documento">
+      <soap:operation soapAction="http://tempuri.org/Verificar_Documento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Aparelho">
+      <soap:operation soapAction="http://tempuri.org/Verificar_Aparelho" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpar">
+      <soap:operation soapAction="http://tempuri.org/Limpar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Documentos">
+      <soap:operation soapAction="http://tempuri.org/Listar_Documentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_All_Ocorrencias">
+      <soap:operation soapAction="http://tempuri.org/Listar_All_Ocorrencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/gravarDocumentoOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarQtdNotasNoDt">
+      <soap:operation soapAction="http://tempuri.org/RetornarQtdNotasNoDt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarTempoSincronizacao">
+      <soap:operation soapAction="http://tempuri.org/GrarvarTempoSincronizacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarUltimoEnvioDeDados">
+      <soap:operation soapAction="http://tempuri.org/GrarvarUltimoEnvioDeDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem">
+      <soap:operation soapAction="http://tempuri.org/gravarDocumentoOcorrenciaSemImagem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem_wce">
+      <soap:operation soapAction="http://tempuri.org/gravarDocumentoOcorrenciaSemImagem_wce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarImagens">
+      <soap:operation soapAction="http://tempuri.org/gravarImagens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia_wce">
+      <soap:operation soapAction="http://tempuri.org/gravarDocumentoOcorrencia_wce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrencia">
+      <soap:operation soapAction="http://tempuri.org/gravarPosicaoOcorrencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrenciaInterno">
+      <soap:operation soapAction="http://tempuri.org/gravarPosicaoOcorrenciaInterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="estaAtivo">
+      <soap12:operation soapAction="http://tempuri.org/estaAtivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarAparelho">
+      <soap12:operation soapAction="http://tempuri.org/GravarAparelho" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Documento">
+      <soap12:operation soapAction="http://tempuri.org/Verificar_Documento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verificar_Aparelho">
+      <soap12:operation soapAction="http://tempuri.org/Verificar_Aparelho" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Limpar">
+      <soap12:operation soapAction="http://tempuri.org/Limpar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Documentos">
+      <soap12:operation soapAction="http://tempuri.org/Listar_Documentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_All_Ocorrencias">
+      <soap12:operation soapAction="http://tempuri.org/Listar_All_Ocorrencias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia">
+      <soap12:operation soapAction="http://tempuri.org/gravarDocumentoOcorrencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarQtdNotasNoDt">
+      <soap12:operation soapAction="http://tempuri.org/RetornarQtdNotasNoDt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarTempoSincronizacao">
+      <soap12:operation soapAction="http://tempuri.org/GrarvarTempoSincronizacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrarvarUltimoEnvioDeDados">
+      <soap12:operation soapAction="http://tempuri.org/GrarvarUltimoEnvioDeDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem">
+      <soap12:operation soapAction="http://tempuri.org/gravarDocumentoOcorrenciaSemImagem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrenciaSemImagem_wce">
+      <soap12:operation soapAction="http://tempuri.org/gravarDocumentoOcorrenciaSemImagem_wce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarImagens">
+      <soap12:operation soapAction="http://tempuri.org/gravarImagens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarDocumentoOcorrencia_wce">
+      <soap12:operation soapAction="http://tempuri.org/gravarDocumentoOcorrencia_wce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrencia">
+      <soap12:operation soapAction="http://tempuri.org/gravarPosicaoOcorrencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gravarPosicaoOcorrenciaInterno">
+      <soap12:operation soapAction="http://tempuri.org/gravarPosicaoOcorrenciaInterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://www.sistecno.com.br/novodotnet/wsandroid/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://www.sistecno.com.br/novodotnet/wsandroid/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

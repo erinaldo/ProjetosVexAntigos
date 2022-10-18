@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RsMobile", "RsMobile.csproj", "{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}"
+EndProject
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "RSInstall", "..\RSInstall\RSInstall.vddproj", "{497CCCFF-7B6A-4D55-B0A6-467E5FB4EB1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F450E3BE-E8A7-4B8B-B7A6-1910128FA5A0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{497CCCFF-7B6A-4D55-B0A6-467E5FB4EB1E}.Debug|Any CPU.ActiveCfg = Debug
+		{497CCCFF-7B6A-4D55-B0A6-467E5FB4EB1E}.Debug|Any CPU.Build.0 = Debug
+		{497CCCFF-7B6A-4D55-B0A6-467E5FB4EB1E}.Release|Any CPU.ActiveCfg = Release
+		{497CCCFF-7B6A-4D55-B0A6-467E5FB4EB1E}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

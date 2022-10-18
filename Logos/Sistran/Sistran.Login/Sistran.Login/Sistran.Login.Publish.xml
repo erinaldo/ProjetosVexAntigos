@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\MOISESROVANI\Desktop\publicacao" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="06/10/2016 13:20:41" />
+    <file relUrl="Styles/grid.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="Styles/testes.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="js/HTMLPage.htm" publishTime="12/30/2014 09:20:38" />
+    <file relUrl="bootstrap.min.css" publishTime="06/10/2016 09:46:55" />
+    <file relUrl="bin/Sistran.Login.pdb" publishTime="06/10/2016 13:28:53" />
+    <file relUrl="Styles/StyleSheetSistranWeb.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="js/jquery-1.4.4.min.js" publishTime="12/30/2014 09:20:38" />
+    <file relUrl="LoginLogos2.aspx" publishTime="06/10/2016 13:28:35" />
+    <file relUrl="bootstrap.min.js" publishTime="06/10/2016 09:46:07" />
+    <file relUrl="Styles/Site.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="js/jquery.meio.mask.js" publishTime="12/30/2014 09:20:38" />
+    <file relUrl="Styles/Toolkit.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="login.html" publishTime="06/10/2016 13:21:39" />
+    <file relUrl="Styles/tableless.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="Styles/estilos.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="Styles/Panel.css" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="Default.aspx" publishTime="12/30/2014 09:20:39" />
+    <file relUrl="bin/Sistran.Login.dll" publishTime="06/10/2016 13:28:53" />
+    <file relUrl="js/utils.js" publishTime="12/30/2014 09:20:38" />
+  </publishProfile>
+</publishData>

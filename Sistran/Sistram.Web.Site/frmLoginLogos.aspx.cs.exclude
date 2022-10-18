@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+
+public partial class frmLoginLogos : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            rmp.TabIndex = 0;
+            RadTabStrip1.SelectedIndex = 0;
+            rpvPromo.Selected = true;
+        }
+    }
+
+    protected void RadTabStrip1_TabClick(object sender, Telerik.Web.UI.RadTabStripEventArgs e)
+    {
+        //Session.Clear();
+        //Session.Abandon();
+        //Request.Cookies.Clear();
+    }
+
+}

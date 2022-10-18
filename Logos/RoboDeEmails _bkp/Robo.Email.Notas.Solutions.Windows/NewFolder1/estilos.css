@@ -1,0 +1,222 @@
+body
+{
+	margin: 0px;
+	background-color: #f8f8f8;
+	font-family: Verdana;
+	font-size: 7pt;
+	/*text-align: center;*/
+}
+form
+{
+    margin: 0px;
+    text-align: center;
+}
+
+
+.cabecalho
+{
+    border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	height: 25px;
+	padding-left: 11px;
+    background: url(../Imagens/vermelho.jpg);
+    color:Black;
+	text-align: center;
+}
+
+
+
+.table
+{
+	background-color: #E0E0E0;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	
+}
+
+.tableSemTamanho
+{
+	background-color: #E0E0E0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-weight: bold;
+	
+	
+}
+
+
+.tdp
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	nowrap:nowrap;
+	font-weight:normal;
+	text-align: left;
+	vertical-align:middle;	
+	
+}
+
+
+.tdp2
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	nowrap:nowrap;
+	font-weight:normal;
+	text-align: left;
+	vertical-align:bottom;	
+	
+}
+
+.tdpSemAlign
+{
+	border: 0.5pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	nowrap:nowrap;
+	font-weight:normal;
+}
+
+
+.tdpCenter
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: center ;
+	nowrap:now
+}
+.tdpR
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align:right;
+	nowrap:nowrap;
+	font-weight:normal;	
+}
+
+
+
+
+.tdp7
+{
+	border: 0.1pt solid #FFFFFF;
+	height: 12pt;
+	font-size:8pt;
+	font-family:Arial;
+}
+
+.tdpCabecalho
+{
+	border: 0.1pt solid #FFFFFF;
+	height: 13pt;
+	font-size:8pt;
+	font-family:Verdana;
+	font-weight:bold;
+	text-transform: uppercase;	
+}
+
+
+.td_divisoria
+{
+	border: 0pt solid #FFFFFF;
+	background-color: #999999;
+}
+
+
+
+.txtVerdana
+{
+	border: 1px solid #999999;
+	font-family: Verdana;
+	font-size: 9px;
+	height: 12px;
+}
+
+.tableVerdana
+{
+	background-color: #E0E0E0;
+	width: 100%;
+	font-family: Verdana;
+	font-size: 7pt;
+	
+	/*font-weight: bold;*/
+}
+
+.tdpVerdana
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: left;
+	nowrap:nowrap;
+}
+
+.tdpVerdana7
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:7pt;
+	font-family:Verdana;
+	text-align: left;
+	nowrap:nowrap;
+	font-weight:normal;
+}
+
+.tdpRVerdana
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: right;	
+	nowrap:nowrap;
+}
+
+.tdpRVerdanaLeft
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align:left;	
+	nowrap:nowrap;
+}
+
+
+.tdpRVerdanaVerde
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: right;	
+	nowrap:nowrap;
+	background-color:#20AE3F;
+}
+
+.tdpRVerdanaAmarelo
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: right;	
+	nowrap:nowrap;
+	background-color:#DEDE40;
+}
+
+.tdpRVerdanaVermelho
+{
+	border: 0.1pt solid #FFFFFF;
+	font-size:8pt;
+	font-family:Verdana;
+	text-align: right;	
+	nowrap:nowrap;
+	background-color:#DE4040;
+}
+
+
+
+

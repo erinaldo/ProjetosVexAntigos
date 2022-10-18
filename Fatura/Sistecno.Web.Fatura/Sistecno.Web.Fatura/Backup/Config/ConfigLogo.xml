@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ImagensClientes>
+  <ImagensClientes id="Conn4" key="REDLOG_STNET2" Imagem="RedLog.png" />
+  <ImagensClientes id="Conn1" key="Conn1" Imagem="monel.gif" /> 
+  <ImagensClientes id="Conn12" key="BD_00240_UNIAOBRASI" Imagem="uniao.png" />  
+  <ImagensClientes id="Conn10" key="BD_00243_PDMLOGISTI" Imagem="pdm.png" />  
+  </ImagensClientes>

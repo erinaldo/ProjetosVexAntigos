@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ImagensClientes>
+  <ImagensClientes id="Conn4" key="Conn4" Imagem="RedLog.png" />
+  <ImagensClientes id="Conn1" key="Conn1" Imagem="monel.gif" />
+  <ImagensClientes id="Conn8" key="Conn5" Imagem="logoQuasar.jpg" />
+  <ImagensClientes id="Conn7" key="Conn7" Imagem="ana.png" />
+ 
+  
+  <ImagensClientes id="Conn8" key="Conn8" Imagem="calog.gif" />  
+  <ImagensClientes id="Conn9" key="Conn9" Imagem="HRJ.png" /> 
+</ImagensClientes>

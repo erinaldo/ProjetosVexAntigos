@@ -1,0 +1,1300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="778253cd66064d7da2a20efe276cb5b2" Name="Diagram1">
+        <EntityTypeShape EntityType="STNNOVOModel.Agenda" Width="1.5" PointX="15" PointY="338" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Agendamento" Width="1.5" PointX="15" PointY="351.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.AgendamentoDocumento" Width="1.5" PointX="17.25" PointY="361" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.AgendaRecebimento" Width="1.5" PointX="37.5" PointY="360.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Agregado" Width="1.5" PointX="15" PointY="347.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Agrupamento" Width="1.5" PointX="38.25" PointY="388.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.AgrupamentoRegiao" Width="1.5" PointX="40.5" PointY="352.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Ajuda" Width="1.5" PointX="29.25" PointY="319.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Alerta" Width="1.5" PointX="21" PointY="326.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Apolice" Width="1.5" PointX="18" PointY="351.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ApoliceAtuadores" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ApoliceItem" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Arquivo" Width="1.5" PointX="22.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ArquivoClienteEDI" Width="1.5" PointX="24.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ArquivoItem" Width="1.5" PointX="25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Auditoria" Width="1.5" PointX="24.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Aviso" Width="1.5" PointX="29.5" PointY="345" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.AvisoDocumento" Width="1.5" PointX="19.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.AvisoRoboEmail" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Bairro" Width="1.5" PointX="7.5" PointY="352.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BairroFaixaDeCep" Width="1.5" PointX="9.75" PointY="352.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BAIRROS" Width="1.5" PointX="26.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Balanca" Width="1.5" PointX="26.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Banco" Width="1.5" PointX="18.75" PointY="382.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoCarteira" Width="1.5" PointX="43.5" PointY="390.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoConta" Width="1.5" PointX="34.5" PointY="363.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoContaBloqueto" Width="1.5" PointX="45.75" PointY="367.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoEspecie" Width="1.5" PointX="43.5" PointY="393" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoInstrucao" Width="1.5" PointX="43.5" PointY="396.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoInstrucaoDeProtesto" Width="1.5" PointX="43.5" PointY="399.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoOcorrenciaRejeicao" Width="1.5" PointX="23.25" PointY="392.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoOcorrenciaRemessa" Width="1.5" PointX="45.5" PointY="333.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BancoOcorrenciaRetorno" Width="1.5" PointX="21" PointY="392.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BASE" Width="1.5" PointX="15.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BaseDoCredito" Width="1.5" PointX="5.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Bordero" Width="1.5" PointX="45" PointY="375.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.BorderoTituloDuplicata" Width="1.5" PointX="49.25" PointY="358.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Cadastro" Width="1.5" PointX="12.75" PointY="346.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroCDA" Width="1.5" PointX="7.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroCdaUsuarioClienteDivisao" Width="1.5" PointX="30.75" PointY="338.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroComplemento" Width="1.5" PointX="21" PointY="350.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroCondicaoEntrega" Width="1.5" PointX="15" PointY="360.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroContato" Width="1.5" PointX="15" PointY="364.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroContatoAlerta" Width="1.5" PointX="17.25" PointY="364.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroContatoEndereco" Width="1.5" PointX="18" PointY="348.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroDepartamento" Width="1.5" PointX="26.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroEndereco" Width="1.5" PointX="18" PointY="356.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroEntrega" Width="1.5" PointX="15" PointY="374.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroHistorico" Width="1.5" PointX="15" PointY="378" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroImagem" Width="1.5" PointX="15" PointY="381.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroReferencia" Width="1.5" PointX="15" PointY="384.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroRegiao" Width="1.5" PointX="21" PointY="347.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CadastroTipoDeContato" Width="1.5" PointX="15.75" PointY="344.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CanalDeVenda" Width="1.5" PointX="26.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CentroDeCusto" Width="1.5" PointX="29.5" PointY="365.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CentroDeCustoFilial" Width="1.5" PointX="31.75" PointY="367.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Cfop" Width="1.5" PointX="21.75" PointY="321.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Cheque" Width="1.5" PointX="39.75" PointY="368.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Cidade" Width="1.5" PointX="5.25" PointY="350.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CidadeDistancia" Width="1.5" PointX="48" PointY="372.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CidadeFaixaDeCep" Width="1.5" PointX="22.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CIDADES" Width="1.5" PointX="26.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CidadeSedex" Width="1.5" PointX="24.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Cliente" Width="1.5" PointX="24" PointY="345.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteDivisao" Width="1.5" PointX="26.25" PointY="336.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteEDI" Width="1.5" PointX="32.25" PointY="349.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteFilial" Width="1.5" PointX="29.25" PointY="349" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteJustificativa" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteMeta" Width="1.5" PointX="26.25" PointY="366.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteRegra" Width="1.5" PointX="26.25" PointY="369.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClientesComprovei" Width="1.5" PointX="27.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteSetorFilial" Width="1.5" PointX="32.25" PointY="345.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteTipoDeMaterial" Width="1.5" PointX="26.25" PointY="374.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ClienteTipoDeMaterialDivisao" Width="1.5" PointX="28.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ColetorConferencia" Width="1.5" PointX="56.25" PointY="387.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ColetorConferenciaCDEAN" Width="1.5" PointX="5.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ColetorConferenciaItem" Width="1.5" PointX="58.5" PointY="416.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ColetorConferenciaLog" Width="1.5" PointX="59.25" PointY="385.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ColetorConferenciaVolume" Width="1.5" PointX="58.5" PointY="419.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Conciliacao" Width="1.5" PointX="17.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConciliacaoLote" Width="1.5" PointX="20" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConciliacaoLoteDetalhe" Width="1.5" PointX="22.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CondicaoDePagamento" Width="1.5" PointX="32" PointY="325.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CondicaoDePagamentoItem" Width="1.5" PointX="7.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Conferencia" Width="1.5" PointX="48.75" PointY="354" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaItemNaoCadastrado" Width="1.5" PointX="51" PointY="354.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPallet" Width="1.5" PointX="52" PointY="359.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletDoc" Width="1.5" PointX="59.25" PointY="397.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletDocVol" Width="1.5" PointX="61.5" PointY="403.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletDocVolItem" Width="1.5" PointX="67.75" PointY="392.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletEntrada" Width="1.5" PointX="60.25" PointY="375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletEntradaLote" Width="1.5" PointX="57.25" PointY="380" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ConferenciaPalletProdutoXXXXX" Width="1.5" PointX="62.25" PointY="370.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaContabil" Width="1.5" PointX="23.25" PointY="372.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaContabilCentroDeCusto" Width="1.5" PointX="38.75" PointY="377.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaContabilFilial" Width="1.5" PointX="48" PointY="375.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaContabilLancamento" Width="1.5" PointX="51" PointY="375.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDeEmail" Width="1.5" PointX="28.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesa" Width="1.5" PointX="7.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesaCapa" Width="1.5" PointX="10" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesaEvento" Width="1.5" PointX="12.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesaImagem" Width="1.5" PointX="10" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesaItem" Width="1.5" PointX="10" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContaDespesaObservacao" Width="1.5" PointX="10" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Contrato" Width="1.5" PointX="12.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoCapa" Width="1.5" PointX="15" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoEvento" Width="1.5" PointX="28.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoImagem" Width="1.5" PointX="15" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoItem" Width="1.5" PointX="15" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoItemCCusto" Width="1.5" PointX="17.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ContratoObservacao" Width="1.5" PointX="17.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ControleBriefing" Width="1.5" PointX="19.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ControleBriefingItem" Width="1.5" PointX="28.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CotacaoDeCompra" Width="1.5" PointX="28.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CotacaoDeCompraItem" Width="1.5" PointX="69.5" PointY="403" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CotacaoFornecedor" Width="1.5" PointX="24.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.CotacaoFornecedorCondPgto" Width="1.5" PointX="27" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DDA" Width="1.5" PointX="40.25" PointY="313.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DDAImagem" Width="1.5" PointX="42.5" PointY="319.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Departamento" Width="1.5" PointX="49.75" PointY="388.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Deposito" Width="1.5" PointX="45" PointY="380.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DepositoPlanta" Width="1.5" PointX="47.25" PointY="379.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DepositoPlantaLeiaute" Width="1.5" PointX="49.5" PointY="380.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DepositoPlantaLocalizacao" Width="1.5" PointX="32.25" PointY="358.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DepositoPlantaLocalizacaoRegra" Width="1.5" PointX="37.5" PointY="369.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Dica" Width="1.5" PointX="28.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Dicionario" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Documento" Width="1.5" PointX="54" PointY="402.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoAFaturar" Width="1.5" PointX="59.25" PointY="401.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoAguardandoCTRC" Width="1.5" PointX="59.25" PointY="404.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoAprovacao" Width="1.5" PointX="0.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoAte" Width="1.5" PointX="2.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoAteItem" Width="1.5" PointX="9.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoCDA" Width="1.5" PointX="56.25" PointY="400.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoCfop" Width="1.5" PointX="59.25" PointY="422.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoComprovante" Width="1.5" PointX="56.25" PointY="406.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoCondicaoDePagamento" Width="1.5" PointX="56.25" PointY="409.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoCotacao" Width="1.5" PointX="29.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoCubagem" Width="1.5" PointX="56.25" PointY="411.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoEdi" Width="1.5" PointX="59.25" PointY="389.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoEletronico" Width="1.5" PointX="56.25" PointY="419" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoEletronicoParametro" Width="1.5" PointX="21.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoEmbalagem" Width="1.5" PointX="56.25" PointY="425.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoFilial" Width="1.5" PointX="59.25" PointY="408.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoFilialPedido" Width="1.5" PointX="23.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoFrete" Width="1.5" PointX="56.25" PointY="434.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoImagem" Width="1.5" PointX="56.25" PointY="431.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoImposto" Width="1.5" PointX="25.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoItem" Width="1.5" PointX="56.25" PointY="445.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoItemComplemento" Width="1.5" PointX="58.5" PointY="448.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoItemEmpenhado" Width="1.5" PointX="58.5" PointY="450.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoItemLabelPicking" Width="1.5" PointX="58.5" PointY="453.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoMigrado" Width="1.5" PointX="30.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoModelo" Width="1.5" PointX="30.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoNotaFiscal" Width="1.5" PointX="56.25" PointY="461.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoObjeto" Width="1.5" PointX="56.25" PointY="465" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoObjetoOcorrencia" Width="1.5" PointX="58.5" PointY="464.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoObservacao" Width="1.5" PointX="56.25" PointY="468.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoOcorrencia" Width="1.5" PointX="51.75" PointY="364.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoOcorrenciaArquivo" Width="1.5" PointX="54" PointY="399.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoOcorrenciaItem" Width="1.5" PointX="58.5" PointY="412.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoOrcamento" Width="1.5" PointX="56.25" PointY="393.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DOCUMENTOPEDIDO" Width="1.5" PointX="14.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DOCUMENTOPEDIDOITEM" Width="1.5" PointX="30.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoProtocolo" Width="1.5" PointX="30.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoRecebimento" Width="1.5" PointX="56.25" PointY="475.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoReclamacao" Width="1.5" PointX="56.25" PointY="478.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoRelacionado" Width="1.5" PointX="56.25" PointY="481.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoRemessa" Width="1.5" PointX="27.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoReprogramado" Width="1.5" PointX="56.25" PointY="484.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoSituacao" Width="1.5" PointX="30.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DocumentoTipo" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DT" Width="1.5" PointX="27" PointY="341.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DtCheque" Width="1.5" PointX="38.25" PointY="352.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTContaCorrente" Width="1.5" PointX="29.25" PointY="353" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTEletronico" Width="1.5" PointX="4.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTFaturamento" Width="1.5" PointX="29.25" PointY="357.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTFaturamentoCliente" Width="1.5" PointX="64.25" PointY="381.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTFaturamentoClienteDocumento" Width="1.5" PointX="66.5" PointY="411.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTHistorico" Width="1.5" PointX="38.25" PointY="347.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTLancamento" Width="1.5" PointX="6.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.dtproperties" Width="1.5" PointX="11.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTRomaneio" Width="1.5" PointX="51.75" PointY="351.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.DTTipo" Width="1.5" PointX="24.75" PointY="326.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI" Width="1.5" PointX="30" PointY="328.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Bairro" Width="1.5" PointX="31.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Cadastro" Width="1.5" PointX="16.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_CadastroContatoEndereco" Width="1.5" PointX="18.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Cidade" Width="1.5" PointX="29.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Documento" Width="1.5" PointX="31.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoAguardandoCtrc" Width="1.5" PointX="32.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoEdi" Width="1.5" PointX="32.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoFilial" Width="1.5" PointX="32.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoFrete" Width="1.5" PointX="32.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoItem" Width="1.5" PointX="8.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoNFE" Width="1.5" PointX="32.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoNotaFiscal" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_DocumentoRelacionado" Width="1.5" PointX="33.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Edi" Width="1.5" PointX="23.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Estado" Width="1.5" PointX="33.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Edi_Gerado" Width="1.5" PointX="34.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.edi_gerado_antigo" Width="1.5" PointX="34.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_Produto" Width="1.5" PointX="34.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_ProdutoCliente" Width="1.5" PointX="34.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDI_ProdutoEmbalagem" Width="1.5" PointX="25.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiArquivo" Width="1.5" PointX="34.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiControleDeArquivo" Width="1.5" PointX="20.25" PointY="333" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiControleDeArquivoLog" Width="1.5" PointX="0.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayOut" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayOutPergunta" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayOutReg" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayOutRegCpo" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayoutRegTabela" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDILayoutTabela" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDIPergunta" Width="1.5" PointX="35.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiPlanilha" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiPlanilhaDetalhe" Width="1.5" PointX="10.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EDITransferencia" Width="1.5" PointX="18.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EdiTrocaDeArquivo" Width="1.5" PointX="15" PointY="434" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EmailPendente" Width="1.5" PointX="27.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Empresa" Width="1.5" PointX="21" PointY="357.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EnquadramentoIPI" Width="1.5" PointX="35.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Estado" Width="1.5" PointX="3" PointY="354.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstadoFaixaDeCep" Width="1.5" PointX="5.25" PointY="357.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ESTADOS" Width="1.5" PointX="33.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Estoque" Width="1.5" PointX="30.75" PointY="378.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstoqueComprasMov" Width="1.5" PointX="69.5" PointY="388" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstoqueDivisao" Width="1.5" PointX="31.5" PointY="333.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstoqueDivisaoMov" Width="1.5" PointX="36.75" PointY="334.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstoqueMov" Width="1.5" PointX="35.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.EstoqueOperacao" Width="1.5" PointX="34.5" PointY="333.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ExtratoParaConciliacao" Width="1.5" PointX="2.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Face_RE" Width="1.5" PointX="4.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Feriado" Width="1.5" PointX="7.5" PointY="355.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Filial" Width="1.5" PointX="42.75" PointY="365.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FilialCidadeSetor" Width="1.5" PointX="54" PointY="367.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FilialPortaria" Width="1.5" PointX="36.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FinalidadeDocTed" Width="1.5" PointX="0.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Folder" Width="1.5" PointX="36.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Fornecedor" Width="1.5" PointX="39.75" PointY="362.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FornecedorFilial" Width="1.5" PointX="51" PointY="371.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Frota" Width="1.5" PointX="23.25" PointY="339.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FrotaGrupoItemControle" Width="1.5" PointX="26.25" PointY="329.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FrotaGrupoItemControleItem" Width="1.5" PointX="28.5" PointY="335" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.FrotaItemControle" Width="1.5" PointX="36.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Funcionario" Width="1.5" PointX="52" PointY="380.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Gaiola" Width="1.5" PointX="10.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.GaiolaConferencia" Width="1.5" PointX="13" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.GrandeUsuario" Width="1.5" PointX="5.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.GrandeUsuarioEndereco" Width="1.5" PointX="8" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Grupo" Width="1.5" PointX="15.75" PointY="341.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.GrupoDeProduto" Width="1.5" PointX="26.25" PointY="384.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.HistoricoPadrao" Width="1.5" PointX="36.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Icms" Width="1.5" PointX="5.25" PointY="360" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.IdTabela" Width="1.5" PointX="36.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Inss" Width="1.5" PointX="23.25" PointY="382.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Inventario" Width="1.5" PointX="54" PointY="371.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.InventarioContagem" Width="1.5" PointX="56.25" PointY="384.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.InventarioContagemProduto" Width="1.5" PointX="42.75" PointY="358.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.InventarioUa" Width="1.5" PointX="45" PointY="384.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Irrf" Width="1.5" PointX="36.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.KPIIRWIN_V2" Width="1.5" PointX="36.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.KPIIRWINProcessamento" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LabelPicking" Width="1.5" PointX="56.25" PointY="498.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Lancamento" Width="1.5" PointX="37.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LancamentoContabil" Width="1.5" PointX="55" PointY="377" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LancamentoContabilCC" Width="1.5" PointX="37.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LancamentoOcorrencia" Width="1.5" PointX="37.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LancamentoPadrao" Width="1.5" PointX="0.75" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LancamentoPadraoConfiguracao" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LeiauteBoleto" Width="1.5" PointX="37.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LeiauteCheque" Width="1.5" PointX="38.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Licenciamento" Width="1.5" PointX="10.75" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LicenciamentoMes" Width="1.5" PointX="13" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_BAIRRO" Width="1.5" PointX="8" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_CPC" Width="1.5" PointX="38.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_FAIXA_BAIRRO" Width="1.5" PointX="10.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_FAIXA_CPC" Width="1.5" PointX="38.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_FAIXA_LOCALIDADE" Width="1.5" PointX="8" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_FAIXA_UF" Width="1.5" PointX="38.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_FAIXA_UOP" Width="1.5" PointX="16.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_GRANDE_USUARIO" Width="1.5" PointX="18.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_LOCALIDADE" Width="1.5" PointX="5.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_LOGRADOURO" Width="1.5" PointX="38.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_NUM_SEC" Width="1.5" PointX="38.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_PAIS" Width="1.5" PointX="27.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_UNID_OPER" Width="1.5" PointX="37.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_VAR_BAI" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_VAR_LOC" Width="1.5" PointX="39.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOG_VAR_LOG" Width="1.5" PointX="23.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LogComprovei" Width="1.5" PointX="39.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LoginPerfil" Width="1.5" PointX="18" PointY="309.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LoginPerfilPermissao" Width="1.5" PointX="20.25" PointY="309.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LogMetodo" Width="1.5" PointX="39.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LOGRADOUROS" Width="1.5" PointX="39.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LogRoboAcertoNota" Width="1.5" PointX="39.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Lote" Width="1.5" PointX="62.25" PointY="397.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.LoteEletronico" Width="1.5" PointX="40.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Mapa" Width="1.5" PointX="54" PointY="350.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MenuCliente" Width="1.5" PointX="29.25" PointY="360.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MenuSite" Width="1.5" PointX="40.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.mMotoristaProprietario" Width="1.5" PointX="40.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Modal" Width="1.5" PointX="23.25" PointY="385.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Modalidade" Width="1.5" PointX="33.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModalidadeDePagamento" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModalidadeDocTed" Width="1.5" PointX="39.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModalidadeFinalidadeDocTed" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Modulo" Width="1.5" PointX="41.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModuloMenu" Width="1.5" PointX="29.25" PointY="322.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModuloMenuBkp" Width="1.5" PointX="10.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModuloOpcao" Width="1.5" PointX="27" PointY="324.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModuloOpcaoAcao" Width="1.5" PointX="29.25" PointY="325.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ModuloOpcaoTabela" Width="1.5" PointX="29.25" PointY="316.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Moeda" Width="1.5" PointX="3" PointY="364.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MoedaCotacao" Width="1.5" PointX="5.25" PointY="364.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Motivo" Width="1.5" PointX="25.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MotivoRejeicao" Width="1.5" PointX="41.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Motorista" Width="1.5" PointX="18.75" PointY="320" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MotoristaFilial" Width="1.5" PointX="48" PointY="385" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MotoristaHistorico" Width="1.5" PointX="21" PointY="318.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Movimentacao" Width="1.5" PointX="55" PointY="359.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoBancaria" Width="1.5" PointX="49" PointY="361.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoCliente" Width="1.5" PointX="27.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.movimentacaocliente_bkp" Width="1.5" PointX="41.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoClienteConsolidado" Width="1.5" PointX="41.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoClienteDivisao" Width="1.5" PointX="41.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoItem" Width="1.5" PointX="34.5" PointY="321.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoRomaneio" Width="1.5" PointX="53.75" PointY="356.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.MovimentacaoRomaneioItem" Width="1.5" PointX="61.5" PointY="391.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Natureza" Width="1.5" PointX="0.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Numerador" Width="1.5" PointX="57" PointY="370.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Ocorrencia" Width="1.5" PointX="23.25" PointY="362.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OcorrenciaAcao" Width="1.5" PointX="21" PointY="375.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OcorrenciaAndamento" Width="1.5" PointX="42.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OcorrenciaCodigo" Width="1.5" PointX="36.5" PointY="378.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OcorrenciaDePara" Width="1.5" PointX="25.5" PointY="378.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OcorrenciaSerie" Width="1.5" PointX="34.25" PointY="374.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Operacao" Width="1.5" PointX="42.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Orcamento" Width="1.5" PointX="17.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OrcamentoPedido" Width="1.5" PointX="20" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.OrcamentoPedidoItem" Width="1.5" PointX="22.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Pais" Width="1.5" PointX="0.75" PointY="357.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Pallet" Width="1.5" PointX="48.75" PointY="348.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PalletDocumento" Width="1.5" PointX="65.25" PointY="393.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PalletDocumentoItem" Width="1.5" PointX="61.5" PointY="452.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PalletDocumentoItemCarregamento" Width="1.5" PointX="42.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ParametroFluxoDeCaixa" Width="1.5" PointX="23.25" PointY="398.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PercursoMdfe" Width="1.5" PointX="16.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PlanoDeContas_Ant" Width="1.5" PointX="42.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Planta" Width="1.5" PointX="45" PointY="421.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Portaria" Width="1.5" PointX="40.25" PointY="340.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PortariaVisitante" Width="1.5" PointX="45.5" PointY="345.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PreFatura" Width="1.5" PointX="19.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PreFaturaDocumento" Width="1.5" PointX="22" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PreFaturaRoge" Width="1.5" PointX="18.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.PrevisaoDeMaterial" Width="1.5" PointX="35.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Produto" Width="1.5" PointX="31.5" PointY="383.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoCliente" Width="1.5" PointX="28.5" PointY="372.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoClienteAvaria" Width="1.5" PointX="30.75" PointY="391.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoClienteRegra" Width="1.5" PointX="39.5" PointY="374" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoEmbalagem" Width="1.5" PointX="33.75" PointY="377.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoEstrutura" Width="1.5" PointX="30.75" PointY="397.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProdutoFoto" Width="1.5" PointX="33.75" PointY="384.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Projeto" Width="1.5" PointX="45" PointY="427.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProjetoArquivo" Width="1.5" PointX="47.25" PointY="426.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProjetoFilial" Width="1.5" PointX="47.25" PointY="399.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProjetoItem" Width="1.5" PointX="47.25" PointY="433" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ProjetoProducao" Width="1.5" PointX="47.25" PointY="436.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Proprietario" Width="1.5" PointX="18.75" PointY="316.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RamoDeAtividade" Width="1.5" PointX="21.75" PointY="389.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Rastreador" Width="1.5" PointX="24.75" PointY="321.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Rastreamento" Width="1.5" PointX="38.25" PointY="355.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Reclamacao" Width="1.5" PointX="42.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Redespacho" Width="1.5" PointX="15" PointY="458.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Regiao" Width="1.5" PointX="35.25" PointY="350.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RegiaoItem" Width="1.5" PointX="40.5" PointY="356" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRoge" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRogeCB" Width="1.5" PointX="17.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRogeConferenciaCega" Width="1.5" PointX="42.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRogeEan" Width="1.5" PointX="41.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRogeItem" Width="1.5" PointX="15" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ReposicaoRogeVolume" Width="1.5" PointX="15" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Representante" Width="1.5" PointX="56" PointY="356.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RepresentanteCliente" Width="1.5" PointX="35.25" PointY="347.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RequisicaoDeMaterial" Width="1.5" PointX="67.25" PointY="379.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RequisicaoDeMaterialDocumento" Width="1.5" PointX="43.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RequisicaoDeMaterialItem" Width="1.5" PointX="67.25" PointY="403.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Respostas" Width="1.5" PointX="20.25" PointY="329.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RetornoComprovei" Width="1.5" PointX="43.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Romaneio" Width="1.5" PointX="46.5" PointY="348.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioConferencia" Width="1.5" PointX="48.75" PointY="443" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioConferenciaItem" Width="1.5" PointX="51" PointY="443" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioDocumento" Width="1.5" PointX="65.25" PointY="398.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioDocumentoConferencia" Width="1.5" PointX="69.5" PointY="381" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioDocumentoFrete" Width="1.5" PointX="67.25" PointY="384.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioDocumentoItem" Width="1.5" PointX="58.5" PointY="469.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioOcorrencia" Width="1.5" PointX="51.75" PointY="347.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioPrevisao" Width="1.5" PointX="38.25" PointY="310.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RomaneioPrevisaoRegiao" Width="1.5" PointX="40.5" PointY="349.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Roteirizacao" Width="1.5" PointX="45" PointY="439.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RoteirizacaoTipo" Width="1.5" PointX="38.25" PointY="331.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RPCI" Width="1.5" PointX="57" PointY="344.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RPCIDocumento" Width="1.5" PointX="59.25" PointY="393.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.RPCIImagem" Width="1.5" PointX="59.25" PointY="349.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Rua" Width="1.5" PointX="20.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Servico" Width="1.5" PointX="65" PointY="378.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Setor" Width="1.5" PointX="38.25" PointY="328.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.SetorCep" Width="1.5" PointX="40.5" PointY="328.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.SituacaoTributariaCofins" Width="1.5" PointX="22.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.SituacaoTributariaIcms" Width="1.5" PointX="43.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.SituacaoTributariaIPI" Width="1.5" PointX="43.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.SituacaoTributariaPIS" Width="1.5" PointX="43.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Sobra" Width="1.5" PointX="35.25" PointY="356.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.sysdiagrams" Width="1.5" PointX="43.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.sysproperties" Width="1.5" PointX="37.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFrete" Width="1.5" PointX="33" PointY="328.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFreteProduto" Width="1.5" PointX="35.25" PointY="329.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFreteRota" Width="1.5" PointX="43.5" PointY="351.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFreteRotaModal" Width="1.5" PointX="48.75" PointY="368.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFreteRotaModalValor" Width="1.5" PointX="60" PointY="364.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TabelaDeFreteVigencia" Width="1.5" PointX="57.75" PointY="341.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TB_AUX_RE" Width="1.5" PointX="43.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.tblBairros" Width="1.5" PointX="2.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.tblCidades" Width="1.5" PointX="4.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.tblLogradouros" Width="1.5" PointX="44.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.tblUF" Width="1.5" PointX="44.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TES" Width="1.5" PointX="25.5" PointY="389.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TESCFOP" Width="1.5" PointX="33.75" PointY="389.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TESControle" Width="1.5" PointX="27.75" PointY="392.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeEscolta" Width="1.5" PointX="24.75" PointY="318.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeItem" Width="1.5" PointX="44.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeMonitoramento" Width="1.5" PointX="24.75" PointY="315.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeMovimento" Width="1.5" PointX="44.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeOperacao" Width="1.5" PointX="44.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeTitulo" Width="1.5" PointX="19.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeTituloDuplicata" Width="1.5" PointX="22" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TipoDeVolume" Width="1.5" PointX="44.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Titulo" Width="1.5" PointX="34.25" PointY="336.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloDocumento" Width="1.5" PointX="60.25" PointY="380.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloDuplicata" Width="1.5" PointX="42.5" PointY="333.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloDuplicataHistorico" Width="1.5" PointX="44.75" PointY="337.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloDuplicataRemessa" Width="1.5" PointX="47.75" PointY="337" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloHistorico" Width="1.5" PointX="39.5" PointY="336.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloImagem" Width="1.5" PointX="36.5" PointY="375.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.TituloItem" Width="1.5" PointX="24.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Transportadora" Width="1.5" PointX="31.5" PointY="372.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeArmazenagem" Width="1.5" PointX="37.5" PointY="364.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeArmazenagemAgrup" Width="1.5" PointX="39.75" PointY="381.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeArmazenagemLote" Width="1.5" PointX="39.75" PointY="383.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeArmazenagemMov" Width="1.5" PointX="45.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeMedida" Width="1.5" PointX="26.25" PointY="399.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeDeNegocios" Width="1.5" PointX="45.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UnidadeFuncional" Width="1.5" PointX="24" PointY="332.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Usuario" Width="1.5" PointX="18" PointY="333.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioAlerta" Width="1.5" PointX="23.25" PointY="335.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCentroDeCusto" Width="1.5" PointX="31.75" PointY="342.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCentroDeCustoOperacao" Width="1.5" PointX="10.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCentroDeCustoOperacaoLog" Width="1.5" PointX="45.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCliente" Width="1.5" PointX="29.25" PointY="341.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioClienteDivisao" Width="1.5" PointX="28.5" PointY="338.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCompra" Width="1.5" PointX="26.25" PointY="332.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioCota" Width="1.5" PointX="45.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioDeTabelaDeFrete" Width="1.5" PointX="37.25" PointY="340.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioFavoritos" Width="1.5" PointX="20.25" PointY="366.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioFilial" Width="1.5" PointX="57" PointY="365.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioGrade" Width="1.5" PointX="20.25" PointY="368.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioGradeCampo" Width="1.5" PointX="22.5" PointY="368.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioModal" Width="1.5" PointX="45.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioOpcao" Width="1.5" PointX="29.25" PointY="313" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioOpcaoAcesso" Width="1.5" PointX="31.5" PointY="313.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioOperacao" Width="1.5" PointX="20.25" PointY="372" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioOperacaoLog" Width="1.5" PointX="45.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.UsuarioPerfil" Width="1.5" PointX="54" PointY="346.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.Veiculo" Width="1.5" PointX="21" PointY="336.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoFilial" Width="1.5" PointX="58" PointY="360.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoFoto" Width="1.5" PointX="23.25" PointY="341.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoLicenciamento" Width="1.5" PointX="21" PointY="379" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoMarca" Width="1.5" PointX="16.5" PointY="313.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoModelo" Width="1.5" PointX="18.75" PointY="313.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoRastreador" Width="1.5" PointX="18.75" PointY="375.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoTabela" Width="1.5" PointX="58" PointY="374.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoTabelaAgregado" Width="1.5" PointX="60.25" PointY="356.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoTabelaRegiao" Width="1.5" PointX="43.5" PointY="348.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoTabelaRegiaoItem" Width="1.5" PointX="45.75" PointY="340.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.VeiculoTipo" Width="1.5" PointX="18.75" PointY="378.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.XmlComprovei" Width="1.5" PointX="45.75" PointY="39.75" IsExpanded="true" />
+        <!--<EntityTypeShape EntityType="STNNOVOModel.ZID_AgendaRecebimento" Width="1.5" PointX="39.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Agrupamento" Width="1.5" PointX="41.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_AgrupamentoRegiao" Width="1.5" PointX="45.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_AVISO" Width="1.5" PointX="43.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_BAIRRO" Width="1.5" PointX="45.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_BANCOCONTA" Width="1.5" PointX="46.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_BANCOCONTABLOQUETO" Width="1.5" PointX="6.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_bordero" Width="1.5" PointX="46.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_BorderoTituloDuplicata" Width="1.5" PointX="46.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CADASTRO" Width="1.5" PointX="46.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroCdaUsuarioClienteDivisao" Width="1.5" PointX="46.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CADASTROCOMPLEMENTO" Width="1.5" PointX="46.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroCondicaoEntrega" Width="1.5" PointX="46.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_cadastrocontato" Width="1.5" PointX="46.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroContatoEndereco" Width="1.5" PointX="46.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroEndereco" Width="1.5" PointX="46.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroEntrega" Width="1.5" PointX="45.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroHistorico" Width="1.5" PointX="47.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroImagem" Width="1.5" PointX="0.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CadastroReferencia" Width="1.5" PointX="47.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CentrodeCustoFilial" Width="1.5" PointX="47.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Cheque" Width="1.5" PointX="16.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CIDADE" Width="1.5" PointX="22.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_clientedivisao" Width="1.5" PointX="24.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ClienteEdi" Width="1.5" PointX="26.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ClienteFilial" Width="1.5" PointX="47.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ClienteSetorFilial" Width="1.5" PointX="28.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ClienteTipoDeMaterial" Width="1.5" PointX="47.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ClienteTipoDeMaterialDivisao" Width="1.5" PointX="47.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_COLETORCONFERENCIA" Width="1.5" PointX="47.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_COLETORCONFERENCIAITEM" Width="1.5" PointX="47.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_COLETORCONFERENCIALOG" Width="1.5" PointX="47.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_COLETORCONFERENCIAVOLUME" Width="1.5" PointX="37.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIA" Width="1.5" PointX="47.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLET" Width="1.5" PointX="39.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLETDOC" Width="1.5" PointX="47.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLETDOCVOL" Width="1.5" PointX="41.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLETDOCVOLITEM" Width="1.5" PointX="47.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLETENTRADA" Width="1.5" PointX="47.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONFERENCIAPALLETENTRADALOTE" Width="1.5" PointX="47.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_contacontabil" Width="1.5" PointX="48.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ContaContabilFilial" Width="1.5" PointX="2.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CONTRATO" Width="1.5" PointX="4.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ContratoImagem" Width="1.5" PointX="6.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ContratoItem" Width="1.5" PointX="8.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ContratoItemCCusto" Width="1.5" PointX="48.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ContratoObservacao" Width="1.5" PointX="10.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CotacaoDeCompra" Width="1.5" PointX="48.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CotacaoDeCompraItem" Width="1.5" PointX="48.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_CotacaoFornecedor" Width="1.5" PointX="48.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Deposito" Width="1.5" PointX="48.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DepositoPlanta" Width="1.5" PointX="18.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DepositoPlantaLeiaute" Width="1.5" PointX="48.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DepositoPlantaLocalizacao" Width="1.5" PointX="48.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DepositoPlantaLocalizacaoRegra" Width="1.5" PointX="48.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTO" Width="1.5" PointX="48.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoAFaturar" Width="1.5" PointX="43.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOAGUARDANDOCTRC" Width="1.5" PointX="49.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoAte" Width="1.5" PointX="49.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoAteItem" Width="1.5" PointX="49.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoCda" Width="1.5" PointX="20.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoCFOP" Width="1.5" PointX="22.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOCOMPROVANTE" Width="1.5" PointX="24.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoCondicaoDePagamento" Width="1.5" PointX="26.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoCotacao" Width="1.5" PointX="49.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOCUBAGEM" Width="1.5" PointX="28.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoEdi" Width="1.5" PointX="49.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoEletronico" Width="1.5" PointX="49.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoEmbalagem" Width="1.5" PointX="49.75" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoFilial" Width="1.5" PointX="49.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoFrete" Width="1.5" PointX="49.75" PointY="37.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoImposto" Width="1.5" PointX="37.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOITEM" Width="1.5" PointX="49.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoItemComplemento" Width="1.5" PointX="39.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoObjetoOcorrencia" Width="1.5" PointX="49.75" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoObservacao" Width="1.5" PointX="49.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoOcorrencia" Width="1.5" PointX="49.75" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOOCORRENCIAARQUIVO" Width="1.5" PointX="45.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoOcorrenciaItem" Width="1.5" PointX="49.75" PointY="47.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoOrcamento" Width="1.5" PointX="47.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoRecebimento" Width="1.5" PointX="49.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DocumentoRelacionado" Width="1.5" PointX="0.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DOCUMENTOREMESSA" Width="1.5" PointX="50.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DT" Width="1.5" PointX="2.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DtContaCorrente" Width="1.5" PointX="4.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DTEletronico" Width="1.5" PointX="6.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DTFaturamento" Width="1.5" PointX="50.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DtFaturamentoCliente" Width="1.5" PointX="8.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DtFaturamentoClienteDocumento" Width="1.5" PointX="50.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DTHistorico" Width="1.5" PointX="10.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_DTROMANEIO" Width="1.5" PointX="50.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI" Width="1.5" PointX="50.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Bairro" Width="1.5" PointX="50.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Cadastro" Width="1.5" PointX="16.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_CadastroContatoEndereco" Width="1.5" PointX="50.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Cidade" Width="1.5" PointX="50.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Documento" Width="1.5" PointX="50.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoAguardandoCtrc" Width="1.5" PointX="50.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoEdi" Width="1.5" PointX="33.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoFilial" Width="1.5" PointX="41.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoFrete" Width="1.5" PointX="51.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoItem" Width="1.5" PointX="51.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoNFE" Width="1.5" PointX="51.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoNotaFiscal" Width="1.5" PointX="18.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_DocumentoRelacionado" Width="1.5" PointX="20.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Edi" Width="1.5" PointX="22.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Estado" Width="1.5" PointX="24.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_Produto" Width="1.5" PointX="51.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_ProdutoCliente" Width="1.5" PointX="26.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EDI_ProdutoEmbalagem" Width="1.5" PointX="51.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EdiControleDeArquivo" Width="1.5" PointX="28.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EdiControleDeArquivoLog" Width="1.5" PointX="51.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EdiPlanilha" Width="1.5" PointX="51.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EdiPlanilhaDetalhe" Width="1.5" PointX="51.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EdiTrocaDeArquivo" Width="1.5" PointX="35.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ESTADO" Width="1.5" PointX="51.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ESTOQUE" Width="1.5" PointX="37.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_EstoqueComprasMov" Width="1.5" PointX="51.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ESTOQUEDIVISAO" Width="1.5" PointX="51.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ESTOQUEDIVISAOMOV" Width="1.5" PointX="51.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ESTOQUEMOV" Width="1.5" PointX="43.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ExtratoParaConciliacao" Width="1.5" PointX="51.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_feriado" Width="1.5" PointX="45.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_FilialCidadeSetor" Width="1.5" PointX="51.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_FilialPortaria" Width="1.5" PointX="47.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Fornecedorfilial" Width="1.5" PointX="51.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_GAIOLA" Width="1.5" PointX="49.75" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_GAIOLACONFERENCIA" Width="1.5" PointX="51.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_grupodeproduto" Width="1.5" PointX="0.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_icms" Width="1.5" PointX="52.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Inventario" Width="1.5" PointX="2.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_InventarioContagem" Width="1.5" PointX="4.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_inventariocontagemproduto" Width="1.5" PointX="6.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Lancamento" Width="1.5" PointX="52.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_LANCAMENTOCONTABIL" Width="1.5" PointX="8.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_LancamentoContabilCC" Width="1.5" PointX="52.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Lote" Width="1.5" PointX="10.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_LoteEletronico" Width="1.5" PointX="52.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_MAPA" Width="1.5" PointX="52.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Modal" Width="1.5" PointX="52.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_modulomenu" Width="1.5" PointX="52.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ModuloOpcao" Width="1.5" PointX="52.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Motivo" Width="1.5" PointX="52.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_MOTORISTAFILIAL" Width="1.5" PointX="52.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_MotoristaHistorico" Width="1.5" PointX="39.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_MOVIMENTACAO" Width="1.5" PointX="51.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_movimentacaobancaria" Width="1.5" PointX="53.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_MOVIMENTACAOITEM" Width="1.5" PointX="53.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Numerador" Width="1.5" PointX="53.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ocorrencia" Width="1.5" PointX="16.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ocorrenciaserie" Width="1.5" PointX="18.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Operacao" Width="1.5" PointX="20.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PAIS" Width="1.5" PointX="22.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PalletDocumento" Width="1.5" PointX="24.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PalletDocumentoItem" Width="1.5" PointX="53.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ParametroFluxoDeCaixa" Width="1.5" PointX="26.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Portaria" Width="1.5" PointX="53.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PortariaVisitante" Width="1.5" PointX="28.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PreFatura" Width="1.5" PointX="53.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PreFaturaDocumento" Width="1.5" PointX="53.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PRODUTO" Width="1.5" PointX="33.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PRODUTOCLIENTE" Width="1.5" PointX="53.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_PRODUTOEMBALAGEM" Width="1.5" PointX="35.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ProdutoEstrutura" Width="1.5" PointX="53.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_produtofoto" Width="1.5" PointX="53.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RASTREAMENTO" Width="1.5" PointX="53.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Regiao" Width="1.5" PointX="41.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_regiaoItem" Width="1.5" PointX="53.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_ReposicaoRoge" Width="1.5" PointX="43.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RequisicaoDeMaterial" Width="1.5" PointX="53.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RequisicaodeMaterialDocumento" Width="1.5" PointX="45.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RequisicaoDeMaterialItem" Width="1.5" PointX="53.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Romaneio" Width="1.5" PointX="47.75" PointY="53.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioDocumento" Width="1.5" PointX="53.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioDocumentoConferencia" Width="1.5" PointX="53.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioDocumentoItem" Width="1.5" PointX="53.75" PointY="52.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioOcorrencia" Width="1.5" PointX="0.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioPrevisao" Width="1.5" PointX="54.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RomaneioPrevisaoRegiao" Width="1.5" PointX="2.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RPCI" Width="1.5" PointX="4.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_RPCIDocumento" Width="1.5" PointX="6.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Setor" Width="1.5" PointX="54.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_SetorCEP" Width="1.5" PointX="8.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Sobra" Width="1.5" PointX="54.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFrete" Width="1.5" PointX="10.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFreteProduto" Width="1.5" PointX="54.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFreteRota" Width="1.5" PointX="54.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFreteRotaModal" Width="1.5" PointX="54.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFreteRotaModalValor" Width="1.5" PointX="54.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TabelaDeFreteVigencia" Width="1.5" PointX="54.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TES" Width="1.5" PointX="54.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TESCFOP" Width="1.5" PointX="54.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_Titulo" Width="1.5" PointX="37.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloDocumento" Width="1.5" PointX="49.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloDuplicata" Width="1.5" PointX="51.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloDuplicataHistorico" Width="1.5" PointX="53.75" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloDuplicataremessa" Width="1.5" PointX="55.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloHistorico" Width="1.5" PointX="55.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TituloImagem" Width="1.5" PointX="55.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_TRANSPORTADORA" Width="1.5" PointX="16.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UnidadeDeArmazenagem" Width="1.5" PointX="18.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UnidadeDeArmazenagemAgrup" Width="1.5" PointX="20.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UnidadeDeArmazenagemLote" Width="1.5" PointX="22.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UnidadeDeArmazenagemMov" Width="1.5" PointX="24.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_usuario" Width="1.5" PointX="55.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioCliente" Width="1.5" PointX="26.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioClienteDivisao" Width="1.5" PointX="55.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioCompra" Width="1.5" PointX="28.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioDeTabelaDeFrete" Width="1.5" PointX="55.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioFilial" Width="1.5" PointX="55.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_USUARIOGRADE" Width="1.5" PointX="33.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_USUARIOGRADECAMPO" Width="1.5" PointX="55.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_usuarioopcao" Width="1.5" PointX="55.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_USUARIOOPERACAO" Width="1.5" PointX="55.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_UsuarioOperacaoLog" Width="1.5" PointX="39.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VEICULO" Width="1.5" PointX="55.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_veiculoFilial" Width="1.5" PointX="41.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_veiculomarca" Width="1.5" PointX="55.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VEICULOMODELO" Width="1.5" PointX="43.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VEICULORASTREADOR" Width="1.5" PointX="55.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VeiculoTabela" Width="1.5" PointX="45.75" PointY="55.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VeiculoTabelaAgregado" Width="1.5" PointX="55.75" PointY="46.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VeiculoTabelaRegiao" Width="1.5" PointX="55.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_VeiculoTabelaRegiaoItem" Width="1.5" PointX="55.75" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="STNNOVOModel.ZID_veiculotipo" Width="1.5" PointX="55.75" PointY="52.75" IsExpanded="true" />-->
+        <AssociationConnector Association="STNNOVOModel.FK_Agenda_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Agendamento_AgendaRecebimento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Agendamento_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Agendamento_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Agendamento_VeiculoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgendamentoDocumento_Agendamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgendaRecebimento_Agendamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Portaria_Agendamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgendamentoDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgendaRecebimento_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgendaRecebimento_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Agregado_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgrupamentoRegiao_Agrupamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_AgrupamentoRegiao_Regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Ajuda_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatoAlerta_Alerta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioAlerta_Alerta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Apolice_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Apolice_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Apolice_Seguradora" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ArquivoItem_Arquivo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Aviso_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Aviso_ClienteDivisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Aviso_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Bairro_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BairroFaixaDeCep_Bairro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cadastro_Bairro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroEndereco_Bairro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoCarteira_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoEspecie_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoInstrucao_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoInstrucaoDeProtesto_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoOcorRemessa_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoOcorRetorno_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroComplemento_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cheque_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoCarteira" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoConta_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoCtaBlq_BancoConta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cheque_BancoConta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_BancoConta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_BancoContaDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_BancoContaOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoContaBloqueto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoContaBloqueto1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoContaBloqueto2" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoEspecie" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoInstrucao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoContaBloqueto_BancoInstrucaoDeProtesto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicata_IdBancoContaBloqueto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BancoOcorrenciaRejeicao_BancoOcorrenciaRetorno" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicataRemessa_BancoOcorrenciaRemessa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Bordero_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BorderoTituloDuplicata_Bordero" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_BorderoTituloDuplicata_TituloDuplicata" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cadastro_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroComplemento_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroCondicaoEntrega_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatos_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatos_Cadastro1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatos_Cadastro2" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroEndereco_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroEntrega_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroFoto_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroHistorico_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroReferencia_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroRegiao_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cliente_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Redespacho" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_CadastroMonitoramento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_CadastroTitular" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EdiTrocaDeArquivo_IdDestino_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EdiTrocaDeArquivo_IdOrigem_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Empresa_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_Cadastro1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Inventario_CDA" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PortariaVisitante_PortariaVisitanteCadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Redespacho_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Representante_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoFrete_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCI_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Transportadora_Cadastro" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Usuario_CadastroUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Veiculo_CadastroTitular" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroCdaUsuarioClienteDivisao_UsuarioClienteDivisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatoAlerta_CadastroContato" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroContatos_CadastroTipoDeContato" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroEndereco_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroRegiao_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CadastroRegiao_RegiaoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CentroDeCusto_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CentroDeCusto_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CentroDeCustoFilial_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cliente_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilCentroDeCusto_IdCentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_CentroDeCustoCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_CentroDeCustoDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_CentroDeCustoCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_CentroDeCustoDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Funcionario_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LancamentoContabil_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_CentroDeCustoCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_CentroDeCustoDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCentroDeCusto_CentroDeCusto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CentroDeCustoFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cliente_Cfop" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoCfop_Cfop" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_Cfop" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TESCFOP_Cfop" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DtCheque_Cheque" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_Cheque" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cidade_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CidadeDistancia_CidadeDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_CidadeDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_CidadeOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Feriado_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FilialCidadeSetor_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Cidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_CidadeDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_CidadeOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoCidade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CidadeDistancia_IdFilial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cliente_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Cliente_RamoDeAtividade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteDivisao_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteEDI_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteFilial_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteMeta_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteRegras_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteSetorFilial_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteTabelaDeFrete_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteTipoDeMaterial_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacao_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacaoRegra_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamentoCliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_GrupoDeProduto_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MenuCliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Regiao_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RepresentanteCliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Sobras_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Titulo_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteDivisao_Parente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisao_ClienteDivisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioClienteDivisao_ClienteDivisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteEDI_EDI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteEDI_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteSetorFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteSetorFilial_Setor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_ClienteTipoDeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferencia_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferencia_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferencia_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferenciaItem_ColetorConferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferenciaVolume_ColetorConferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferenciaLog_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferenciaLog_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ColetorConferenciaLog_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConciliacaoLote_Conciliacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConciliacaoLoteDetalhe_ConciliacaoLote" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Titulo_CondicaoDePagamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Conferencia_ConferenciaRomaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaItemNaoCadastrado_Conferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPallet_Conferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPallet_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPallet_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletDoc_ConferenciaPallet" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntrada_ConferenciaPallet" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntradaLote_ConferenciaPallet" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletProduto_ConferenciaPallet" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletDoc_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletDocVol_ConferenciaPalletDoc" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletDocVolItem_ConferenciaPalletDocVol" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletItem_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletItem_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntrada_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntrada_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntradaLote_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletEntradaLote_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ConferenciaPalletProduto_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabil_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabil_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilCentroDeCusto_IdContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilFilial_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilLancamento_ContaContabilCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilLancamento_ContaContabilDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_ContaContabilCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_ContaContabilDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_ContaContabilCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Fornecedor_ContaContabilDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Funcionario_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LancamentoContabil_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_ContaContabilCredito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_ContaContabilDebito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Transportadora_ContaContabil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaContabilLancamento_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaDespesaCapa_ContaDespesa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaDespesaIamagem_ContaDespesa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaDespesaItem_ContaDespesa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContaDespesaObservacao_ContaDespesa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContratoCapa_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContratoImagem_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContratoItem_Contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ContratoItemCCusto_ContratoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CotacaoDeCompraItem_RequisicaoDeMaterialItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_CotacaoFornecedorCondicaoPagamento_CotacaoFornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DDAImagem_DDA" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicata_TituloDuplicataDDA" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Funcionario_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Deposito_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlanta_Deposito" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLeiaute_DepositoPlanta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacao_DepositoPlanta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacaoRegra_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoClienteRegraLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UnidadeDeArmazenagem_DepositoPlantaLocalizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacaoRegra_DepositoPlantaLocalizacaoRegra" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacaoRegra_GrupoDeProduto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DepositoPlantaLocalizacaoRegra_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Documento_DocumentoOcorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoAFaturar_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoAguardandoCTRC_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoCfop_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoComprovante_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoComprovante_Documento1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoCondicaoDePagamento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoCubagem_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoEdi_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoEletronico_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoEmbalagem_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoFilial_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoFoto_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoFrete_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoItem_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoNotaFiscal_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoNotaFiscal_NotaFiscal" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoObjeto_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoObservacao_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrencia_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOrcamento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoRecebimento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoReclamacao_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoRelacionado_DocumentoRelacionadoFilho" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoRelacionado_DocumentoRelacionadoPai" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoReprogramado_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamentoCliente_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamentoClienteDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_IdDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_IdDocumentoCDA_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LabelPicking_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Lote_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumento_DocumentoVerificado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoFrete_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCIDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDocumento_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoAFaturar_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoAguardandoCTRC_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoEdi_EDI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoEdi_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoItemComplemento_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoItemEmpenhado_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoItemLabelPicking_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrenciaItem_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_IdDocumentoItem_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoItem_DocumentoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoObjetoOcorrencia_DocumentoObjeto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrencia_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrencia_Ocorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrencia_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrenciaArquivo_DocumentoOcorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOcorrenciaItem_DocumentoOcorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoOrcamento_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_FilialDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_PrimeiroMotorista" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_PrimeiroVeiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Proprietario1Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Proprietario2Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_SegundoMotorista" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Transportadora" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_UsuarioBaixou" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_UsuarioEmitiu" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporte_Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporteRomaneio_DocumentoDeTransporte" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_DTTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_Modal" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_Rastreador" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_RPCI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_TipoDeEscolta" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DT_TipoDeMonitoramento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DtCheque_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTContaCorrente_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamento_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTHistorico_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Portaria_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Rastreamento_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCIDocumento_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDocumento_DT" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamentoCliente_DTFaturamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTFaturamentoClienteDocumento_DTFaturamentoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DTHistorico_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_DocumentoDeTransporteRomaneio_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EdiControleDeArquivo_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayoutPergunta_EDILayOut" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayOutReg_EDILayOut" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayoutTabela_EDILayOut" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayOutReg_EDILayOutReg" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayOutRegCpo_EDILayOutReg" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EDILayoutRegTabela_EDILayOutReg" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Empresa_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Filial_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Inss_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Modal_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Numerador_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Ocorrencia_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ParametroFluxoDeCaixa_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Estado_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstadoFaixaDeCep_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Feriado_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Icms_EstadoIDEstadoDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Icms_EstadoIDEstadoOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_EstadoDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_EstadoOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Estoque_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Estoque_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueComprasMov_Estoque" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisao_Estoque" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Lote_Estoque" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueComprasMov_Lote" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueComprasMov_RequisicaoDeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueComprasMov_RequisicaoDeMaterialItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueComprasMov_UnidadeDeArmazenagemLote" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_EstoqueDivisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_EstoqueDivisaoDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_EstoqueDivisaoOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_EstoqueOperacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_MovimentacaoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_EstoqueDivisaoMov_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FilialCidadeSetor_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FornecedorFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Funcionario_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Inventario_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LancamentoContabil_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Mapa_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MotoristaFilialFilial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Movimentacao_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Numerador_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Numerador_Filial1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Planta_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Portaria_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Projeto_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProjetoFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Regiao_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Representante_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_idFilialDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoFrete_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Roteirizacao_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCI_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Sobras_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_FilialDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_FilialOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Titulo_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UnidadeDeArmazenagem_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_Filial1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioPerfil_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoFilial_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabela_Filial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FilialCidadeSetor_Setor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ModalidadeDePagamento_FinalidadeDocTed" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FornecedorFilial_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Titulo_Fornecedor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FrotaGrupoItemControleItem_Frota" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FrotaVeiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_FrotaGrupoItemControleItem_FrotaGrupoItemControle" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_GaiolaConferencia_Gaiola" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_GrandeUsuarioEnderecoGrandeUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LoginPerfil_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Usuario_Grupo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_GrupoDeProduto_Parente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Produto_GrupoDeProduto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InvetarioContagem_Inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_InventarioContagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioUa_InventarioContagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioContagemProduto_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_InventarioUa_UnidadeDeArmazenagemLote" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LancamentoPadraoConfiguracao_LancamentoPadrao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LicenciamentoMes_Licenciamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LOG_BAIRRO_LOG_LOCALIDADE" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LOG_FAIXA_LOCALIDADE_LOG_LOCALIDADE" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_LoginPerfilPermissao_LoginPerfil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Lote_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Lote_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Lote_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Mapa_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Mapa_UsuarioProcessamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_Mapa" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MenuCliente_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteModal_IdModal" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ModuloMenu_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ModuloOpcaoAcao_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ModuloOpcaoTabela_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioOpcao_ModuloOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.TESControle_fk2" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Moeda_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MoedaCotacao_Moeda" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MotoristaFilialMotorista" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MotoristaHistorico_Motorista" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoMotorista" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Movimentacao_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneio_Movimentacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_Movimentacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoBancaria_TituloDuplicata" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneio_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_MovimentacaoRomaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_UnidadeDeArmazenagemLote" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_MovimentacaoRomaneioItem_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Ocorrencia_OcorrenciaAcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_OcorrenciaCodigo_Ocorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_OcorrenciaDePara_Ocorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioOcorrencia_Ocorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TES_IDOcorrencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_OcorrenciaCodigo_OcorrenciaSerie" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_OrcamentoPedido_Orcamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_OrcamentoPedidoItem_OrcamentoPedido" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Pallet_IdUsuario_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Pallet_IdUsuarioCarregamento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Pallet_IdUsuarioReaberturaIdUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Pallet_Pallet" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Pallet_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_IdUADocumento_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PalletDocumento_PalletDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PalletDocumento_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PalletDocumentoItem_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Portaria_Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PortariaVisitante_PortariaVisitantePortaria" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_Portaria" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_PreFaturaDocumento_PreFatura" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoEmbalagem_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoFoto_Produto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioConferenciaItem_DUN14" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioConferenciaItem_EAN13" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoCliente_UnidadeDeMedida" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoClienteAvaria_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoClienteRegra_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoEmbalagem_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoEstrutura_ProdCliFilho" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoEstrutura_ProdCliPai" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_ProdutoCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProdutoEmbalagem_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_ProdutoEmbalagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProjetoArquivo_Projeto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProjetoFilial_Projeto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProjetoItem_Projeto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ProjetoProducao_Projeto" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoProprietario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Rastreamento_Rastreador" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Regiao_TabelaDeFrete" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Regiao_Transportadora" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_Romaneio_Regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioPrevisaoRegiao_Regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_RegiaoDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_RegiaoOrigem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabelaRegiao_Regiao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_RoteirizacaoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RegiaoItem_Setor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ReposicaoRogeItem_ReposicaoRoge" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ReposicaoRogeVolume_ReposicaoRoge" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ReposicaoRogeCB_ReposicaoRogeItem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RepresentanteCliente_Representante" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RequisicaoDeMaterialItem_RequisicaoDeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RespostasPadrao_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Romaneio_RomaneioRelacionado" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioConferencia_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumento_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioOcorrencia_Romaneio" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioConferenciaItem_RomaneioConferencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_RomaneioDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoConferencia_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioDocumentoFrete_Servico" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioOcorrencia_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RomaneioPrevisaoRegiao_RomaneioPrevisao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Roteirizacao_Roteirizacao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Roteirizacao_RoteirizacaoParent" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCI_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCIDocumento_RPCI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_RPCIImagem_RPCI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDocumento_RPCI" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_SetorCep_Setor" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_ClienteTabelaDeFrete_TabelaDeFrete" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteProduto_TabelaDeFrete" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRota_TabelaDeFrete" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteVigencia_TabelaDeFrete" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteModal_Rota" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRotaModalValor_RotaModal" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TabelaDeFreteRotaModalValor_Vigencia" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TESCFOP_TES" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.TESControle_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TipoDeTituloDuplicata_TipoDeTitulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_Titulo_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDocumento_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicata_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloHistorico_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloImagem_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicataHistorico_Titulo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicataRemessa_TituloDuplicata" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloDuplicataHistorico_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_TituloHistorico_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_Transportadora" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UnidadeDeArmazenagemAgrupamento_UnidadeDeArmazenagem1" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UnidadeDeArmazenagemLote_UnidadeDeArmazenagem" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCompra_UnidadeFuncional" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioAlerta_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCentroDeCusto_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCliente_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioCompra_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioFavoritos_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioFilial_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioGrade_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioOperacao_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioPerfil_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioPerfil_UsuarioPerfil" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_VeiculoFilial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioDeTabelaDeFrete_VeiculoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioFilial_UsuarioFilial" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioGradeCampo_UsuarioGrade" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_UsuarioOpcaoAcesso_UsuarioOpcao" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoFilialVeiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoFoto_Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabela_Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabelaAgregado_Veiculo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoVeiculoModelo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoVeiculoRastreador" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoVeiculoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoLicenciamento_VeiculoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoModelo_VeiculoMarca" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabela_VeiculoTipo" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabelaAgregado_VeiculoTabela" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabelaRegiao_VeiculoTabela" ManuallyRouted="false" />
+        <AssociationConnector Association="STNNOVOModel.FK_VeiculoTabelaRegiaoItem_VeiculoTabelaRegiao" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="STNNOVOModel.Conexao" Width="1.5" PointX="3.9398387036937468" PointY="3.0344060822550234" />
+        <AssociationConnector Association="STNNOVOModel.FK_Conexao_Cliente" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

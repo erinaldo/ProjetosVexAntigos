@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:error="http://www.accurate.com/acec/ErrorLog" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:client="http://www.accurate.com/acec/StockServices" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StockServices" targetNamespace="http://www.accurate.com/acec/StockServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import schemaLocation="schemas/StockServices.xsd" namespace="http://www.accurate.com/acec/StockServices" />
+      <xsd:import schemaLocation="schemas/ErrorLog.xsd" namespace="http://www.accurate.com/acec/ErrorLog" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SetStockRequestMessage">
+    <wsdl:part name="payload" element="client:setStockRequest" />
+  </wsdl:message>
+  <wsdl:message name="SetStockResponseMessage">
+    <wsdl:part name="payload" element="client:setStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetStockFaultMessage">
+    <wsdl:part name="payload" element="error:error" />
+  </wsdl:message>
+  <wsdl:portType name="StockServices">
+    <wsdl:operation name="setStock">
+      <wsdl:input message="client:SetStockRequestMessage" />
+      <wsdl:output message="client:SetStockResponseMessage" />
+      <wsdl:fault name="setStockFault" message="client:SetStockFaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StockServicesBinding" type="client:StockServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="setStock">
+      <soap:operation soapAction="setStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="setStockFault">
+        <soap:fault use="literal" name="setStockFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StockServices">
+    <wsdl:port name="StockServices_pt" binding="client:StockServicesBinding">
+      <soap:address location="http://comp300.acc.br:11110/soa-infra/services/default/StockServices/StockServices_en" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

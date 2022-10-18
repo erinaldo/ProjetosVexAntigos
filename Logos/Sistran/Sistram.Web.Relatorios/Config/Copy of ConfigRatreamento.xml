@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ConexoesRastrear>
+  <ImagensClientes id="01" value="Data Source=192.168.10.4;Initial Catalog=GrupoLogos;User ID=site_ASP;Password=asp7998;"/>
+  <ImagensClientes id="02" value="Data Source=192.168.10.5;Initial Catalog=GrupoLogosTeste;User ID=site_ASP;Password=asp7998;" />  
+</ConexoesRastrear>

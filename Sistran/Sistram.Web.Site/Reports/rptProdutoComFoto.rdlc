@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="SistranWebGrupoLogos">
+      <rd:DataSourceID>9626ba24-8a94-4aa5-a1ad-e90cce8a2f4d</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="Divisao">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.1cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <BottomMargin>1cm</BottomMargin>
+  <rd:ReportID>ca7f6806-2b87-4c20-a700-7d31f319d1fc</rd:ReportID>
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="DsProdutoComFoto_ProdutoFoto">
+      <Fields>
+        <Field Name="FOTO">
+          <DataField>FOTO</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="CODIGODOCLIENTE">
+          <DataField>CODIGODOCLIENTE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CODIGO">
+          <DataField>CODIGO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DESCRICAO">
+          <DataField>DESCRICAO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PERECIVEL">
+          <DataField>PERECIVEL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VALIDADE">
+          <DataField>VALIDADE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SALDODIVISAODISPONIVEL">
+          <DataField>SALDODIVISAODISPONIVEL</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="RODOVIARIO">
+          <DataField>RODOVIARIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AERIO">
+          <DataField>AERIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VALORUNITARIO">
+          <DataField>VALORUNITARIO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CONTEUDO">
+          <DataField>CONTEUDO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UNIDADEDEMEDIDA">
+          <DataField>UNIDADEDEMEDIDA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ALTURA">
+          <DataField>ALTURA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LARGURA">
+          <DataField>LARGURA</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="COMPRIMENTO">
+          <DataField>COMPRIMENTO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PESOBRUTO">
+          <DataField>PESOBRUTO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PESOLIQUIDO">
+          <DataField>PESOLIQUIDO</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DATALIMITEDEUSO">
+          <DataField>DATALIMITEDEUSO</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SistranWebGrupoLogos</DataSourceName>
+        <CommandText>SELECT  
+(SELECT TOP 1 FOTO FROM PRODUTOFOTO PF WHERE PF.IDPRODUTO=PR.IDPRODUTO ) FOTO, 
+ISNULL(PROCLI.CODIGODOCLIENTE, PROCLI.CODIGO) CODIGODOCLIENTE,
+PROCLI.CODIGO,
+PROCLI.DESCRICAO,
+SOLICITARDATADEVALIDADE 'PERECIVEL',
+SOLICITARDATADEVALIDADE 'VALIDADE',
+VALORUNITARIO,
+CAST(COALESCE(ESTDIV.SALDO, 0) - (SELECT COALESCE(SUM(DOCIT.QUANTIDADEUNIDADEESTOQUE),0) AS QUANTIDADEUNIDADEESTOQUE FROM DOCUMENTOITEM DOCIT    
+								INNER JOIN DOCUMENTO DOC ON (DOC.IDDOCUMENTO = DOCIT.IDDOCUMENTO)    
+								INNER JOIN PRODUTOEMBALAGEM PRODE 	ON (PRODE.IDPRODUTOEMBALAGEM = DOCIT.IDPRODUTOEMBALAGEM)    
+								WHERE DOC.ENTRADASAIDA = 'SAIDA'    
+								AND DOC.TIPODEDOCUMENTO = 'PEDIDO'   
+								AND DOC.ATIVO = 'SIM'    
+								AND PRODE.IDPRODUTOCLIENTE = PROCLI.IDPRODUTOCLIENTE    
+								AND COALESCE(DOCIT.ESTOQUEPROCESSADO,'NAO') = 'NAO'     
+								AND DOCIT.IDCLIENTEDIVISAO = ESTDIV.IDCLIENTEDIVISAO   ) AS NUMERIC (10,0)) AS SALDODIVISAODISPONIVEL,
+CONTEUDO,								
+UNIDADEDEMEDIDA,
+PR.ALTURA,
+PR.LARGURA,
+PR.COMPRIMENTO,
+PR.PESOBRUTO,
+PR.PESOLIQUIDO,
+'0.00' RODOVIARIO,
+'0.00' AERIO,
+DATALIMITEDEUSO
+   
+FROM ESTOQUEDIVISAO ESTDIV    
+LEFT JOIN ESTOQUE EST   ON(EST.IDESTOQUE = ESTDIV.IDESTOQUE)   
+LEFT JOIN PRODUTOCLIENTE PROCLI   ON(PROCLI.IDPRODUTOCLIENTE = EST.IDPRODUTOCLIENTE)   
+LEFT JOIN PRODUTOEMBALAGEM PROEMB   ON (PROEMB.IDPRODUTOCLIENTE = PROCLI.IDPRODUTOCLIENTE)   
+LEFT JOIN UNIDADEDEMEDIDA UNIDEMED   ON (UNIDEMED.IDUNIDADEDEMEDIDA = PROCLI.IDUNIDADEDEMEDIDA)
+INNER JOIN PRODUTO PR ON PR.IDPRODUTO =   PROEMB.IDPRODUTO 
+WHERE ESTDIV.IDCLIENTEDIVISAO =@IDCLIENTEDIVISAO   
+AND PROCLI.IDCLIENTE = 1 
+AND COALESCE(ESTDIV.SALDO, 0) - (SELECT COALESCE(SUM(DOCIT.QUANTIDADEUNIDADEESTOQUE),0) AS QUANTIDADEUNIDADEESTOQUE 
+FROM DOCUMENTOITEM DOCIT
+INNER JOIN DOCUMENTO DOC
+ON (DOC.IDDOCUMENTO = DOCIT.IDDOCUMENTO)
+INNER JOIN PRODUTOEMBALAGEM PRODE
+ON (PRODE.IDPRODUTOEMBALAGEM = DOCIT.IDPRODUTOEMBALAGEM)
+WHERE DOC.ENTRADASAIDA = 'SAIDA'
+AND DOC.TIPODEDOCUMENTO = 'PEDIDO'
+AND DOC.ATIVO = 'SIM'
+AND PRODE.IDPRODUTOCLIENTE = PROCLI.IDPRODUTOCLIENTE
+AND COALESCE(DOCIT.ESTOQUEPROCESSADO,'NAO') = 'NAO' 
+AND DOCIT.IDCLIENTEDIVISAO = ESTDIV.IDCLIENTEDIVISAO	) &gt; 0</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DsProdutoComFoto</rd:DataSetName>
+        <rd:TableName>ProdutoFoto</rd:TableName>
+        <rd:TableAdapterName>ProdutoFotoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>26.4cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox30">
+        <rd:DefaultName>textbox30</rd:DefaultName>
+        <Top>0.7cm</Top>
+        <Width>14.9cm</Width>
+        <Style>
+          <Color>Red</Color>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>8pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.1cm</Left>
+        <Height>0.5cm</Height>
+        <Value>="DIVISÃO: " &amp; Parameters!Divisao.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <rd:DefaultName>textbox15</rd:DefaultName>
+        <Width>26.3cm</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>Produto com Foto</Value>
+      </Textbox>
+      <List Name="list1">
+        <DataSetName>DsProdutoComFoto_ProdutoFoto</DataSetName>
+        <ReportItems>
+          <Line Name="line2">
+            <Style>
+              <BorderStyle>
+                <Default>Dotted</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>30</ZIndex>
+            <Left>0.1cm</Left>
+            <Height>0cm</Height>
+          </Line>
+          <Textbox Name="textbox21">
+            <Top>3.1cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>29</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!VALORUNITARIO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>3.75cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <Format>d</Format>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>28</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!DATALIMITEDEUSO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Top>3.15cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>27</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!AERIO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>2.55cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>26</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!RODOVIARIO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox26">
+            <Top>1.95cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!ALTURA.Value.ToString() &amp; "x" &amp; Fields!LARGURA.Value.ToString() &amp; "x" &amp; Fields!COMPRIMENTO.Value.ToString() &amp; " = " &amp; (Fields!ALTURA.Value * Fields!LARGURA.Value * Fields!COMPRIMENTO.Value).ToString()</Value>
+          </Textbox>
+          <Textbox Name="textbox27">
+            <Top>1.35cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!PESOBRUTO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Top>0.75cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!UNIDADEDEMEDIDA.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Top>0.15cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <TextAlign>Right</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>17.7cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!SALDODIVISAODISPONIVEL.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Top>3.7cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!CONTEUDO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Top>2.5cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!VALIDADE.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <Top>1.9cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!PERECIVEL.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <Top>1.3cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!DESCRICAO.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Top>0.7cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!CODIGODOCLIENTE.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Top>0.1cm</Top>
+            <Width>8.5cm</Width>
+            <Style>
+              <BackgroundColor>WhiteSmoke</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>6.1cm</Left>
+            <Height>0.5cm</Height>
+            <Value>=Fields!CODIGO.Value</Value>
+          </Textbox>
+          <Line Name="line1">
+            <Top>4.4cm</Top>
+            <Width>26.3cm</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Dotted</Default>
+              </BorderStyle>
+            </Style>
+            <ZIndex>15</ZIndex>
+          </Line>
+          <Textbox Name="textbox14">
+            <Top>3.7cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Limite de Uso:</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Top>3.1cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Peso Aéreo:</Value>
+          </Textbox>
+          <Textbox Name="textbox7">
+            <Top>2.5cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Peso Rodoviário:</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Top>1.9cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Medida:</Value>
+          </Textbox>
+          <Textbox Name="textbox9">
+            <Top>1.3cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Peso Real:</Value>
+          </Textbox>
+          <Textbox Name="textbox10">
+            <Top>0.7cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Unid. Medida:</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Top>3.7cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Conteúdo:</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Top>0.1cm</Top>
+            <Width>2.4cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>15.2cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Quantidade:</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Top>3.1cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Valor Unitário:</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Top>2.5cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Sujeito à Validade:</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>1.9cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Produto Perecível:</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Top>1.3cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>3</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Descrição:</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Top>0.7cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Código Cliente:</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Top>0.1cm</Top>
+            <Width>2.7cm</Width>
+            <Style>
+              <BackgroundColor>Silver</BackgroundColor>
+              <FontFamily>Verdana</FontFamily>
+              <FontSize>7pt</FontSize>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>3.3cm</Left>
+            <Height>0.5cm</Height>
+            <Value>Código:</Value>
+          </Textbox>
+          <Image Name="image1">
+            <Sizing>FitProportional</Sizing>
+            <Top>0.3cm</Top>
+            <Width>3cm</Width>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <Height>3.5cm</Height>
+            <Value>=Fields!FOTO.Value</Value>
+          </Image>
+        </ReportItems>
+        <Top>1.4cm</Top>
+        <Height>4.4cm</Height>
+      </List>
+    </ReportItems>
+    <Height>5.9cm</Height>
+  </Body>
+  <Language>pt-BR</Language>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

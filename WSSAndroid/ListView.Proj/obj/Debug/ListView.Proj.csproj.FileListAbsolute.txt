@@ -1,0 +1,4 @@
+M:\Projetos\WSSAndroid\ListView.Proj\bin\ListView.Proj.dll
+M:\Projetos\WSSAndroid\ListView.Proj\bin\ListView.Proj.pdb
+M:\Projetos\WSSAndroid\ListView.Proj\obj\Debug\ListView.Proj.dll
+M:\Projetos\WSSAndroid\ListView.Proj\obj\Debug\ListView.Proj.pdb

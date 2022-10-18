@@ -1,0 +1,2 @@
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.UI.Web\obj\Debug\Sistecno.UI.Web.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.UI.Web\obj\Debug\Sistecno.UI.Web.csproj.CoreCompileInputs.cache

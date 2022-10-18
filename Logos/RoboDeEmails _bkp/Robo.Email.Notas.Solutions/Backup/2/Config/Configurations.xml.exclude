@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DataBases>
+  <DataBase id="1" key="cf" dataBaseName="SistranWebGrupoLogos" />
+  <DataBase id="2" key="cf1" dataBaseName="SistranWebLogosMakro" />
+  <DataBase id="3" key="cf2" dataBaseName="SistranWebGrupoLogos" />
+</DataBases>

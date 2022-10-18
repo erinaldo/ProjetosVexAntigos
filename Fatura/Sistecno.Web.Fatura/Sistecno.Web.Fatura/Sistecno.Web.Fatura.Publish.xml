@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\mrova\Desktop\z" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="frmGerarDocCob.aspx" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="09/06/2017 12:01:37" />
+    <file relUrl="Imagens/index_03.gif" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="frmEnviarFatura.aspx" publishTime="01/04/2019 15:37:20" />
+    <file relUrl="Config/Constantes.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="LogoCliente/monel.gif" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="frmComprovanteEntrega.aspx" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="bin/Sistecno.Web.Fatura.pdb" publishTime="01/04/2019 15:20:24" />
+    <file relUrl="IcoBradesco.jpg" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="frmBaixarXMLDacte.aspx" publishTime="09/06/2017 11:48:19" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="09/06/2017 11:48:20" />
+    <file relUrl="frmGerarConemb.aspx" publishTime="09/06/2017 11:48:33" />
+    <file relUrl="bin/Sistecno.Web.Fatura.dll" publishTime="01/04/2019 15:20:24" />
+    <file relUrl="frmCriarZIP.aspx" publishTime="09/06/2017 11:48:33" />
+    <file relUrl="Imagens/logo_rastreamento.gif" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="Fatura.aspx" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="MasterPage.Master" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="bin/Telerik.Web.UI.dll" publishTime="09/06/2017 12:01:37" />
+    <file relUrl="frmCriarZIPCompEntrega.aspx" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="bin/ICSharpCode.SharpZipLib.dll" publishTime="09/06/2017 12:01:05" />
+    <file relUrl="Config/CamposReports.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="bin/Sistran.Library.dll" publishTime="01/04/2019 12:12:35" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.dll" publishTime="09/06/2017 12:01:05" />
+    <file relUrl="Correios/sro_remoto.htm" publishTime="09/06/2017 11:48:19" />
+    <file relUrl="Config/Clientes/licdicate.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="index_03.gif" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="09/06/2017 11:48:20" />
+    <file relUrl="downloadVermelho.jpg" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="PrintFatura.aspx" publishTime="09/06/2017 11:48:33" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="09/06/2017 12:01:05" />
+    <file relUrl="fecharCinza.jpg" publishTime="09/06/2017 11:49:45" />
+    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="09/06/2017 12:01:37" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="09/06/2017 11:48:20" />
+    <file relUrl="Imagens/index_01.jpg" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="LogoCliente/Nasha_ols.jpg" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="Imagens/assinaturaEmitente.png" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="LogoCliente/logoQuasar.jpg" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="GerarBoleto.aspx" publishTime="09/06/2017 11:48:19" />
+    <file relUrl="LogoCliente/logoQuasar.png" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="LogoCliente/RedLog.png" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Interception.dll" publishTime="09/06/2017 12:01:37" />
+    <file relUrl="Rastreamento.css" publishTime="09/06/2017 11:48:33" />
+    <file relUrl="download.jpg" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="frmBaixarXML.aspx" publishTime="09/06/2017 11:48:33" />
+    <file relUrl="bin/Sistran.Library.pdb" publishTime="01/04/2019 12:12:34" />
+    <file relUrl="bin/Telerik.Web.UI.xml" publishTime="09/06/2017 12:01:05" />
+    <file relUrl="frmBaixarTodosDactes.aspx" publishTime="09/06/2017 11:48:19" />
+    <file relUrl="Imagens/Copy of LOGOS-LOGTRANSP-03.jpg" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="Web.config" publishTime="07/16/2018 10:04:30" />
+    <file relUrl="Config/Copy of ConfigRatreamento.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="Index.aspx" publishTime="09/06/2017 11:48:19" />
+    <file relUrl="Config/ConfigRatreamento.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="bin/Boleto.Net.dll" publishTime="09/06/2017 12:01:05" />
+    <file relUrl="Imagens/LOGOS-LOGTRANSP-03.jpg" publishTime="09/06/2017 11:49:44" />
+    <file relUrl="Config/ConfigLogo.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="LogoCliente/Nasha.jpg" publishTime="09/06/2017 11:48:29" />
+    <file relUrl="Config/ConfigLicense.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="Config/clienteslicdicate.xml" publishTime="09/06/2017 11:48:30" />
+    <file relUrl="frmGerarOcoren.aspx" publishTime="09/06/2017 11:48:33" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,298 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Bem Vindo</title>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <link href="Styles/estilos.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style3
+        {
+            font-size: 7pt;
+            font-weight: bold;
+        }
+        Hf .style4
+        {
+            color: black;
+            font-weight: bold;
+        }
+        .style5
+        {
+            font-size: xx-small;
+            font-weight: bold;
+        }
+        
+        .treev
+        {
+            font-family: Arial;
+            font-size: 10px;
+            color: Black;
+        }
+        .style6
+        {
+            width: 100%;
+        }
+        </style>
+    <script language="javascript" type="text/javascript">
+
+
+        function DimensionaDiv2(div, tableId, pain, tblPrinc2) {
+            obj = document.getElementById(tblPrinc2);
+            var de = document.documentElement;
+            var alturaCorpo = window.innerHeight || self.innerHeight || (de && de.clientHeight) || document.body.clientHeight;
+            obj.style.height(alturaCorpo - 115) + "px";
+            alert(alturaCorpo);
+        }
+
+        function Ocultar(control1, control2, fazer) {
+
+            obj = document.getElementById(control1);
+
+            if (obj.style.display == "none") {
+                obj.style.display = "inline";
+            }
+            else {
+                obj.style.display = "none";
+            }
+
+            obj = document.getElementById(control2);
+
+            var de = document.documentElement;
+            var alturaCorpo = window.innerHeight || self.innerHeight || (de && de.clientHeight) || document.body.clientHeight;
+            obj.style.height = (alturaCorpo - 120) + "px";
+        }       
+    </script>
+</head>
+<body onload="DimensionaDiv('sobra','tbPrincipal', 'Teste', 'tblPrinc2');" onresize="DimensionaDiv('sobra','tbPrincipal', 'Teste', 'tblPrinc2');"
+    style="background-color: White">
+    <form id="frmMasterPage" runat="server">
+    <div id="sobra">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" AsyncPostBackTimeout="1000000" />
+        <table id="Teste" width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table id="tbPrincipal" cellpadding="0" cellspacing="0" width="100%" border="0">
+                        <tr>
+                            <td style="width: 100%;" valign="middle">
+                                <table cellpadding="0" cellspacing="0" style="background-color: White;" width="100%"
+                                    border="0">
+                                    <tr>
+                                        <td>
+                                            <a href="#">
+                                                <img src="Imagens/LOGOS-LOGTRANSP-03.jpg" style="border: 0px; margin-top: 1px; margin-left: 2px;
+                                                    margin-bottom: 2px; height: 60px;" alt="Home Page" id="imgLogoPrincipal" runat="server" />
+                                            </a>
+                                        </td>
+                                        <td style="width: 100%;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td style="height: 30px; border-bottom: 1px solid silver; text-align: right;" valign="middle">
+                                                        <asp:Label ID="lblDataHor2a" runat="server">Este aplicativo foi desenvolvido para visualização 1024 x 768 </asp:Label>
+                                                        <asp:Label ID="lblStatus1" runat="server" Font-Bold="true" Font-Size="14px"></asp:Label>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="height: 30px; text-align: right;" valign="middle">
+                                                        <asp:Label ID="lblDataHora" runat="server" Style="text-transform: lowercase;">Segunda-Feira, 
+                                        23 de Agosto de 2010 </asp:Label>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cabecalho">
+                                <table border="0" cellpadding="0" cellspacing="0" width="99%">
+                                    <tr>
+                                        <td align="left" style="width: 50%; color: #fff; height: 10px" valign="middle">
+                                            <asp:Label ID="lblUserName" runat="server" Font-Bold="True" Font-Names="Arial" Font-Size="10px"
+                                                Style="text-transform: uppercase;" ForeColor="Black"></asp:Label>
+                                            <asp:Label ID="lblCodEmpresa" runat="server" Style="font-size: 7pt" Visible="False"></asp:Label>
+                                        </td>
+                                        <td>
+                                            <table width="100%" id="tb_troca" runat="server">
+                                                <tr>
+                                                    <td style="font-family: Arial; font-size: 8pt; width: 30%; text-align: right;" class="style4">
+                                                        Selecionar Cliente(s):
+                                                    </td>
+                                                    <td style="width: 1%;">
+                                                        <asp:UpdatePanel ID="uplBot" runat="server">
+                                                            <ContentTemplate>
+                                                                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Imagens/identity.png"
+                                                                    OnClick="ImageButton1_Click" />
+                                                            </ContentTemplate>
+                                                        </asp:UpdatePanel>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td align="right" style="padding-right: 5px; width: 5%; color: #fff; font-size: 10px;"
+                                            valign="middle">
+                                            <asp:Panel ID="pnUser" runat="server" Width="50px">
+                                                <asp:LinkButton ID="lnkLogout" runat="server" CausesValidation="false" CssClass="sair"
+                                                    Text="SAIR [x]" PostBackUrl="Fim.aspx"></asp:LinkButton>
+                                            </asp:Panel>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="position: absolute; top: 50%; left: 50%; text-align: center;">
+                        <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1">
+                            <ProgressTemplate>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/AjaxGif/ajax-loader.gif"
+                                    Height="60px" />
+                                <br />
+                                <span class="style3">&nbsp;</span><span class="style5">AGUARDE..</span><span class="style3">.
+                                </span>
+                            </ProgressTemplate>
+                        </asp:UpdateProgress>
+                    </div>
+                    <tr>
+                        <td id="xtdMenu" runat="server" style="text-align: left; vertical-align: top">
+                            <table border="0" width="100%" cellpadding="0" cellspacing="0" id="tblPrinc2">
+                                <tr valign="top">
+                                    <td id="tr0" runat="server" width="205px" valign="top">
+                                        <asp:Panel ID="Panel2" runat="server" BackImageUrl="Images/skins/primeiro/img/menu_3_2.jpg"
+                                            Height="25px">
+                                            <asp:Image ID="Image3" runat="server" ImageUrl="Images/skins/primeiro/img/menu_3_12.jpg" />
+                                        </asp:Panel>
+                                        <asp:Panel ID="Panel3" runat="server" ScrollBars="Auto">
+                                            <asp:TreeView ID="TreeViewMenu" runat="server" Font-Names="Arial" Font-Size="7pt"
+                                                ForeColor="Black" Style="font-size: 10px" NodeIndent="5">
+                                                <SelectedNodeStyle Font-Bold="True" />
+                                            </asp:TreeView>
+                                        </asp:Panel>
+                                    </td>
+                                    <td style="width: 7px; vertical-align: middle" id="KKKKKK2" runat="server" height="100%"
+                                        align="center" class="Divisoria">
+                                        <asp:Image ID="Button1" runat="server" CausesValidation="False" Font-Bold="True"
+                                            ImageUrl="Images/skins/primeiro/img/menu_1_2.jpg" Width="13px" />
+                                    </td>
+                                    <td id="KKKKKK" runat="server" height="100%" valign="top" style="border: solid:0">
+                                        <asp:UpdatePanel ID="Up" runat="server">
+                                            <ContentTemplate>
+                                                <asp:ContentPlaceHolder ID="cphMain" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                        <br />
+
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                                            <ContentTemplate>
+                                        <div id="dvEscolheCliente" style="position: absolute; top: 20%; left: 30%;width:600px" runat="server"
+                                            visible="false">
+                                            <asp:Panel ID="Panel4" runat="server" BackColor="White" Width="99%" 
+                                                Style="text-align: center" DefaultButton="Button2">
+                                                <center>
+                                                    <table cellpadding="2" cellspacing="2" class="table" id="tbTrocaCliente" 
+                                                        runat="server" width="99%">
+                                                        <tr>
+                                                            <td style="background-image: url(Images/skins/primeiro/img/menu_3_2.jpg);" class="tdpCabecalho"
+                                                                nowrap="nowrap" align="left" colspan="2">
+                                                                <b>Pesquisar Clientes</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="tdp" style="text-align: left" width="1%">
+                                                                Nome:<br />
+                                                            </td>
+                                                            <td align="left" class="tdpCabecalho" style="text-align: left" width="99%">
+                                                                <asp:TextBox ID="txtFiltro" runat="server" CssClass="txt" Width="99%"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="tdpR" colspan="2" style="text-align: right">
+                                                                <asp:Button ID="Button2" runat="server" CssClass="button" Font-Size="12pt" 
+                                                                    Height="25px" onclick="Button2_Click" Text="Pesquisar" Width="100px" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="tdp" colspan="2">
+                                                                <asp:Panel ID="pnlClientes" runat="server">
+                                                                    <table class="style6">
+                                                                        <tr>
+                                                                            <td class="tdpCenter" nowrap="nowrap" width="50%">
+                                                                                <b>Selecione o Cliente</b></td>
+                                                                            <td class="tdpCenter" nowrap="nowrap">
+                                                                                &nbsp;</td>
+                                                                            <td class="tdpCenter" nowrap="nowrap">
+                                                                                <b>Selecione um ou mais Clientes</b></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="tdp" valign="top" nowrap="nowrap">
+                                                                                <asp:CheckBoxList ID="rdListClientes" runat="server">
+                                                                                </asp:CheckBoxList>
+                                                                            </td>
+                                                                            <td valign="top" nowrap="nowrap" bgcolor="White">
+                                                                                <table class="style6">
+                                                                                    <tr>
+                                                                                        <td style="text-align: center">
+                                                                                            <asp:ImageButton ID="ImageButton2" runat="server" Height="30px" 
+                                                                                                ImageUrl="~/Images/setas/untitled.bmp" onclick="ImageButton2_Click" />
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td class="tdp" nowrap="nowrap" valign="top">
+                                                                                <asp:CheckBoxList ID="chkEscolhidos" runat="server" AutoPostBack="True" 
+                                                                                    Font-Names="Verdana" Font-Size="7pt" 
+                                                                                    onselectedindexchanged="chkEscolhidos_SelectedIndexChanged">
+                                                                                </asp:CheckBoxList>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="tdpCenter" colspan="3">
+                                                                                <asp:Button ID="btnConfirmar" runat="server" CssClass="button" Font-Size="12pt" 
+                                                                                    Height="25px" Text="Confirmar" Width="100px" 
+                                                                                    onclick="btnConfirmar_Click" />
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </asp:Panel>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                                                <br />
+                                            </asp:Panel>
+                                        </div>
+                                        </ContentTemplate></asp:UpdatePanel>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td class="rodape">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="text-align: left; font-size: 8pt;" width="100%" class="cabecalho">
+                                                    Desenvolvido por Sistecno.
+                                                                                        </tr>
+                                        </table>
+                                    </td>
+                                    <td class="cabecalho">
+                                        <asp:Label ID="lblVersao" runat="server" ForeColor="Black" Style="font-size: 8pt"> Versão: 1.0</asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

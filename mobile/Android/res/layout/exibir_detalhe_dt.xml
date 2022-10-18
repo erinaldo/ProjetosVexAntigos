@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="fill_parent"
+  android:background="@drawable/fundo"
+  
+  >
+
+    
+<TableLayout
+  
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="25dp"
+  >
+  
+ <TableRow>
+	<TextView
+		android:id="@+id/textView1"
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:text="Número da Nota Fiscal: "
+		android:textAppearance="?android:attr/textAppearanceMedium" 	
+		android:textColor="@android:color/black"	
+		
+		/>
+
+	  <TextView 
+	      android:text="x" 
+	      android:id="@+id/txtNumero" 
+	      android:layout_width="wrap_content" 
+	      android:layout_height="fill_parent" 
+	      android:textColor="@android:color/black"   
+	      android:textAppearance="?android:attr/textAppearanceMedium"  
+	        
+	     />	    
+</TableRow>
+</TableLayout>
+  
+  
+<TableRow android:layout_marginTop="10dp">
+  <TextView 
+      android:text="Remetente: " 
+      android:id="@+id/TextView02" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content"   
+      android:textColor="@android:color/black"
+      android:layout_marginBottom="20dp"
+      >   
+  </TextView>
+  
+  <TextView 
+      android:text="vvv" 
+      android:id="@+id/txtRemetente" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content"    
+      android:textColor="@android:color/black"
+      >  
+  </TextView>
+      
+
+</TableRow>
+
+
+<TableRow>
+    <TextView 
+        android:text="Destinatário: " 
+        android:id="@+id/TextView01" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+		android:textColor="@android:color/black"
+        >        
+    </TextView>
+    
+    <TextView 
+        android:text="yyyyy" 
+        android:id="@+id/txtDestinatario" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:textColor="@android:color/black"
+        >
+    </TextView>
+</TableRow>
+  
+<TableRow> 
+  <TextView 
+      android:text="Endereço:" 
+      android:id="@+id/TextView03" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:textColor="@android:color/black"
+     
+      >      
+  </TextView>
+  
+  <TextView
+      android:id="@+id/txtEndereco"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="100dp"
+      android:text=""
+      android:textColor="@android:color/black" >
+</TextView>
+</TableRow>
+
+<TableRow> 
+  <TextView 
+      android:text="Cidade: " 
+      android:id="@+id/TextViewd3" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:textColor="@android:color/black"
+     
+      >      
+  </TextView>
+  
+  <TextView
+      android:id="@+id/txtCidade"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="100dp"
+      android:text=""
+      android:textColor="@android:color/black" 
+      android:layout_marginBottom="20dp">
+</TextView>
+</TableRow>
+
+<TableRow>
+ <TextView 
+      android:text="Peso: " 
+      android:id="@+id/TextView53" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:textColor="@android:color/black"
+     
+      >      
+  </TextView>
+  
+  <TextView
+      android:id="@+id/txtPeso"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="100dp"
+      android:text=""
+      android:textColor="@android:color/black" >
+</TextView>
+</TableRow>
+
+<TableRow>
+
+  <TextView 
+      android:text="Volumes: " 
+      android:id="@+id/TextView05" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:textColor="@android:color/black"
+     
+      >      
+  </TextView>
+  
+  <TextView
+      android:id="@+id/txtVolumes"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="100dp"
+      android:text=""
+      android:textColor="@android:color/black" 
+     >
+</TextView>
+</TableRow>
+
+
+<TableRow>
+
+  <TextView 
+      android:text="Ocorrência: " 
+      android:id="@+id/TextView05" 
+      android:layout_width="wrap_content" 
+      android:layout_height="wrap_content" 
+      android:textColor="@android:color/black"
+     
+      >      
+  </TextView>
+  
+  <TextView
+      android:id="@+id/txtOcorrencias"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginRight="100dp"
+      android:text=""
+      android:textColor="@android:color/black" 
+      android:layout_marginBottom="20dp">
+</TextView>
+</TableRow>
+ 
+	    
+	<TableLayout
+	  
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent" 
+	  
+	  >
+	<TableRow android:gravity="center"> 
+	  <Button
+	      android:id="@+id/btnVoltar"      
+	      android:layout_height="wrap_content"
+	      android:layout_width="150dp"
+	      android:text="Voltar" />
+	
+	  
+	    <Button
+	      android:id="@+id/btnRealizarColeta"      
+	      android:layout_height="wrap_content"
+	      android:layout_width="150dp"
+	      android:text="Informar Coleta" />
+	
+	  
+	  <Button
+	      android:id="@+id/btnRealizar"      
+	      android:layout_height="wrap_content"
+	      android:layout_width="150dp"
+	      android:text="Realizar" />
+	</TableRow>
+	 
+	</TableLayout>    
+	
+	
+	
+	
+</TableLayout>

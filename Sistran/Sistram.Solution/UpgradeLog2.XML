@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Sistran.Solution">
+</Property><Property Name="Solution File" Value="M:\Projetos\Sistecno\sistran\Sistram.Solution\Sistran.Solution.sln">
+</Property><Property Name="Date" Value="terça-feira, 3 de janeiro de 2012">
+</Property><Property Name="Time" Value="08:22">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="Sistran.Library" Source="..\Sistram.Library\Sistram.Library\Sistran.Library.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="Sistran.Library" Source="..\Sistram.Library\Sistram.Library\Sistran.Library.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="Boleto" Source="..\Boleto\Boleto.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Boleto" Source="..\Boleto\Boleto.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Sistran.Solution.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Sistran.Solution.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Boleto" Source="..\Boleto\Boleto.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs"
+    Inherits="Site_master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>::: Grupo Logos ::: Rastrear Encomenda</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Rastreamento.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-image: url(index_03.gif);
+        height: 70px">
+        <tr>
+            <td width="1%" rowspan="2" valign="baseline">
+                <a href="http://www.grupologos.com.br">
+                    <img src="Imagens/LOGOS-LOGTRANSP-03.jpg" height="68" border="0" /></a>
+            </td>
+        </tr>
+    </table>
+    <div style="position: absolute; top: 3%; left: 50%; border: 0px solid #808080; z-index: auto;
+        text-align: center; vertical-align: middle">
+        <center>
+            <asp:Label ID="Label1" runat="server" Style="text-transform: uppercase; text-align: center;
+                font-size: 12pt;" Text="RASTREAMENTO DE ENCOMENDAS" Font-Bold="True" Font-Names="Arial"
+                Font-Size="12pt"></asp:Label>
+            <br />
+            <asp:Label ID="lblDataHora" runat="server" Style="text-transform: lowercase;" CssClass="lableCabec">Segunda-Feira, 
+                                        23 de Agosto de 2010 </asp:Label>
+        </center>
+    </div>
+    <div style="position: absolute; top: 2%; left: 95%; border: 1px solid #808080; z-index: auto;
+        text-align: center; vertical-align: middle; background-color: Transparent; margin-left: 1px">
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <asp:ImageButton ID="fechar" runat="server" ImageUrl="fecharCinza.jpg"
+                            Width="20px" OnClientClick="window.close()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="Label2" runat="server" CssClass="lableCabec" onclick="javascript:window.close()">Fechar </asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    <div id="container" runat="server">
+    
+    </div>
+    <div>
+      
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+        
+    </div>
+    <div id="Div1" runat="server" style="background-image: url(index_03.gif); height: 20px;
+        margin: 0px; text-align: center" class="style1">
+    </div>
+    </form>
+</body>
+</html>

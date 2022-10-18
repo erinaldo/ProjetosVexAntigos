@@ -1,0 +1,16 @@
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\MonitorDePedidos.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\MonitorDePedidos.pdb
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Sistran.Library.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Microsoft.Practices.ServiceLocation.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Microsoft.Practices.Unity.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Microsoft.Practices.Unity.Interception.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Sistran.Library.pdb
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\obj\Debug\MonitorDePedidos.dll
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\obj\Debug\MonitorDePedidos.pdb
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\MonitorDePedidos.dll.config
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\bin\Sistran.Library.dll.config
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\obj\Debug\MonitorDePedidos.csprojAssemblyReference.cache
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\obj\Debug\MonitorDePedidos.csproj.CoreCompileInputs.cache
+D:\projetos\LogosSVN\Sistran\MonitorDePedidos\obj\Debug\MonitorDePedidos.csproj.CopyComplete

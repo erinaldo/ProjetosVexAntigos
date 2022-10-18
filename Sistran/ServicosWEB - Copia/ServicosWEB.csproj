@@ -1,0 +1,952 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5022C5B6-191E-46EC-B743-BCBD1CA02B66}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServicosWEB</RootNamespace>
+    <AssemblyName>ServicosWEB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Barbosa\CadastroFornecedor.asmx" />
+    <Content Include="Barbosa\CadastroMaterial.asmx" />
+    <Content Include="Barbosa\imprimirNf.aspx" />
+    <Content Include="Barbosa\NFCompra.asmx" />
+    <Content Include="Barbosa\NFDevolucao.asmx" />
+    <Content Include="Barbosa\NfeDevFornecedor.asmx" />
+    <Content Include="Barbosa\NFTransferenciaEntrada.asmx" />
+    <Content Include="Barbosa\NFTransferenciaSaida.asmx" />
+    <Content Include="Barbosa\NF.asmx" />
+    <Content Include="Barbosa\OL005.asmx" />
+    <Content Include="Barbosa\OL010.asmx" />
+    <Content Include="Barbosa\OL011.asmx" />
+    <Content Include="Barbosa\OL014.asmx" />
+    <Content Include="Barbosa\OL016.asmx" />
+    <Content Include="Barbosa\PedidoDeCompra.asmx" />
+    <Content Include="Barbosa\PedidoTransferencia.asmx" />
+    <Content Include="Barbosa\EnviarPlanilha.aspx" />
+    <Content Include="bootstrap.min.js" />
+    <Content Include="Comprovei.aspx" />
+    <Content Include="ComproveiRec.aspx" />
+    <Content Include="ClientesComprovei.aspx" />
+    <Content Include="ConsultarNF.asmx" />
+    <Content Include="EtiquetaCarreta.aspx" />
+    <Content Include="Financeiro\logo-vex3.png" />
+    <Content Include="Financeiro\TitulosSistranCs.aspx" />
+    <Content Include="Girotrade\logo-vex3.png" />
+    <Content Include="Girotrade\LogsRecebimentoNfEntrada.aspx" />
+    <Content Include="Girotrade\PedidoDetalhe.aspx" />
+    <Content Include="Girotrade\LogsRecebimento.aspx" />
+    <Content Include="Girotrade\Pedidos.aspx" />
+    <Content Include="Linea\ws.asmx" />
+    <Content Include="MaisBrasil\NfeEntrada.aspx" />
+    <Content Include="MaisBrasil\WebForm1.aspx" />
+    <Content Include="MaisBrasil\ws.asmx" />
+    <Content Include="OcorrenciaCliente.asmx" />
+    <Content Include="VexPedidos.asmx" />
+    <Content Include="JosaparEstoqueValidade.aspx" />
+    <Content Include="LoginJosapar.aspx" />
+    <Content Include="Josapar\wsJosapar.asmx" />
+    <Content Include="MagaLog\WebService1.asmx" />
+    <Content Include="Sistranet\Coletor\default.aspx" />
+    <Content Include="Sistranet\Coletor\Login.aspx" />
+    <Content Include="Sistranet\Sistema\Login.aspx" />
+    <Content Include="Sistranet\styles\style.css" />
+    <Content Include="ViaVarejo\logo-vex3.png" />
+    <Content Include="ViaVarejo\Ocorrencias.aspx" />
+    <Content Include="wsLoginAppHR.asmx" />
+    <Content Include="InfraCommerce\CustomerServices.asmx" />
+    <Content Include="InfraCommerce\OrderServices.asmx" />
+    <Content Include="InfraCommerce\PaymentServices.asmx" />
+    <Content Include="InfraCommerce\StockTeste.aspx" />
+    <Content Include="InfraCommerce\TrackingTeste.aspx" />
+    <Content Include="InfraCommerce\WSS.asmx" />
+    <Content Include="Josapar\TrackingServices.asmx" />
+    <Content Include="Josapar\WS.asmx" />
+    <Content Include="RelatorioFoto.aspx" />
+    <Content Include="RotasComprovei.aspx" />
+    <Content Include="LoginComprovei.aspx" />
+    <Content Include="InformarVolumes.aspx" />
+    <Content Include="GaiolaLog.aspx" />
+    <Content Include="GaiolaConsultaVolumes.aspx" />
+    <Content Include="GaiolaRelatoriosVolumesDetalhes.aspx" />
+    <Content Include="GaiolaRelatoriosDetalhes.aspx" />
+    <Content Include="GaiolaDiiver.aspx" />
+    <Content Include="GaiolaManut.aspx" />
+    <Content Include="GaiolaRelatorios.aspx" />
+    <Content Include="Img\editar.png" />
+    <Content Include="Img\images.jpg" />
+    <Content Include="LoginGaiola.aspx" />
+    <Content Include="Gaiolas.aspx" />
+    <Content Include="Img\impressora.png" />
+    <Content Include="jquery-2.1.1.min.js" />
+    <Content Include="RelatoriosComprovei\Menu.aspx" />
+    <Content Include="mpJosapar.Master" />
+    <Content Include="dsEtiquetaCarreta.xsc">
+      <DependentUpon>dsEtiquetaCarreta.xsd</DependentUpon>
+    </Content>
+    <Content Include="Barbosa\Site1.Master" />
+    <None Include="dsEtiquetaCarreta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEtiquetaCarreta.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="dsEtiquetaCarreta.xss">
+      <DependentUpon>dsEtiquetaCarreta.xsd</DependentUpon>
+    </Content>
+    <Content Include="f2 - Copia.ttf" />
+    <Content Include="IDAutomationHC39M.ttf" />
+    <Content Include="IDAutomationHC39M_FREE - Copia.ttf" />
+    <Content Include="IDAutomationHC39M_FREE.otf" />
+    <Content Include="Girotrade\Site1.Master" />
+    <Content Include="MaisBrasil\Site1.Master" />
+    <Content Include="Financeiro\Site1.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Service References\InfraTracking\AcecInvoiceInfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InfraTracking\AcecTracking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InfraTracking\ErrorLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InfraTracking\ServicosWEB.InfraTracking.captureTrackingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InfraTracking\TrackingServices.wsdl" />
+    <None Include="Service References\InfraTracking\TrackingServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsInfraStock\configuration91.svcinfo" />
+    <None Include="Service References\wsInfraStock\configuration.svcinfo" />
+    <None Include="Service References\wsInfraStock\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InfraTracking\configuration91.svcinfo" />
+    <None Include="Service References\InfraTracking\configuration.svcinfo" />
+    <None Include="Service References\InfraTracking\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Sobras.aspx" />
+    <Content Include="CtrMenu.ascx" />
+    <Content Include="HomeRefill\HR.asmx" />
+    <Content Include="rptFilialFalta.aspx" />
+    <Content Include="rptFaltaDeVolumes.aspx" />
+    <Content Include="EnviarConferenciaDET.aspx" />
+    <Content Include="EnviarConferencia.aspx" />
+    <Content Include="Img\NovoLogoDistecno.jpg" />
+    <Content Include="Img\roge.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReposicaoRogeInterno.asmx" />
+    <Content Include="VilaNova.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="RelatorioFotoGestaoArmazenagem.aspx" />
+    <Content Include="wsExecutarComado.asmx" />
+    <Content Include="wsLoginApp.asmx" />
+    <Content Include="WSS\ReposicaoRoge.asmx" />
+    <Content Include="WSS\wssLogin.asmx" />
+    <Content Include="Web References\OL011\DT_PEDTRANS_IN_RES.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\OL011\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\OL011\SI_SYN_OUT_PEDTRANS_IN.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bandeira.cs">
+      <DependentUpon>bandeira.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bandeira.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bandeira.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Barbosa\Autentica.cs" />
+    <Compile Include="Barbosa\CadastroFornecedor.asmx.cs">
+      <DependentUpon>CadastroFornecedor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\CadastroMaterial.asmx.cs">
+      <DependentUpon>CadastroMaterial.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\cOL010Itens.cs" />
+    <Compile Include="Barbosa\imprimirNf.aspx.cs">
+      <DependentUpon>imprimirNf.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barbosa\imprimirNf.aspx.designer.cs">
+      <DependentUpon>imprimirNf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barbosa\NFCompra.asmx.cs">
+      <DependentUpon>NFCompra.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\NFDevolucao.asmx.cs">
+      <DependentUpon>NFDevolucao.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\NfeDevFornecedor.asmx.cs">
+      <DependentUpon>NfeDevFornecedor.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\NFTransferenciaEntrada.asmx.cs">
+      <DependentUpon>NFTransferenciaEntrada.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\NFTransferenciaSaida.asmx.cs">
+      <DependentUpon>NFTransferenciaSaida.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\NF.asmx.cs">
+      <DependentUpon>NF.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\OL005.asmx.cs">
+      <DependentUpon>OL005.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\OL010.asmx.cs">
+      <DependentUpon>OL010.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\OL011.asmx.cs">
+      <DependentUpon>OL011.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\OL014.asmx.cs">
+      <DependentUpon>OL014.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\OL016.asmx.cs">
+      <DependentUpon>OL016.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\PedidoDeCompra.asmx.cs">
+      <DependentUpon>PedidoDeCompra.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\PedidoTransferencia.asmx.cs">
+      <DependentUpon>PedidoTransferencia.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Barbosa\EnviarPlanilha.aspx.cs">
+      <DependentUpon>EnviarPlanilha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barbosa\EnviarPlanilha.aspx.designer.cs">
+      <DependentUpon>EnviarPlanilha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barbosa\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barbosa\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarNF.asmx.cs">
+      <DependentUpon>ConsultarNF.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsEtiquetaCarreta.cs">
+      <DependentUpon>dsEtiquetaCarreta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsEtiquetaCarreta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEtiquetaCarreta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EtiquetaCarreta.aspx.cs">
+      <DependentUpon>EtiquetaCarreta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EtiquetaCarreta.aspx.designer.cs">
+      <DependentUpon>EtiquetaCarreta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financeiro\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\TitulosSistranCs.aspx.cs">
+      <DependentUpon>TitulosSistranCs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Financeiro\TitulosSistranCs.aspx.designer.cs">
+      <DependentUpon>TitulosSistranCs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Girotrade\LogsRecebimentoNfEntrada.aspx.cs">
+      <DependentUpon>LogsRecebimentoNfEntrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Girotrade\LogsRecebimentoNfEntrada.aspx.designer.cs">
+      <DependentUpon>LogsRecebimentoNfEntrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Girotrade\PedidoDetalhe.aspx.cs">
+      <DependentUpon>PedidoDetalhe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Girotrade\PedidoDetalhe.aspx.designer.cs">
+      <DependentUpon>PedidoDetalhe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Girotrade\LogsRecebimento.aspx.cs">
+      <DependentUpon>LogsRecebimento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Girotrade\LogsRecebimento.aspx.designer.cs">
+      <DependentUpon>LogsRecebimento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Girotrade\Pedidos.aspx.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Girotrade\Pedidos.aspx.designer.cs">
+      <DependentUpon>Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Girotrade\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Girotrade\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Linea\ws.asmx.cs">
+      <DependentUpon>ws.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MaisBrasil\NfeEntrada.aspx.cs">
+      <DependentUpon>NfeEntrada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaisBrasil\NfeEntrada.aspx.designer.cs">
+      <DependentUpon>NfeEntrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaisBrasil\Recebimento.cs" />
+    <Compile Include="MaisBrasil\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaisBrasil\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MaisBrasil\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaisBrasil\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaisBrasil\ws.asmx.cs">
+      <DependentUpon>ws.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OcorrenciaCliente.asmx.cs">
+      <DependentUpon>OcorrenciaCliente.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VexPedidos.asmx.cs">
+      <DependentUpon>VexPedidos.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MagaLog\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mpJosapar.Master.cs">
+      <DependentUpon>mpJosapar.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mpJosapar.Master.designer.cs">
+      <DependentUpon>mpJosapar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="JosaparEstoqueValidade.aspx.cs">
+      <DependentUpon>JosaparEstoqueValidade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JosaparEstoqueValidade.aspx.designer.cs">
+      <DependentUpon>JosaparEstoqueValidade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginJosapar.aspx.cs">
+      <DependentUpon>LoginJosapar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginJosapar.aspx.designer.cs">
+      <DependentUpon>LoginJosapar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Josapar\wsJosapar.asmx.cs">
+      <DependentUpon>wsJosapar.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistranet\Coletor\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sistranet\Sistema\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistranet\Sistema\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SoapLoggerExtension.cs" />
+    <Compile Include="ViaVarejo\Ocorrencias.aspx.cs">
+      <DependentUpon>Ocorrencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViaVarejo\Ocorrencias.aspx.designer.cs">
+      <DependentUpon>Ocorrencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OL011\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="wsLoginAppHR.asmx.cs">
+      <DependentUpon>wsLoginAppHR.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Josapar\TrackingServices.asmx.cs">
+      <DependentUpon>TrackingServices.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="TraceExtension.cs" />
+    <Compile Include="Comprovei.aspx.cs">
+      <DependentUpon>Comprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprovei.aspx.designer.cs">
+      <DependentUpon>Comprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComproveiRec.aspx.cs">
+      <DependentUpon>ComproveiRec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComproveiRec.aspx.designer.cs">
+      <DependentUpon>ComproveiRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesComprovei.aspx.cs">
+      <DependentUpon>ClientesComprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientesComprovei.aspx.designer.cs">
+      <DependentUpon>ClientesComprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfraCommerce\CustomerServices.asmx.cs">
+      <DependentUpon>CustomerServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfraCommerce\OrderServices.asmx.cs">
+      <DependentUpon>OrderServices.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="InfraCommerce\PaymentServices.asmx.cs">
+      <DependentUpon>PaymentServices.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="InfraCommerce\StockTeste.aspx.cs">
+      <DependentUpon>StockTeste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfraCommerce\StockTeste.aspx.designer.cs">
+      <DependentUpon>StockTeste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfraCommerce\TrackingTeste.aspx.cs">
+      <DependentUpon>TrackingTeste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfraCommerce\TrackingTeste.aspx.designer.cs">
+      <DependentUpon>TrackingTeste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfraCommerce\WSS.asmx.cs">
+      <DependentUpon>WSS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Josapar\WS.asmx.cs">
+      <DependentUpon>WS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RelatorioFoto.aspx.cs">
+      <DependentUpon>RelatorioFoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioFoto.aspx.designer.cs">
+      <DependentUpon>RelatorioFoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RotasComprovei.aspx.cs">
+      <DependentUpon>RotasComprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RotasComprovei.aspx.designer.cs">
+      <DependentUpon>RotasComprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginComprovei.aspx.cs">
+      <DependentUpon>LoginComprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginComprovei.aspx.designer.cs">
+      <DependentUpon>LoginComprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InformarVolumes.aspx.cs">
+      <DependentUpon>InformarVolumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InformarVolumes.aspx.designer.cs">
+      <DependentUpon>InformarVolumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaLog.aspx.cs">
+      <DependentUpon>GaiolaLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaLog.aspx.designer.cs">
+      <DependentUpon>GaiolaLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaConsultaVolumes.aspx.cs">
+      <DependentUpon>GaiolaConsultaVolumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaConsultaVolumes.aspx.designer.cs">
+      <DependentUpon>GaiolaConsultaVolumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaRelatoriosVolumesDetalhes.aspx.cs">
+      <DependentUpon>GaiolaRelatoriosVolumesDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaRelatoriosVolumesDetalhes.aspx.designer.cs">
+      <DependentUpon>GaiolaRelatoriosVolumesDetalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaRelatoriosDetalhes.aspx.cs">
+      <DependentUpon>GaiolaRelatoriosDetalhes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaRelatoriosDetalhes.aspx.designer.cs">
+      <DependentUpon>GaiolaRelatoriosDetalhes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaDiiver.aspx.cs">
+      <DependentUpon>GaiolaDiiver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaDiiver.aspx.designer.cs">
+      <DependentUpon>GaiolaDiiver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaManut.aspx.cs">
+      <DependentUpon>GaiolaManut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaManut.aspx.designer.cs">
+      <DependentUpon>GaiolaManut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GaiolaRelatorios.aspx.cs">
+      <DependentUpon>GaiolaRelatorios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GaiolaRelatorios.aspx.designer.cs">
+      <DependentUpon>GaiolaRelatorios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginGaiola.aspx.cs">
+      <DependentUpon>LoginGaiola.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginGaiola.aspx.designer.cs">
+      <DependentUpon>LoginGaiola.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gaiolas.aspx.cs">
+      <DependentUpon>Gaiolas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gaiolas.aspx.designer.cs">
+      <DependentUpon>Gaiolas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoLogosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GrupoLogosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mp.Master.cs">
+      <DependentUpon>mp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mp.Master.designer.cs">
+      <DependentUpon>mp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RelatoriosComprovei\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatoriosComprovei\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatoriosComprovei\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatoriosComprovei\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InfraTracking\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsInfraStock\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Sobras.aspx.cs">
+      <DependentUpon>Sobras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sobras.aspx.designer.cs">
+      <DependentUpon>Sobras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrMenu.ascx.cs">
+      <DependentUpon>CtrMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrMenu.ascx.designer.cs">
+      <DependentUpon>CtrMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeRefill\HR.asmx.cs">
+      <DependentUpon>HR.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFilialFalta.aspx.cs">
+      <DependentUpon>rptFilialFalta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptFilialFalta.aspx.designer.cs">
+      <DependentUpon>rptFilialFalta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rptFaltaDeVolumes.aspx.cs">
+      <DependentUpon>rptFaltaDeVolumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptFaltaDeVolumes.aspx.designer.cs">
+      <DependentUpon>rptFaltaDeVolumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarConferenciaDET.aspx.cs">
+      <DependentUpon>EnviarConferenciaDET.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarConferenciaDET.aspx.designer.cs">
+      <DependentUpon>EnviarConferenciaDET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarConferencia.aspx.cs">
+      <DependentUpon>EnviarConferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarConferencia.aspx.designer.cs">
+      <DependentUpon>EnviarConferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReposicaoRogeInterno.asmx.cs">
+      <DependentUpon>ReposicaoRogeInterno.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\CidadeBairro.cs" />
+    <Compile Include="Util\Validacao.cs" />
+    <Compile Include="VilaNova.asmx.cs">
+      <DependentUpon>VilaNova.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\br.com.roge.wslogos01\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\br.com.roge.wslogos02\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioFotoGestaoArmazenagem.aspx.cs">
+      <DependentUpon>RelatorioFotoGestaoArmazenagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioFotoGestaoArmazenagem.aspx.designer.cs">
+      <DependentUpon>RelatorioFotoGestaoArmazenagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wsExecutarComado.asmx.cs">
+      <DependentUpon>wsExecutarComado.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="wsLoginApp.asmx.cs">
+      <DependentUpon>wsLoginApp.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WSS\wssLogin.asmx.cs">
+      <DependentUpon>wssLogin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="App_Code\FuncoesGerais.cs" />
+    <Content Include="App_Code\ReportDefinition.cs" />
+    <Content Include="App_Code\ReposcicaoRoge.cs">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="App_Code\TableRdlGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Barbosa\Planilhas\Processados\" />
+    <Folder Include="CB\" />
+    <Folder Include="tmp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="D:\Diversos\Layouts\wsdl\OL011.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OL011\</RelPath>
+      <UpdateFromURL>D:\Diversos\Layouts\wsdl\OL011.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ServicosWEB_OL011_SI_SYN_OUT_PEDTRANS_INService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.roge.wslogos01\</RelPath>
+      <UpdateFromURL>http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ServicosWEB_br_com_roge_wslogos01_WSLogos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wslogos02.roge.com.br:8087/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.roge.wslogos02\</RelPath>
+      <UpdateFromURL>http://wslogos02.roge.com.br:8087/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ServicosWEB_br_com_roge_wslogos02_WSLogos</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mp.Master" />
+    <None Include="bandeira.xsc">
+      <DependentUpon>bandeira.xsd</DependentUpon>
+    </None>
+    <None Include="bandeira.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bandeira.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="bandeira.xss">
+      <DependentUpon>bandeira.xsd</DependentUpon>
+    </None>
+    <Content Include="GrupoLogosDataSet.xsc">
+      <DependentUpon>GrupoLogosDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="f1.ttf" />
+    <None Include="f2.otf" />
+    <None Include="GrupoLogosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GrupoLogosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="GrupoLogosDataSet.xss">
+      <DependentUpon>GrupoLogosDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="RelatoriosComprovei\Site1.Master" />
+    <None Include="Service References\wsInfraStock\AcecStock.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsInfraStock\ErrorLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsInfraStock\ServicosWEB.wsInfraStock.setStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\wsInfraStock\StockServices.wsdl" />
+    <None Include="Service References\wsInfraStock\StockServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Sistranet\Coletor\Site1.Master" />
+    <None Include="Web References\br.com.roge.wslogos01\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.roge.wslogos01\WSRoge.wsdl" />
+    <None Include="Web References\br.com.roge.wslogos02\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.roge.wslogos02\WSRoge.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bandeira.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EtiquetaCarreta.rdlc" />
+    <EmbeddedResource Include="imagem.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBandeiraGaiola.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\InfraTracking\" />
+    <WCFMetadataStorage Include="Service References\wsInfraStock\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sistram.Library\Sistram.Library\Sistran.Library.csproj">
+      <Project>{D6640122-F36D-4434-B722-7DF88F8A3ABE}</Project>
+      <Name>Sistran.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>35040</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

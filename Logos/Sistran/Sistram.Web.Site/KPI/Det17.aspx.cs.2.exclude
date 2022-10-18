@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+//using Microsoft.Reporting.WebForms;
+using System.Configuration;
+using System.Threading;
+using System.Globalization;
+
+public partial class Det17 : System.Web.UI.Page
+{
+    string select = "";
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo culture = new CultureInfo("pt-BR");
+
+            if (!IsPostBack)
+            {
+                lblResultado.Text = new SistranBLL.KPI().Form17("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select).ToString("#0.00") +"%";                
+                gerarReport();
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert", "alert('" + ex.Message.Replace("'", "´") + "')", true);
+        }
+
+    }
+
+    private void gerarReport()
+    {
+        ReportViewer rw = new Microsoft.Reporting.WebForms.ReportViewer();
+        rw.Width = new Unit("100%");
+        rw.Height = 600;
+        rw.BackColor = System.Drawing.Color.WhiteSmoke;
+        rw.BorderStyle = System.Web.UI.WebControls.BorderStyle.Solid;
+        rw.BorderWidth = 0;
+        
+
+        rw.LocalReport.DataSources.Clear();
+        rw.LocalReport.EnableHyperlinks = true;
+
+        DataSet ds = carregarReport();
+
+        ReportDataSource datasource1 = new ReportDataSource("dskpi16_recebidas", ds.Tables[0]);
+        rw.LocalReport.DataSources.Add(datasource1);
+
+        ReportDataSource datasource2 = new ReportDataSource("dskpi16_corretas", ds.Tables[1]);
+        rw.LocalReport.DataSources.Add(datasource2);
+
+        lblLinhasSolicitadas.Text = ds.Tables[0].Rows.Count.ToString();
+        lblLinhasCorretas.Text = ds.Tables[1].Rows.Count.ToString();
+        
+        rw.LocalReport.ReportPath = @"kpi\reports\kpi17.rdlc";
+        rw.LocalReport.EnableExternalImages = true;
+        rw.LocalReport.Refresh();
+        pnlReport.Controls.Add(rw);
+        pnlReport.ScrollBars = ScrollBars.None;
+    }
+
+
+    private DataSet carregarReport()
+    {
+        //o linha recebidas
+        //1 linha corretas
+        string strsql = " ";
+        strsql += "  SELECT   NF.NUMERO, NF.SERIE, PC.CODIGO";
+        strsql += "  FROM DOCUMENTO NF   ";
+        strsql += "  INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)    ";
+        strsql += "  INNER JOIN PRODUTOEMBALAGEM PE ON PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM ";
+        strsql += "  INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE ";
+        strsql += "  WHERE  NF.IDCLIENTE IN(" + Sistran.Library.FuncoesUteis.retornarClientes() + ")  ";
+        strsql += "  AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  "; 
+        strsql += "  AND NF.ATIVO = 'SIM'   ";
+        strsql += "  AND NF.ENTRADASAIDA = 'ENTRADA'   ";
+        strsql += "  AND NF.DATADEEMISSAO  BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103) AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59" + "', 103)  ";
+
+        strsql += "  SELECT   NF.NUMERO, NF.SERIE, PC.CODIGO   ";
+        strsql += "  FROM DOCUMENTO NF   ";
+        strsql += "  INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)    ";
+        strsql += "  INNER JOIN PRODUTOEMBALAGEM PE ON PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM ";
+        strsql += "  INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE ";
+        strsql += "  WHERE  NF.IDCLIENTE IN(" + Sistran.Library.FuncoesUteis.retornarClientes() + ")  ";
+        strsql += "  AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  "; 
+        strsql += "  AND NF.ATIVO = 'SIM'   ";
+        strsql += "  AND NF.ENTRADASAIDA = 'ENTRADA'   ";
+        strsql += "  AND NF.DATADEEMISSAO  BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103) AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59" + "', 103)  ";        
+        strsql += "  AND NFI.STATUSDOITEM = 'RECEBIMENTO AUDITADO COM ERRO' ";
+
+        return Sistran.Library.GetDataTables.RetornarDataSet(strsql, "");
+    }
+
+    
+}

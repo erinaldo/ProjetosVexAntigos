@@ -1,0 +1,11 @@
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\ReposicaoRoge\bin\ReposicaoRoge.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\ReposicaoRoge\bin\ReposicaoRoge.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.pdb
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\bin\ReposicaoRoge.dll.config
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\bin\ReposicaoRoge.dll
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\bin\ReposicaoRoge.pdb
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.csprojAssemblyReference.cache
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.csproj.CoreCompileInputs.cache
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.dll
+D:\Projetos\LogosSVN\Sistran\ReposicaoRoge\obj\Debug\ReposicaoRoge.pdb

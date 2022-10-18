@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">RS MOBILE Android </string>
+    <string name="app_name">RS MOBILE Android</string>
+    <string name="ifs">Informe os Dados Abaixo Para Acessar</string>
+    <string name="placa">Placa (Números):</string>
+    <string name="DT">N° do Documento:</string>
+    <string name="ocorre">Selecione a Ocorrência</string>
+    <string name="confirm">CONFIRMAR</string>
+    <string name="img"></string>
+    <string name="ndt"></string>
+    <string name="nplaca"></string>    
+    <string name="Voltar">VOLTAR</string>
+    <string name="Realizar">Realizar Entrega</string>    
+    <string name="Remetente">Remetente</string>
+    <string name="Dado">Dados - Documento de Transporte</string>
+    <string name="Numero">Número</string>
+    <string name="Endereco">Endereço:</string>
+    <string name="Destinatario">"Destinatario"</string>
+    <string name="Confirmar">"Confirmar"</string>
+    <string name="sistecno">"Sistecno"</string>
+    <string name="StatusEntregas">"Status das Entregas"</string>
+    <string name="empresa">Empresa: </string>
+    <string name="empresaN"></string>
+    <string name="bemvindo">Bem Vindo</string>
+    <string name="rg">RG:</string>
+    <string name="nome">Nome:</string>
+    <string name="numero">Número:</string>    
+    
+</resources>
+
+
+

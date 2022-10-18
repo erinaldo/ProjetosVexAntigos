@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fundo"
+    android:orientation="vertical" >
+
+<TableRow>
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/styleName"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" 
+        
+        >
+    </ListView>
+</TableRow>
+
+<TableRow>
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Voltar" >
+    </Button>
+</TableRow>
+
+<TableRow>
+    <Button
+        android:id="@+id/btnTeste"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Teste"
+        android:visibility="invisible"
+         >
+    </Button>
+</TableRow>
+</TableLayout>

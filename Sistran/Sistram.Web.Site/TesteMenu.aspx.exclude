@@ -1,0 +1,50 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Bkank.master" AutoEventWireup="true" CodeFile="TesteMenu.aspx.cs" Inherits="TesteMenu" Title="Untitled Page" %>
+
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <p>
+        <br />
+    </p>
+    <p>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:GrupoLogosConnectionString %>" SelectCommand="SELECT    coalesce(ModOpc.Descricao, Mod.Nome) as Menu,  
+coalesce(ModMen.IDParente,0) IDParente,  
+ModOpc.Programa,    
+ModOpc.Pacote,    
+coalesce(ModOpc.Tipo, coalesce(Mod.tipo, 'WIN')) Tipo,    
+ModMen.IDModuloMenu,    
+isnull(ModOpc.IDModuloOpcao,0) IDModuloOpcao,    
+Mod.Ordem,    
+ModMen.Ordem,  
+Link    
+FROM ModuloMenu ModMen    LEFT JOIN ModuloOpcao ModOpc  ON(ModOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+LEFT JOIN Modulo Mod    ON(Mod.IDModulo = ModMen.IDModulo)    
+WHERE  
+	(coalesce(ModMen.Ativo,'NAO') = 'SIM')    
+	AND (coalesce(ModOpc.tipo, coalesce(Mod.tipo, 'WIN')) = 'WEB')    
+	AND ModMen.IDModuloMenu in     ( SELECT IDParente from ModuloMenu ModMen2  INNER JOIN UsuarioOpcao UsuOpc    ON(UsuOpc.IDModuloOpcao = ModMen2.IDModuloOpcao)    
+	LEFT JOIN ModuloOpcao ModOpc    ON(ModOpc.IDModuloOpcao = ModMen2.IDModuloOpcao)    
+	WHERE UsuOpc.IDUsuario =25  
+	
+	AND UsuOpc.Permissao = 'SIM' )    
+
+UNION ALL    
+SELECT     coalesce(ModOpc.Descricao, Mod.Nome) as Menu,    coalesce(ModMen.IDParente,0) IDParente,    ModOpc.Programa,    ModOpc.Pacote,    
+coalesce(ModOpc.Tipo, coalesce(Mod.tipo, 'WIN')) Tipo,    ModMen.IDModuloMenu,    ModOpc.IDModuloOpcao,    Mod.Ordem,    ModMen.Ordem,  Link    
+FROM ModuloMenu ModMen    LEFT JOIN ModuloOpcao ModOpc  ON(ModOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+LEFT JOIN Modulo Mod    ON(Mod.IDModulo = ModMen.IDModulo)    
+INNER JOIN UsuarioOpcao UsuOpc    ON(UsuOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+WHERE
+(coalesce(ModMen.Ativo,'NAO') = 'SIM')    
+AND (coalesce(ModOpc.tipo, coalesce(Mod.tipo, 'WIN')) = 'WEB')    
+AND  UsuOpc.IDUsuario = 25 
+AND UsuOpc.Permissao = 'SIM'      
+
+and ModOpc.Link is not null
+ORDER BY IDParente ASC,  ModMen.Ordem asc   "></asp:SqlDataSource>
+    </p>
+</asp:Content>
+

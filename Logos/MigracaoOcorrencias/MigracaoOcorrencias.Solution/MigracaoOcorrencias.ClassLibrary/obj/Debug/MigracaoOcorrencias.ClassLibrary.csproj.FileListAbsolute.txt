@@ -1,0 +1,15 @@
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.dll
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.pdb
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.dll
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.pdb
+M:\Projetos\Sistecno\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.dll
+M:\Projetos\Sistecno\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.pdb
+M:\Projetos\Sistecno\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\Sistecno\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.dll
+M:\Projetos\Sistecno\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.pdb
+M:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.dll
+M:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Debug\MigracaoOcorrencias.ClassLibrary.pdb
+M:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.dll
+M:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Debug\MigracaoOcorrencias.ClassLibrary.pdb

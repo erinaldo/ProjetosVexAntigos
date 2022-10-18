@@ -1,0 +1,11 @@
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\bin\Release\MigracaoOcorrencias.WindService.exe.config
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\bin\Release\MigracaoOcorrencias.WindService.exe
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\bin\Release\MigracaoOcorrencias.WindService.pdb
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\bin\Release\MigracaoOcorrencias.ClassLibrary.dll
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\bin\Release\MigracaoOcorrencias.ClassLibrary.pdb
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\ResolveAssemblyReference.cache
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\MigracaoOcorrencias.WindService.exe
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\MigracaoOcorrencias.WindService.pdb
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\MigracaoOcorrencias.WindService.MigracaoOcorrencias.resources
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\MigracaoOcorrencias.WindService.csproj.GenerateResource.Cache
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindService\obj\Release\MigracaoOcorrencias.WindService.ProjectInstaller.resources

@@ -1,0 +1,11 @@
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\bin\Debug\MigracaoOcorrencias.WindForms.exe
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\bin\Debug\MigracaoOcorrencias.WindForms.pdb
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\ResolveAssemblyReference.cache
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\MigracaoOcorrencias.WindForms.Properties.Resources.resources
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\MigracaoOcorrencias.WindForms.csproj.GenerateResource.Cache
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\MigracaoOcorrencias.WindForms.exe
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\MigracaoOcorrencias.WindForms.pdb
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\bin\Debug\MigracaoOcorrencias.WindForms.exe.config
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\obj\Debug\MigracaoOcorrencias.WindForms.Form1.resources
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\bin\Debug\MigracaoOcorrencias.ClassLibrary.dll
+d:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.WindForms\bin\Debug\MigracaoOcorrencias.ClassLibrary.pdb

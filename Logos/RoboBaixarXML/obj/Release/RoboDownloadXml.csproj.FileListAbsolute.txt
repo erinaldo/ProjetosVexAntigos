@@ -1,0 +1,14 @@
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Sistecno.BaixarXMLNfe.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Sistecno.BaixarXMLNfe.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Sistran.Library.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Microsoft.Practices.Unity.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Microsoft.Practices.Unity.Interception.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Release\Sistran.Library.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Release\DownloadXMLNFeExemploBasico.Form1.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Release\DownloadXMLNFeExemploBasico.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Release\RoboDownloadXml.csproj.GenerateResource.Cache
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Release\Sistecno.BaixarXMLNfe.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Release\Sistecno.BaixarXMLNfe.pdb

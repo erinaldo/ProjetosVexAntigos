@@ -1,0 +1,11 @@
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.dll.config
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.dll
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.pdb
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.dll
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.xml
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.csproj.CoreCompileInputs.cache
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.dll
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.pdb

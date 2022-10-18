@@ -1,0 +1,68 @@
+
+ Esse arquivo imageres.dll é para deixar os ícones do sistema no mesmo 
+estilo do Windows 8.1, caso não tenha gostado do visual do 10 na parte de ícones
+
+
+ Esquema 1
+
+ Coloca-lo dentro das pastas "C:\Windows\System32" e "C:\Windows\SysWOW64"
+ Não conseguirá realizar com o Sistema iniciado, então deverá dar o boot com 
+uma instalação Linux e realize a substituição do arquivo.
+
+ IMPORTANTE: Não se esqueçam de fazer backup do arquivo original. 
+
+
+ Esquema 2
+
+ Como trocar o "Imageres.dll" pelo próprio windows
+ Coloque o arquivo "imageres.dll" na
+raiz do Sistema (Geralmente C:)(precisa ser administrador)
+Com o arquivo salvo clique em INICIAR depois em LIGAR/DESLIGAR, vai abrir um menu,
+segure a tecla SHIFT e clique em Reiniciar, devera aparecer a palavra AGUARDE na tela.
+Será exibido um MENU:
+Clique em "Solução de Problemas"
+Clique em "Opções Avançadas"
+Clique em "Prompt de Comando"
+O computador irá reiniciar,
+selecione o seu usuário(que seja administrador), se tiver, coloque a senha.
+irá aparecer a tela do Prompt de Comando (Tela Preta)
+nela vc terá que ACHAR a unidade que está seus arquivos do Windows.
+ 
+comece pela Unidade C:
+(geralmente a unidade C: não é a sua C: usual e sim a partição de boot)
+ 
+Explicação com base na minha experiencia :
+Se vc tem somente unidade C: (usualmente no windows), ela qui será a unidade D:
+Se vc tem varias unidades, dependerá a posição dos HD's e sequencia de partições.
+ 
+Como encontrar :
+digite a letra da unidade mais ":" para entrar na unidade,
+Irá aparecer no Prompt na linha de baixo, a letra que vc entrou seguida de ":\>", se a unidade existir.
+ 
+Ex.
+C:\>
+D:\>
+ 
+uma vez dentro da unidade digite "DIR" e enter para listar as pastas. você estará procurando a estrutura de pasta que tem no seu "c:".
+ 
+quando encontrar terá que digitar os comandos abaixo: (Vou considerar que a Unidade que está meu windows seja a "D" troque a letra nos seus comandos pela sua unidade.
+ 
+COMANDOS EM SEQUENCIA
+ 
+cd windows
+cd system32
+ren imageres.dll imageres.bkp
+cd ..
+cd syswow64
+ren imageres.dll imageres.bkp
+cd /
+copy D:\imageres.dll D:\windows\system32
+copy D:\imageres.dll D:\windows\syswow64
+ 
+Após isso vc fez backup dos arquivos e substituiu pelo novo
+digite:
+"exit"
+e de enter
+Clique em "Continuar"
+ 
+pronto o pc irá Reinicar e estara pronto para usar.

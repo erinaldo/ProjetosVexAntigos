@@ -1,0 +1,8 @@
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\bin\Release\RsMobile.exe
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\bin\Release\RsMobile.pdb
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\ResolveAssemblyReference.cache
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\RsMobile.frmLogin.resources
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\RsMobile.Properties.Resources.resources
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\RsMobile.csproj.GenerateResource.Cache
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\RsMobile.exe
+D:\Projetos\RSMobile_wCE\RsMobile\RsMobile\obj\Release\RsMobile.pdb

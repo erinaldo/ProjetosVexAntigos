@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet3" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT U.IDUSUARIO, U.NOME, U.LOGIN, U.SENHA,
+CD.NOME,
+CD.IDCLIENTEDIVISAO, PC.CODIGO, PC.DESCRICAO,  
+(SELECT NOME FROM USUARIO UU WHERE UU.IDUSUARIO = U.IDPERFIL) PERFIL
+FROM USUARIO U
+INNER JOIN USUARIOCLIENTE UC ON UC.IDUSUARIO = UC.IDUSUARIO
+INNER JOIN USUARIOCLIENTEDIVISAO UCD ON UCD.IDUSUARIOCLIENTE = UC.IDUSUARIOCLIENTE
+INNER JOIN CLIENTEDIVISAO CD ON CD.IDCLIENTEDIVISAO = UCD.IDCLIENTEDIVISAO
+INNER JOIN PRODUTOCLIENTE PC ON PC.IDCLIENTE = UC.IDCLIENTE
+WHERE UC.IDCLIENTE = 1
+AND U.TIPO='USUARIO'
+AND U.TIPODESISTEMA='WEB'
+ORDER BY U.NOME</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDUSUARIO" DataSetColumn="IDUSUARIO" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="LOGIN" DataSetColumn="LOGIN" />
+              <Mapping SourceColumn="NOME1" DataSetColumn="NOME1" />
+              <Mapping SourceColumn="IDCLIENTEDIVISAO" DataSetColumn="IDCLIENTEDIVISAO" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="DESCRICAO" DataSetColumn="DESCRICAO" />
+              <Mapping SourceColumn="PERFIL" DataSetColumn="PERFIL" />
+              <Mapping SourceColumn="SENHA" DataSetColumn="SENHA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet3" msprop:Generator_DataSetName="DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUSUARIO" msprop:Generator_UserColumnName="IDUSUARIO" msprop:Generator_ColumnPropNameInRow="IDUSUARIO" msprop:Generator_ColumnVarNameInTable="columnIDUSUARIO" msprop:Generator_ColumnPropNameInTable="IDUSUARIOColumn" type="xs:int" />
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOGIN" msprop:Generator_UserColumnName="LOGIN" msprop:Generator_ColumnPropNameInRow="LOGIN" msprop:Generator_ColumnVarNameInTable="columnLOGIN" msprop:Generator_ColumnPropNameInTable="LOGINColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME1" msprop:Generator_UserColumnName="NOME1" msprop:Generator_ColumnPropNameInRow="NOME1" msprop:Generator_ColumnVarNameInTable="columnNOME1" msprop:Generator_ColumnPropNameInTable="NOME1Column">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCLIENTEDIVISAO" msprop:Generator_UserColumnName="IDCLIENTEDIVISAO" msprop:Generator_ColumnPropNameInRow="IDCLIENTEDIVISAO" msprop:Generator_ColumnVarNameInTable="columnIDCLIENTEDIVISAO" msprop:Generator_ColumnPropNameInTable="IDCLIENTEDIVISAOColumn" type="xs:int" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PERFIL" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PERFIL" msprop:Generator_ColumnVarNameInTable="columnPERFIL" msprop:Generator_ColumnPropNameInRow="PERFIL" msprop:Generator_ColumnPropNameInTable="PERFILColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SENHA" msprop:Generator_UserColumnName="SENHA" msprop:Generator_ColumnPropNameInRow="SENHA" msprop:Generator_ColumnVarNameInTable="columnSENHA" msprop:Generator_ColumnPropNameInTable="SENHAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:IDUSUARIO" />
+      <xs:field xpath="mstns:IDCLIENTEDIVISAO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,16 @@
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Robo.Email.Notas.WindowsServices.exe
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Robo.Email.Notas.WindowsServices.pdb
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\Robo.Email.Notas.WindowsServices.exe
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\Robo.Email.Notas.WindowsServices.pdb
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Robo.Email.Notas.WindowsServices.exe.config
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Sistran.Library.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\bin\Debug\Sistran.Library.pdb
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\Robo.Email.Notas.WindowsServices.ProjectInstaller.resources
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\Robo.Email.Notas.WindowsServices.RoboNF.resources
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.WindowsServices\obj\Debug\Robo.Email.Notas.WindowsServices.csproj.GenerateResource.Cache

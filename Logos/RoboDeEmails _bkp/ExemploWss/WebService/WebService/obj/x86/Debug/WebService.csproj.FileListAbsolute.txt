@@ -1,0 +1,16 @@
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\bin\Debug\WebService.exe
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\bin\Debug\WebService.pdb
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.fWS.resources
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.Properties.Resources.resources
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.csproj.GenerateResource.Cache
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.exe
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.pdb
+C:\Users\Renato\documents\visual studio 2010\Projects\WebService\WebService\obj\x86\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.exe
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.pdb
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\bin\Debug\WebService.exe
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\bin\Debug\WebService.pdb
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.csprojResolveAssemblyReference.cache
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.fWS.resources
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Robo.Email.Notas\ExemploWss\WebService\WebService\obj\x86\Debug\WebService.csproj.GenerateResource.Cache

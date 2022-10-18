@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT FL.NOME NOMEDAFILIAL,   COUNT(*) NOTASFISCAIS,  NF.PRAZOUTILIZADO--,   CONVERT(DECIMAL(5,2)  ,AVG(NF.PRAZOUTILIZADO)) AS MEDIA   
+ FROM DOCUMENTO NF   INNER JOIN CADASTRO REME ON (REME.IDCADASTRO = NF.IDREMETENTE)   
+ INNER JOIN CADASTRO DEST ON (DEST.IDCADASTRO = NF.IDDESTINATARIO)   
+ INNER JOIN CIDADE DESTCID ON (DESTCID.IDCIDADE = DEST.IDCIDADE)   
+ INNER JOIN ESTADO DESTEST ON (DESTEST.IDESTADO = DESTCID.IDESTADO)   
+ INNER JOIN FILIAL FL ON (FL.IDFILIAL = NF.IDFILIAL)   
+ WHERE   NF.TIPODEDOCUMENTO = 'NOTA FISCAL'   
+ AND NF.DATADEEMISSAO BETWEEN  CONVERT(DATETIME, '6/09/2010 00:00:00', 103)
+ AND CONVERT(DATETIME, '30/09/2010 00:00:00', 103) AND NF.DATADECONCLUSAO IS NOT NULL   
+ AND NF.PRAZOUTILIZADO IS NOT NULL   AND (NF.IDREMETENTE IN (444,446,445)  OR NF.IDDESTINATARIO IN (444,446,445)  OR NF.IDCLIENTE IN (444,446,445) ) 
+ AND FL.NOME='GUARULHOS' 
+ GROUP BY FL.NOME, NF.PRAZOUTILIZADO   
+ ORDER BY FL.NOME </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOMEDAFILIAL" DataSetColumn="NOMEDAFILIAL" />
+              <Mapping SourceColumn="NOTASFISCAIS" DataSetColumn="NOTASFISCAIS" />
+              <Mapping SourceColumn="PRAZOUTILIZADO" DataSetColumn="PRAZOUTILIZADO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMEDAFILIAL" msprop:Generator_UserColumnName="NOMEDAFILIAL" msprop:Generator_ColumnPropNameInRow="NOMEDAFILIAL" msprop:Generator_ColumnVarNameInTable="columnNOMEDAFILIAL" msprop:Generator_ColumnPropNameInTable="NOMEDAFILIALColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTASFISCAIS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS" msprop:Generator_ColumnPropNameInTable="NOTASFISCAISColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PRAZOUTILIZADO" msprop:Generator_UserColumnName="PRAZOUTILIZADO" msprop:Generator_ColumnPropNameInRow="PRAZOUTILIZADO" msprop:Generator_ColumnVarNameInTable="columnPRAZOUTILIZADO" msprop:Generator_ColumnPropNameInTable="PRAZOUTILIZADOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

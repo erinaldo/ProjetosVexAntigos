@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="WebServiceComprovei:downloadDocumentsHistory" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="downloadDocumentsHistory">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element default="1" name="qtdDocumentos" type="xsd:integer" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="downloadDocumentsHistoryResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="status" type="xsd:string" />
+        <xsd:element name="protocolo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

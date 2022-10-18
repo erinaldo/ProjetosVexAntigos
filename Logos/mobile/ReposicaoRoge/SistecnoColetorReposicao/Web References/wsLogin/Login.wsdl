@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RetornaConexao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idEmpresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornaConexaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornaConexaoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstaAtivo">
+        <s:complexType />
+      </s:element>
+      <s:element name="EstaAtivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstaAtivoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarProgramasColetor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarProgramasColetorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarProgramasColetorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RetornaConexaoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornaConexao" />
+  </wsdl:message>
+  <wsdl:message name="RetornaConexaoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornaConexaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstaAtivoSoapIn">
+    <wsdl:part name="parameters" element="tns:EstaAtivo" />
+  </wsdl:message>
+  <wsdl:message name="EstaAtivoSoapOut">
+    <wsdl:part name="parameters" element="tns:EstaAtivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarProgramasColetorSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarProgramasColetor" />
+  </wsdl:message>
+  <wsdl:message name="RetornarProgramasColetorSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarProgramasColetorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LoginSoap">
+    <wsdl:operation name="RetornaConexao">
+      <wsdl:input message="tns:RetornaConexaoSoapIn" />
+      <wsdl:output message="tns:RetornaConexaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstaAtivo">
+      <wsdl:input message="tns:EstaAtivoSoapIn" />
+      <wsdl:output message="tns:EstaAtivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarProgramasColetor">
+      <wsdl:input message="tns:RetornarProgramasColetorSoapIn" />
+      <wsdl:output message="tns:RetornarProgramasColetorSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoginSoap" type="tns:LoginSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaConexao">
+      <soap:operation soapAction="http://tempuri.org/RetornaConexao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaAtivo">
+      <soap:operation soapAction="http://tempuri.org/EstaAtivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarProgramasColetor">
+      <soap:operation soapAction="http://tempuri.org/RetornarProgramasColetor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoginSoap12" type="tns:LoginSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetornaConexao">
+      <soap12:operation soapAction="http://tempuri.org/RetornaConexao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaAtivo">
+      <soap12:operation soapAction="http://tempuri.org/EstaAtivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarProgramasColetor">
+      <soap12:operation soapAction="http://tempuri.org/RetornarProgramasColetor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Login">
+    <wsdl:port name="LoginSoap" binding="tns:LoginSoap">
+      <soap:address location="http://wss.sistecno.com.br/appWs/wss/login.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoginSoap12" binding="tns:LoginSoap12">
+      <soap12:address location="http://wss.sistecno.com.br/appWs/wss/login.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

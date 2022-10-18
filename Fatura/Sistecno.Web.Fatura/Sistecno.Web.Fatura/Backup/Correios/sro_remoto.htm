@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Formulário de Rastreamento</title>
+    <link href="../Rastreamento.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+<table style="width: 408px">
+	<tr>
+		<td nowrap>
+			<a href="http://www.correios.com.br">
+			<img src="http://www.correios.com.br/_imag/0_logo10.gif" border="0">
+			</a>
+		</td>
+		<td>
+			<font face="Arial">
+			<b>&nbsp;&nbsp;Rastreamento de Objetos</b>
+			</font>
+		</td>
+	</tr>	
+</table>
+<form method="GET" action="http://websro.correios.com.br/sro_bin/txect01$.QueryList?" name="rastreamento">
+<font face=arial size=2>
+<input type="hidden" name="P_TIPO" value="001">
+
+	<b>Objeto(s):</b><br>
+	<textarea name="P_COD_UNI" wrap="VIRTUAL" class="textarea" 
+    style="width: 408px; height: 61px; font-family: Arial, Helvetica, sans-serif"></textarea>
+
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<br />
+&nbsp;&nbsp;&nbsp; Exemplos de consulta de: 
+	<ul>
+    	<li> Um objeto: <font size="1">SS123456789BR</font></li>
+	    <li>Lista de objetos:&nbsp;<font size="1">SS123456789BR; SS912345678BR; SS891234567BR
+       <br />Informe o código de no máximo 10 objetos separando-os por ponto e vírgula </font></li>
+    </ul>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Resposta em:
+	&nbsp;&nbsp;
+	<input type="radio" name="P_LINGUA" value="001" checked>
+<!--    <input type="radio" name="LINGUA" value="P" onClick="lingua(0,2,3,0,1);" checked> -->
+	Português
+	&nbsp;&nbsp;&nbsp; 
+<!--	<input type="radio" name="LINGUA" value="E" onClick="lingua(0,2,3,0,1);"> -->
+   	<input type="radio" name="P_LINGUA" value="002">
+	English
+	<!-- Fim Código para selecionar a língua -->
+	<!----------------------------------------->
+
+	<br><br>
+	<input type="submit" value="Pesquisar" class="button" >
+    &nbsp; 
+    <input type="reset" value="Limpar" class="button">
+    &nbsp; 
+    <input type="button" name="Submit3" value="Ajuda" onClick="return window.open('http://www.correios.com.br/sedexonline/rastreamento_ajuda.cfm'
+	  ,'ajuda','width=460,height=500, scrollbars=yes' );" class="button" >
+
+</font>
+</form>
+</body>
+</html>

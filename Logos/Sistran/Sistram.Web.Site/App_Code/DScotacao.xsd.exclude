@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DScotacao" targetNamespace="http://tempuri.org/DScotacao.xsd" xmlns:mstns="http://tempuri.org/DScotacao.xsd" xmlns="http://tempuri.org/DScotacao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GrupoLogosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GrupoLogosConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GrupoLogosConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GrupoLogosConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  
+CF.IDCOTACAODECOMPRA,
+CCI.IDCOTACAODECOMPRAITEM,
+CADFIL.RAZAOSOCIALNOME SOLICTANTE,  
+CADFIL.CNPJCPF CNPJSOLICITANTE, 
+CADFIL.ENDERECO ENDERECOSOLICITANTE,
+CADFIL.NUMERO NUMEROSOLICITANTE,
+CIDSOLIC.NOME CIDADESOLICITANTE,
+CADFIL.CEP CEPSOLICITANTE,
+CADFORN.RAZAOSOCIALNOME FORNECEDOR,  
+CADFORN.CNPJCPF CNPJSFORNECEDOR, 
+CADFORN.ENDERECO ENDERECFORNECEDOR,
+CADFORN.NUMERO NUMEROFORNECEDOR,
+CIDSFORN.NOME CIDADEFORNECEDOR,
+CADFORN.CEP CEPFORNECEDOR,
+PC.DESCRICAO,
+PC.CODIGO,
+CCI.SALDO,
+CF.IDFORNECEDOR,
+DATADEENTREGA,
+ISNULL(CCI.VALORUNITARIO, '0.00') VALORUNITARIO
+FROM COTACAODECOMPRA CC
+INNER JOIN COTACAOFORNECEDOR CF ON CF.IDCOTACAODECOMPRA = CC.IDCOTACAODECOMPRA
+INNER JOIN COTACAODECOMPRAITEM CCI ON CCI.IDCOTACAOFORNECEDOR = CF.IDCOTACAOFORNECEDOR
+INNER JOIN FORNECEDOR FORNEC ON FORNEC.IDFORNECEDOR = CF.IDFORNECEDOR
+INNER JOIN CADASTRO CADFORN ON CADFORN.IDCADASTRO = FORNEC.IDFORNECEDOR
+INNER JOIN FILIAL FL ON FL.IDFILIAL = CC.IDFILIAL
+INNER JOIN CADASTRO CADFIL ON CADFIL.IDCADASTRO = FL.IDCADASTRO
+INNER JOIN CIDADE CIDSOLIC ON  CIDSOLIC.IDCIDADE = CADFIL.IDCIDADE
+INNER JOIN CIDADE CIDSFORN ON  CIDSFORN.IDCIDADE = CADFORN.IDCIDADE
+INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = CCI.IDPRODUTOCLIENTE
+WHERE CF.IDCOTACAOFORNECEDOR =215</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDCOTACAODECOMPRA" DataSetColumn="IDCOTACAODECOMPRA" />
+              <Mapping SourceColumn="IDCOTACAODECOMPRAITEM" DataSetColumn="IDCOTACAODECOMPRAITEM" />
+              <Mapping SourceColumn="SOLICTANTE" DataSetColumn="SOLICTANTE" />
+              <Mapping SourceColumn="CNPJSOLICITANTE" DataSetColumn="CNPJSOLICITANTE" />
+              <Mapping SourceColumn="ENDERECOSOLICITANTE" DataSetColumn="ENDERECOSOLICITANTE" />
+              <Mapping SourceColumn="NUMEROSOLICITANTE" DataSetColumn="NUMEROSOLICITANTE" />
+              <Mapping SourceColumn="CIDADESOLICITANTE" DataSetColumn="CIDADESOLICITANTE" />
+              <Mapping SourceColumn="CEPSOLICITANTE" DataSetColumn="CEPSOLICITANTE" />
+              <Mapping SourceColumn="FORNECEDOR" DataSetColumn="FORNECEDOR" />
+              <Mapping SourceColumn="CNPJSFORNECEDOR" DataSetColumn="CNPJSFORNECEDOR" />
+              <Mapping SourceColumn="ENDERECFORNECEDOR" DataSetColumn="ENDERECFORNECEDOR" />
+              <Mapping SourceColumn="NUMEROFORNECEDOR" DataSetColumn="NUMEROFORNECEDOR" />
+              <Mapping SourceColumn="CIDADEFORNECEDOR" DataSetColumn="CIDADEFORNECEDOR" />
+              <Mapping SourceColumn="CEPFORNECEDOR" DataSetColumn="CEPFORNECEDOR" />
+              <Mapping SourceColumn="DESCRICAO" DataSetColumn="DESCRICAO" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="SALDO" DataSetColumn="SALDO" />
+              <Mapping SourceColumn="IDFORNECEDOR" DataSetColumn="IDFORNECEDOR" />
+              <Mapping SourceColumn="DATADEENTREGA" DataSetColumn="DATADEENTREGA" />
+              <Mapping SourceColumn="VALORUNITARIO" DataSetColumn="VALORUNITARIO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CotacaoFornecedorCondicaoPagamentoTableAdapter" GeneratorDataComponentClassName="CotacaoFornecedorCondicaoPagamentoTableAdapter" Name="CotacaoFornecedorCondicaoPagamento" UserDataComponentName="CotacaoFornecedorCondicaoPagamentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GrupoLogosConnectionString (Web.config)" DbObjectName="GrupoLogos.dbo.CotacaoFornecedorCondicaoPagamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [COTACAOFORNECEDORCONDICAOPAGAMENTO] WHERE (([IDCOTACAOFORNECEDORCONDICAOPAGAMENTO] = @Original_IDCOTACAOFORNECEDORCONDICAOPAGAMENTO))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [COTACAOFORNECEDORCONDICAOPAGAMENTO] ([IDCOTACAOFORNECEDORCONDICAOPAGAMENTO], [IDCOTACAOFORNECEDOR], [VENCIMENTO], [VALOR]) VALUES (@IDCOTACAOFORNECEDORCONDICAOPAGAMENTO, @IDCOTACAOFORNECEDOR, @VENCIMENTO, @VALOR)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDCOTACAOFORNECEDOR" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDOR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@VENCIMENTO" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@VALOR" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="VALOR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IDCOTACAOFORNECEDORCONDICAOPAGAMENTO, IDCOTACAOFORNECEDOR, VENCIMENTO, VALOR , '' VENC FROM COTACAOFORNECEDORCONDICAOPAGAMENTO WHERE IDCOTACAOFORNECEDOR=215</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [COTACAOFORNECEDORCONDICAOPAGAMENTO] SET [IDCOTACAOFORNECEDORCONDICAOPAGAMENTO] = @IDCOTACAOFORNECEDORCONDICAOPAGAMENTO, [IDCOTACAOFORNECEDOR] = @IDCOTACAOFORNECEDOR, [VENCIMENTO] = @VENCIMENTO, [VALOR] = @VALOR WHERE (([IDCOTACAOFORNECEDORCONDICAOPAGAMENTO] = @Original_IDCOTACAOFORNECEDORCONDICAOPAGAMENTO))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDCOTACAOFORNECEDOR" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDOR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@VENCIMENTO" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@VALOR" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="VALOR" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" DataSetColumn="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" />
+              <Mapping SourceColumn="IDCOTACAOFORNECEDOR" DataSetColumn="IDCOTACAOFORNECEDOR" />
+              <Mapping SourceColumn="VENCIMENTO" DataSetColumn="VENCIMENTO" />
+              <Mapping SourceColumn="VALOR" DataSetColumn="VALOR" />
+              <Mapping SourceColumn="VENC" DataSetColumn="VENC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DScotacao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DScotacao" msprop:Generator_DataSetName="DScotacao">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCOTACAODECOMPRA" msprop:Generator_UserColumnName="IDCOTACAODECOMPRA" msprop:Generator_ColumnVarNameInTable="columnIDCOTACAODECOMPRA" msprop:Generator_ColumnPropNameInRow="IDCOTACAODECOMPRA" msprop:Generator_ColumnPropNameInTable="IDCOTACAODECOMPRAColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDCOTACAODECOMPRAITEM" msprop:Generator_UserColumnName="IDCOTACAODECOMPRAITEM" msprop:Generator_ColumnVarNameInTable="columnIDCOTACAODECOMPRAITEM" msprop:Generator_ColumnPropNameInRow="IDCOTACAODECOMPRAITEM" msprop:Generator_ColumnPropNameInTable="IDCOTACAODECOMPRAITEMColumn" type="xs:int" />
+              <xs:element name="SOLICTANTE" msprop:Generator_UserColumnName="SOLICTANTE" msprop:Generator_ColumnVarNameInTable="columnSOLICTANTE" msprop:Generator_ColumnPropNameInRow="SOLICTANTE" msprop:Generator_ColumnPropNameInTable="SOLICTANTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNPJSOLICITANTE" msprop:Generator_UserColumnName="CNPJSOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnCNPJSOLICITANTE" msprop:Generator_ColumnPropNameInRow="CNPJSOLICITANTE" msprop:Generator_ColumnPropNameInTable="CNPJSOLICITANTEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENDERECOSOLICITANTE" msprop:Generator_UserColumnName="ENDERECOSOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnENDERECOSOLICITANTE" msprop:Generator_ColumnPropNameInRow="ENDERECOSOLICITANTE" msprop:Generator_ColumnPropNameInTable="ENDERECOSOLICITANTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMEROSOLICITANTE" msprop:Generator_UserColumnName="NUMEROSOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnNUMEROSOLICITANTE" msprop:Generator_ColumnPropNameInRow="NUMEROSOLICITANTE" msprop:Generator_ColumnPropNameInTable="NUMEROSOLICITANTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIDADESOLICITANTE" msprop:Generator_UserColumnName="CIDADESOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnCIDADESOLICITANTE" msprop:Generator_ColumnPropNameInRow="CIDADESOLICITANTE" msprop:Generator_ColumnPropNameInTable="CIDADESOLICITANTEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CEPSOLICITANTE" msprop:Generator_UserColumnName="CEPSOLICITANTE" msprop:Generator_ColumnVarNameInTable="columnCEPSOLICITANTE" msprop:Generator_ColumnPropNameInRow="CEPSOLICITANTE" msprop:Generator_ColumnPropNameInTable="CEPSOLICITANTEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FORNECEDOR" msprop:Generator_UserColumnName="FORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnFORNECEDOR" msprop:Generator_ColumnPropNameInRow="FORNECEDOR" msprop:Generator_ColumnPropNameInTable="FORNECEDORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CNPJSFORNECEDOR" msprop:Generator_UserColumnName="CNPJSFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnCNPJSFORNECEDOR" msprop:Generator_ColumnPropNameInRow="CNPJSFORNECEDOR" msprop:Generator_ColumnPropNameInTable="CNPJSFORNECEDORColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENDERECFORNECEDOR" msprop:Generator_UserColumnName="ENDERECFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnENDERECFORNECEDOR" msprop:Generator_ColumnPropNameInRow="ENDERECFORNECEDOR" msprop:Generator_ColumnPropNameInTable="ENDERECFORNECEDORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMEROFORNECEDOR" msprop:Generator_UserColumnName="NUMEROFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnNUMEROFORNECEDOR" msprop:Generator_ColumnPropNameInRow="NUMEROFORNECEDOR" msprop:Generator_ColumnPropNameInTable="NUMEROFORNECEDORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIDADEFORNECEDOR" msprop:Generator_UserColumnName="CIDADEFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnCIDADEFORNECEDOR" msprop:Generator_ColumnPropNameInRow="CIDADEFORNECEDOR" msprop:Generator_ColumnPropNameInTable="CIDADEFORNECEDORColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CEPFORNECEDOR" msprop:Generator_UserColumnName="CEPFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnCEPFORNECEDOR" msprop:Generator_ColumnPropNameInRow="CEPFORNECEDOR" msprop:Generator_ColumnPropNameInTable="CEPFORNECEDORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SALDO" msprop:Generator_UserColumnName="SALDO" msprop:Generator_ColumnVarNameInTable="columnSALDO" msprop:Generator_ColumnPropNameInRow="SALDO" msprop:Generator_ColumnPropNameInTable="SALDOColumn" type="xs:int" />
+              <xs:element name="IDFORNECEDOR" msprop:Generator_UserColumnName="IDFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnIDFORNECEDOR" msprop:Generator_ColumnPropNameInRow="IDFORNECEDOR" msprop:Generator_ColumnPropNameInTable="IDFORNECEDORColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="DATADEENTREGA" msprop:Generator_UserColumnName="DATADEENTREGA" msprop:Generator_ColumnVarNameInTable="columnDATADEENTREGA" msprop:Generator_ColumnPropNameInRow="DATADEENTREGA" msprop:Generator_ColumnPropNameInTable="DATADEENTREGAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="VALORUNITARIO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="VALORUNITARIO" msprop:Generator_ColumnVarNameInTable="columnVALORUNITARIO" msprop:Generator_ColumnPropNameInRow="VALORUNITARIO" msprop:Generator_ColumnPropNameInTable="VALORUNITARIOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CotacaoFornecedorCondicaoPagamento" msprop:Generator_UserTableName="CotacaoFornecedorCondicaoPagamento" msprop:Generator_RowDeletedName="CotacaoFornecedorCondicaoPagamentoRowDeleted" msprop:Generator_TableClassName="CotacaoFornecedorCondicaoPagamentoDataTable" msprop:Generator_RowChangedName="CotacaoFornecedorCondicaoPagamentoRowChanged" msprop:Generator_RowClassName="CotacaoFornecedorCondicaoPagamentoRow" msprop:Generator_RowChangingName="CotacaoFornecedorCondicaoPagamentoRowChanging" msprop:Generator_RowEvArgName="CotacaoFornecedorCondicaoPagamentoRowChangeEvent" msprop:Generator_RowEvHandlerName="CotacaoFornecedorCondicaoPagamentoRowChangeEventHandler" msprop:Generator_TablePropName="CotacaoFornecedorCondicaoPagamento" msprop:Generator_TableVarName="tableCotacaoFornecedorCondicaoPagamento" msprop:Generator_RowDeletingName="CotacaoFornecedorCondicaoPagamentoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" msprop:Generator_UserColumnName="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" msprop:Generator_ColumnPropNameInRow="IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" msprop:Generator_ColumnVarNameInTable="columnIDCOTACAOFORNECEDORCONDICAOPAGAMENTO" msprop:Generator_ColumnPropNameInTable="IDCOTACAOFORNECEDORCONDICAOPAGAMENTOColumn" type="xs:int" />
+              <xs:element name="IDCOTACAOFORNECEDOR" msprop:Generator_UserColumnName="IDCOTACAOFORNECEDOR" msprop:Generator_ColumnPropNameInRow="IDCOTACAOFORNECEDOR" msprop:Generator_ColumnVarNameInTable="columnIDCOTACAOFORNECEDOR" msprop:Generator_ColumnPropNameInTable="IDCOTACAOFORNECEDORColumn" type="xs:int" />
+              <xs:element name="VENCIMENTO" msprop:Generator_UserColumnName="VENCIMENTO" msprop:Generator_ColumnPropNameInRow="VENCIMENTO" msprop:Generator_ColumnVarNameInTable="columnVENCIMENTO" msprop:Generator_ColumnPropNameInTable="VENCIMENTOColumn" type="xs:dateTime" />
+              <xs:element name="VALOR" msprop:Generator_UserColumnName="VALOR" msprop:Generator_ColumnPropNameInRow="VALOR" msprop:Generator_ColumnVarNameInTable="columnVALOR" msprop:Generator_ColumnPropNameInTable="VALORColumn" type="xs:decimal" />
+              <xs:element name="VENC" msdata:ReadOnly="true" msprop:Generator_UserColumnName="VENC" msprop:Generator_ColumnPropNameInRow="VENC" msprop:Generator_ColumnVarNameInTable="columnVENC" msprop:Generator_ColumnPropNameInTable="VENCColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:IDCOTACAODECOMPRAITEM" />
+    </xs:unique>
+    <xs:unique name="CotacaoFornecedorCondicaoPagamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CotacaoFornecedorCondicaoPagamento" />
+      <xs:field xpath="mstns:IDCOTACAOFORNECEDORCONDICAOPAGAMENTO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

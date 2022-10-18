@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Code.dll">
+   <Modules>
+    <Module Name="app_code.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="cGraficos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GerarGraficosGeral(System.Data.DataTable)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="135">In method 'cGraficos.GerarGraficosGeral(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GerarGraficosGeralFilial(System.Data.DataTable)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="67">In method 'cGraficos.GerarGraficosGeralFilial(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoGeral(System.Data.DataTable)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="198">In method 'cGraficos.GraficoGeral(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoGeralResponsabilidade(System.Data.DataTable,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="262">In method 'cGraficos.GraficoGeralResponsabilidade(DataTable, string)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoInventarioXRua(System.Data.DataTable,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="386">In method 'cGraficos.GraficoInventarioXRua(DataTable, int)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoInventarioXRuaPizza(System.Data.DataTable,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="447">In method 'cGraficos.GraficoInventarioXRuaPizza(DataTable, int)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MontarGraficoFilialResponsavel(System.Data.DataTable,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="cGraficos.cs" Line="321">In method 'cGraficos.MontarGraficoFilialResponsavel(DataTable, string)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DataSet1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet1'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataSet1+DataTable1DataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet1.DataTable1DataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataSet2" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet2'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataSet2+DataTable1DataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet2.DataTable1DataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataSet3" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet3'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataSet3+DataTable1DataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DataSet3.DataTable1DataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoCidade" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoCidade'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoCidade+CidadeDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoCidade.CidadeDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoDia" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoDia'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoDia+DiaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoDia.DiaDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoDia+DocumentoFilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoDia.DocumentoFilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoFilial" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoFilial'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DesempenhoFilial+FilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DesempenhoFilial.FilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DetalheItens" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DetalheItens'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DetalheItens+ItensNFDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DetalheItens.ItensNFDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DetalheItens+NFDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DetalheItens.NFDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DetalheItens+OcorrenciasDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DetalheItens.OcorrenciasDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DetalheItens+UltimaOcorrenciaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DetalheItens.UltimaOcorrenciaDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="dsCosolidado" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dsCosolidado'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="dsCosolidado+ConsolidadosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'dsCosolidado.ConsolidadosDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsProdutoComFoto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsProdutoComFoto'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsProdutoComFoto+ProdutoFotoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsProdutoComFoto.ProdutoFotoDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsVeiculo" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsVeiculo'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsVeiculo+MotoristaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsVeiculo.MotoristaDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsVeiculo+ProprietarioDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsVeiculo.ProprietarioDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DsVeiculo+VeiculoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DsVeiculo.VeiculoDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DT" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DT'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DT+DTDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'DT.DTDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="FuncoesGerais" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CarregarConexoesRastreamento()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="FuncoesGerais.cs" Line="135">In method 'FuncoesGerais.CarregarConexoesRastreamento()', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadDataSetConstantes(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="FuncoesGerais.cs" Line="23">In method 'FuncoesGerais.LoadDataSetConstantes(string)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadDataSetLogo(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="FuncoesGerais.cs" Line="84">In method 'FuncoesGerais.LoadDataSetLogo(string)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#VerificarLicenca(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB\App_Code" File="FuncoesGerais.cs" Line="99">In method 'FuncoesGerais.VerificarLicenca(string)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Home" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'Home'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Home+AguardandoEmbarqueDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'Home.AguardandoEmbarqueDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Home+FilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'Home.FilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Home+MercadoriaEmbarcadaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'Home.MercadoriaEmbarcadaDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="Home+OcorrenciaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'Home.OcorrenciaDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="PedidoProduto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'PedidoProduto'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="PedidoProduto+DataTable1DataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'PedidoProduto.DataTable1DataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+FilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.FilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+FilialResponsavelClienteDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.FilialResponsavelClienteDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+FilialResponsavelClienteFilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.FilialResponsavelClienteFilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+FilialResponsavelTransporteDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.FilialResponsavelTransporteDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+FilialResponsavelTransporteFilialDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.FilialResponsavelTransporteFilialDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="ResumoOcorrencia+ocoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'ResumoOcorrencia.ocoDataTable'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_dujrmw3j.dll">
+   <Modules>
+    <Module Name="app_web_dujrmw3j.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="DesempenhoEntregaCidade" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CriarLink(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaCidade.aspx.cs" Line="247">In method 'DesempenhoEntregaCidade.CriarLink(string, string)', object 'm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'm' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmRptDesempenhoFilial" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#f(System.String,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="93">In method 'frmRptDesempenhoFilial.f(string, DataTable)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="83">In method 'frmRptDesempenhoFilial.f(string, DataTable)', call System.IDisposable.Dispose on object 'wv' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#f2(System.String,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="108">In method 'frmRptDesempenhoFilial.f2(string, DataTable)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="101">In method 'frmRptDesempenhoFilial.f2(string, DataTable)', call System.IDisposable.Dispose on object 'wv' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico(System.Data.DataTable,System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="162">In method 'frmRptDesempenhoFilial.Grafico(DataTable, double, double)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico2(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="215">In method 'frmRptDesempenhoFilial.Grafico2(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="32">In method 'frmRptDesempenhoFilial.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'D' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoFilial.aspx.cs" Line="23">In method 'frmRptDesempenhoFilial.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'rw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmRptDesempenhoPorDia" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#f(System.String,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="214">In method 'frmRptDesempenhoPorDia.f(string, DataTable)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="208">In method 'frmRptDesempenhoPorDia.f(string, DataTable)', call System.IDisposable.Dispose on object 'wv' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#f2(System.String,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="225">In method 'frmRptDesempenhoPorDia.f2(string, DataTable)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="222">In method 'frmRptDesempenhoPorDia.f2(string, DataTable)', call System.IDisposable.Dispose on object 'wv' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#f3(System.String,System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="143">In method 'frmRptDesempenhoPorDia.f3(string, DataTable)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="137">In method 'frmRptDesempenhoPorDia.f3(string, DataTable)', call System.IDisposable.Dispose on object 'wv' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="277">In method 'frmRptDesempenhoPorDia.Grafico(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico2(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="350">In method 'frmRptDesempenhoPorDia.Grafico2(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoNaoEntregue(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="199">In method 'frmRptDesempenhoPorDia.GraficoNaoEntregue(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="37">In method 'frmRptDesempenhoPorDia.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'D' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDesempenhoPorDia.aspx.cs" Line="23">In method 'frmRptDesempenhoPorDia.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'rw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ResumoPorFilial" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Button2_Click1(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="ResumoPorFilial.aspx.cs" Line="948">In method 'ResumoPorFilial.Button2_Click1(object, EventArgs)', object 'frm' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'frm' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="ResumoPorFilial.aspx.cs" Line="946">In method 'ResumoPorFilial.Button2_Click1(object, EventArgs)', call System.IDisposable.Dispose on object 'tw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetGridViewHtml(System.Web.UI.Control)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="ResumoPorFilial.aspx.cs" Line="937">In method 'ResumoPorFilial.GetGridViewHtml(Control)', call System.IDisposable.Dispose on object 'sw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoEntregues(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="ResumoPorFilial.aspx.cs" Line="1017">In method 'ResumoPorFilial.GraficoEntregues(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoNaoEntregues(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="ResumoPorFilial.aspx.cs" Line="1084">In method 'ResumoPorFilial.GraficoNaoEntregues(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_lnj4n0kz.dll">
+   <Modules>
+    <Module Name="app_web_lnj4n0kz.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="DesempenhoEntregaFilial" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CriarBoatoAjuda(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaFilial.aspx.cs" Line="319">In method 'DesempenhoEntregaFilial.CriarBoatoAjuda(string)', object 'bot' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'bot' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico(System.Data.DataTable,System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaFilial.aspx.cs" Line="391">In method 'DesempenhoEntregaFilial.Grafico(DataTable, double, double)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico2(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaFilial.aspx.cs" Line="458">In method 'DesempenhoEntregaFilial.Grafico2(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmRptEntregas" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptEntregas.aspx.cs" Line="19">In method 'frmRptEntregas.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'rw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_ndufp3no.dll">
+   <Modules>
+    <Module Name="app_web_ndufp3no.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmUsuariosDetalhe" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnSalvar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmUsuariosDetalhe.aspx.cs" Line="202">In method 'frmUsuariosDetalhe.btnSalvar_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'lstSelecionados' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmVerFoto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmVerFoto.aspx.cs" Line="25">In method 'frmVerFoto.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_oh0t4elz.dll">
+   <Modules>
+    <Module Name="app_web_oh0t4elz.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmRptDetalheNF" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmRptDetalheNF.aspx.cs" Line="19">In method 'frmRptDetalheNF.Page_Load(object, EventArgs)', object 'rw' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'rw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmSobraDetalhe" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnGravarTudo_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmSobraDetalhe.aspx.cs" Line="162">'frmSobraDetalhe.btnGravarTudo_Click(Object, EventArgs)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_ta0etx24.dll">
+   <Modules>
+    <Module Name="app_web_ta0etx24.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmCarregarFoto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DataList1_ItemDataBound(System.Object,System.Web.UI.WebControls.DataListItemEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmCarregarFoto.aspx.cs" Line="149">In method 'frmCarregarFoto.DataList1_ItemDataBound(object, DataListItemEventArgs)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#montarVisaoFoto()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmCarregarFoto.aspx.cs" Line="115">In method 'frmCarregarFoto.montarVisaoFoto()', object 'dtFototmp' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'dtFototmp' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmgdrExcelSobras" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#gerarExcel()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmgdrExcelSobras.aspx.cs" Line="25">In method 'frmgdrExcelSobras.gerarExcel()', object 'form' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'form' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmgdrExcelSobras.aspx.cs" Line="30">In method 'frmgdrExcelSobras.gerarExcel()', call System.IDisposable.Dispose on object 'stw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmLoginGrupoLogos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="36">In method 'frmLoginGrupoLogos.Criptografar(string, string)', call System.IDisposable.Dispose on object 'des' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="37">In method 'frmLoginGrupoLogos.Criptografar(string, string)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="46">'frmLoginGrupoLogos.Criptografar(String, String)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="60">In method 'frmLoginGrupoLogos.Descriptografar(string, string)', call System.IDisposable.Dispose on object 'des' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="61">In method 'frmLoginGrupoLogos.Descriptografar(string, string)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginGrupoLogos.aspx.cs" Line="74">'frmLoginGrupoLogos.Descriptografar(String, String)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmLoginQuasar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="36">In method 'frmLoginQuasar.Criptografar(string, string)', call System.IDisposable.Dispose on object 'des' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="37">In method 'frmLoginQuasar.Criptografar(string, string)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="46">'frmLoginQuasar.Criptografar(String, String)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="60">In method 'frmLoginQuasar.Descriptografar(string, string)', call System.IDisposable.Dispose on object 'des' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="61">In method 'frmLoginQuasar.Descriptografar(string, string)', call System.IDisposable.Dispose on object 'ms' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmLoginQuasar.aspx.cs" Line="74">'frmLoginQuasar.Descriptografar(String, String)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmphExcel" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#gerarExcel()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmphExcel.aspx.cs" Line="129">In method 'frmphExcel.gerarExcel()', object 'form' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'form' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="frmphExcel.aspx.cs" Line="134">In method 'frmphExcel.gerarExcel()', call System.IDisposable.Dispose on object 'stw' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Site" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#btnConfirmar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="Site.master.cs" Line="429">In method 'Site.btnConfirmar_Click(object, EventArgs)', object 'ListClientes' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'ListClientes' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Administrador\AppData\Local\Temp\tmpDB6E.tmp.cadir\bin\App_Web_vxajh1fx.dll">
+   <Modules>
+    <Module Name="app_web_vxajh1fx.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="DesempenhoEntregaDia" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Grafico(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaDia.aspx.cs" Line="331">In method 'DesempenhoEntregaDia.Grafico(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Grafico2(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaDia.aspx.cs" Line="404">In method 'DesempenhoEntregaDia.Grafico2(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GraficoNaoEntregue(System.Data.DataTable)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-06-13 17:21:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="m:\Projetos\GrupoLogos.Intranet\GrupoLogos.Intranet.WEB" File="DesempenhoEntregaDia.aspx.cs" Line="461">In method 'DesempenhoEntregaDia.GraficoNaoEntregue(DataTable)', object 'viewer' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'viewer' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implement ISerializable correctly</Name>
+   <Description>If a type is assignable to ISerializable, it should implement GetObjectData. For unsealed types, the GetObjectData method should be callable and overridable by derived types.</Description>
+   <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

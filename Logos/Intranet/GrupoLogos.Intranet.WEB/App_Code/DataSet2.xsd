@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT    coalesce(ModOpc.Descricao, Mod.Nome) as Menu,  
+coalesce(ModMen.IDParente,0) IDParente,  
+ModOpc.Programa,    
+ModOpc.Pacote,    
+coalesce(ModOpc.Tipo, coalesce(Mod.tipo, 'WIN')) Tipo,    
+ModMen.IDModuloMenu,    
+isnull(ModOpc.IDModuloOpcao,0) IDModuloOpcao,    
+Mod.Ordem,    
+ModMen.Ordem,  
+Link    
+FROM ModuloMenu ModMen    LEFT JOIN ModuloOpcao ModOpc  ON(ModOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+LEFT JOIN Modulo Mod    ON(Mod.IDModulo = ModMen.IDModulo)    
+WHERE  
+	(coalesce(ModMen.Ativo,'NAO') = 'SIM')    
+	AND (coalesce(ModOpc.tipo, coalesce(Mod.tipo, 'WIN')) = 'WEB')    
+	AND ModMen.IDModuloMenu in     ( SELECT IDParente from ModuloMenu ModMen2  INNER JOIN UsuarioOpcao UsuOpc    ON(UsuOpc.IDModuloOpcao = ModMen2.IDModuloOpcao)    
+	LEFT JOIN ModuloOpcao ModOpc    ON(ModOpc.IDModuloOpcao = ModMen2.IDModuloOpcao)    
+	WHERE UsuOpc.IDUsuario = 4  
+	
+	AND UsuOpc.Permissao = 'SIM' )    
+
+UNION ALL    
+SELECT     coalesce(ModOpc.Descricao, Mod.Nome) as Menu,    coalesce(ModMen.IDParente,0) IDParente,    ModOpc.Programa,    ModOpc.Pacote,    
+coalesce(ModOpc.Tipo, coalesce(Mod.tipo, 'WIN')) Tipo,    ModMen.IDModuloMenu,    ModOpc.IDModuloOpcao,    Mod.Ordem,    ModMen.Ordem,  Link    
+FROM ModuloMenu ModMen    LEFT JOIN ModuloOpcao ModOpc  ON(ModOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+LEFT JOIN Modulo Mod    ON(Mod.IDModulo = ModMen.IDModulo)    
+INNER JOIN UsuarioOpcao UsuOpc    ON(UsuOpc.IDModuloOpcao = ModMen.IDModuloOpcao)    
+WHERE
+(coalesce(ModMen.Ativo,'NAO') = 'SIM')    
+AND (coalesce(ModOpc.tipo, coalesce(Mod.tipo, 'WIN')) = 'WEB')    
+AND  UsuOpc.IDUsuario = 4 
+AND UsuOpc.Permissao = 'SIM'      
+
+and ModOpc.Link is not null
+ORDER BY IDParente ASC,  ModMen.Ordem asc   </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Menu" DataSetColumn="Menu" />
+              <Mapping SourceColumn="IDParente" DataSetColumn="IDParente" />
+              <Mapping SourceColumn="Programa" DataSetColumn="Programa" />
+              <Mapping SourceColumn="Pacote" DataSetColumn="Pacote" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="IDModuloMenu" DataSetColumn="IDModuloMenu" />
+              <Mapping SourceColumn="IDModuloOpcao" DataSetColumn="IDModuloOpcao" />
+              <Mapping SourceColumn="Ordem" DataSetColumn="Ordem" />
+              <Mapping SourceColumn="Ordem1" DataSetColumn="Ordem1" />
+              <Mapping SourceColumn="Link" DataSetColumn="Link" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TablePropName="DataTable1" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Menu" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Menu" msprop:Generator_ColumnPropNameInRow="Menu" msprop:Generator_ColumnVarNameInTable="columnMenu" msprop:Generator_ColumnPropNameInTable="MenuColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDParente" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IDParente" msprop:Generator_ColumnPropNameInRow="IDParente" msprop:Generator_ColumnVarNameInTable="columnIDParente" msprop:Generator_ColumnPropNameInTable="IDParenteColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Programa" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Programa" msprop:Generator_ColumnPropNameInRow="Programa" msprop:Generator_ColumnVarNameInTable="columnPrograma" msprop:Generator_ColumnPropNameInTable="ProgramaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pacote" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Pacote" msprop:Generator_ColumnPropNameInRow="Pacote" msprop:Generator_ColumnVarNameInTable="columnPacote" msprop:Generator_ColumnPropNameInTable="PacoteColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDModuloMenu" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IDModuloMenu" msprop:Generator_ColumnPropNameInRow="IDModuloMenu" msprop:Generator_ColumnVarNameInTable="columnIDModuloMenu" msprop:Generator_ColumnPropNameInTable="IDModuloMenuColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDModuloOpcao" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IDModuloOpcao" msprop:Generator_ColumnPropNameInRow="IDModuloOpcao" msprop:Generator_ColumnVarNameInTable="columnIDModuloOpcao" msprop:Generator_ColumnPropNameInTable="IDModuloOpcaoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Ordem" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Ordem" msprop:Generator_ColumnPropNameInRow="Ordem" msprop:Generator_ColumnVarNameInTable="columnOrdem" msprop:Generator_ColumnPropNameInTable="OrdemColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Ordem1" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Ordem1" msprop:Generator_ColumnPropNameInRow="Ordem1" msprop:Generator_ColumnVarNameInTable="columnOrdem1" msprop:Generator_ColumnPropNameInTable="Ordem1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="Link" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Link" msprop:Generator_ColumnPropNameInRow="Link" msprop:Generator_ColumnVarNameInTable="columnLink" msprop:Generator_ColumnPropNameInTable="LinkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

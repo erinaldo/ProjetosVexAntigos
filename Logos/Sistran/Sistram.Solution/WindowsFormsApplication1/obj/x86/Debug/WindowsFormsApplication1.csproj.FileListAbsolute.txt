@@ -1,0 +1,17 @@
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+D:\projetos\LogosSVN\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb

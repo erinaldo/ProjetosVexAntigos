@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+      android:background="@drawable/fundo">
+    
+ <TableRow >
+<LinearLayout 
+    android:id="@+id/linearLayout2" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content"   
+    >
+    
+    </LinearLayout>  
+     </TableRow>
+
+ <ImageView
+     android:id="@+id/imageView1"
+     android:layout_width="100dp"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="1dp"
+     android:contentDescription="@string/Dado"
+     android:src="@drawable/logo" />
+
+
+
+ <TableRow 
+     android:id="@+id/tableRow1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content" 
+     android:layout_gravity="center"
+     >
+ <TextView
+     android:id="@+id/textView1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/bemvindo"
+     android:textAppearance="?android:attr/textAppearanceLarge"
+ 		android:layout_gravity="center"
+ 		 />
+ </TableRow>
+
+</TableLayout>

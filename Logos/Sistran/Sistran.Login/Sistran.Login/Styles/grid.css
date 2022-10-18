@@ -1,0 +1,95 @@
+﻿
+.grid{
+    
+}
+
+.grid_scroll{
+    border: #999999 1px solid;
+    background: #FFFFFF;
+}
+
+.grid_label{
+    border-right-width: 1px;
+    
+    border-right-style: solid;
+    
+    border-right-color: #999999;
+
+}
+
+.grid_label_text{
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold;    
+}
+
+.grid_label_grup{
+    
+    border: solid 1px #999999;
+    
+	background-image: url(../Images/vcl-bin/qooxdoo/framework/resource/widget/windows/grade/campo.png);
+}
+
+.grid_cell{
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    
+    border-right-style: solid;
+    border-bottom-style: solid;
+    
+    border-right-color: #CCCCCC;
+    border-bottom-color: #CCCCCC;
+    
+    background: #FFFFFF;
+    height: 20px;
+    
+    cursor: pointer;
+
+}
+
+.grid_cell_text{
+    font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.grid_cell_over{
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    
+    border-right-style: solid;
+    border-bottom-style: solid;
+    
+    border-right-color: #CCCCCC;
+    border-bottom-color: #CCCCCC;
+    
+    color: #000000;
+    
+    background: #335EA8;
+    height: 20px;
+}
+
+.grid_cell_text_over{
+    color: #FFFFFF;
+}
+
+.grid_cell_selected{
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    
+    border-right-style: solid;
+    border-bottom-style: solid;
+    
+    border-right-color: #CCCCCC;
+    border-bottom-color: #CCCCCC;
+    
+    color: #FFFFFF;
+    
+    background: #000063;
+    height: 20px;
+}
+
+.grid_cell_text_selected{
+	font-size: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}

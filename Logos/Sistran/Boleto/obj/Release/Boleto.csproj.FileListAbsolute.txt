@@ -1,0 +1,5 @@
+D:\Projetos\sistran\Boleto\bin\Release\Boleto.dll
+D:\Projetos\sistran\Boleto\bin\Release\Boleto.pdb
+D:\Projetos\sistran\Boleto\obj\Release\ResolveAssemblyReference.cache
+D:\Projetos\sistran\Boleto\obj\Release\Boleto.dll
+D:\Projetos\sistran\Boleto\obj\Release\Boleto.pdb

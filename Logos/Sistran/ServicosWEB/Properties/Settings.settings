@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServicosWEB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServicosWEB_br_com_roge_wslogos01_WSLogos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls</Value>
+    </Setting>
+    <Setting Name="ServicosWEB_br_com_roge_wslogos02_WSLogos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wslogos02.roge.com.br:8087/csp/roge/WSRoge.WSLogos.cls</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

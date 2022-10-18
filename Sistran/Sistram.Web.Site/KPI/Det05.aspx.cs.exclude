@@ -1,0 +1,99 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+//using Microsoft.Reporting.WebForms;
+using System.Configuration;
+using System.Threading;
+using System.Globalization;
+
+public partial class Det05 : System.Web.UI.Page
+{
+    string select = "";
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo culture = new CultureInfo("pt-BR");
+
+
+            if (!IsPostBack)
+            {
+                string select = "";
+                decimal ItensCancelados = new SistranBLL.KPI().Form06("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+                decimal caclTemp = new SistranBLL.KPI().Form05("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+                decimal m = (caclTemp / (caclTemp + ItensCancelados)) * 100;
+
+                lblResultado.Text = m.ToString("#0.00") + "%";
+                gerarReport();//corrigir
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert", "alert('" + ex.Message.Replace("'", "´") + "')", true);
+        }
+
+    }
+
+    private void gerarReport()
+    {
+
+        DataSet ds = retornar();
+        decimal LinhasAtendidas = new SistranBLL.KPI().Form02("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+        lblAtendidas.Text = LinhasAtendidas.ToString();
+
+        decimal ItensCancelados = new SistranBLL.KPI().Form06("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+        decimal LinhasSolicitadas = ItensCancelados + LinhasAtendidas;
+
+
+        lblSolicitadas.Text = LinhasSolicitadas.ToString();
+
+        lblAtendidas.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det05a')");
+        lblAtendidas.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+        lblAtendidas.ToolTip = "Clique para gerar o Excel";
+        Session["det05a"] = ds.Tables[1];     
+
+
+        lblSolicitadas.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det05s')");
+        lblSolicitadas.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+        lblSolicitadas.ToolTip = "Clique para gerar o Excel";
+        Session["det05s"] = ds.Tables[0];     
+    }
+
+
+    private DataSet retornar()
+    {
+        //conferidos
+        string strsql = "  SELECT  NF.NUMERO [NOTA FISCAL], NF.SERIE, PC.CODIGO, NFI.QUANTIDADE    ";
+        strsql += " FROM MAPA MP INNER JOIN MOVIMENTACAOITEM MI ON (MI.IDMAPA = MP.IDMAPA)  ";
+        strsql += " INNER JOIN DOCUMENTO NF ON (NF.IDDOCUMENTO = MI.IDDOCUMENTO)  ";
+        strsql += " INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)  ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM) ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE) ";
+        strsql += " WHERE NF.IDCLIENTE in(" + Sistran.Library.FuncoesUteis.retornarClientes() + ") AND MP.ESTOQUEPROCESSADO = 'SIM' ";
+        strsql += " AND MP.ESTOQUEPROCESSADO = 'SIM'  ";
+        strsql += " AND MP.DATADECADASTRO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103)  AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+        strsql += " AND MI.PEDIDONOTAFISCAL IS NOT NULL ";
+
+        //atendidos
+         strsql += "  SELECT  NF.NUMERO [NOTA FISCAL], NF.SERIE, ";
+        strsql += " PC.CODIGO, NFI.QUANTIDADE ";
+        strsql += " FROM  ";
+        strsql += " DOCUMENTO NF   ";
+        strsql += " INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)   ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)   ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)   ";
+        strsql += " INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (" + Sistran.Library.FuncoesUteis.retornarClientes() + ")     ";
+        strsql += " AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'   ";
+        strsql += " AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103)  AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+        strsql += " ORDER BY NF.NUMERO   ";
+        return Sistran.Library.GetDataTables.RetornarDataSet(strsql, "");
+    } 
+    
+}

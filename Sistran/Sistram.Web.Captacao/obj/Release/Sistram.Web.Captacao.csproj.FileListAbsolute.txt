@@ -1,0 +1,17 @@
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Sistram.Web.Captacao.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Sistram.Web.Captacao.pdb
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\AjaxControlToolkit.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Artem.GoogleMap.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Microsoft.Practices.ServiceLocation.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Microsoft.Practices.Unity.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Microsoft.Practices.Unity.Interception.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Sistran.Library.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Validacao.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Sistran.Library.pdb
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\AjaxControlToolkit.pdb
+M:\Projetos\sistran\Sistram.Web.Captacao\bin\Validacao.pdb
+M:\Projetos\sistran\Sistram.Web.Captacao\obj\Release\Sistram.Web.Captacao.csprojResolveAssemblyReference.cache
+M:\Projetos\sistran\Sistram.Web.Captacao\obj\Release\Sistram.Web.Captacao.dll
+M:\Projetos\sistran\Sistram.Web.Captacao\obj\Release\Sistram.Web.Captacao.pdb

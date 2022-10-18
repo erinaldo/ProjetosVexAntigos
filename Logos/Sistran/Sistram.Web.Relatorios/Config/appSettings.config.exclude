@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<appSettings>
+  <add key="EnderecoSiteDefault" value="http://localhost:40552/Default.aspx" />
+  <add key="UrlXmlConnections" value="Config/Configurations.xml" />
+</appSettings>
+

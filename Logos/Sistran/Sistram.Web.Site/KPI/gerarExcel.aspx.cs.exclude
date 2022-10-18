@@ -1,0 +1,238 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Reflection;
+
+using System.IO;
+public partial class KPI_gerarExcel : System.Web.UI.Page
+{
+
+    public static void ExportToExcel(DataTable data, string fileName)
+    {
+        HttpContext.Current.Response.Clear();
+        HttpContext.Current.Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", fileName + ".xls"));
+        HttpContext.Current.Response.ContentType = "application/ms-excel";
+        HttpContext.Current.Response.Write(GenerateTable(data));
+        HttpContext.Current.Response.End();
+    }
+
+    private static string GenerateTable(DataTable source)
+    {
+
+        HtmlTable table = new HtmlTable();
+        HtmlTableRow headerRow = new HtmlTableRow();
+
+        for (int x = 0; x < source.Columns.Count; x++)
+        {
+            HtmlTableCell th = new HtmlTableCell("th");
+            th.Style.Add(HtmlTextWriterStyle.BackgroundColor, "#337490");
+            th.Style.Add(HtmlTextWriterStyle.Color, "#FFFFFF");
+            th.InnerText = source.Columns[x].ColumnName;
+            headerRow.Cells.Add(th);
+        }
+        table.Rows.Add(headerRow);
+
+        foreach (DataRow x in source.Rows)
+        {
+            HtmlTableRow tableRow = new HtmlTableRow();
+
+            for (int y = 0; y < source.Columns.Count; y++)
+            {
+                System.Type rowType;
+                rowType = x[y].GetType();
+                HtmlTableCell td = new HtmlTableCell();
+
+                switch (rowType.ToString())
+                {
+                    case "System.String":
+                        string XMLstring = x[y].ToString();
+                        XMLstring = XMLstring.Trim();
+                        XMLstring = XMLstring.Replace("&", "&");
+                        XMLstring = XMLstring.Replace(">", ">");
+                        XMLstring = XMLstring.Replace("<", "<");
+                        td.InnerText = XMLstring;
+                        break;
+
+                    case "System.DateTime":
+                        DateTime XMLDate = (DateTime)x[y];
+                        string XMLDatetoString = ""; //Excel Converted Date
+                        XMLDatetoString = XMLDate.Year.ToString() +
+                             "-" +
+                             (XMLDate.Month < 10 ? "0" +
+                             XMLDate.Month.ToString() : XMLDate.Month.ToString()) +
+                             "-" +
+                             (XMLDate.Day < 10 ? "0" +
+                             XMLDate.Day.ToString() : XMLDate.Day.ToString()) +
+                             "T" +
+                             (XMLDate.Hour < 10 ? "0" +
+                             XMLDate.Hour.ToString() : XMLDate.Hour.ToString()) +
+                             ":" +
+                             (XMLDate.Minute < 10 ? "0" +
+                             XMLDate.Minute.ToString() : XMLDate.Minute.ToString()) +
+                             ":" +
+                             (XMLDate.Second < 10 ? "0" +
+                             XMLDate.Second.ToString() : XMLDate.Second.ToString()) +
+                             ".000";
+                        td.InnerText = XMLDatetoString;
+                        break;
+
+                    case "System.Boolean":
+                        td.InnerText = x[y].ToString();
+                        break;
+
+                    case "System.Int16":
+
+                    case "System.Int32":
+
+                    case "System.Int64":
+
+                    case "System.Byte":
+
+                        td.InnerText = x[y].ToString();
+                        break;
+
+                    case "System.Decimal":
+
+                    case "System.Double":
+
+                        td.InnerText = string.Format("{0:n}", x[y]);
+
+                        break;
+
+                    case "System.DBNull":
+                        td.InnerText = string.Empty;
+                        break;
+                }
+                tableRow.Cells.Add(td);
+            }
+            table.Rows.Add(tableRow);
+        }
+        StringWriter sw = new StringWriter();
+        HtmlTextWriter htw = new HtmlTextWriter(sw);
+        table.RenderControl(htw);
+        return sw.ToString();
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string key = Request.QueryString["key"];
+        DataTable dt = (DataTable)Session[key];
+        ExportToExcel(dt, Request.QueryString["key"]);
+
+
+
+        /*
+        if (!IsPostBack)
+        {
+            string key = Request.QueryString["key"];
+            DataTable dt = (DataTable)Session[key];
+            
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                return;
+            }
+            Response.Clear();
+            Response.ContentType = "application/vnd.ms-excel"; 
+            string sep = "";
+            foreach (DataColumn dc in dt.Columns)
+            {
+                Response.Write(sep + dc.ColumnName);
+                sep = "\t";
+            }
+            Response.Write("\n");
+
+            int i;
+            foreach (DataRow dr in dt.Rows)
+            {
+                sep = "";
+                for (i = 0; i < dt.Columns.Count; i++)
+                {
+                    Response.Write(sep + dr[i].ToString());
+                    sep = "\t";
+                }
+                Response.Write("\n");
+            }
+        }
+        //Response.Write("<script>window.close();</script>");
+         * */
+
+    }
+}
+
+/* testes
+ * 
+ * 
+ * 
+ * 
+        Microsoft.Office.Interop.Excel.Application oXL;
+        Microsoft.Office.Interop.Excel.Workbook oWB;
+        Microsoft.Office.Interop.Excel.Worksheet oSheet;
+        Microsoft.Office.Interop.Excel.Range oRange;
+
+
+        // Start Excel and get Application object.
+        oXL = new Microsoft.Office.Interop.Excel.Application();
+
+        // Set some properties
+       // oXL.Visible = true;
+        oXL.DisplayAlerts = false;
+
+        // Get a new workbook.
+        oWB = oXL.Workbooks.Add(Missing.Value);
+
+        // Get the active sheet
+        oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oWB.ActiveSheet;
+        oSheet.Name = Request.QueryString["key"];
+
+        // Process the DataTable
+        // BE SURE TO CHANGE THIS LINE TO USE *YOUR* DATATABLE
+        string key = Request.QueryString["key"];
+        System.Data.DataTable dt = (System.Data.DataTable)Session[key];
+
+        int rowCount = 1;
+        foreach (DataRow dr in dt.Rows)
+        {
+            rowCount += 1;
+            for (int i = 1; i < dt.Columns.Count + 1; i++)
+            {
+                // Add the header the first time through
+                if (rowCount == 2)
+                {
+                    oSheet.Cells[1, i] = dt.Columns[i - 1].ColumnName;
+                }
+                oSheet.Cells[rowCount, i] = dr[i - 1].ToString();
+            }
+        }
+
+        // Resize the columns
+        oRange = oSheet.get_Range(oSheet.Cells[1, 1],
+                      oSheet.Cells[rowCount, dt.Columns.Count]);
+        oRange.EntireColumn.AutoFit();
+
+        // Save the sheet and close
+        oSheet = null;
+        oRange = null;
+        oWB.SaveAs("test.xls", Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal,
+            Missing.Value, Missing.Value, Missing.Value, Missing.Value,
+            Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive,
+            Missing.Value, Missing.Value, Missing.Value,
+            Missing.Value, Missing.Value);
+        oWB.Close(Missing.Value, Missing.Value, Missing.Value);
+        oWB = null;
+        oXL.Quit();
+
+        // Clean up
+        // NOTE: When in release mode, this does the trick
+        GC.WaitForPendingFinalizers();
+        GC.Collect();
+        GC.WaitForPendingFinalizers();
+        GC.Collect(); */

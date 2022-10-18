@@ -1,0 +1,4 @@
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Release\AprovacaoRequisicao.Library.dll
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Release\AprovacaoRequisicao.Library.pdb
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Release\AprovacaoRequisicao.Library.dll
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Release\AprovacaoRequisicao.Library.pdb

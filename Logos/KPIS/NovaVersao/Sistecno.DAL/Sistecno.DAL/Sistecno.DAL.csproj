@@ -1,0 +1,2278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B646E6C6-03F3-4CCF-9F18-8FCED93697E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistecno.DAL</RootNamespace>
+    <AssemblyName>Sistecno.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BD\cDb.cs" />
+    <Compile Include="BD\Cnn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Cnn.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BD\ConexaoPrincipal.cs" />
+    <Compile Include="Cadastro.cs" />
+    <Compile Include="CadastroImagem.cs" />
+    <Compile Include="Carrinho.cs" />
+    <Compile Include="CFOP.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ColetorConferencia.cs" />
+    <Compile Include="ConexaoSistecno.cs" />
+    <Compile Include="ContasDeEmail.cs" />
+    <Compile Include="Documento.cs" />
+    <Compile Include="DT.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="EmpresaFilial.cs" />
+    <Compile Include="Filial.cs" />
+    <Compile Include="Icms.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Models\Agenda.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agendamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgendamentoDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgendaRecebimento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agregado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agrupamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AgrupamentoRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ajuda.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alerta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Apolice.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApoliceAtuadores.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApoliceItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Arquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArquivoClienteEDI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ArquivoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Auditoria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Aviso.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AvisoDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AvisoRoboEmail.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bairro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BairroFaixaDeCep.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BAIRROS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Balanca.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Banco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoCarteira.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoConta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoContaBloqueto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoEspecie.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoInstrucao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoInstrucaoDeProtesto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoOcorrenciaRejeicao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoOcorrenciaRemessa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoOcorrenciaRetorno.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BASE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BaseDoCredito.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bordero.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BorderoTituloDuplicata.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cadastro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroCDA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroCdaUsuarioClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroComplemento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroCondicaoEntrega.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroContato.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroContatoAlerta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroContatoEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroDepartamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroEntrega.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroReferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CadastroTipoDeContato.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CanalDeVenda.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CentroDeCusto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CentroDeCustoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cfop.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cheque.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cidade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CidadeDistancia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CidadeFaixaDeCep.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CIDADES.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CidadeSedex.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteEDI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteJustificativa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteMeta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteRegra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientesComprovei.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteSetorFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteTipoDeMaterial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClienteTipoDeMaterialDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColetorConferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColetorConferenciaCDEAN.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColetorConferenciaItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColetorConferenciaLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ColetorConferenciaVolume.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Conciliacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConciliacaoLote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConciliacaoLoteDetalhe.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CondicaoDePagamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CondicaoDePagamentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Conexao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Conferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaItemNaoCadastrado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPallet.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletDoc.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletDocVol.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletDocVolItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletEntrada.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletEntradaLote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConferenciaPalletProdutoXXXXX.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaContabil.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaContabilCentroDeCusto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaContabilFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaContabilLancamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDeEmail.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesaCapa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesaEvento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesaImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesaItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContaDespesaObservacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contrato.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoCapa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoEvento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoItemCCusto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContratoObservacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ControleBriefing.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ControleBriefingItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CotacaoDeCompra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CotacaoDeCompraItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CotacaoFornecedor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CotacaoFornecedorCondPgto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DDA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DDAImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Departamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Deposito.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepositoPlanta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepositoPlantaLeiaute.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepositoPlantaLocalizacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepositoPlantaLocalizacaoRegra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dica.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dicionario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoAFaturar.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoAguardandoCTRC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoAprovacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoAte.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoAteItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoCDA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoCfop.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoComprovante.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoCondicaoDePagamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoCotacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoCubagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoEdi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoEletronicoParametro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoEmbalagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoFilialPedido.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoImposto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoItemComplemento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoItemEmpenhado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoItemLabelPicking.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoMigrado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoModelo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoNotaFiscal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoObjeto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoObjetoOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoObservacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoOcorrenciaArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoOcorrenciaItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoOrcamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DOCUMENTOPEDIDO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DOCUMENTOPEDIDOITEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoProtocolo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoRecebimento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoReclamacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoRelacionado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoRemessa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoReprogramado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoSituacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentoTipo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DT.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DtCheque.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTContaCorrente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTFaturamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTFaturamentoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTFaturamentoClienteDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTLancamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dtproperties.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTRomaneio.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DTTipo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiControleDeArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiControleDeArquivoLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayOut.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayOutPergunta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayOutReg.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayOutRegCpo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayoutRegTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDILayoutTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDIPergunta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiPlanilha.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiPlanilhaDetalhe.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDITransferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdiTrocaDeArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Bairro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Cadastro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_CadastroContatoEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Cidade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Documento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoAguardandoCtrc.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoEdi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoNFE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoNotaFiscal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_DocumentoRelacionado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Edi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Estado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Edi_Gerado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\edi_gerado_antigo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_Produto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_ProdutoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EDI_ProdutoEmbalagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\EmailPendente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empresa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EnquadramentoIPI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstadoFaixaDeCep.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ESTADOS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estoque.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstoqueComprasMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstoqueDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstoqueDivisaoMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstoqueMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstoqueOperacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExtratoParaConciliacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Face_RE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Feriado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Filial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FilialCidadeSetor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FilialPortaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinalidadeDocTed.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Folder.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fornecedor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FornecedorFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Frota.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FrotaGrupoItemControle.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FrotaGrupoItemControleItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FrotaItemControle.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Funcionario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gaiola.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GaiolaConferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GrandeUsuario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GrandeUsuarioEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grupo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GrupoDeProduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HistoricoPadrao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Icms.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inss.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Inventario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioContagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioContagemProduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventarioUa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Irrf.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KPIIRWINProcessamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KPIIRWIN_V2.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LabelPicking.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lancamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LancamentoContabil.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LancamentoContabilCC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LancamentoOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LancamentoPadrao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LancamentoPadraoConfiguracao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeiauteBoleto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LeiauteCheque.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Licenciamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LicenciamentoMes.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogComprovei.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginPerfil.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginPerfilPermissao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogMetodo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOGRADOUROS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogRoboAcertoNota.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_BAIRRO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_CPC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_FAIXA_BAIRRO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_FAIXA_CPC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_FAIXA_LOCALIDADE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_FAIXA_UF.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_FAIXA_UOP.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_GRANDE_USUARIO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_LOCALIDADE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_LOGRADOURO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_NUM_SEC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_PAIS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_UNID_OPER.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_VAR_BAI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_VAR_LOC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOG_VAR_LOG.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoteEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mapa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MenuCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MenuSite.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\mMotoristaProprietario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modalidade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModalidadeDePagamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModalidadeDocTed.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModalidadeFinalidadeDocTed.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Modulo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuloMenu.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuloMenuBkp.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuloOpcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuloOpcaoAcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModuloOpcaoTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Moeda.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MoedaCotacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Motivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MotivoRejeicao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Motorista.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MotoristaFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MotoristaHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Movimentacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoBancaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoClienteConsolidado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\movimentacaocliente_bkp.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoRomaneio.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovimentacaoRomaneioItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Natureza.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Numerador.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ocorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcorrenciaAcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcorrenciaAndamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcorrenciaCodigo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcorrenciaDePara.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OcorrenciaSerie.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Operacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orcamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrcamentoPedido.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrcamentoPedidoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pais.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pallet.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PalletDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PalletDocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PalletDocumentoItemCarregamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ParametroFluxoDeCaixa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PercursoMdfe.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PlanoDeContas_Ant.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Planta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Portaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PortariaVisitante.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PreFatura.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PreFaturaDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PreFaturaRoge.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrevisaoDeMaterial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Produto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoClienteAvaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoClienteRegra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoEmbalagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoEstrutura.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProdutoFoto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Projeto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjetoArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjetoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjetoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjetoProducao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Proprietario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RamoDeAtividade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rastreador.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rastreamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reclamacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Redespacho.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Regiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RegiaoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRoge.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRogeCB.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRogeConferenciaCega.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRogeEan.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRogeItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReposicaoRogeVolume.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Representante.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RepresentanteCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequisicaoDeMaterial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequisicaoDeMaterialDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequisicaoDeMaterialItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Respostas.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RetornoComprovei.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Romaneio.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioConferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioConferenciaItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioDocumentoConferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioDocumentoFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioDocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioPrevisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RomaneioPrevisaoRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roteirizacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RoteirizacaoTipo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RPCI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RPCIDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RPCIImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rua.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Servico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Setor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SetorCep.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistecno.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistecno.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistecno.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sistecno.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistecno.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SituacaoTributariaCofins.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SituacaoTributariaIcms.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SituacaoTributariaIPI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SituacaoTributariaPIS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sobra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysproperties.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFreteProduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFreteRota.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFreteRotaModal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFreteRotaModalValor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TabelaDeFreteVigencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblBairros.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblCidades.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblLogradouros.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblUF.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TB_AUX_RE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TES.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TESCFOP.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TESControle.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeEscolta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeMonitoramento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeMovimento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeOperacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeTitulo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeTituloDuplicata.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoDeVolume.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Titulo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloDuplicata.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloDuplicataHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloDuplicataRemessa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TituloItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transportadora.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeArmazenagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeArmazenagemAgrup.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeArmazenagemLote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeArmazenagemMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeMedida.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeDeNegocios.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UnidadeFuncional.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioAlerta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCentroDeCusto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCentroDeCustoOperacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCentroDeCustoOperacaoLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCompra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioCota.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioDeTabelaDeFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioFavoritos.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioGrade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioGradeCampo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioModal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioOpcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioOpcaoAcesso.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioOperacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioOperacaoLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuarioPerfil.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Veiculo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoFoto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoLicenciamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoMarca.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoModelo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoRastreador.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoTabelaAgregado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoTabelaRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoTabelaRegiaoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VeiculoTipo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\XmlComprovei.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_AgendaRecebimento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Agrupamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_AgrupamentoRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_AVISO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_BAIRRO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_BANCOCONTA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_BANCOCONTABLOQUETO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_bordero.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_BorderoTituloDuplicata.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CADASTRO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroCdaUsuarioClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CADASTROCOMPLEMENTO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroCondicaoEntrega.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_cadastrocontato.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroContatoEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroEntrega.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CadastroReferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CentrodeCustoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Cheque.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CIDADE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_clientedivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ClienteEdi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ClienteFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ClienteSetorFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ClienteTipoDeMaterial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ClienteTipoDeMaterialDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_COLETORCONFERENCIA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_COLETORCONFERENCIAITEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_COLETORCONFERENCIALOG.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_COLETORCONFERENCIAVOLUME.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLET.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLETDOC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLETDOCVOL.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLETDOCVOLITEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLETENTRADA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONFERENCIAPALLETENTRADALOTE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_contacontabil.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ContaContabilFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CONTRATO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ContratoImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ContratoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ContratoItemCCusto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ContratoObservacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CotacaoDeCompra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CotacaoDeCompraItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_CotacaoFornecedor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Deposito.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DepositoPlanta.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DepositoPlantaLeiaute.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DepositoPlantaLocalizacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DepositoPlantaLocalizacaoRegra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoAFaturar.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOAGUARDANDOCTRC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoAte.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoAteItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoCda.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoCFOP.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOCOMPROVANTE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoCondicaoDePagamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoCotacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOCUBAGEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoEdi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoEmbalagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoImposto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOITEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoItemComplemento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoObjetoOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoObservacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOOCORRENCIAARQUIVO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoOcorrenciaItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoOrcamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoRecebimento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DocumentoRelacionado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DOCUMENTOREMESSA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DT.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DtContaCorrente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DTEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DTFaturamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DtFaturamentoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DtFaturamentoClienteDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DTHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_DTROMANEIO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EdiControleDeArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EdiControleDeArquivoLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EdiPlanilha.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EdiPlanilhaDetalhe.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EdiTrocaDeArquivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Bairro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Cadastro.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_CadastroContatoEndereco.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Cidade.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Documento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoAguardandoCtrc.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoEdi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoNFE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoNotaFiscal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_DocumentoRelacionado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Edi.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Estado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_Produto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_ProdutoCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EDI_ProdutoEmbalagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ESTADO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ESTOQUE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_EstoqueComprasMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ESTOQUEDIVISAO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ESTOQUEDIVISAOMOV.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ESTOQUEMOV.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ExtratoParaConciliacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_feriado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_FilialCidadeSetor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_FilialPortaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Fornecedorfilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_GAIOLA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_GAIOLACONFERENCIA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_grupodeproduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_icms.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Inventario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_InventarioContagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_inventariocontagemproduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Lancamento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_LANCAMENTOCONTABIL.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_LancamentoContabilCC.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Lote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_LoteEletronico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_MAPA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Modal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_modulomenu.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ModuloOpcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Motivo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_MOTORISTAFILIAL.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_MotoristaHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_MOVIMENTACAO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_movimentacaobancaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_MOVIMENTACAOITEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Numerador.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ocorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ocorrenciaserie.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Operacao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PAIS.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PalletDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PalletDocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ParametroFluxoDeCaixa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Portaria.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PortariaVisitante.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PreFatura.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PreFaturaDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PRODUTO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PRODUTOCLIENTE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_PRODUTOEMBALAGEM.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ProdutoEstrutura.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_produtofoto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RASTREAMENTO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Regiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_regiaoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_ReposicaoRoge.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RequisicaoDeMaterial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RequisicaodeMaterialDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RequisicaoDeMaterialItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Romaneio.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioDocumentoConferencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioDocumentoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioOcorrencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioPrevisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RomaneioPrevisaoRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RPCI.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_RPCIDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Setor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_SetorCEP.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Sobra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFreteProduto.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFreteRota.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFreteRotaModal.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFreteRotaModalValor.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TabelaDeFreteVigencia.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TES.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TESCFOP.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_Titulo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloDocumento.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloDuplicata.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloDuplicataHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloDuplicataremessa.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloHistorico.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TituloImagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_TRANSPORTADORA.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UnidadeDeArmazenagem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UnidadeDeArmazenagemAgrup.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UnidadeDeArmazenagemLote.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UnidadeDeArmazenagemMov.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_usuario.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioCliente.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioClienteDivisao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioCompra.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioDeTabelaDeFrete.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_USUARIOGRADE.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_USUARIOGRADECAMPO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_usuarioopcao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_USUARIOOPERACAO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_UsuarioOperacaoLog.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VEICULO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_veiculoFilial.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_veiculomarca.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VEICULOMODELO.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VEICULORASTREADOR.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VeiculoTabela.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VeiculoTabelaAgregado.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VeiculoTabelaRegiao.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_VeiculoTabelaRegiaoItem.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ZID_veiculotipo.cs">
+      <DependentUpon>Sistecno.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaisUfCidade.cs" />
+    <Compile Include="ParametrosPesquisa.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="Plano.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaInicial.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="Titulo.cs" />
+    <Compile Include="UA.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Veiculo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="BD\Cnn.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Cnn.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Models\Sistecno.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sistecno.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\Sistecno.edmx.diagram">
+      <DependentUpon>Sistecno.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\Sistecno.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sistecno.edmx</DependentUpon>
+      <LastGenOutput>Sistecno.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Sistecno.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sistecno.edmx</DependentUpon>
+      <LastGenOutput>Sistecno.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

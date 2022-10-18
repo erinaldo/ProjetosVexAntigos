@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:dda="WebServiceComprovei:downloadDocumentsAWBs" xmlns:wsc="WebServiceComprovei" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:geps="WebServiceComprovei:getExportProtocolStatus" xmlns:ddh="WebServiceComprovei:downloadDocumentsHistory" targetNamespace="WebServiceComprovei" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+        Serviço: ExportQueue
+        Versão: 2.0
+        Criador: Comprovei
+    </documentation>
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="WebServiceComprovei">
+      <xsd:import schemaLocation="https://soap.comprovei.com.br/exportQueue/v2/schemas/downloadDocumentsHistory.xsd" namespace="WebServiceComprovei:downloadDocumentsHistory" />
+      <xsd:import schemaLocation="https://soap.comprovei.com.br/exportQueue/v2/schemas/downloadDocumentsAWBs.xsd" namespace="WebServiceComprovei:downloadDocumentsAWBs" />
+      <xsd:import schemaLocation="https://soap.comprovei.com.br/exportQueue/v2/schemas/getExportProtocolStatus.xsd" namespace="WebServiceComprovei:getExportProtocolStatus" />
+      <xsd:element name="Credenciais" type="wsc:Credenciais" />
+      <xsd:complexType name="Credenciais">
+        <xsd:sequence>
+          <xsd:element name="Usuario" type="xsd:string" />
+          <xsd:element name="Senha" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="downloadDocumentsHistoryRequest">
+    <part name="parameters" element="ddh:downloadDocumentsHistory" />
+  </message>
+  <message name="downloadDocumentsHistoryResponse">
+    <part name="parameters" element="ddh:downloadDocumentsHistoryResponse" />
+  </message>
+  <message name="downloadDocumentsHistoryCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <message name="downloadDocumentsAWBsRequest">
+    <part name="parameters" element="dda:downloadDocumentsAWBs" />
+  </message>
+  <message name="downloadDocumentsAWBsResponse">
+    <part name="parameters" element="dda:downloadDocumentsAWBsResponse" />
+  </message>
+  <message name="downloadDocumentsAWBsCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <message name="getExportProtocolStatusRequest">
+    <part name="parameters" element="geps:getExportProtocolStatus" />
+  </message>
+  <message name="getExportProtocolStatusResponse">
+    <part name="parameters" element="geps:getExportProtocolStatusResponse" />
+  </message>
+  <message name="getExportProtocolStatusCredenciais">
+    <part name="Credenciais" element="wsc:Credenciais" />
+  </message>
+  <portType name="WebServiceComproveiPortType">
+    <documentation>Descrição dos métodos disponíveis</documentation>
+    <operation name="downloadDocumentsHistory">
+      <documentation>Receber as informações dos status e ocorrências de documentos conforme forem apontados pelos motoristas.</documentation>
+      <input message="wsc:downloadDocumentsHistoryRequest" />
+      <output message="wsc:downloadDocumentsHistoryResponse" />
+    </operation>
+    <operation name="downloadDocumentsAWBs">
+      <documentation>Download dos documentos do AWB.</documentation>
+      <input message="wsc:downloadDocumentsAWBsRequest" />
+      <output message="wsc:downloadDocumentsAWBsResponse" />
+    </operation>
+    <operation name="getExportProtocolStatus">
+      <documentation>Consulta, pelo protocolo fornecido, o resultado da exportação.</documentation>
+      <input message="wsc:getExportProtocolStatusRequest" />
+      <output message="wsc:getExportProtocolStatusResponse" />
+    </operation>
+  </portType>
+  <binding name="WebServiceComproveiBinding" type="wsc:WebServiceComproveiPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="downloadDocumentsHistory">
+      <soap:operation soapAction="urn:WebServiceComprovei#downloadDocumentsHistory" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:downloadDocumentsHistoryCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="downloadDocumentsAWBs">
+      <soap:operation soapAction="urn:WebServiceComprovei#downloadDocumentsAWBs" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:downloadDocumentsAWBsCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExportProtocolStatus">
+      <soap:operation soapAction="urn:WebServiceComprovei#getExportProtocolStatus" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="wsc:getExportProtocolStatusCredenciais" part="Credenciais" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WebServiceComprovei">
+    <port name="WebServiceComproveiPort" binding="wsc:WebServiceComproveiBinding">
+      <soap:address location="https://soap.comprovei.com.br/exportQueue/v2/index.php" />
+    </port>
+  </service>
+</definitions>

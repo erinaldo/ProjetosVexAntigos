@@ -1,0 +1,31 @@
+﻿.panel_text{
+    border-top : 1px solid #CCCCCC;
+}
+.panel_title_on{
+    border: 1px solid #000000;
+    background-image: url(../Images/vcl-bin/qooxdoo/framework/resource/widget/windows/panel/on.png);
+    height:28px;
+     color: #000000;
+    font-weight: bold;
+}
+
+.panel_title_off{
+    border: 1px solid #CCCCCC;
+    background-image: url(../Images/vcl-bin/qooxdoo/framework/resource/widget/windows/panel/off.png);
+    height:28px;
+    color: #999999;
+    font-weight: none;
+}
+
+.panel_title_text_on{
+    color: #000000;
+    font-weight: bold;
+}
+
+.panel_title_text_off{
+    color: #999999;
+    font-weight: none;
+}
+.painel_group{
+	border-bottom: #000000 1px solid;
+}

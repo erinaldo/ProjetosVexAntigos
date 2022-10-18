@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6640122-F36D-4434-B722-7DF88F8A3ABE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistran.Library</RootNamespace>
+    <AssemblyName>Sistran.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\TFS_SISTECNO\web\Solution\SISTRAN.LIBRARY\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseAntigaConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>BaseAntigaConfig.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\Aviso.cs" />
+    <Compile Include="BLL\Projeto.cs" />
+    <Compile Include="BLL\KPI_Irwin.cs" />
+    <Compile Include="BLL\Deposito.cs" />
+    <Compile Include="BLL\Fatura.cs" />
+    <Compile Include="BLL\Localizacao.cs" />
+    <Compile Include="BLL\Cliente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Cadastro.cs" />
+    <Compile Include="BLL\Destinatario.cs" />
+    <Compile Include="BLL\Pedido.cs" />
+    <Compile Include="BLL\Produto.cs" />
+    <Compile Include="BLL\Rastreamento.cs" />
+    <Compile Include="BLL\Reports.cs" />
+    <Compile Include="BLL\Veiculo.cs" />
+    <Compile Include="BLL\Filial.cs" />
+    <Compile Include="BLL\Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\NF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\NotasFiscais.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\NotasFiscaisItens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAO\Aviso.cs" />
+    <Compile Include="DAO\Projeto.cs" />
+    <Compile Include="DAO\KPI_Irwin.cs" />
+    <Compile Include="DAO\Deposito.cs" />
+    <Compile Include="DAO\Rastreamento.cs" />
+    <Compile Include="DAO\Fatura.cs" />
+    <Compile Include="DAO\Localizacao.cs" />
+    <Compile Include="DAO\Cliente.cs" />
+    <Compile Include="BLL\Importacao.cs" />
+    <Compile Include="DAO\Cadastro.cs" />
+    <Compile Include="DAO\Destinatario.cs" />
+    <Compile Include="DAO\Pedido.cs" />
+    <Compile Include="DAO\Produto.cs" />
+    <Compile Include="DAO\Importacao.cs" />
+    <Compile Include="DAO\Reports.cs" />
+    <Compile Include="DAO\Veiculo.cs" />
+    <Compile Include="DAO\Filial.cs" />
+    <Compile Include="DAO\Menu.cs" />
+    <Compile Include="DAO\NF.cs" />
+    <Compile Include="DAO\NotasFiscais.cs" />
+    <Compile Include="DAO\NotasFiscaisItens.cs" />
+    <Compile Include="DAO\Usuario.cs" />
+    <Compile Include="DTO\Cidade.cs" />
+    <Compile Include="DTO\Cliente.cs" />
+    <Compile Include="DTO\Carrinho.cs" />
+    <Compile Include="DTO\Cadastro.cs" />
+    <Compile Include="DTO\Localizacao.cs" />
+    <Compile Include="DTO\Menu.cs" />
+    <Compile Include="DTO\NotasDocumentosRelacionados.cs" />
+    <Compile Include="DTO\NotasFiscais.cs" />
+    <Compile Include="DTO\NotasFiscaisHistorico.cs" />
+    <Compile Include="DTO\NotasFiscaisItens.cs" />
+    <Compile Include="DTO\Usuario.cs" />
+    <Compile Include="DTO\Veiculo.cs" />
+    <Compile Include="enuns.cs" />
+    <Compile Include="GetDataTables.cs" />
+    <Compile Include="IntranetSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>IntranetSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Logins\Acesso.cs" />
+    <Compile Include="Logins\AcessoIntranet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BLL\Usuario.cs" />
+    <Compile Include="Robo\Robo.cs" />
+    <Compile Include="Settings1.cs" />
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="BaseAntigaConfig.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>BaseAntigaConfig.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IntranetSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>IntranetSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

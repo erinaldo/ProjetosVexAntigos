@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFaturamento" targetNamespace="http://tempuri.org/dsFaturamento.xsd" xmlns:mstns="http://tempuri.org/dsFaturamento.xsd" xmlns="http://tempuri.org/dsFaturamento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFaturamento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsFaturamento" msprop:Generator_DataSetName="dsFaturamento">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FAT" msprop:Generator_UserTableName="FAT" msprop:Generator_RowDeletedName="FATRowDeleted" msprop:Generator_RowChangedName="FATRowChanged" msprop:Generator_RowClassName="FATRow" msprop:Generator_RowChangingName="FATRowChanging" msprop:Generator_RowEvArgName="FATRowChangeEvent" msprop:Generator_RowEvHandlerName="FATRowChangeEventHandler" msprop:Generator_TableClassName="FATDataTable" msprop:Generator_TableVarName="tableFAT" msprop:Generator_RowDeletingName="FATRowDeleting" msprop:Generator_TablePropName="FAT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTO" msprop:Generator_UserColumnName="IDDOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnIDDOCUMENTO" msprop:Generator_ColumnPropNameInRow="IDDOCUMENTO" msprop:Generator_ColumnPropNameInTable="IDDOCUMENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO" msprop:Generator_UserColumnName="NUMERO" msprop:Generator_ColumnVarNameInTable="columnNUMERO" msprop:Generator_ColumnPropNameInRow="NUMERO" msprop:Generator_ColumnPropNameInTable="NUMEROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATADEENTRADA" msprop:Generator_UserColumnName="DATADEENTRADA" msprop:Generator_ColumnVarNameInTable="columnDATADEENTRADA" msprop:Generator_ColumnPropNameInRow="DATADEENTRADA" msprop:Generator_ColumnPropNameInTable="DATADEENTRADAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDUNIDADEDEARMAZENAGEM" msprop:Generator_UserColumnName="IDUNIDADEDEARMAZENAGEM" msprop:Generator_ColumnVarNameInTable="columnIDUNIDADEDEARMAZENAGEM" msprop:Generator_ColumnPropNameInRow="IDUNIDADEDEARMAZENAGEM" msprop:Generator_ColumnPropNameInTable="IDUNIDADEDEARMAZENAGEMColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LINHAS_EXPEDIDAS" msprop:Generator_UserTableName="LINHAS_EXPEDIDAS" msprop:Generator_RowDeletedName="LINHAS_EXPEDIDASRowDeleted" msprop:Generator_TableClassName="LINHAS_EXPEDIDASDataTable" msprop:Generator_RowChangedName="LINHAS_EXPEDIDASRowChanged" msprop:Generator_RowClassName="LINHAS_EXPEDIDASRow" msprop:Generator_RowChangingName="LINHAS_EXPEDIDASRowChanging" msprop:Generator_RowEvArgName="LINHAS_EXPEDIDASRowChangeEvent" msprop:Generator_RowEvHandlerName="LINHAS_EXPEDIDASRowChangeEventHandler" msprop:Generator_TablePropName="LINHAS_EXPEDIDAS" msprop:Generator_TableVarName="tableLINHAS_EXPEDIDAS" msprop:Generator_RowDeletingName="LINHAS_EXPEDIDASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTO" msprop:Generator_UserColumnName="IDDOCUMENTO" msprop:Generator_ColumnPropNameInRow="IDDOCUMENTO" msprop:Generator_ColumnVarNameInTable="columnIDDOCUMENTO" msprop:Generator_ColumnPropNameInTable="IDDOCUMENTOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMERO" msprop:Generator_UserColumnName="NUMERO" msprop:Generator_ColumnPropNameInRow="NUMERO" msprop:Generator_ColumnVarNameInTable="columnNUMERO" msprop:Generator_ColumnPropNameInTable="NUMEROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATADEEMISSAO" msdata:Caption="DATADEENTRADA" msprop:Generator_UserColumnName="DATADEEMISSAO" msprop:Generator_ColumnPropNameInRow="DATADEEMISSAO" msprop:Generator_ColumnVarNameInTable="columnDATADEEMISSAO" msprop:Generator_ColumnPropNameInTable="DATADEEMISSAOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LINHAEXPEDIDA" msdata:Caption="IDUNIDADEDEARMAZENAGEM" msprop:Generator_UserColumnName="LINHAEXPEDIDA" msprop:Generator_ColumnPropNameInRow="LINHAEXPEDIDA" msprop:Generator_ColumnVarNameInTable="columnLINHAEXPEDIDA" msprop:Generator_ColumnPropNameInTable="LINHAEXPEDIDAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

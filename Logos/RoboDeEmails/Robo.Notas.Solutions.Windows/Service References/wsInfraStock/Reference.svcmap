@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e33b25dd-102f-4b01-8ea0-4b6bebb07038" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Users\mrova\Desktop\Infrashop-Middleware-Unilever\AcecServices\schemas\StockServices.xsd" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StockServices.xsd" MetadataType="Schema" ID="1ac84b8a-6f58-4c2b-9fff-50b021c2465a" SourceId="1" SourceUrl="file:///C:/Users/mrova/Desktop/Infrashop-Middleware-Unilever/AcecServices/schemas/StockServices.xsd" />
+    <MetadataFile FileName="AcecStock.xsd" MetadataType="Schema" ID="1e766e0a-d801-4b5f-9342-1885ffe5b513" SourceId="1" SourceUrl="file:///C:/Users/mrova/Desktop/Infrashop-Middleware-Unilever/DataModel/AcecStock.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

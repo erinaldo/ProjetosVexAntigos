@@ -1,0 +1,376 @@
+﻿using System;
+using System.Data;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SistranBLL;
+using System.ComponentModel;
+
+public partial class Intranet_frmPOPCadMotorista : System.Web.UI.Page
+{
+    #region Eventos
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Request.QueryString["novo"] != null)
+        {
+            lblTitulo.Text = "Novo Motorista";
+        }
+        else
+        {
+            lblTitulo.Text = "Cadastro de Motorista";                 
+
+        }
+
+
+        if (!IsPostBack)
+        {
+            cboCidade.Items.Clear();
+            cboCidade.Items.Insert(0, (new ListItem("SELECIONE O ESTADO", "0")));
+
+            cboCidadeNascimento.Items.Clear();
+            cboCidadeNascimento.Items.Insert(0, (new ListItem("SELECIONE O ESTADO DE NASCIMENTO", "0")));
+
+
+
+            CarregarCboEstado();
+            CarregarCboEstadoNascimento();
+
+
+            if (Request.QueryString["IDMOTORISTA"] !=null)
+            {
+                CarregarCampos();
+            }
+            
+        }
+    }
+
+    private void CarregarCampos()
+    {
+        int? id = int.Parse(Request.QueryString["IDMOTORISTA"].ToString());
+        DataTable dt = new SistranBLL.Cadastro.Motorista().Pesquisar("", "","", id);
+        preencherCampos(dt);
+
+    }
+
+    private void preencherCampos(DataTable dt)
+    {
+        lblId.Text = dt.Rows[0]["IDMOTORISTA"].ToString();
+        chkAtivo.Checked = dt.Rows[0]["ATIVO"].ToString() == "SIM" ? true : false;
+        chkLiberado.Checked = dt.Rows[0]["LIBERADO"].ToString() == "SIM" ? true : false;
+        txtRazao.Text = dt.Rows[0]["RAZAOSOCIALNOME"].ToString();
+        txtcpfcnpj.Text = dt.Rows[0]["CNPJCPF"].ToString();
+        txtFantasiaApelido.Text = dt.Rows[0]["FANTASIAAPELIDO"].ToString();
+        txtIE.Text = dt.Rows[0]["FANTASIAAPELIDO"].ToString();
+
+        txtCEP.Text = dt.Rows[0]["CEP"].ToString();
+        txtEndereco.Text = dt.Rows[0]["ENDERECO"].ToString();
+        txtNumero.Text = dt.Rows[0]["NUMERO"].ToString();
+        txtComplemento.Text = dt.Rows[0]["COMPLEMENTO"].ToString();
+        txtDataNascimento.Text = (dt.Rows[0]["DataDeNascimento"] == DBNull.Value ? "" : Convert.ToDateTime(dt.Rows[0]["DataDeNascimento"]).ToShortDateString());
+        txtNomePai.Text = dt.Rows[0]["NomeDoPai"].ToString();
+        txtNomeMae.Text = dt.Rows[0]["NomeDamae"].ToString();
+        txtEstacocivil.Text = dt.Rows[0]["EstadoCivil"].ToString();
+        txtNomeConjuge.Text = dt.Rows[0]["Conjuge"].ToString();
+        txtPrimaHabilitacao.Text = (dt.Rows[0]["DataDaPrimeiraHabilitacao"] == DBNull.Value ? "" : Convert.ToDateTime(dt.Rows[0]["DataDaPrimeiraHabilitacao"]).ToShortDateString());
+        txtValidade.Text = (dt.Rows[0]["ValidadeDaHabilitacao"] == DBNull.Value ? "" : Convert.ToDateTime(dt.Rows[0]["ValidadeDaHabilitacao"]).ToShortDateString());
+        txtCarteiraHabilitacao.Text = dt.Rows[0]["CarteiraDeHabilitacao"].ToString();
+        txtCategoriaHabilitacao.Text = dt.Rows[0]["Categoria"].ToString();
+        txtRoubo.Text = dt.Rows[0]["VitimaDeRouboQuantidade"].ToString();
+        txtAcidente.Text = dt.Rows[0]["SofreuAcidadeQuantidade"].ToString();
+        txtAliquota.Text = dt.Rows[0]["AliquotaSestSenat"].ToString();
+        txtRisco.Text = (dt.Rows[0]["VencimentoNoGerenciadorDeRisco"] == DBNull.Value ? "" : Convert.ToDateTime(dt.Rows[0]["VencimentoNoGerenciadorDeRisco"]).ToShortDateString());
+
+
+        CarregarCboEstado();
+
+        if (dt.Rows[0]["IDCIDADE"].ToString().Trim().Length > 0)
+        {
+            DataTable dtCidade = new Localizacao.Cidade().Read(Convert.ToInt32(dt.Rows[0]["IDCIDADE"].ToString()));
+
+            if (dtCidade.Rows.Count > 0)
+            {
+                CarregarCoboCidade(dtCidade.Rows[0]["IDESTADO"].ToString());
+
+                cboEstado.SelectedValue = dtCidade.Rows[0]["IDESTADO"].ToString();
+                cboCidade.SelectedValue = dtCidade.Rows[0]["IDCIDADE"].ToString();
+                cboCidade.Enabled = true;
+                CarregarCoboCidade(dtCidade.Rows[0]["IDESTADO"].ToString());
+                lblCodEstado.Text = dtCidade.Rows[0]["IDESTADO"].ToString();
+                lblCodCidade.Text = dtCidade.Rows[0]["IDCIDADE"].ToString();
+            }
+        }
+
+        CarregarCboEstadoNascimento();
+
+        if (dt.Rows[0]["IDCidadeNascimento"].ToString().Trim().Length > 0)
+        {
+            DataTable dtCidadeNascimento = new Localizacao.Cidade().Read(Convert.ToInt32(dt.Rows[0]["IDCidadeNascimento"].ToString()));
+
+            if (dtCidadeNascimento.Rows.Count > 0)
+            {
+                CarregarCoboCidadeNascimento(dtCidadeNascimento.Rows[0]["IDESTADO"].ToString());
+
+                cboEstadoNascimento.SelectedValue = dtCidadeNascimento.Rows[0]["IDESTADO"].ToString();
+                cboCidadeNascimento.SelectedValue = dtCidadeNascimento.Rows[0]["IDCIDADE"].ToString();
+                cboCidadeNascimento.Enabled = true;
+                CarregarCoboCidadeNascimento(dtCidadeNascimento.Rows[0]["IDESTADO"].ToString());
+                lblCodEstadoNascimento.Text = dtCidadeNascimento.Rows[0]["IDESTADO"].ToString();
+                lblCodCidadeNascimeto.Text = dtCidadeNascimento.Rows[0]["IDCIDADE"].ToString();
+            }
+
+        }
+
+    }
+
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        salvar();
+        ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "ssss", "javascript:window.opener.document.getElementById('" + Request["controle"] + "').value = '" + lblId.Text + "'; window.opener.document.getElementById('" + Request["controleCpf"] + "').value = '" + txtcpfcnpj.Text + "'; window.opener.document.getElementById('" + Request["controleNome"] + "').value = '" + txtRazao.Text + "';window.close();", true);
+    }
+
+    protected void txtCPF_TextChanged(object sender, EventArgs e)
+    {
+        txtcpfcnpj.Text = FuncoesGerais.FormatarCnpj(txtcpfcnpj.Text);
+    }
+
+    protected void cboEstado_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (cboEstado.SelectedValue == lblCodEstado.Text && cboCidade.SelectedValue == lblCodCidade.Text)
+        {
+            return;
+        }
+
+        if (cboEstado.SelectedValue == "0")
+        {
+            cboCidade.Items.Clear();
+            cboCidade.Items.Insert(0, (new ListItem("SELECIONE O ESTADO", "0")));
+            cboCidade.Enabled = false;
+            lblCodEstado.Text = "";
+            return;
+        }
+        else
+        {
+            lblCodEstado.Text = cboEstado.SelectedValue;
+            lblCodCidade.Text = "";            
+            CarregarCoboCidade(cboEstado.SelectedValue);
+        }
+    }
+
+    protected void cboEstadoNascimento_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (cboEstadoNascimento.SelectedValue == lblCodEstadoNascimento.Text && cboCidadeNascimento.SelectedValue == lblCodCidadeNascimeto.Text)
+        {
+            return;
+        }
+
+        if (cboEstadoNascimento.SelectedValue == "0")
+        {
+            cboCidadeNascimento.Items.Clear();
+            cboCidadeNascimento.Items.Insert(0, (new ListItem("SELECIONE O ESTADO", "0")));
+            cboCidadeNascimento.Enabled = false;
+            lblCodEstadoNascimento.Text = "";
+            return;
+        }
+        else
+        {
+            lblCodEstadoNascimento.Text = cboEstadoNascimento.SelectedValue;
+            lblCodCidadeNascimeto.Text = "";
+            CarregarCoboCidadeNascimento(cboEstadoNascimento.SelectedValue);
+        }
+    }
+
+    private void CarregarCoboCidade(string idEstado)
+    {
+        cboCidade.Items.Clear();
+        cboCidade.DataSource = new Localizacao.Cidade().ReadbyIdEstado(Convert.ToInt32(idEstado));
+        cboCidade.DataTextField = "NOME";
+        cboCidade.DataValueField = "IDCIDADE";
+        cboCidade.DataBind();
+        cboCidade.Items.Insert(0, (new ListItem("SELECIONE", "0")));
+        cboCidade.Enabled = true;
+    }
+
+    private void CarregarCoboCidadeNascimento(string idEstado)
+    {
+        cboCidadeNascimento.Items.Clear();
+        cboCidadeNascimento.DataSource = new Localizacao.Cidade().ReadbyIdEstado(Convert.ToInt32(idEstado));
+        cboCidadeNascimento.DataTextField = "NOME";
+        cboCidadeNascimento.DataValueField = "IDCIDADE";
+        cboCidadeNascimento.DataBind();
+        cboCidadeNascimento.Items.Insert(0, (new ListItem("SELECIONE", "0")));
+        cboCidadeNascimento.Enabled = true;
+    }
+
+    protected void cboCidade_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (cboCidade.SelectedValue == "0")
+        {
+            lblCodCidade.Text = "";
+            return;
+        }
+
+        else
+        {
+            lblCodCidade.Text = cboCidade.SelectedValue;
+
+        }
+    }
+
+    protected void txtcpfcnpj_TextChanged(object sender, EventArgs e)
+    {
+        txtcpfcnpj.Text = FuncoesGerais.FormatarCnpj(txtcpfcnpj.Text);
+        if (FormatarCnpj(txtcpfcnpj.Text) == "")
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert3", "alert('CPF / CNPJ inválido.')", true);
+            return;
+        }
+
+        DataTable dt = new SistranBLL.Cadastro.Motorista().Pesquisar("", FormatarCnpj(txtcpfcnpj.Text), "", null);
+        txtcpfcnpj.Text = FormatarCnpj(txtcpfcnpj.Text);
+
+        if (dt.Rows.Count > 0)
+        {
+            preencherCampos(dt);
+        }
+        txtRazao.Focus();
+    }
+    
+    #endregion
+
+    #region Metodos and Helpers
+
+    private void salvar()
+    {
+        try
+        {
+            if (cboCidade.SelectedIndex == 0 || cboEstado.SelectedIndex == 0)
+            {
+                cboEstado.Focus();
+                throw new Exception("Selecione Cidade / Estado");
+            }
+
+
+            if (cboCidadeNascimento.SelectedIndex == 0 || cboEstadoNascimento.SelectedIndex == 0)
+            {
+                cboEstadoNascimento.Focus();
+                throw new Exception("Selecione Cidade / Estado de Nascimento");
+            }
+
+
+            SistranMODEL.Cadastro oCad = new SistranMODEL.Cadastro();
+            SistranMODEL.Cadastro.Motorista oMot = new SistranMODEL.Cadastro.Motorista();
+
+            oCad.IDCadastro = Convert.ToInt32(lblId.Text);
+            oCad.CnpjCpf = txtcpfcnpj.Text;
+            oCad.InscricaoRG = txtIE.Text;
+            oCad.FantasiaApelido = txtFantasiaApelido.Text;
+            oCad.Endereco = txtEndereco.Text;
+            oCad.Numero = txtNumero.Text;
+            oCad.Complemento = txtComplemento.Text;
+            oCad.Cep = txtCEP.Text;
+            oCad.IDCidade = Convert.ToInt32(cboCidade.SelectedValue);
+            oCad.RazaoSocialNome = txtRazao.Text;
+            oCad.IDBairro = 0;
+
+            oMot.IDMotorista = Convert.ToInt32(lblId.Text);
+            oMot.Liberado = chkLiberado.Checked == true ? "SIM" : "NAO";
+            oMot.Ativo = chkAtivo.Checked == true ? "SIM" : "NAO";
+            oMot.CarteiraDeHabilitacao = txtCarteiraHabilitacao.Text;
+            oMot.ValidadeDaHabilitacao = Convert.ToDateTime(txtValidade.Text);
+            oMot.DataDaPrimeiraHabilitacao = Convert.ToDateTime(txtPrimaHabilitacao.Text);
+            oMot.Categoria = txtCategoriaHabilitacao.Text;
+            oMot.DataDeNascimento = Convert.ToDateTime(txtDataNascimento.Text);
+            oMot.IDCidadeNascimento = cboCidadeNascimento.SelectedValue;
+            oMot.NomeDaMae = txtNomeMae.Text;
+            oMot.NomeDoPai = txtNomePai.Text;
+            oMot.Conjuge = txtNomeConjuge.Text;
+            oMot.VitimaDeRouboQuantidade = Convert.ToInt32(txtRoubo.Text);
+            oMot.SofreuAcidadeQuantidade = Convert.ToInt32(txtAcidente.Text);
+            oMot.EstadoCivil = txtEstacocivil.Text;
+            oMot.VencimentoNoGerenciadorDeRisco = Convert.ToDateTime(txtRisco.Text);
+            oMot.AliquotaSestSenat = Convert.ToDecimal(txtAliquota.Text);
+           
+
+
+            if (lblId.Text == "" || lblId.Text == "0")
+            {
+                lblId.Text = new SistranBLL.Cadastro().TransacaoInserirCadastroMotorista("", oCad, oMot).ToString();
+                
+            }                      
+            else
+            {
+                new SistranBLL.Cadastro().Alterar(oCad.CnpjCpf, oCad.InscricaoRG, txtRazao.Text.ToUpper(), txtFantasiaApelido.Text.ToUpper(), txtEndereco.Text.ToUpper(), txtNumero.Text, oCad.Complemento, oCad.IDCidade.ToString(), "", oCad.Cep, lblId.Text);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert3", "alert('" + ex.Message.ToString().Replace("'", "´") + "')", true);
+            return;
+        }
+    }
+
+    private void CarregarCboEstado()
+    {
+        cboEstado.DataSource = new SistranBLL.Localizacao.Estado().Listar();
+        cboEstado.DataTextField = "NOME";
+        cboEstado.DataValueField = "IDESTADO";
+        cboEstado.DataBind();
+        cboEstado.Items.Insert(0, new ListItem("SELECIONE", "0"));
+        cboCidade.Enabled = true;
+    }
+
+    private void CarregarCboEstadoNascimento()
+    {
+        cboEstadoNascimento.DataSource = new SistranBLL.Localizacao.Estado().Listar();
+        cboEstadoNascimento.DataTextField = "NOME";
+        cboEstadoNascimento.DataValueField = "IDESTADO";
+        cboEstadoNascimento.DataBind();
+        cboEstadoNascimento.Items.Insert(0, new ListItem("SELECIONE", "0"));
+        cboCidadeNascimento.Enabled = true;
+    }
+
+    private string FormatarCnpj(string s)
+    {
+        s = s.Replace(".", "");
+        s = s.Replace("-", "");
+        s = s.Replace("/", "");
+        s = s.Replace(@"\", "");
+
+        if (s.Length == 0)
+        {
+            return "";
+        }
+
+        if (s.Length <= 11)
+        {
+            MaskedTextProvider mtpCpf = new MaskedTextProvider(@"000\.000\.000-00");
+            mtpCpf.Set(ZerosEsquerda(s, 11));
+            return mtpCpf.ToString();
+        }
+        else
+        {
+            MaskedTextProvider mtpCnpj = new MaskedTextProvider(@"00\.000\.000/0000-00");
+            mtpCnpj.Set(ZerosEsquerda(s, 11));
+            return mtpCnpj.ToString();
+        }
+    }
+
+    public static string ZerosEsquerda(string strString, int intTamanho)
+    {
+
+        string strResult = "";
+
+        for (int intCont = 1; intCont <= (intTamanho - strString.Length); intCont++)
+        {
+
+            strResult += "0";
+
+        }
+
+        return strResult + strString;
+
+    }
+
+    #endregion    
+}

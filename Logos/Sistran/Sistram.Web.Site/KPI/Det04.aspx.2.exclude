@@ -1,0 +1,95 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteDetalhe.master" AutoEventWireup="true" CodeFile="Det04.aspx.cs"
+    Inherits="Det04" Theme="Adm" EnableTheming="true" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" runat="Server">
+    <asp:Panel ID="pnlteste" runat="server" style="text-align: center">
+        <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="4" style="background-image: url('Images/skins/primeiro/img/menu_3_2.jpg');
+                    height: 25px; font-size: 3pt;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tr>
+                            <td style="background-image: url('../Images/skins/primeiro/img/menu_3_2.jpg'); height: 25px">
+                                <asp:Label ID="lblTitulo" runat="server" Font-Bold="True" Font-Size="14px" 
+                                    Text="Detalhe KPI 04"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+            </tr>
+            
+            <tr>
+            <td>
+                <table class="table">
+                    <tr>
+                        <td class="tdp">
+                            Sub Processo:</td>
+                        <td class="tdp">
+                            SEPARAÇÃO</td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Indicador:</td>
+                        <td class="tdp">
+                            Actual Lines Interfaced</td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Finalidade:</td>
+                        <td class="tdp">
+                           Mensurar Número de linhas conferidas enviadas pela interface para atendimento</td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Formula:</td>
+                        <td class="tdp">
+                            (Qtde. de linhas conferidas / Qtde. de linhas atendidas) * 100%</td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Resultado:</td>
+                        <td class="tdp">
+                            <asp:Label ID="lblResultado" runat="server" style="font-weight: 700"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdp" colspan="2">
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Linhas Conferidas:</td>
+                        <td class="tdp">
+                            <asp:LinkButton ID="lblConferidas" runat="server" CssClass="link"></asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdp">
+                            Linhas Atendidas:</td>
+                        <td class="tdp">
+                            <asp:LinkButton ID="lblAtendidas" runat="server" CssClass="link"></asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdp" colspan="2">
+                        <hr />
+                            </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+        
+        <br />
+        <asp:Panel ID="pnlLinhasAtendidas" runat="server">
+        </asp:Panel>
+        <br />
+        <asp:Panel ID="pnlLinhasConferidas" runat="server">
+        </asp:Panel>
+        <br />
+    </asp:Panel>
+</asp:Content>

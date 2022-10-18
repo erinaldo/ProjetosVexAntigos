@@ -1,0 +1,38 @@
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\DownloadXMLNFeExemploBasico.exe
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.csprojResolveAssemblyReference.cache
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.Form1.resources
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.Properties.Resources.resources
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.csproj.GenerateResource.Cache
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.exe
+C:\Meus Arquivos\Meus Programas\Delphi\Baixar XML NFe DLL\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.exe
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.csprojResolveAssemblyReference.cache
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.Form1.resources
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.Properties.Resources.resources
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\obj\Debug\DownloadXMLNFeExemploBasico.csproj.GenerateResource.Cache
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\DownloadXMLNFeExemploBasico.exe
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Sistran.Library.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\MOISESROVANI\Desktop\dll\Código Fonte do Exemplo de Uso C#.NET Básico\bin\Debug\Sistran.Library.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\DownloadXMLNFeExemploBasico.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\DownloadXMLNFeExemploBasico.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Sistran.Library.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Microsoft.Practices.Unity.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\bin\Debug\Sistran.Library.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.csprojResolveAssemblyReference.cache
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.Form1.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\RoboBaixarXML\obj\Debug\DownloadXMLNFeExemploBasico.csproj.GenerateResource.Cache

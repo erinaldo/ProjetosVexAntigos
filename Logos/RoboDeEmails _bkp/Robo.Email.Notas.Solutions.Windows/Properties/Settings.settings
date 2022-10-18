@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Robo.Email.Notas.Solutions.Windows.Testes.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Robo_Email_Notas_Solutions_Windows_Testes_br_com_roge_wslogos01_WSLogos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls</Value>
+    </Setting>
+    <Setting Name="Robo_Email_Notas_Solutions_Windows_Testes_WsComprovei_WebServiceComprovei" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://54.221.129.119:85/WebServicePOD/server.php</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

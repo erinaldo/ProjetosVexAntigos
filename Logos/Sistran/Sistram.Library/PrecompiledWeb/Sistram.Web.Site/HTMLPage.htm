@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <title>GLPI - Autenticação</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <link rel="shortcut icon" type="images/x-icon" href="/pics/favicon.ico" />
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 6]><link rel='stylesheet' href='/css/styles_ie.css' type='text/css' media='screen' >
+<![endif]-->
+    <script type='text/javascript'><!--        document.getElementById('var_login_name').focus();--></script>
+</head>
+<body>
+    <div id='contenulogin'>
+        <div id='logo-login'>
+        </div>
+        <div id='boxlogin'>
+            <form action='/login.php' method='post'>
+            <fieldset>
+                <legend>Autenticação</legend>
+                <div class="row">
+                    <span class="label">
+                        <label>
+                            Usuário :
+                        </label>
+                    </span><span class="formw">
+                        <input type="text" name="login_name" id="login_name" size="15" /></span></div>
+                <div class="row">
+                    <span class="label">
+                        <label>
+                            Senha :
+                        </label>
+                    </span><span class="formw">
+                        <input type="password" name="login_password" id="login_password" size="15" /></span></div>
+            </fieldset>
+            <p>
+                <span>
+                    <input type="submit" name="submit" value="Enviar" class="submit" /></span></p>
+            <input type='hidden' name='_glpi_csrf_token' value='aa64ff6c6af79b4c5a785ccc940e6529'></form>
+            <script type='text/javascript'>
+                document.getElementById('login_name').focus();</script>
+        </div>
+        <div class='error'>
+            <noscript>
+                <p>
+                    Você deve ativar o JavaScript no seu navegador</p>
+            </noscript>
+        </div>
+    </div>
+    <div id='footer-login'>
+        <a href='http://glpi-project.org/' title='Powered By Indepnet'>GLPI version 0.83.8 Copyright
+            (C) 2003-2013 INDEPNET Development Team.</a></div>
+    <div style="background-image: url('/front/cron.php');">
+    </div>
+</body>
+</html>

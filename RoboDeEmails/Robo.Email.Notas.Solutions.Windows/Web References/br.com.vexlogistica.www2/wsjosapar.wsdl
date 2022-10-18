@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Estoque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstoqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstoqueResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstoqueValidadeDias">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="QuantidadeDias" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EstoqueValidadeDiasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EstoqueValidadeDiasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EstoqueSoapIn">
+    <wsdl:part name="parameters" element="tns:Estoque" />
+  </wsdl:message>
+  <wsdl:message name="EstoqueSoapOut">
+    <wsdl:part name="parameters" element="tns:EstoqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="EstoqueValidadeDiasSoapIn">
+    <wsdl:part name="parameters" element="tns:EstoqueValidadeDias" />
+  </wsdl:message>
+  <wsdl:message name="EstoqueValidadeDiasSoapOut">
+    <wsdl:part name="parameters" element="tns:EstoqueValidadeDiasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsJosaparSoap">
+    <wsdl:operation name="Estoque">
+      <wsdl:input message="tns:EstoqueSoapIn" />
+      <wsdl:output message="tns:EstoqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EstoqueValidadeDias">
+      <wsdl:input message="tns:EstoqueValidadeDiasSoapIn" />
+      <wsdl:output message="tns:EstoqueValidadeDiasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsJosaparSoap" type="tns:wsJosaparSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Estoque">
+      <soap:operation soapAction="http://tempuri.org/Estoque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstoqueValidadeDias">
+      <soap:operation soapAction="http://tempuri.org/EstoqueValidadeDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsJosaparSoap12" type="tns:wsJosaparSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Estoque">
+      <soap12:operation soapAction="http://tempuri.org/Estoque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstoqueValidadeDias">
+      <soap12:operation soapAction="http://tempuri.org/EstoqueValidadeDias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsJosapar">
+    <wsdl:port name="wsJosaparSoap" binding="tns:wsJosaparSoap">
+      <soap:address location="https://www2.vexlogistica.com.br/wss/josapar/wsjosapar.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsJosaparSoap12" binding="tns:wsJosaparSoap12">
+      <soap12:address location="https://www2.vexlogistica.com.br/wss/josapar/wsjosapar.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

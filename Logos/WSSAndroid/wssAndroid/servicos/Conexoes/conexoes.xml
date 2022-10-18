@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+
+  <conexoes>
+    <cd_cliente>1</cd_cliente>
+    <conexao>Data Source=192.168.10.4;Initial Catalog=grupologos;User ID=sa;Password=@logos09022005$;</conexao>
+  </conexoes>
+  <conexoes>
+    <cd_cliente>2</cd_cliente>
+    <conexao>Data Source=192.168.0.5;Initial Catalog=STNNOVO;User ID=sa;Password=@oncetsis12122014;</conexao>
+  </conexoes>
+</DocumentElement>

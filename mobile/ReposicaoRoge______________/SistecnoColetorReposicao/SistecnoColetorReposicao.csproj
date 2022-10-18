@@ -1,0 +1,331 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DC8118A-41D0-4B29-AF3F-A71EF25FFB51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistecnoColetor</RootNamespace>
+    <AssemblyName>Reposicao_SobrasRoge</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>SistecnoColetor</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>Sistecno.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BbColetor.cs" />
+    <Compile Include="Classes\BdExterno.cs" />
+    <Compile Include="Classes\BLL\Empresa.cs" />
+    <Compile Include="Classes\BLL\Estoque.cs" />
+    <Compile Include="Classes\BLL\Produto.cs" />
+    <Compile Include="Classes\BLL\Usuario.cs" />
+    <Compile Include="Classes\DAL\Estoque.cs" />
+    <Compile Include="Classes\DAL\Produto.cs" />
+    <Compile Include="Classes\DAL\Empresa.cs" />
+    <Compile Include="Classes\DAL\Usuario.cs" />
+    <Compile Include="Classes\DTO\Produto.cs" />
+    <Compile Include="Classes\DTO\Usuario.cs" />
+    <Compile Include="Classes\WS.cs" />
+    <Compile Include="CLW00004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLW00004.Designer.cs">
+      <DependentUpon>CLW00004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfGaiolas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfGaiolas.Designer.cs">
+      <DependentUpon>ConfGaiolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfVolume.Designer.cs">
+      <DependentUpon>ConfVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfItens.Designer.cs">
+      <DependentUpon>ConfItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConferenciaItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConferenciaItem.Designer.cs">
+      <DependentUpon>ConferenciaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FiliaisLogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiliaisLogos.Designer.cs">
+      <DependentUpon>FiliaisLogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicial.Designer.cs">
+      <DependentUpon>Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CLW00004.resx">
+      <DependentUpon>CLW00004.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfGaiolas.resx">
+      <DependentUpon>ConfGaiolas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfVolume.resx">
+      <DependentUpon>ConfVolume.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfItens.resx">
+      <DependentUpon>ConfItens.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConferenciaItem.resx">
+      <DependentUpon>ConferenciaItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiliaisLogos.resx">
+      <DependentUpon>FiliaisLogos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicial.resx">
+      <DependentUpon>Inicial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RepositorioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositorioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VarGlobal.cs" />
+    <Compile Include="Web References\br.com.grupologos.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReposicaoInterno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsLogin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsUsuarioEmpresa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagens\NovoLogoDistecno.jpg" />
+    <Content Include="Imagens\roge.jpg" />
+    <Content Include="Imagens\Vex.jpg" />
+    <Content Include="Repositorio.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sistecno.ico" />
+    <None Include="Web References\wsUsuarioEmpresa\wsslogin.disco" />
+    <None Include="Web References\ReposicaoInterno\ReposicaoRogeInterno.disco" />
+    <None Include="Web References\br.com.grupologos.www\ReposicaoRoge.disco" />
+    <None Include="Web References\wsLogin\Login.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RepositorioDataSet.xsc">
+      <DependentUpon>RepositorioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RepositorioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepositorioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RepositorioDataSet.xss">
+      <DependentUpon>RepositorioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\br.com.grupologos.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.grupologos.www\ReposicaoRoge.wsdl" />
+    <None Include="Web References\ReposicaoInterno\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReposicaoInterno\ReposicaoRogeInterno.wsdl" />
+    <None Include="Web References\wsLogin\Login.wsdl" />
+    <None Include="Web References\wsLogin\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsUsuarioEmpresa\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsUsuarioEmpresa\Usuario.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsUsuarioEmpresa\wsslogin.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://wss.sistecno.com.br/appWs/wss/login.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\wsLogin\</RelPath>
+      <UpdateFromURL>http://wss.sistecno.com.br/appWs/wss/login.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.logoslogistica.com.br/wss/ReposicaoRogeInterno.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\ReposicaoInterno\</RelPath>
+      <UpdateFromURL>http://www2.logoslogistica.com.br/wss/ReposicaoRogeInterno.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.logoslogistica.com.br/wss/WSS/ReposicaoRoge.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\br.com.grupologos.www\</RelPath>
+      <UpdateFromURL>http://www2.logoslogistica.com.br/wss/WSS/ReposicaoRoge.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www2.logoslogistica.com.br/WSS/wss/wsslogin.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\wsUsuarioEmpresa\</RelPath>
+      <UpdateFromURL>http://www2.logoslogistica.com.br/WSS/wss/wsslogin.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

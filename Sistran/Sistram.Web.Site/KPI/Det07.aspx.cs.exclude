@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+//using Microsoft.Reporting.WebForms;
+using System.Configuration;
+using System.Threading;
+using System.Globalization;
+
+public partial class Det07 : System.Web.UI.Page
+{
+    string select = "";
+ 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo culture = new CultureInfo("pt-BR");
+
+
+            if (!IsPostBack)
+            {
+                decimal m = new SistranBLL.KPI().Form07("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+                lblResultado.Text = m.ToString("#0.00") +"%";
+                gerarReport();                
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert", "alert('" + ex.Message.Replace("'", "´") + "')", true);
+        }
+
+    }
+
+    private void gerarReport()
+    {
+        DataTable dtOcupadas = carregarGridOcupadas();
+        DataTable dtlivres = carregarGridLivres();
+
+        lblDisponiveis.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det07l')");
+        lblDisponiveis.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+        lblDisponiveis.ToolTip = "Clique para gerar o Excel";
+        Session["det07l"] = carregarGridLivres();
+        lblDisponiveis.Text = dtlivres.Rows.Count.ToString();
+
+        lblOcupadas.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det07o')");
+        lblOcupadas.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+        lblOcupadas.ToolTip = "Clique para gerar o Excel";
+        Session["det07o"] = carregarGridOcupadas();
+        lblOcupadas.Text = dtOcupadas.Rows.Count.ToString();
+    }
+
+    private DataTable carregarGridOcupadas()
+    {
+        string strsql = "   SELECT  DISTINCT DPL.Codigo OCUPADAS ";
+        strsql += "  FROM UNIDADEDEARMAZENAGEMLOTE UAL     ";
+         strsql += " INNER JOIN  UNIDADEDEARMAZENAGEM UA ON (UA.IDUNIDADEDEARMAZENAGEM = UAL.IDUNIDADEDEARMAZENAGEM)     ";
+         strsql += " INNER JOIN LOTE LT ON (LT.IDLOTE = UAL.IDLOTE)     ";
+         strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = LT.IDPRODUTOCLIENTE)    ";
+         strsql += " INNER JOIN DEPOSITOPLANTALOCALIZACAO DPL ON DPL.IDDEPOSITOPLANTALOCALIZACAO = UA.IDDepositoPlantaLocalizacao   ";
+         strsql += " WHERE PC.IDCLIENTE IN(" + Sistran.Library.FuncoesUteis.retornarClientes() + ") AND UAL.SALDO > 0  AND LEN(DPL.Codigo)>5  ";
+          strsql += " ORDER BY DPL.Codigo";
+        return Sistran.Library.GetDataTables.RetornarDataTable(strsql);
+    }
+
+    private DataTable carregarGridLivres()
+    {
+        string strsql = " SELECT DISTINCT DPL.Codigo  LIVRES ";
+        strsql += " FROM DEPOSITOPLANTALOCALIZACAOREGRA DPLR   ";
+        strsql += " INNER JOIN DEPOSITOPLANTALOCALIZACAO DPL ON DPL.IDDEPOSITOPLANTALOCALIZACAO = DPLR.IDDEPOSITOPLANTALOCALIZACAO   ";
+        strsql += " LEFT JOIN PRODUTOCLIENTE PC ON PC.IDDEPOSITOPLANTALOCALIZACAO = DPL.IDDEPOSITOPLANTALOCALIZACAO   ";
+        strsql += " WHERE DPLR.IDCLIENTE IN(126816,6915)  AND DPL.ATIVO='SIM'  AND PC.IDPRODUTOCLIENTE IS NULL   ";
+        strsql += " ORDER BY DPL.Codigo ";
+        return Sistran.Library.GetDataTables.RetornarDataTable(strsql);
+    }    
+}

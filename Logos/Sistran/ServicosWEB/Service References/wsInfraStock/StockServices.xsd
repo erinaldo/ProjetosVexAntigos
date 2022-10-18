@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:ss="http://www.accurate.com/acec/StockServices" xmlns:st="http://www.accurate.com/acec/Stock" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.accurate.com/acec/StockServices" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="../../DataModel/AcecStock.xsd" namespace="http://www.accurate.com/acec/Stock" />
+  <complexType name="StockList">
+    <sequence>
+      <element minOccurs="0" maxOccurs="unbounded" name="Stock" type="st:stock" />
+    </sequence>
+  </complexType>
+  <element name="setStockRequest">
+    <complexType>
+      <sequence>
+        <element name="stockList" type="ss:StockList" />
+        <element minOccurs="0" default="false" name="orderAccountingFlag" type="boolean" />
+        <element minOccurs="0" name="storeId" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="setStockResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="string" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="stock" type="st:stock" />
+</schema>

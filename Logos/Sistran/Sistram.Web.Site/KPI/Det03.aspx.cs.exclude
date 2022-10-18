@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+//using Microsoft.Reporting.WebForms;
+using System.Configuration;
+using System.Threading;
+using System.Globalization;
+
+public partial class Det03 : System.Web.UI.Page
+{
+    string select = "";
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo culture = new CultureInfo("pt-BR");
+
+
+            if (!IsPostBack)
+            {
+                lblResultado.Text = new SistranBLL.KPI().Form03("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select).ToString();
+                gerarRelatorio();
+
+
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert", "alert('" + ex.Message.Replace("'", "´") + "')", true);
+        }
+
+    }
+
+    private void gerarRelatorio()
+    {
+
+
+        string strsql = " SELECT  DISTINCT  MP.NUMERO ,MP.DATADECADASTRO, PC.CODIGO, PC.DESCRICAO, NFI.QUANTIDADE, ISNULL(MP.DATADEPROCESSAMENTO, MP.DATADECADASTRO)DATADEIMPRESSAO , GP.DESCRICAO LINHA ";
+        strsql += " FROM MAPA MP  ";
+        strsql += " INNER JOIN MOVIMENTACAOITEM MI ON (MI.IDMAPA = MP.IDMAPA)  ";
+        strsql += " INNER JOIN DOCUMENTO NF ON (NF.IDDOCUMENTO = MI.IDDOCUMENTO)  ";
+        strsql += "  INNER JOIN DOCUMENTOITEM NFI ON NFI.IDDOCUMENTO = NFI.IDDOCUMENTO ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE ";
+        strsql += " INNER JOIN GRUPODEPRODUTO GP ON GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO ";
+        strsql += " where NF.IDCLIENTE IN (" + Sistran.Library.FuncoesUteis.retornarClientes() + ")  AND PC.IDCliente in (" + Sistran.Library.FuncoesUteis.retornarClientes() + ") ";
+        strsql += " AND MP.ESTOQUEPROCESSADO = 'NAO'  ";
+        strsql += " AND MP.TIPO = 'ENTRADA'  ";
+        strsql += " AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103)  AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+
+
+
+        DataSet ds = Sistran.Library.GetDataTables.RetornarDataSet(strsql, "");
+
+
+        ReportViewer rw = new Microsoft.Reporting.WebForms.ReportViewer();
+        rw.Width = new Unit("100%");
+        rw.Height = 600;
+        rw.BackColor = System.Drawing.Color.WhiteSmoke;
+        rw.BorderStyle = System.Web.UI.WebControls.BorderStyle.Solid;
+        rw.BorderWidth = 0;
+
+
+        rw.LocalReport.DataSources.Clear();
+        rw.LocalReport.EnableHyperlinks = true;
+
+
+        ReportDataSource datasource1 = new ReportDataSource("dskpi3_dt", ds.Tables[0]);
+        rw.LocalReport.DataSources.Add(datasource1);
+
+
+
+        rw.LocalReport.ReportPath = @"kpi\reports\kpi3.rdlc";
+        rw.LocalReport.EnableExternalImages = true;
+        rw.LocalReport.Refresh();
+        pnlReport.Controls.Add(rw);
+        pnlReport.ScrollBars = ScrollBars.None;
+    }
+}

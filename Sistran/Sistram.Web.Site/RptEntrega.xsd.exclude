@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RptEntrega" targetNamespace="http://tempuri.org/RptEntrega.xsd" xmlns:mstns="http://tempuri.org/RptEntrega.xsd" xmlns="http://tempuri.org/RptEntrega.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GrupoLogosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GrupoLogosConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GrupoLogosConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NotaFiscalSaidaConsultarTableAdapter" Name="NotaFiscalSaidaConsultar">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT DISTINCT  DOC.NUMERO,  DOC.IDDOCUMENTO,  DOC.SERIE, ISNULL(FIL.NOME, '') FILIAL , DOC.DATADEEMISSAO,  DOC.DATADEENTRADA,  DOC.PREVISAODESAIDA,  DOC.DATADESAIDA,  DOC.DATAPLANEJADA,  DOC.DATADECONCLUSAO,  DATEDIFF(DAY,  DOC.DATADEENTRADA, DOC.DATADECONCLUSAO) TRANSITTIME,  OCO.NOME AS DESCRICAOOCORRENCIA,  OCO.NOME AS DESCRICAOOCORRENCIA,  CADREM.CNPJCPF AS REMECNPJ,  COALESCE(CADREM.FANTASIAAPELIDO, CADREM.RAZAOSOCIALNOME) AS REMENOME,  CADDES.CNPJCPF AS DESTCNPJ,  COALESCE(CADDES.FANTASIAAPELIDO, CADDES.RAZAOSOCIALNOME) AS DESTNOME,  CADDES.CNPJCPF AS DESTCNPJ, DF.Situacao  
+ FROM DOCUMENTO DOC WITH(NOLOCK)  
+ LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)  
+ LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)  
+ LEFT JOIN CADASTRO CADDES WITH(NOLOCK) ON(CADDES.IDCADASTRO = DOC.IDDESTINATARIO)   
+ LEFT JOIN CIDADE CIDDES WITH(NOLOCK) ON(CIDDES.IDCIDADE = CADDES.IDCIDADE)   
+ LEFT JOIN ESTADO ESTDES WITH(NOLOCK) ON(ESTDES.IDESTADO = CIDDES.IDESTADO)   
+ LEFT JOIN CADASTRO CADREM WITH(NOLOCK) ON(CADREM.IDCADASTRO = DOC.IDREMETENTE)  
+ LEFT JOIN CIDADE CIDREM WITH(NOLOCK) ON(CIDREM.IDCIDADE = CADREM.IDCIDADE)   
+ LEFT JOIN ESTADO ESTREM WITH(NOLOCK) ON(ESTREM.IDESTADO = CIDREM.IDESTADO) 
+ Left Join DocumentoFilial DF on (DF.IDDocumento = DOC.IDDocumento)   
+ LEFT JOIN FILIALCIDADESETOR FCS ON FCS.IDCIDADE = CADDES.IDCIDADE  LEFT JOIN FILIAL FIL ON FIL.IDFILIAL = FCS.IDFILIAL 
+ WHERE (DOC.IDREMETENTE in(444,446,445,62694) OR DOC.IDCLIENTE in(444,446,445,62694) OR DOC.IDDESTINATARIO in(444,446,445,62694)) 
+ AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'  
+ AND DOC.DATADECONCLUSAO IS NULL  
+ AND NOT DOC.DATADEENTRADA IS NULL  
+ AND NOT DOC.CODIGODORECEXP IS NULL  
+ AND DOC.IDDOCUMENTOOCORRENCIA IS NULL 
+ AND DF.SITUACAO='AGUARDANDO EMBARQUE' 
+ AND DOC.ATIVO='SIM' 
+ AND DOC.DataDeEmissao BETWEEN CONVERT(DATETIME, '02/07/2011', 103) AND CONVERT(DATETIME, '02/07/2011',103) 
+ and FIL.Nome is not null
+ ORDER BY 1 DESC 
+ </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NUMERO" DataSetColumn="NUMERO" />
+              <Mapping SourceColumn="IDDOCUMENTO" DataSetColumn="IDDOCUMENTO" />
+              <Mapping SourceColumn="SERIE" DataSetColumn="SERIE" />
+              <Mapping SourceColumn="DATADEEMISSAO" DataSetColumn="DATADEEMISSAO" />
+              <Mapping SourceColumn="DATADEENTRADA" DataSetColumn="DATADEENTRADA" />
+              <Mapping SourceColumn="PREVISAODESAIDA" DataSetColumn="PREVISAODESAIDA" />
+              <Mapping SourceColumn="DATADESAIDA" DataSetColumn="DATADESAIDA" />
+              <Mapping SourceColumn="DATAPLANEJADA" DataSetColumn="DATAPLANEJADA" />
+              <Mapping SourceColumn="DATADECONCLUSAO" DataSetColumn="DATADECONCLUSAO" />
+              <Mapping SourceColumn="TRANSITTIME" DataSetColumn="TRANSITTIME" />
+              <Mapping SourceColumn="DESCRICAOOCORRENCIA" DataSetColumn="DESCRICAOOCORRENCIA" />
+              <Mapping SourceColumn="DESCRICAOOCORRENCIA1" DataSetColumn="DESCRICAOOCORRENCIA1" />
+              <Mapping SourceColumn="REMECNPJ" DataSetColumn="REMECNPJ" />
+              <Mapping SourceColumn="REMENOME" DataSetColumn="REMENOME" />
+              <Mapping SourceColumn="DESTCNPJ" DataSetColumn="DESTCNPJ" />
+              <Mapping SourceColumn="DESTNOME" DataSetColumn="DESTNOME" />
+              <Mapping SourceColumn="DESTCNPJ1" DataSetColumn="DESTCNPJ1" />
+              <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
+              <Mapping SourceColumn="FILIAL" DataSetColumn="FILIAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RptEntrega" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NotaFiscalSaidaConsultar">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMERO" type="xs:int" minOccurs="0" />
+              <xs:element name="IDDOCUMENTO" type="xs:int" />
+              <xs:element name="SERIE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATADEEMISSAO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATADEENTRADA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PREVISAODESAIDA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATADESAIDA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATAPLANEJADA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATADECONCLUSAO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TRANSITTIME" msdata:ReadOnly="true" type="xs:int" minOccurs="0" />
+              <xs:element name="DESCRICAOOCORRENCIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRICAOOCORRENCIA1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REMECNPJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REMENOME" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTCNPJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTNOME" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTCNPJ1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Situacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILIAL" msdata:ReadOnly="true" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Produtos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="Descricao" type="xs:string" minOccurs="0" />
+              <xs:element name="DataDeCadastro" type="xs:string" minOccurs="0" />
+              <xs:element name="Ativo" type="xs:string" minOccurs="0" />
+              <xs:element name="Saldo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:NotaFiscalSaidaConsultar" />
+      <xs:field xpath="mstns:IDDOCUMENTO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+D:\Projetos\sistran\Boleto\bin\Debug\Boleto.dll
+D:\Projetos\sistran\Boleto\bin\Debug\Boleto.pdb
+D:\Projetos\sistran\Boleto\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\sistran\Boleto\obj\Debug\Boleto.dll
+D:\Projetos\sistran\Boleto\obj\Debug\Boleto.pdb
+M:\Projetos\Sistecno\sistran\Boleto\bin\Debug\Boleto.dll
+M:\Projetos\Sistecno\sistran\Boleto\bin\Debug\Boleto.pdb
+M:\Projetos\Sistecno\sistran\Boleto\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\Sistecno\sistran\Boleto\obj\Debug\Boleto.dll
+M:\Projetos\Sistecno\sistran\Boleto\obj\Debug\Boleto.pdb
+M:\Projetos\sistran - Cópia\Boleto\bin\Debug\Boleto.dll
+M:\Projetos\sistran - Cópia\Boleto\bin\Debug\Boleto.pdb
+M:\Projetos\sistran - Cópia\Boleto\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\sistran - Cópia\Boleto\obj\Debug\Boleto.dll
+M:\Projetos\sistran - Cópia\Boleto\obj\Debug\Boleto.pdb
+M:\Projetos\sistran\Boleto\bin\Debug\Boleto.dll
+M:\Projetos\sistran\Boleto\bin\Debug\Boleto.pdb
+M:\Projetos\sistran\Boleto\obj\Debug\Boleto.dll
+M:\Projetos\sistran\Boleto\obj\Debug\Boleto.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Boleto\bin\Debug\Boleto.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Boleto\bin\Debug\Boleto.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Boleto\obj\Debug\Boleto.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Boleto\obj\Debug\Boleto.pdb
+<<<<<<< .mine
+||||||| .r135
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Boleto\obj\Debug\Boleto.csprojResolveAssemblyReference.cache
+=======
+M:\Desenvolvimento\logos\Sistran\Boleto\bin\Debug\Boleto.dll
+M:\Desenvolvimento\logos\Sistran\Boleto\bin\Debug\Boleto.pdb
+M:\Desenvolvimento\logos\Sistran\Boleto\obj\Debug\Boleto.csprojResolveAssemblyReference.cache
+M:\Desenvolvimento\logos\Sistran\Boleto\obj\Debug\Boleto.dll
+M:\Desenvolvimento\logos\Sistran\Boleto\obj\Debug\Boleto.pdb
+>>>>>>> .r193
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\bin\Debug\Boleto.dll
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\bin\Debug\Boleto.pdb
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\obj\Debug\Boleto.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\obj\Debug\Boleto.csproj.CoreCompileInputs.cache
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\obj\Debug\Boleto.dll
+D:\projetos\LogosSVN\Logos\Sistran\Boleto\obj\Debug\Boleto.pdb

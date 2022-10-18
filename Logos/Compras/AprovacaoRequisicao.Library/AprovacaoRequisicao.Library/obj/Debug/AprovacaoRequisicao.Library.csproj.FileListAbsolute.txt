@@ -1,0 +1,9 @@
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Debug\AprovacaoRequisicao.Library.dll
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Debug\AprovacaoRequisicao.Library.pdb
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Debug\AprovacaoRequisicao.Library.dll
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Debug\AprovacaoRequisicao.Library.pdb
+M:\Projetos\RoboEmailAprovacao\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Debug\AprovacaoRequisicao.Library.csprojResolveAssemblyReference.cache
+C:\DESENVOLVIMENTO\Projetos\Logos\Compras\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Debug\AprovacaoRequisicao.Library.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Compras\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\bin\Debug\AprovacaoRequisicao.Library.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Compras\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Debug\AprovacaoRequisicao.Library.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Compras\AprovacaoRequisicao.Library\AprovacaoRequisicao.Library\obj\Debug\AprovacaoRequisicao.Library.pdb

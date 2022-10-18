@@ -1,0 +1,2 @@
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.BLL\obj\Debug\Sistecno.BLL.csprojResolveAssemblyReference.cache
+D:\projetos\LogosSVN\KPIS\NovaVersao\Sistecno.BLL\obj\Debug\Sistecno.BLL.csproj.CoreCompileInputs.cache

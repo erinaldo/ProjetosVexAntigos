@@ -1,0 +1,9 @@
+D:\projetos\LogosSVN\Sistran\Testes\bin\Debug\Testes.exe.config
+D:\projetos\LogosSVN\Sistran\Testes\bin\Debug\Testes.exe
+D:\projetos\LogosSVN\Sistran\Testes\bin\Debug\Testes.pdb
+D:\projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.Form1.resources
+D:\projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.Properties.Resources.resources
+D:\projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.csproj.GenerateResource.Cache
+D:\projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.exe
+D:\projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.pdb
+D:\Projetos\LogosSVN\Sistran\Testes\obj\x86\Debug\Testes.csprojAssemblyReference.cache

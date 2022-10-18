@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sistran.Library" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="Conn2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.10.10;Initial Catalog=VEX20200631;User ID=site;Password=@0ncetsis14;</Value>
+    </Setting>
+    <Setting Name="Conn4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=RedLog_Stnet2;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn6" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.5;Initial Catalog=stnnovo;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn7" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=AnaTransp;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=monel;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn5" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=Quasar;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00362_DDLOGTRANSP;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn8" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00227_CALOGSOLUC;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn9" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00238_HRJTRANSPO;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn10" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00243_PDMLOGISTI;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn11" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=200.150.161.199, 1746;Initial Catalog=BD_00245_TRANSMASSA;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn12" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00240_UNIAOBRASI;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn13" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00335_JJRLOGISTI;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn14" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=SBTransportes;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn15" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00344_REZENDETRA;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn16" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00341_JSSTRANSPO;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn17" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.6;Initial Catalog=BD_00241_TALISMATRA;User ID=sa;Password=@oncetsis12122014;</Value>
+    </Setting>
+    <Setting Name="Conn18" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00368_WAGLOGTRAN;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn19" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00368_WAGLOGTRAN;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn20" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00240_UNIAOBRASI;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+    <Setting Name="Conn21" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.14;Initial Catalog=BD_00372_SSLOGISTICA;User ID=sa;Password=@oncetsis05083#;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

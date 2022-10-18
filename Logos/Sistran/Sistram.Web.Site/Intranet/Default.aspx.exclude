@@ -1,0 +1,6 @@
+﻿<%@ Page Language="C#" MasterPageFile="IntranetMaster.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Intranet_Default" Title="Untitled Page" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" Runat="Server">
+
+</asp:Content>
+

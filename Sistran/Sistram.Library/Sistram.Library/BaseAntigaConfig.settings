@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Sistran.Library" GeneratedClassName="BaseAntigaConfig">
+  <Profiles />
+  <Settings>
+    <Setting Name="BDNovoLogos" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.10.10;Initial Catalog=VEX20200631;User ID=sa;Password=WERasd27;  </Value>
+    </Setting>
+    <Setting Name="BDStnNovo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.0.5;Initial Catalog=stnnovo;User ID=sa;Password=WERasd27;</Value>
+    </Setting>
+    <Setting Name="BDAntigo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=192.168.10.9;Initial Catalog=Logos;User ID=sa;Password=WERasd27;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

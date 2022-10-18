@@ -1,0 +1,30 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              >
+    <TextView android:id="@+id/msg"
+    	android:layout_height="wrap_content"
+    	android:layout_width="wrap_content"    	
+    	android:text="Deseja Digitalizar o Comprovante?">
+    </TextView>
+
+    <Button
+        android:id="@+id/bt_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="156dp"
+        android:layout_y="63dp"
+        android:text="NÃO" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="59dp"
+        android:layout_y="64dp"
+        android:text="SIM" />
+
+</AbsoluteLayout>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Constantes>
+  <Constantes id="ConstDcoFilSitAguardEmbarque" key="ConstDcoFilSitAguardEmbarque" Situacao="AGUARDANDO EMBARQUE" />
+  <Constantes id="ConstDcoFilSitAguardAgendamento" key="ConstDcoFilSitAguardAgendamento" Situacao="AGUARDANDO AGENDAMENTO" />
+  <Constantes id="ConstDcoFilSitAguardColeta" key="ConstDcoFilSitAguardColeta" Situacao="AGUARDANDO COLETA" />
+  <Constantes id="ConstDcoFilSitAguardCTRC" key="ConstDcoFilSitAguardCTRC" Situacao="AGUARDANDO GERAR CTRC" />
+  <Constantes id="ConstDcoFilSitAguardImpressao" key="ConstDcoFilSitAguardImpressao" Situacao="AGUARDANDO IMPRESSAO" />
+  <Constantes id="ConstDcoFilSitAguardLiberação" key="ConstDcoFilSitAguardLiberação" Situacao="AGUARDANDO LIBERACAO" />
+  <Constantes id="ConstDcoFilSitAguardLiberacaoEmb" key="ConstDcoFilSitAguardLiberacaoEmb" Situacao="AGUARDANDO LIBERACAO EMBARQUE" />
+  <Constantes id="ConstDcoFilSitAguardSolucao" key="ConstDcoFilSitAguardSolucao" Situacao="AGUARDANDO SOLUCAO" />
+  <Constantes id="ConstDcoFilSitConfPedNF" key="ConstDcoFilSitConfPedNF" Situacao="CONFERINDO PEDIDO X NT FISCAL" />
+  <Constantes id="ConstDcoFilSitConhecimento" key="ConstDcoFilSitConhecimento" Situacao="CONHECIMENTO" />
+  <Constantes id="ConstDcoFilSitCancelado" key="ConstDcoFilSitCancelado" Situacao="DOCUMENTO CANCELADO" />
+  <Constantes id="ConstDcoFilSitDocumentoRecebido" key="ConstDcoFilSitDocumentoRecebido" Situacao="DOCUMENTO RECEBIDO" />
+  <Constantes id="ConstDcoFilSitLiberadoDevolucao" key="ConstDcoFilSitLiberadoDevolucao" Situacao="LIBERADO PARA DEVOLUCAO" />
+  <Constantes id="ConstDcoFilSitLiberadoEmbalagem" key="ConstDcoFilSitLiberadoEmbalagem" Situacao="LIBERADO PARA EMBALAGEM" />
+  <Constantes id="ConstDcoFilSitLiberadoFaturamento" key="ConstDcoFilSitLiberadoFaturamento" Situacao="LIBERADO PARA FATURAMENTO" />
+  <Constantes id="ConstDcoFilSitLiberadoRecebimento" key="ConstDcoFilSitLiberadoRecebimento" Situacao="LIBERADO PARA RECEBIMENTO" />
+  <Constantes id="ConstDcoFilSitLiberadoSeparacao" key="ConstDcoFilSitLiberadoSeparacao" Situacao="LIBERADO PARA SEPARACAO" />
+  <Constantes id="ConstDcoFilSitMercadoriaEmbarcada" key="ConstDcoFilSitMercadoriaEmbarcada" Situacao="MERCADORIA EMBARCADA" />
+  <Constantes id="ConstDcoFilSitPedidoAgendado" key="ConstDcoFilSitPedidoAgendado" Situacao="PEDIDO AGENDADO" />
+  <Constantes id="ConstDcoFilSitPedidoFaturado" key="ConstDcoFilSitPedidoFaturado" Situacao="PEDIDO FATURADO" />
+  <Constantes id="ConstDcoFilSitProcessoFinalizado" key="ConstDcoFilSitProcessoFinalizado" Situacao="PROCESSO FINALIZADO" />
+  <Constantes id="ConstDcoFilSitRecebendoMercadoria" key="ConstDcoFilSitRecebendoMercadoria" Situacao="RECEBENDO MERCADORIA" />
+
+  <Constantes id="AguardandoClienteAutorizar" key="AguardandoClienteAutorizar" Situacao="AGUARDANDO O CLIENTE AUTORIZAR" />
+  <Constantes id="EnviarPraFaturamento" key="EnviarPraFaturamento" Situacao="ENVIAR PARA FATURAMENTO" />
+  <Constantes id="EnviadoPraFaturamento" key="EnviadoPraFaturamento" Situacao="ENVIADO PARA FATURAMENTO" />
+  
+
+  
+</Constantes>

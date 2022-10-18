@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dskpi3" targetNamespace="http://tempuri.org/dskpi3.xsd" xmlns:mstns="http://tempuri.org/dskpi3.xsd" xmlns="http://tempuri.org/dskpi3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dskpi3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dskpi3" msprop:Generator_DataSetName="dskpi3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dt" msprop:Generator_UserTableName="dt" msprop:Generator_RowDeletedName="dtRowDeleted" msprop:Generator_RowChangedName="dtRowChanged" msprop:Generator_RowClassName="dtRow" msprop:Generator_RowChangingName="dtRowChanging" msprop:Generator_RowEvArgName="dtRowChangeEvent" msprop:Generator_RowEvHandlerName="dtRowChangeEventHandler" msprop:Generator_TableClassName="dtDataTable" msprop:Generator_TableVarName="tabledt" msprop:Generator_RowDeletingName="dtRowDeleting" msprop:Generator_TablePropName="dt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NUMERO" msprop:Generator_UserColumnName="NUMERO" msprop:Generator_ColumnVarNameInTable="columnNUMERO" msprop:Generator_ColumnPropNameInRow="NUMERO" msprop:Generator_ColumnPropNameInTable="NUMEROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATADECADASTRO" msprop:Generator_UserColumnName="DATADECADASTRO" msprop:Generator_ColumnPropNameInRow="DATADECADASTRO" msprop:Generator_ColumnVarNameInTable="columnDATADECADASTRO" msprop:Generator_ColumnPropNameInTable="DATADECADASTROColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTIDADE" msprop:Generator_UserColumnName="QUANTIDADE" msprop:Generator_ColumnPropNameInRow="QUANTIDADE" msprop:Generator_ColumnVarNameInTable="columnQUANTIDADE" msprop:Generator_ColumnPropNameInTable="QUANTIDADEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DATADEIMPRESSAO" msprop:Generator_UserColumnName="DATADEIMPRESSAO" msprop:Generator_ColumnPropNameInRow="DATADEIMPRESSAO" msprop:Generator_ColumnVarNameInTable="columnDATADEIMPRESSAO" msprop:Generator_ColumnPropNameInTable="DATADEIMPRESSAOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LINHA" msprop:Generator_UserColumnName="LINHA" msprop:Generator_ColumnPropNameInRow="LINHA" msprop:Generator_ColumnVarNameInTable="columnLINHA" msprop:Generator_ColumnPropNameInTable="LINHAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

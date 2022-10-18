@@ -1,0 +1,16 @@
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Robo.Email.Notas.Solutions.Windows.Testes.exe.config
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Robo.Email.Notas.Solutions.Windows.Testes.exe
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Robo.Email.Notas.Solutions.Windows.Testes.pdb
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Sistran.Library.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Microsoft.Practices.Unity.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Microsoft.Practices.Unity.Interception.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\bin\Release\Sistran.Library.pdb
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\ResolveAssemblyReference.cache
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\Robo.Email.Notas.Solutions.Windows.Testes.Form1.resources
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\Robo.Email.Notas.Solutions.Windows.Testes.Properties.Resources.resources
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\Robo.Email.Notas.Solutions.Windows.Testes.csproj.GenerateResource.Cache
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\Robo.Email.Notas.Solutions.Windows.Testes.exe
+D:\Projetos\Robo.Email.Notas\Robo.Email.Notas.Solutions.Windows.Testes\obj\Release\Robo.Email.Notas.Solutions.Windows.Testes.pdb

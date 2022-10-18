@@ -1,0 +1,9 @@
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\RetriveNumber.Resources.resources
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\RetriveNumber.vbproj.GenerateResource.Cache
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\bin\Debug\RetriveNumber.dll
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\bin\Debug\RetriveNumber.pdb
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\bin\Debug\RetriveNumber.xml
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\RetriveNumber.dll
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\RetriveNumber.xml
+D:\Projetos\RSMobile_wCE\RsMobile\RetriveNumber\obj\Debug\RetriveNumber.pdb

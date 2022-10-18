@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:wscur="WebServiceComprovei:uploadRouteUsingDocumentKey" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="WebServiceComprovei:uploadRouteUsingDocumentKey" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="../../schemas/WS012.xsd" />
+  <xsd:element name="uploadRouteUsingDocumentKey">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="wscur:Rotas" />
+        <xsd:element name="nomeArquivo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="uploadRouteUsingDocumentKeyResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="status" type="xsd:string" />
+        <xsd:element name="protocolo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

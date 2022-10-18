@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DesempenhoDia" targetNamespace="http://tempuri.org/DesempenhoDia.xsd" xmlns:mstns="http://tempuri.org/DesempenhoDia.xsd" xmlns="http://tempuri.org/DesempenhoDia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DiaTableAdapter" GeneratorDataComponentClassName="DiaTableAdapter" Name="Dia" UserDataComponentName="DiaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT  
+ ISNULL(NF.PRAZOUTILIZADO,0) PRAZOUTILIZADO, 
+ SUM(CASE WHEN  (NF.DATADECONCLUSAO IS NOT NULL)  THEN 1 ELSE 0 END) NOTASFISCAISENTREGUE,   
+ SUM(CASE WHEN  (NF.DATADECONCLUSAO IS NULL)  THEN 1 ELSE 0 END) NOTASNAOFISCAISENTREGUE,   
+ 0.000 'PERC',
+ 0.000 'ACUMUL'  
+ FROM DOCUMENTO NF INNER JOIN CADASTRO REME ON (REME.IDCADASTRO = NF.IDREMETENTE)  
+ WHERE  NF.TIPODEDOCUMENTO = 'NOTA FISCAL' 
+ AND NF.ATIVO='SIM'
+ AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/03/2011 00:00:00', 103) 
+ AND CONVERT(DATETIME, '31/03/2011 00:00:00', 103) 
+ AND 
+ ( NF.IDREMETENTE IN (444,446,445,62694) 
+  OR NF.IDDESTINATARIO IN (444,446,445,62694)  OR NF.IDCLIENTE IN (444,446,445,62694)  ) 
+ GROUP BY ISNULL(NF.PRAZOUTILIZADO,0) 
+ ORDER BY NF.PRAZOUTILIZADO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOTASFISCAISENTREGUE" DataSetColumn="NOTASFISCAISENTREGUE" />
+              <Mapping SourceColumn="PERC" DataSetColumn="PERC" />
+              <Mapping SourceColumn="ACUMUL" DataSetColumn="ACUMUL" />
+              <Mapping SourceColumn="PRAZOUTILIZADO" DataSetColumn="PRAZOUTILIZADO1" />
+              <Mapping SourceColumn="NOTASNAOFISCAISENTREGUE" DataSetColumn="NOTASNAOFISCAISENTREGUE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DocumentoFilialTableAdapter" GeneratorDataComponentClassName="DocumentoFilialTableAdapter" Name="DocumentoFilial" UserDataComponentName="DocumentoFilialTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.DocumentoFilial" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   
+DF.SITUACAO,
+COUNT(*) NOTAS  FROM DOCUMENTO NF
+LEFT JOIN DOCUMENTOFILIAL DF ON DF.IDDOCUMENTO = NF.IDDOCUMENTO
+WHERE NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  
+AND NF.ATIVO='SIM' 
+AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/04/2011 00:00:00', 103)  
+AND CONVERT(DATETIME, '19/04/2011 00:00:00', 103)  
+AND  ( NF.IDREMETENTE IN (444,446,445,62694)  OR NF.IDDESTINATARIO IN (444,446,445,62694)  OR NF.IDCLIENTE IN (444,446,445,62694))  
+AND NF.DATADECONCLUSAO IS NULL
+GROUP BY DF.SITUACAO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="SITUACAO" DataSetColumn="SITUACAO" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DesempenhoDia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DesempenhoDia" msprop:Generator_DataSetName="DesempenhoDia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Dia" msprop:Generator_UserTableName="Dia" msprop:Generator_RowDeletedName="DiaRowDeleted" msprop:Generator_RowChangedName="DiaRowChanged" msprop:Generator_RowClassName="DiaRow" msprop:Generator_RowChangingName="DiaRowChanging" msprop:Generator_RowEvArgName="DiaRowChangeEvent" msprop:Generator_RowEvHandlerName="DiaRowChangeEventHandler" msprop:Generator_TableClassName="DiaDataTable" msprop:Generator_TableVarName="tableDia" msprop:Generator_RowDeletingName="DiaRowDeleting" msprop:Generator_TablePropName="Dia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PRAZOUTILIZADO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PRAZOUTILIZADO" msprop:Generator_ColumnPropNameInRow="PRAZOUTILIZADO" msprop:Generator_ColumnVarNameInTable="columnPRAZOUTILIZADO" msprop:Generator_ColumnPropNameInTable="PRAZOUTILIZADOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOTASFISCAISENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAISENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASFISCAISENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAISENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASFISCAISENTREGUEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERC" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PERC" msprop:Generator_ColumnPropNameInRow="PERC" msprop:Generator_ColumnVarNameInTable="columnPERC" msprop:Generator_ColumnPropNameInTable="PERCColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACUMUL" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ACUMUL" msprop:Generator_ColumnPropNameInRow="ACUMUL" msprop:Generator_ColumnVarNameInTable="columnACUMUL" msprop:Generator_ColumnPropNameInTable="ACUMULColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PRAZOUTILIZADO1" msdata:ReadOnly="true" msdata:Caption="PRAZOUTILIZADO" msprop:Generator_UserColumnName="PRAZOUTILIZADO1" msprop:Generator_ColumnVarNameInTable="columnPRAZOUTILIZADO1" msprop:Generator_ColumnPropNameInRow="PRAZOUTILIZADO1" msprop:Generator_ColumnPropNameInTable="PRAZOUTILIZADO1Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOTASNAOFISCAISENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASNAOFISCAISENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASNAOFISCAISENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASNAOFISCAISENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASNAOFISCAISENTREGUEColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DocumentoFilial" msprop:Generator_UserTableName="DocumentoFilial" msprop:Generator_RowDeletedName="DocumentoFilialRowDeleted" msprop:Generator_TableClassName="DocumentoFilialDataTable" msprop:Generator_RowChangedName="DocumentoFilialRowChanged" msprop:Generator_RowClassName="DocumentoFilialRow" msprop:Generator_RowChangingName="DocumentoFilialRowChanging" msprop:Generator_RowEvArgName="DocumentoFilialRowChangeEvent" msprop:Generator_RowEvHandlerName="DocumentoFilialRowChangeEventHandler" msprop:Generator_TablePropName="DocumentoFilial" msprop:Generator_TableVarName="tableDocumentoFilial" msprop:Generator_RowDeletingName="DocumentoFilialRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SITUACAO" msprop:Generator_UserColumnName="SITUACAO" msprop:Generator_ColumnPropNameInRow="SITUACAO" msprop:Generator_ColumnVarNameInTable="columnSITUACAO" msprop:Generator_ColumnPropNameInTable="SITUACAOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PERC" msprop:Generator_UserColumnName="PERC" msprop:Generator_ColumnPropNameInRow="PERC" msprop:Generator_ColumnVarNameInTable="columnPERC" msprop:Generator_ColumnPropNameInTable="PERCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ACUMUL" msprop:Generator_UserColumnName="ACUMUL" msprop:Generator_ColumnPropNameInRow="ACUMUL" msprop:Generator_ColumnVarNameInTable="columnACUMUL" msprop:Generator_ColumnPropNameInTable="ACUMULColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

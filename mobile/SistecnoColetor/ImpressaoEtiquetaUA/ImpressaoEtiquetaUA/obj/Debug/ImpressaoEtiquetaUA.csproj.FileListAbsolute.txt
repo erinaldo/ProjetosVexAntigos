@@ -1,0 +1,13 @@
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\bin\Debug\ImpressaoEtiquetaUA.exe
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\bin\Debug\ImpressaoEtiquetaUA.pdb
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ResolveAssemblyReference.cache
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.Form1.resources
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.csproj.GenerateResource.Cache
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.exe
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.pdb
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\bin\Debug\ImpressaoEtiquetaUA.exe.config
+C:\DESENVOLVIMENTO\Projetos\Sistecno\WindowsCE\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\bin\Debug\Microsoft.SqlServer.Replication.dll
+C:\DESENVOLVIMENTO\Projetos\Mobile\SistecnoColetor\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\bin\Debug\ImpressaoEtiquetaUA.exe.config
+C:\DESENVOLVIMENTO\Projetos\Mobile\SistecnoColetor\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.exe
+C:\DESENVOLVIMENTO\Projetos\Mobile\SistecnoColetor\ImpressaoEtiquetaUA\ImpressaoEtiquetaUA\obj\Debug\ImpressaoEtiquetaUA.pdb

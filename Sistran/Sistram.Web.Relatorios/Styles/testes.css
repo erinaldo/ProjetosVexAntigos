@@ -1,0 +1,84 @@
+﻿body
+{
+	margin: 0px;
+	background-color: #f8f8f8;
+	font-family: Verdana;
+	font-size: 7pt;	
+}
+form
+{
+    margin: 0px;
+}
+.tdContent
+{
+   /* padding-left: 2px;
+	text-align: left;*/
+}
+.divContent
+{
+    width: 100%;
+}
+
+.cabecalho
+{
+    border-style: none;
+	border-color: inherit;
+	border-width: 0px;
+	height: 25px;
+
+    /*background-color: #990000;
+  	padding-left: 11px;*/
+   	background: url(../Imagens/vermelho.jpg);
+   	color:Black;
+	text-align: center;
+}
+
+.sair:link, .sair:active, .sair:visited
+{
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    border: 0px none #fff;
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+    padding: 2px;
+
+}
+.sair:hover
+{
+    font-weight: bold;
+    border-color: #ccc;
+    color: #ccc;
+}
+
+.rodape
+{
+    /*width: 701px;*/
+    height: 25px;
+    background: url(../Imagens/vermelho.jpg);
+    /*background: url(../Imagens/rodape.gif);*/
+    background-repeat: no-repeat;
+    font-family: Arial;
+    font-size: 10px;
+    color: White;
+   /* padding-left: 10px;*/
+}
+
+.td_divisoria
+{
+	border: 0pt solid #FFFFFF;
+	background-color: #999999;
+}
+
+.Divisoria
+{
+    width: 7px;
+    border: 0px;
+    /*background-color: #990000;
+    padding-left: 11px;*/
+    background: url(../Imagens/menu_1_1.jpg);
+    
+}

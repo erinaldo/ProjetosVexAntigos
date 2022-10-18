@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="WebServiceComprovei:downloadDocumentsAWBs" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="downloadDocumentsAWBs">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cnpjEmissorNFe" type="xsd:string" />
+        <xsd:element default="1" name="qtdAWBs" type="xsd:integer" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="downloadDocumentsAWBsResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="status" type="xsd:string" />
+        <xsd:element name="protocolo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,11 @@
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Sistram.Library.dll.config
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Sistram.Library.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Sistram.Library.pdb
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Microsoft.Practices.Unity.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Microsoft.Practices.Unity.Interception.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\bin\Release\Microsoft.Practices.ServiceLocation.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Release\ResolveAssemblyReference.cache
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Release\Sistram.Library.dll
+d:\Projetos\sistran\Sistram.Library\Sistram.Library\obj\Release\Sistram.Library.pdb

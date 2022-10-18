@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5022C5B6-191E-46EC-B743-BCBD1CA02B66}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServicosWEB</RootNamespace>
+    <AssemblyName>ServicosWEB</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Comprovei.aspx" />
+    <Content Include="ComproveiRec.aspx" />
+    <Content Include="ClientesComprovei.aspx" />
+    <Content Include="Gaiolas.aspx" />
+    <Content Include="Sobras.aspx" />
+    <Content Include="CtrMenu.ascx" />
+    <Content Include="HomeRefill\HR.asmx" />
+    <Content Include="rptFilialFalta.aspx" />
+    <Content Include="rptFaltaDeVolumes.aspx" />
+    <Content Include="EnviarConferenciaDET.aspx" />
+    <Content Include="EnviarConferencia.aspx" />
+    <Content Include="Img\NovoLogoDistecno.jpg" />
+    <Content Include="Img\roge.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="ReposicaoRogeInterno.asmx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WSS\ReposicaoRoge.asmx" />
+    <Content Include="WSS\wssLogin.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comprovei.aspx.cs">
+      <DependentUpon>Comprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comprovei.aspx.designer.cs">
+      <DependentUpon>Comprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComproveiRec.aspx.cs">
+      <DependentUpon>ComproveiRec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComproveiRec.aspx.designer.cs">
+      <DependentUpon>ComproveiRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientesComprovei.aspx.cs">
+      <DependentUpon>ClientesComprovei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientesComprovei.aspx.designer.cs">
+      <DependentUpon>ClientesComprovei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gaiolas.aspx.cs">
+      <DependentUpon>Gaiolas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gaiolas.aspx.designer.cs">
+      <DependentUpon>Gaiolas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mp.Master.cs">
+      <DependentUpon>mp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mp.Master.designer.cs">
+      <DependentUpon>mp.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sobras.aspx.cs">
+      <DependentUpon>Sobras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sobras.aspx.designer.cs">
+      <DependentUpon>Sobras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrMenu.ascx.cs">
+      <DependentUpon>CtrMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CtrMenu.ascx.designer.cs">
+      <DependentUpon>CtrMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeRefill\HR.asmx.cs">
+      <DependentUpon>HR.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptFilialFalta.aspx.cs">
+      <DependentUpon>rptFilialFalta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptFilialFalta.aspx.designer.cs">
+      <DependentUpon>rptFilialFalta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rptFaltaDeVolumes.aspx.cs">
+      <DependentUpon>rptFaltaDeVolumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptFaltaDeVolumes.aspx.designer.cs">
+      <DependentUpon>rptFaltaDeVolumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarConferenciaDET.aspx.cs">
+      <DependentUpon>EnviarConferenciaDET.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarConferenciaDET.aspx.designer.cs">
+      <DependentUpon>EnviarConferenciaDET.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviarConferencia.aspx.cs">
+      <DependentUpon>EnviarConferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviarConferencia.aspx.designer.cs">
+      <DependentUpon>EnviarConferencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReposicaoRogeInterno.asmx.cs">
+      <DependentUpon>ReposicaoRogeInterno.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\br.com.roge.wslogos01\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\br.com.roge.wslogos02\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WSS\wssLogin.asmx.cs">
+      <DependentUpon>wssLogin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="App_Code\FuncoesGerais.cs" />
+    <Content Include="App_Code\ReportDefinition.cs" />
+    <Content Include="App_Code\ReposcicaoRoge.cs" />
+    <Content Include="App_Code\TableRdlGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sistram.Library\Sistram.Library\Sistran.Library.csproj">
+      <Project>{D6640122-F36D-4434-B722-7DF88F8A3ABE}</Project>
+      <Name>Sistran.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.roge.wslogos01\</RelPath>
+      <UpdateFromURL>http://wslogos01.roge.com.br:8086/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ServicosWEB_br_com_roge_wslogos01_WSLogos</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://wslogos02.roge.com.br:8087/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\br.com.roge.wslogos02\</RelPath>
+      <UpdateFromURL>http://wslogos02.roge.com.br:8087/csp/roge/WSRoge.WSLogos.cls%3fwsdl=1</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ServicosWEB_br_com_roge_wslogos02_WSLogos</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mp.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.roge.wslogos01\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.roge.wslogos01\WSRoge.wsdl" />
+    <None Include="Web References\br.com.roge.wslogos02\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\br.com.roge.wslogos02\WSRoge.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>47109</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

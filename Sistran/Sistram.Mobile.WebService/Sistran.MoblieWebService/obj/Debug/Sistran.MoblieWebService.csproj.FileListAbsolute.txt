@@ -1,0 +1,12 @@
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Sistran.MoblieWebService.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Sistran.MoblieWebService.pdb
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\obj\Debug\Sistran.MoblieWebService.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\obj\Debug\Sistran.MoblieWebService.pdb
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Sistran.Library.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Microsoft.Practices.Unity.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Microsoft.Practices.Unity.Interception.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projetos\sistran\Sistram.Mobile.WebService\Sistran.MoblieWebService\bin\Sistran.Library.pdb

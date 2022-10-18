@@ -1,0 +1,7 @@
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\bin\Debug\SmartDeviceProject1.exe
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\bin\Debug\SmartDeviceProject1.pdb
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.Properties.Resources.resources
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.csproj.GenerateResource.Cache
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.exe
+D:\Projetos\RSMobile_wCE\RsMobile\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.pdb

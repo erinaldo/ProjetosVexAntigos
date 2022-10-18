@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RoboJosapar.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RoboJosapar_Josapar_OrderService_BOOrderIntegration" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Order/WS/BOOrderIntegration.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

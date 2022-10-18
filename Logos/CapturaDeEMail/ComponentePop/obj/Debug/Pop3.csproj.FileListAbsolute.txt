@@ -1,0 +1,8 @@
+C:\Users\MOISESROVANI\Desktop\despop3client_demo\bin\Debug\Pop3.dll
+C:\Users\MOISESROVANI\Desktop\despop3client_demo\bin\Debug\Pop3.pdb
+C:\Users\MOISESROVANI\Desktop\despop3client_demo\obj\Debug\Pop3.dll
+C:\Users\MOISESROVANI\Desktop\despop3client_demo\obj\Debug\Pop3.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\CapturaDeEMail\ComponentePop\bin\Debug\Pop3.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\CapturaDeEMail\ComponentePop\bin\Debug\Pop3.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\CapturaDeEMail\ComponentePop\obj\Debug\Pop3.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\CapturaDeEMail\ComponentePop\obj\Debug\Pop3.pdb

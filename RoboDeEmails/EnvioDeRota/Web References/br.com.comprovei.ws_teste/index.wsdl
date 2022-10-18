@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:WebServiceComprovei" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:WebServiceComprovei" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+        Serviço: ImportQueue
+        Versão: 1.0
+        Criador: Comprovei
+        Ambiente: Teste1
+    </documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:WebServiceComprovei">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Notifications">
+        <xsd:all>
+          <xsd:element minOccurs="0" name="Error" type="tns:ArrayNotifications" />
+          <xsd:element minOccurs="0" name="Warning" type="tns:ArrayNotifications" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayNotifications">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Notification[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Notification">
+        <xsd:all>
+          <xsd:element name="Code" type="xsd:integer" />
+          <xsd:element name="Doc" type="xsd:string" />
+          <xsd:element name="Mensagem" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="uploadDocumentsRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadDocumentsResponse">
+    <wsdl:part name="Code" type="xsd:integer" />
+    <wsdl:part name="Status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+    <wsdl:part name="Notifications" type="tns:Notifications" />
+  </wsdl:message>
+  <wsdl:message name="uploadRouteRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadRouteResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadRouteUsingDocumentKeyRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadRouteUsingDocumentKeyResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendDocsToPODV2Request">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendDocsToPODV2Response">
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadUsersRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadUsersResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadNFeRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadNFeResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNfeRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendNfeResponse">
+    <wsdl:part name="codigoRetorno" type="xsd:integer" />
+    <wsdl:part name="mensagemRetorno" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadCTeRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadCTeResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadMDFeRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadMDFeResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getImportProtocolStatusRequest">
+    <wsdl:part name="protocolo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getImportProtocolStatusResponse">
+    <wsdl:part name="status" type="xsd:string" />
+    <wsdl:part name="protocolo" type="xsd:string" />
+    <wsdl:part name="metodo" type="xsd:string" />
+    <wsdl:part name="dataCriacao" type="xsd:string" />
+    <wsdl:part name="dataConclusao" type="xsd:string" />
+    <wsdl:part name="processado" type="xsd:string" />
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceComproveiPortType">
+    <wsdl:operation name="uploadDocuments">
+      <documentation>Faz a importação de múltiplos documentos para o sistema</documentation>
+      <wsdl:input message="tns:uploadDocumentsRequest" />
+      <wsdl:output message="tns:uploadDocumentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadRoute">
+      <documentation>Faz a importação de rota para o sistema (v2)</documentation>
+      <wsdl:input message="tns:uploadRouteRequest" />
+      <wsdl:output message="tns:uploadRouteResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadRouteUsingDocumentKey">
+      <documentation>Faz a importação de rota para o sistema usando documentos pré cadastrados</documentation>
+      <wsdl:input message="tns:uploadRouteUsingDocumentKeyRequest" />
+      <wsdl:output message="tns:uploadRouteUsingDocumentKeyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendDocsToPODV2">
+      <documentation>Faz a importação de rota para o sistema, com padrão de entrada e saida antiga.</documentation>
+      <wsdl:input message="tns:sendDocsToPODV2Request" />
+      <wsdl:output message="tns:sendDocsToPODV2Response" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadUsers">
+      <documentation>Faz a importação de usuários para cadastro no sistema</documentation>
+      <wsdl:input message="tns:uploadUsersRequest" />
+      <wsdl:output message="tns:uploadUsersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadNFe">
+      <documentation>Faz a importação de NFe para o sistema</documentation>
+      <wsdl:input message="tns:uploadNFeRequest" />
+      <wsdl:output message="tns:uploadNFeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendNfe">
+      <documentation>Faz a importação de NFe para o sistema (sem nome do arquivo)</documentation>
+      <wsdl:input message="tns:sendNfeRequest" />
+      <wsdl:output message="tns:sendNfeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadCTe">
+      <documentation>Faz a importação de CTe para o sistema</documentation>
+      <wsdl:input message="tns:uploadCTeRequest" />
+      <wsdl:output message="tns:uploadCTeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadMDFe">
+      <documentation>Faz a importação de MDFe para o sistema</documentation>
+      <wsdl:input message="tns:uploadMDFeRequest" />
+      <wsdl:output message="tns:uploadMDFeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getImportProtocolStatus">
+      <documentation>Consulta, pelo protocolo fornecido, o resultado da importação</documentation>
+      <wsdl:input message="tns:getImportProtocolStatusRequest" />
+      <wsdl:output message="tns:getImportProtocolStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceComproveiBinding" type="tns:WebServiceComproveiPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="uploadDocuments">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadDocuments" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadRoute">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadRoute" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadRouteUsingDocumentKey">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadRouteUsingDocumentKey" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendDocsToPODV2">
+      <soap:operation soapAction="urn:WebServiceComprovei#sendDocsToPODV2" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadUsers">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadUsers" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadNFe">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadNFe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendNfe">
+      <soap:operation soapAction="urn:WebServiceComprovei#sendNfe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadCTe">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadCTe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadMDFe">
+      <soap:operation soapAction="urn:WebServiceComprovei#uploadMDFe" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImportProtocolStatus">
+      <soap:operation soapAction="urn:WebServiceComprovei#getImportProtocolStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceComprovei">
+    <wsdl:port name="WebServiceComproveiPort" binding="tns:WebServiceComproveiBinding">
+      <soap:address location="https://ws-teste1.comprovei.com.br/importQueue/index.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

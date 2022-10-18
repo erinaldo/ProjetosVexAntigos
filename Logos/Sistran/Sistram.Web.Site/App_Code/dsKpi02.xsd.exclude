@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsKpi02" targetNamespace="http://tempuri.org/dsKpi02.xsd" xmlns:mstns="http://tempuri.org/dsKpi02.xsd" xmlns="http://tempuri.org/dsKpi02.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_ATENDIDOSTableAdapter" GeneratorDataComponentClassName="DT_ATENDIDOSTableAdapter" Name="DT_ATENDIDOS" UserDataComponentName="DT_ATENDIDOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>  SELECT  NF.NUMERO [NOTA FISCAL], NF.SERIE,
+  PC.CODIGO, NFI.QUANTIDADE
+  FROM 
+  DOCUMENTO NF  
+  INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)  
+  INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)  
+  INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)  
+  INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (126816,6915)    
+  AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'  
+  AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/09/2011', 103) AND  CONVERT(DATETIME, '08/09/2011 23:00:00', 103) 
+  ORDER BY NF.NUMERO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOTA FISCAL" DataSetColumn="PEDIDO" />
+              <Mapping SourceColumn="SERIE" DataSetColumn="SERIE" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="QUANTIDADE" DataSetColumn="QUANTIDADE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_SOLICITADASTableAdapter" GeneratorDataComponentClassName="DT_SOLICITADASTableAdapter" Name="DT_SOLICITADAS" UserDataComponentName="DT_SOLICITADASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>    SELECT    PD.NUMERO [NOTA FISCAL], 
+    PD.SERIE,
+	PC.CODIGO, 
+	PDI.QUANTIDADE     FROM DOCUMENTO PD     
+    INNER JOIN DOCUMENTOITEM PDI ON (PDI.IDDOCUMENTO = PD.IDDOCUMENTO) 
+    INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = PDI.IDPRODUTOEMBALAGEM)  
+	INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)    
+    WHERE     PD.IDCLIENTE IN(126816,6915)    AND PD.TIPODEDOCUMENTO = 'PEDIDO'     
+    AND PD.ATIVO = 'NAO'     AND PD.ENTRADASAIDA = 'SAIDA'     
+    AND PDI.STATUSDOITEM = 'CANCELADO'     
+    AND PD.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/09/2011', 103) AND  CONVERT(DATETIME, '08/09/2011 23:00:00', 103)
+    UNION
+      SELECT  NF.NUMERO [NOTA FISCAL], NF.SERIE,
+  PC.CODIGO, NFI.QUANTIDADE
+  FROM 
+  DOCUMENTO NF  
+  INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)  
+  INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)  
+  INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)  
+  INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (126816,6915)    
+  AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'  
+  AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/09/2011', 103) AND  CONVERT(DATETIME, '08/09/2011 23:00:00', 103) </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOTA FISCAL" DataSetColumn="PEDIDO" />
+              <Mapping SourceColumn="SERIE" DataSetColumn="SERIE" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="QUANTIDADE" DataSetColumn="QUANTIDADE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DT_CONFERIDASTableAdapter" GeneratorDataComponentClassName="DT_CONFERIDASTableAdapter" Name="DT_CONFERIDAS" UserDataComponentName="DT_CONFERIDASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>    SELECT    PD.NUMERO [NOTA FISCAL], 
+    PD.SERIE,
+	PC.CODIGO, 
+	PDI.QUANTIDADE     FROM DOCUMENTO PD     
+    INNER JOIN DOCUMENTOITEM PDI ON (PDI.IDDOCUMENTO = PD.IDDOCUMENTO) 
+    INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = PDI.IDPRODUTOEMBALAGEM)  
+	INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)    
+    WHERE     PD.IDCLIENTE IN(126816,6915)    AND PD.TIPODEDOCUMENTO = 'PEDIDO'     
+    AND PD.ATIVO = 'NAO'     AND PD.ENTRADASAIDA = 'SAIDA'     
+    AND PDI.STATUSDOITEM = 'CANCELADO'     
+    AND PD.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/09/2011', 103) AND  CONVERT(DATETIME, '08/09/2011 23:00:00', 103)
+    UNION
+      SELECT  NF.NUMERO [NOTA FISCAL], NF.SERIE,
+  PC.CODIGO, NFI.QUANTIDADE
+  FROM 
+  DOCUMENTO NF  
+  INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)  
+  INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)  
+  INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)  
+  INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (126816,6915)    
+  AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'  
+  AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/09/2011', 103) AND  CONVERT(DATETIME, '08/09/2011 23:00:00', 103) </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOTA FISCAL" DataSetColumn="PEDIDO" />
+              <Mapping SourceColumn="SERIE" DataSetColumn="SERIE" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="QUANTIDADE" DataSetColumn="QUANTIDADE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsKpi02" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsKpi02" msprop:Generator_DataSetName="dsKpi02">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT_ATENDIDOS" msprop:Generator_UserTableName="DT_ATENDIDOS" msprop:Generator_RowDeletedName="DT_ATENDIDOSRowDeleted" msprop:Generator_RowChangedName="DT_ATENDIDOSRowChanged" msprop:Generator_RowClassName="DT_ATENDIDOSRow" msprop:Generator_RowChangingName="DT_ATENDIDOSRowChanging" msprop:Generator_RowEvArgName="DT_ATENDIDOSRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_ATENDIDOSRowChangeEventHandler" msprop:Generator_TableClassName="DT_ATENDIDOSDataTable" msprop:Generator_TableVarName="tableDT_ATENDIDOS" msprop:Generator_RowDeletingName="DT_ATENDIDOSRowDeleting" msprop:Generator_TablePropName="DT_ATENDIDOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PEDIDO" msprop:Generator_UserColumnName="PEDIDO" msprop:Generator_ColumnVarNameInTable="columnPEDIDO" msprop:Generator_ColumnPropNameInRow="PEDIDO" msprop:Generator_ColumnPropNameInTable="PEDIDOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SERIE" msprop:Generator_UserColumnName="SERIE" msprop:Generator_ColumnVarNameInTable="columnSERIE" msprop:Generator_ColumnPropNameInRow="SERIE" msprop:Generator_ColumnPropNameInTable="SERIEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QUANTIDADE" msprop:Generator_UserColumnName="QUANTIDADE" msprop:Generator_ColumnVarNameInTable="columnQUANTIDADE" msprop:Generator_ColumnPropNameInRow="QUANTIDADE" msprop:Generator_ColumnPropNameInTable="QUANTIDADEColumn" type="xs:decimal" />
+              <xs:element name="GRUPO" msprop:Generator_UserColumnName="GRUPO" msprop:Generator_ColumnPropNameInRow="GRUPO" msprop:Generator_ColumnVarNameInTable="columnGRUPO" msprop:Generator_ColumnPropNameInTable="GRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_SOLICITADAS" msprop:Generator_UserTableName="DT_SOLICITADAS" msprop:Generator_RowDeletedName="DT_SOLICITADASRowDeleted" msprop:Generator_RowChangedName="DT_SOLICITADASRowChanged" msprop:Generator_RowClassName="DT_SOLICITADASRow" msprop:Generator_RowChangingName="DT_SOLICITADASRowChanging" msprop:Generator_RowEvArgName="DT_SOLICITADASRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_SOLICITADASRowChangeEventHandler" msprop:Generator_TableClassName="DT_SOLICITADASDataTable" msprop:Generator_TableVarName="tableDT_SOLICITADAS" msprop:Generator_RowDeletingName="DT_SOLICITADASRowDeleting" msprop:Generator_TablePropName="DT_SOLICITADAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PEDIDO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PEDIDO" msprop:Generator_ColumnVarNameInTable="columnPEDIDO" msprop:Generator_ColumnPropNameInRow="PEDIDO" msprop:Generator_ColumnPropNameInTable="PEDIDOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SERIE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SERIE" msprop:Generator_ColumnVarNameInTable="columnSERIE" msprop:Generator_ColumnPropNameInRow="SERIE" msprop:Generator_ColumnPropNameInTable="SERIEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GRUPO" msprop:Generator_UserColumnName="GRUPO" msprop:Generator_ColumnPropNameInRow="GRUPO" msprop:Generator_ColumnVarNameInTable="columnGRUPO" msprop:Generator_ColumnPropNameInTable="GRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTIDADE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="QUANTIDADE" msprop:Generator_ColumnVarNameInTable="columnQUANTIDADE" msprop:Generator_ColumnPropNameInRow="QUANTIDADE" msprop:Generator_ColumnPropNameInTable="QUANTIDADEColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DT_CONFERIDAS" msprop:Generator_UserTableName="DT_CONFERIDAS" msprop:Generator_RowDeletedName="DT_CONFERIDASRowDeleted" msprop:Generator_TableClassName="DT_CONFERIDASDataTable" msprop:Generator_RowChangedName="DT_CONFERIDASRowChanged" msprop:Generator_RowClassName="DT_CONFERIDASRow" msprop:Generator_RowChangingName="DT_CONFERIDASRowChanging" msprop:Generator_RowEvArgName="DT_CONFERIDASRowChangeEvent" msprop:Generator_RowEvHandlerName="DT_CONFERIDASRowChangeEventHandler" msprop:Generator_TablePropName="DT_CONFERIDAS" msprop:Generator_TableVarName="tableDT_CONFERIDAS" msprop:Generator_RowDeletingName="DT_CONFERIDASRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PEDIDO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="PEDIDO" msprop:Generator_ColumnPropNameInRow="PEDIDO" msprop:Generator_ColumnVarNameInTable="columnPEDIDO" msprop:Generator_ColumnPropNameInTable="PEDIDOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SERIE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SERIE" msprop:Generator_ColumnPropNameInRow="SERIE" msprop:Generator_ColumnVarNameInTable="columnSERIE" msprop:Generator_ColumnPropNameInTable="SERIEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GRUPO" msprop:Generator_UserColumnName="GRUPO" msprop:Generator_ColumnPropNameInRow="GRUPO" msprop:Generator_ColumnVarNameInTable="columnGRUPO" msprop:Generator_ColumnPropNameInTable="GRUPOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESCRICAO" msprop:Generator_UserColumnName="DESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="QUANTIDADE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="QUANTIDADE" msprop:Generator_ColumnPropNameInRow="QUANTIDADE" msprop:Generator_ColumnVarNameInTable="columnQUANTIDADE" msprop:Generator_ColumnPropNameInTable="QUANTIDADEColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

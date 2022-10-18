@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\moto" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll" publishTime="05/19/2010 14:28:00" />
+    <file relUrl="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll" publishTime="05/19/2010 14:27:52" />
+    <file relUrl="bin/Sistran.Library.dll" publishTime="04/30/2014 13:00:53" />
+    <file relUrl="frmCadastrarProprietario.aspx" publishTime="08/21/2013 09:44:25" />
+    <file relUrl="frmConcluir.aspx" publishTime="07/24/2013 08:42:22" />
+    <file relUrl="bin/Artem.GoogleMap.dll" publishTime="04/07/2011 16:53:34" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="06/14/2013 08:40:36" />
+    <file relUrl="frmCadastrarMotorista.aspx" publishTime="08/16/2013 13:51:33" />
+    <file relUrl="bin/Microsoft.Practices.ServiceLocation.dll" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="bin/Sistram.Web.Captacao.pdb" publishTime="04/30/2014 13:10:10" />
+    <file relUrl="bin/AjaxControlToolkit.pdb" publishTime="08/30/2010 13:52:48" />
+    <file relUrl="bin/AjaxControlToolkit.dll" publishTime="08/30/2010 13:52:48" />
+    <file relUrl="bin/Validacao.pdb" publishTime="06/26/2013 10:16:24" />
+    <file relUrl="bin/Microsoft.Practices.Unity.Interception.dll" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="frmCadAnexos.aspx" publishTime="08/16/2013 14:00:36" />
+    <file relUrl="Default.aspx" publishTime="07/24/2013 08:42:24" />
+    <file relUrl="bin/Sistram.Web.Captacao.dll" publishTime="04/30/2014 13:10:10" />
+    <file relUrl="bin/Validacao.dll" publishTime="06/26/2013 10:16:24" />
+    <file relUrl="bin/Microsoft.Practices.Unity.dll" publishTime="04/16/2010 13:42:32" />
+    <file relUrl="Imagens/download.jpg" publishTime="07/18/2013 10:47:30" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="06/14/2013 08:40:36" />
+    <file relUrl="bin/Sistran.Library.pdb" publishTime="04/30/2014 13:00:53" />
+    <file relUrl="LOGOS-LOGTRANSP-03.jpg" publishTime="06/14/2013 08:41:18" />
+    <file relUrl="Checar.aspx" publishTime="08/12/2013 13:54:06" />
+    <file relUrl="Web.config" publishTime="04/30/2014 13:10:11" />
+    <file relUrl="Imagens/excluir.jpg" publishTime="07/18/2013 10:47:30" />
+    <file relUrl="duvidas.jpg" publishTime="08/09/2013 10:25:14" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="06/14/2013 08:40:34" />
+  </publishProfile>
+</publishData>

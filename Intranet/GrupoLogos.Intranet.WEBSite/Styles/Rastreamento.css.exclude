@@ -1,0 +1,8 @@
+﻿body
+{
+	font-family: verdana;
+	font-size: 8pt;
+	margin  : 0 auto;
+}
+
+    

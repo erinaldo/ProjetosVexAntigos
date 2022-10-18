@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DesempenhoFilial" targetNamespace="http://tempuri.org/DesempenhoFilial.xsd" xmlns:mstns="http://tempuri.org/DesempenhoFilial.xsd" xmlns="http://tempuri.org/DesempenhoFilial.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialTableAdapter" GeneratorDataComponentClassName="FilialTableAdapter" Name="Filial" UserDataComponentName="FilialTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Filial" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  
+ FL.NOME NOMEDAFILIAL,
+ SUM(CASE WHEN  (NF.DATADECONCLUSAO IS NOT NULL)  THEN 1 ELSE 0 END) NOTASFISCAIS_ENTREGUE,  
+ AVG(CAST((ISNULL(DATEDIFF(DAY,  NF.DATADEEMISSAO, NF.DATADECONCLUSAO),0)) AS NUMERIC(10,3))) LEADTIME,
+ SUM(CASE WHEN (NF.DATADECONCLUSAO IS NULL)  THEN 1 ELSE 0 END) NOTASFISCAIS_NAO_ENTREGUE,
+ SUM(CASE WHEN (NF.DATADECONCLUSAO IS NULL) AND (DATEDIFF(D, NF.DATAPLANEJADA,GETDATE())&gt;1)  THEN 1 ELSE 0 END) NOTASFISCAIS_NAO_ENTREGUE_ATRASO,   
+ SUM(CASE WHEN (NF.DATADECONCLUSAO IS NULL) AND (DATEDIFF(D, NF.DATAPLANEJADA,GETDATE())&lt;=1)  THEN 1 ELSE 0 END) NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO,   
+ AVG(ISNULL(NF.PRAZOUTILIZADO,0) - ISNULL(NF.DIASOCORRENCIACLIENTE,0)) AS TRANSITTIME,
+ AVG(CAST((
+ CASE WHEN (NF.DATADECONCLUSAO IS NULL) THEN
+   DATEDIFF(D,  NF.DATAPLANEJADA, GETDATE()) ELSE
+   DATEDIFF(D,  NF.DATAPLANEJADA, NF.DATADECONCLUSAO)
+ END) AS NUMERIC(10,2)))  MEDIA_DOS_DIAS_NAO_ENTREGUE,
+ AVG(CAST((
+ CASE WHEN (NF.DATADECONCLUSAO IS NULL) AND DATEDIFF(D,  NF.DATAPLANEJADA, GETDATE())&gt;1 THEN
+   DATEDIFF(D,  NF.DATAPLANEJADA, GETDATE()) ELSE
+   DATEDIFF(D,  NF.DATAPLANEJADA, NF.DATADECONCLUSAO)
+ END) AS NUMERIC(10,2)))  MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO,
+ AVG(CAST((
+ CASE WHEN (NF.DATADECONCLUSAO IS NULL) AND DATEDIFF(D,  NF.DATAPLANEJADA, GETDATE())&lt;=1 THEN
+   DATEDIFF(D,  NF.DATAPLANEJADA, GETDATE()) ELSE
+   DATEDIFF(D,  NF.DATAPLANEJADA, NF.DATADECONCLUSAO)
+ END) AS NUMERIC(10,2)))  MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO
+   
+ FROM DOCUMENTO NF  
+ INNER JOIN CADASTRO REME ON (REME.IDCADASTRO = NF.IDREMETENTE)   
+ INNER JOIN CADASTRO DEST ON (DEST.IDCADASTRO = NF.IDDESTINATARIO)   
+ INNER JOIN CIDADE DESTCID ON (DESTCID.IDCIDADE = DEST.IDCIDADE)   
+ INNER JOIN ESTADO DESTEST ON (DESTEST.IDESTADO = DESTCID.IDESTADO)   
+ INNER JOIN FILIAL FL ON (FL.IDFILIAL = NF.IDFILIAL)     
+ WHERE   NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  
+ AND NF.DATADEEMISSAO BETWEEN  CONVERT(DATETIME, '01/03/2011 00:00:00', 103)
+AND CONVERT(DATETIME, '31/03/2011 00:00:00', 103)  AND (NF.IDREMETENTE IN
+(444,446,445,62694)  OR NF.IDDESTINATARIO IN (444,446,445,62694)  OR
+NF.IDCLIENTE IN (444,446,445,62694) ) 
+ 
+ GROUP BY FL.NOME   
+ ORDER BY AVG(NF.PRAZOUTILIZADO) 
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOMEDAFILIAL" DataSetColumn="NOMEDAFILIAL" />
+              <Mapping SourceColumn="NOTASFISCAIS_ENTREGUE" DataSetColumn="NOTASFISCAIS_ENTREGUE" />
+              <Mapping SourceColumn="LEADTIME" DataSetColumn="LEADTIME" />
+              <Mapping SourceColumn="NOTASFISCAIS_NAO_ENTREGUE" DataSetColumn="NOTASFISCAIS_NAO_ENTREGUE" />
+              <Mapping SourceColumn="NOTASFISCAIS_NAO_ENTREGUE_ATRASO" DataSetColumn="NOTASFISCAIS_NAO_ENTREGUE_ATRASO" />
+              <Mapping SourceColumn="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" DataSetColumn="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" />
+              <Mapping SourceColumn="TRANSITTIME" DataSetColumn="TRANSITTIME" />
+              <Mapping SourceColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE" DataSetColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE" />
+              <Mapping SourceColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" DataSetColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" />
+              <Mapping SourceColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" DataSetColumn="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DesempenhoFilial" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DesempenhoFilial" msprop:Generator_DataSetName="DesempenhoFilial">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Filial" msprop:Generator_UserTableName="Filial" msprop:Generator_RowDeletedName="FilialRowDeleted" msprop:Generator_RowChangedName="FilialRowChanged" msprop:Generator_RowClassName="FilialRow" msprop:Generator_RowChangingName="FilialRowChanging" msprop:Generator_RowEvArgName="FilialRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialRowChangeEventHandler" msprop:Generator_TableClassName="FilialDataTable" msprop:Generator_TableVarName="tableFilial" msprop:Generator_RowDeletingName="FilialRowDeleting" msprop:Generator_TablePropName="Filial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMEDAFILIAL" msprop:Generator_UserColumnName="NOMEDAFILIAL" msprop:Generator_ColumnVarNameInTable="columnNOMEDAFILIAL" msprop:Generator_ColumnPropNameInRow="NOMEDAFILIAL" msprop:Generator_ColumnPropNameInTable="NOMEDAFILIALColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTASFISCAIS_ENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_ENTREGUEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="LEADTIME" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LEADTIME" msprop:Generator_ColumnPropNameInRow="LEADTIME" msprop:Generator_ColumnVarNameInTable="columnLEADTIME" msprop:Generator_ColumnPropNameInTable="LEADTIMEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOTASFISCAIS_NAO_ENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_NAO_ENTREGUEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOTASFISCAIS_NAO_ENTREGUE_ATRASO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_NAO_ENTREGUE_ATRASOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_NAO_ENTREGUE_NO_PRAZOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TRANSITTIME" msdata:ReadOnly="true" msprop:Generator_UserColumnName="TRANSITTIME" msprop:Generator_ColumnPropNameInRow="TRANSITTIME" msprop:Generator_ColumnVarNameInTable="columnTRANSITTIME" msprop:Generator_ColumnPropNameInTable="TRANSITTIMEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MEDIA_DOS_DIAS_NAO_ENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MEDIA_DOS_DIAS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInRow="MEDIA_DOS_DIAS_NAO_ENTREGUE" msprop:Generator_ColumnVarNameInTable="columnMEDIA_DOS_DIAS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInTable="MEDIA_DOS_DIAS_NAO_ENTREGUEColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnPropNameInRow="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnVarNameInTable="columnMEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASO" msprop:Generator_ColumnPropNameInTable="MEDIA_DOS_DIAS_NAO_ENTREGUE_ATRASOColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnPropNameInRow="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnVarNameInTable="columnMEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZO" msprop:Generator_ColumnPropNameInTable="MEDIA_DOS_DIAS_NAO_ENTREGUE_NO_PRAZOColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs"
+    Inherits="Sistecno.Web.Fatura.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="Rastreamento.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="text-align: center">
+        <table border="0" style="width: 100%; text-align: left">
+            <tr>
+                <td>
+                    <asp:Image style="height: 60px" alt="logo" id="imgLogoPrincipal" runat="server" />
+                </td>
+                <td style="width: 99%">
+                    <table  style="width: 100%">
+                        <tr style="text-align: right">
+                            <td style="font-family: Arial; font-size: 16px; font-weight: bold">
+                                <asp:Label ID="lblTitulo" runat="server" Text="SUA FATURA"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr style="text-align:right">
+                            <td style="font-family:Arial; font-size:11px">
+                                <hr style="width:100%; background-color:Black; height:1px" />
+                            </td>
+                        </tr>
+                        <tr style="text-align: right">
+                            <td style="font-family:Arial; font-size:11px">
+                                <asp:Label ID="lblDataHora" runat="server" Text=""></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                   <hr style="width:100%; background-color:Black; height:1px" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

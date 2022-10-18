@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx?wsdl" docRef="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx" xmlns:q1="http://www.accurate.com/acec/TrakingServices" binding="q1:TrackingServicesMediator_epSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://erp.josapar.com.br/Apps/WebService/pWWS_B2B_Traking/WS/TrackingServicesMediator_ep.asmx" xmlns:q2="http://www.accurate.com/acec/TrakingServices" binding="q2:TrackingServicesMediator_epSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

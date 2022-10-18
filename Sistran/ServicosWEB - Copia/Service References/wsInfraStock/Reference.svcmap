@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be2d5f8e-c6cf-4fda-b13d-16fb5b458b99" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="file:///C:/Users/MOISESROVANI/Desktop/Infrashop-Middleware-Unilever/AcecServices/StockServices.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ErrorLog.xsd" MetadataType="Schema" ID="758fb058-d385-46fb-825d-416873c24a26" SourceId="1" SourceUrl="file:///C:/Users/MOISESROVANI/Desktop/Infrashop-Middleware-Unilever/AcecServices/schemas/ErrorLog.xsd" />
+    <MetadataFile FileName="AcecStock.xsd" MetadataType="Schema" ID="c8af4f90-7358-4075-a0e3-70abd61c9782" SourceId="1" SourceUrl="file:///C:/Users/MOISESROVANI/Desktop/Infrashop-Middleware-Unilever/DataModel/AcecStock.xsd" />
+    <MetadataFile FileName="StockServices.xsd" MetadataType="Schema" ID="33ab5f3a-e7d4-42c9-ab77-0ca56b1da512" SourceId="1" SourceUrl="file:///C:/Users/MOISESROVANI/Desktop/Infrashop-Middleware-Unilever/AcecServices/schemas/StockServices.xsd" />
+    <MetadataFile FileName="StockServices.wsdl" MetadataType="Wsdl" ID="707151c3-1dc4-4a2e-bb5f-0f74ab4044f9" SourceId="1" SourceUrl="file:///C:/Users/MOISESROVANI/Desktop/Infrashop-Middleware-Unilever/AcecServices/StockServices.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

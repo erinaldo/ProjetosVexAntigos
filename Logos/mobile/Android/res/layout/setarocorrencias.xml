@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/fundo"
+  >
+  
+<TableRow>
+    
+    <TextView 
+        android:layout_width="wrap_content" 
+        android:id="@+id/textView2" 
+        android:layout_height="wrap_content" 
+        android:text="Número:" 
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >        
+    </TextView>
+    
+    <TextView 
+        android:layout_width="wrap_content" 
+        android:id="@+id/txtNumero" 
+        android:layout_height="wrap_content" 
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >        
+    </TextView>
+</TableRow>
+
+
+    <ListView 
+        android:layout_width="fill_parent" 
+        android:layout_height="200dp"
+        android:id="@+id/listView1" 
+        android:textColor="@android:color/black"
+        >
+   </ListView> 
+   
+    
+    
+
+
+    <TableRow android:gravity="center">
+    
+        <TextView 
+    android:layout_width="298dp" 
+    android:id="@+id/txtEscolha" 
+    android:layout_height="44dp" 
+    android:textColor="@android:color/black"
+   >        
+</TextView>
+
+<Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="VOLTAR"
+         
+        />
+
+    <Button
+        android:id="@+id/btnConfirmarOcorrencia"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm" />
+    
+    
+
+    </TableRow>
+    
+
+</TableLayout>

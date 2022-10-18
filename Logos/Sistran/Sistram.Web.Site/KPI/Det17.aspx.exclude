@@ -1,0 +1,98 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/SiteDetalhe.master" AutoEventWireup="true"
+    CodeFile="Det17.aspx.cs" Inherits="Det17" Theme="Adm" EnableTheming="true" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" runat="Server">
+    <asp:Panel ID="pnlteste" runat="server" Style="text-align: center">
+        <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="4" style="background-image: url('Images/skins/primeiro/img/menu_3_2.jpg');
+                    height: 25px; font-size: 3pt;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                        <tr>
+                            <td style="background-image: url('../Images/skins/primeiro/img/menu_3_2.jpg'); height: 25px">
+                                <asp:Label ID="lblTitulo" runat="server" Font-Bold="True" Font-Size="14px" 
+                                    Text="Detalhe KPI 17"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table">
+                        <tr>
+                            <td class="tdp">
+                                Sub Processo:
+                            </td>
+                            <td class="tdp">
+                                RECEBIMENTO</td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Indicador:
+                            </td>
+                            <td class="tdp">
+                               Inbound Accuracy
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Finalidade:
+                            </td>
+                            <td class="tdp">
+                                Mensurar o % de acurracidade acumulada de auditorias de cargas
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Formula:
+                            </td>
+                            <td class="tdp">
+                               (ƩQtde. de linhas corretas / ƩQtde. de linhas recebidas) * 100%
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Resultado:
+                            </td>
+                            <td class="tdp">
+                                <asp:Label ID="lblResultado" runat="server" Style="font-weight: 700"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp" colspan="2">
+                                <hr />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Linhas Corretas: </td>
+                            <td class="tdp">
+                                <asp:Label ID="lblLinhasCorretas" runat="server" Style="font-weight: 700"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdp">
+                                Linhas Recebidas:
+                            </td>
+                            <td class="tdp">
+                                <asp:Label ID="lblLinhasSolicitadas" runat="server" Style="font-weight: 700"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <asp:Panel ID="pnlReport" runat="server" BorderColor="Black" BorderStyle="Solid"
+            BorderWidth="1px">
+        </asp:Panel>
+        <br />
+        <br />
+        <input id="Button1" class="button" type="button" value="Fechar" onclick="javascript:window.close();" /><br />
+    </asp:Panel>
+</asp:Content>

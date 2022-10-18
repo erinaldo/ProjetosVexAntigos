@@ -1,0 +1,24 @@
+
+ Requer Internet para ativação
+
+Abra o CMD (Prompt de comando) como administrador e digite:
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
+e de enter.
+
+Em seguida digite:
+slmgr /skms kms.xspace.in
+e de enter.
+
+Em seguida digite:
+slmgr /ato
+e de enter.
+
+Em seguida digite:
+smlgr.vbs -xpr
+e de enter.
+ 
+Em todas, aguarde uma mensagem que poderá ser fechada
+
+ ou 
+
+pode tentar o KMSpico v10.0.5 ou KMSpico v10.0.7 Beta

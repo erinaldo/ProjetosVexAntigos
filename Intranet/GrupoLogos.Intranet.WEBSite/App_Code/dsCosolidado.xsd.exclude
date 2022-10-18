@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCosolidado" targetNamespace="http://tempuri.org/dsCosolidado.xsd" xmlns:mstns="http://tempuri.org/dsCosolidado.xsd" xmlns="http://tempuri.org/dsCosolidado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ConsolidadosTableAdapter" GeneratorDataComponentClassName="ConsolidadosTableAdapter" Name="Consolidados" UserDataComponentName="ConsolidadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT 
+CAST(DOC.DATADEEMISSAO AS DATE) DATA,  
+PC.CODIGO, 
+pc.Descricao,
+SUM(DIT.QUANTIDADE) QTD,
+DEST.CNPJCPF CNPJCPF_DESTINATARIO, 
+ISNULL(DEST.RAZAOSOCIALNOME, DEST.FANTASIAAPELIDO) AS DESTINATARIO
+FROM DOCUMENTO DOC
+INNER JOIN DOCUMENTOITEM DIT ON DIT.IDDOCUMENTO = DOC.IDDOCUMENTO
+INNER JOIN PRODUTOEMBALAGEM PEM ON PEM.IDPRODUTOEMBALAGEM = DIT.IDPRODUTOEMBALAGEM
+INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = PEM.IDPRODUTOCLIENTE
+INNER JOIN CADASTRO DEST ON DEST.IDCADASTRO = DOC.IDDESTINATARIO
+WHERE 
+DOC.TIPODEDOCUMENTO='PEDIDO' 
+AND DOC.ATIVO='SIM' 
+AND DATADECANCELAMENTO IS NULL
+GROUP BY 
+CAST(DOC.DATADEEMISSAO AS DATE),  
+PC.CODIGO, 
+pc.Descricao,
+DEST.CNPJCPF , 
+ISNULL(DEST.RAZAOSOCIALNOME, DEST.FANTASIAAPELIDO) 
+ORDER BY DATA DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DATA" DataSetColumn="DATA" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+              <Mapping SourceColumn="CNPJCPF_DESTINATARIO" DataSetColumn="CNPJCPF_DESTINATARIO" />
+              <Mapping SourceColumn="DESTINATARIO" DataSetColumn="DESTINATARIO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCosolidado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsCosolidado" msprop:Generator_DataSetName="dsCosolidado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Consolidados" msprop:Generator_UserTableName="Consolidados" msprop:Generator_RowDeletedName="ConsolidadosRowDeleted" msprop:Generator_TableClassName="ConsolidadosDataTable" msprop:Generator_RowChangedName="ConsolidadosRowChanged" msprop:Generator_RowClassName="ConsolidadosRow" msprop:Generator_RowChangingName="ConsolidadosRowChanging" msprop:Generator_RowEvArgName="ConsolidadosRowChangeEvent" msprop:Generator_RowEvHandlerName="ConsolidadosRowChangeEventHandler" msprop:Generator_TablePropName="Consolidados" msprop:Generator_TableVarName="tableConsolidados" msprop:Generator_RowDeletingName="ConsolidadosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DATA" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DATA" msprop:Generator_ColumnPropNameInRow="DATA" msprop:Generator_ColumnVarNameInTable="columnDATA" msprop:Generator_ColumnPropNameInTable="DATAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descricao" msprop:Generator_UserColumnName="Descricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_UserColumnName="QTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CNPJCPF_DESTINATARIO" msprop:Generator_UserColumnName="CNPJCPF_DESTINATARIO" msprop:Generator_ColumnPropNameInRow="CNPJCPF_DESTINATARIO" msprop:Generator_ColumnVarNameInTable="columnCNPJCPF_DESTINATARIO" msprop:Generator_ColumnPropNameInTable="CNPJCPF_DESTINATARIOColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTINATARIO" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DESTINATARIO" msprop:Generator_ColumnPropNameInRow="DESTINATARIO" msprop:Generator_ColumnVarNameInTable="columnDESTINATARIO" msprop:Generator_ColumnPropNameInTable="DESTINATARIOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+ <Agendamento>   
+   <hora>6</hora>   
+   <hora>8</hora>   
+   <hora>10</hora>   
+   <hora>12</hora>   
+   <hora>16</hora>   
+   <hora>18</hora>   
+   <hora>20</hora>   
+   <hora>22</hora>   
+  </Agendamento>

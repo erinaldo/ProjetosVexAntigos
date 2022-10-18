@@ -1,0 +1,6 @@
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\bin\Debug\Uol.PagSeguro.XML
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\bin\Debug\Uol.PagSeguro.dll
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\bin\Debug\Uol.PagSeguro.pdb
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\obj\Debug\ResolveAssemblyReference.cache
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\obj\Debug\Uol.PagSeguro.dll
+M:\Projetos\Referencias\pagseguro-netframework-2.0.2\source\Uol.PagSeguro\obj\Debug\Uol.PagSeguro.pdb

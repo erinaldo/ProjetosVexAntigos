@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        p.MsoNormal
+        {
+            margin-bottom: .0001pt;
+            font-size: 12.0pt;
+            font-family: "Times New Roman" , "serif";
+            margin-left: 0cm;
+            margin-right: 0cm;
+            margin-top: 0cm;
+        }
+        table.MsoNormalTable
+        {
+            font-size: 10.0pt;
+            font-family: "Times New Roman" , "serif";
+        }
+        a:link
+        {
+            color: blue;
+            text-decoration: underline;
+        }
+        .style1
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .style2
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center">
+        <div style="width: 100%; text-align: left">
+            <table border="0" cellpadding="0" cellspacing="0" class="MsoNormalTable">
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        <p align="center" class="MsoNormal" style="text-align: center">
+                            <b><span style="font-size: 18.0pt; font-family: Arial; color: #646464">Fatura de Frete</span></b><span
+                                style="color: black"><o:p></o:p></span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; width: 15%" colspan="2">
+                        <p class="MsoNormal" style="margin-bottom: 12.0pt">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black">
+                                <br />
+                                &nbsp; Prezado Cliente,</span></p>
+                        <p class="MsoNormal" style="margin-bottom: 12.0pt">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black">
+                                <br />
+                                <br />
+                                &nbsp; Segue fatura n° <strong>@@NUMERO_FATURA@@</strong> referente aos serviços
+                                de transporte por nós realizados.</span></p>
+                        <p class="MsoNormal" style="margin-bottom: 12.0pt">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black">
+                                <br />
+                                &nbsp; Para visualizar as informações desta fatura, notas fiscais, arquivos (Ocoren,
+                                DocCob e outros) e imprimir o&nbsp; boleto, clique sobre o número da fatura ou se
+                                preferir clique <a href="http://www.grupologos.com.br/duplicatas/fatura.aspx?idtitulo=@@ID_FATURA@@"
+                                    target="_blank">aqui</a>.</span></p>
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%">
+                        <p align="right" class="MsoNormal" style="text-align: right">
+                            <b><span style="font-size: 10.0pt; font-family: Arial; color: black">Fatura:&nbsp;&nbsp;</span></b><o:p></o:p></p>
+                    </td>
+                    <td style="width: 85.0%; padding: 0cm 0cm 0cm 0cm" width="85%">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black"><a href="http://www.grupologos.com.br/duplicatas/fatura.aspx?idtitulo=@@ID_FATURA@@"
+                                target="_blank"><b>@@NUMERO_FATURA@@</b></a></span><o:p></o:p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%">
+                        <p align="right" class="MsoNormal" style="text-align: right">
+                            <b><span style="font-size: 10.0pt; font-family: Arial; color: black">Valor (R$):&nbsp;&nbsp;</span></b><o:p></o:p></p>
+                    </td>
+                    <td style="width: 85.0%; padding: 0cm 0cm 0cm 0cm" width="85%">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black">@@VALOR_FATURA@@</span></p>
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%">
+                        <p align="right" class="MsoNormal" style="text-align: right">
+                            <b><span style="font-size: 10.0pt; font-family: Arial; color: black">Vencimento:&nbsp;&nbsp;</span></b><o:p></o:p></p>
+                    </td>
+                    <td style="width: 85.0%; padding: 0cm 0cm 0cm 0cm" width="85%">
+                        <p class="MsoNormal">
+                            <span style="font-size: 10.0pt; font-family: Arial; color: black">@@VENCIMENTO_FATURA@@</span><o:p></o:p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%">
+                        &nbsp;
+                    </td>
+                    <td style="width: 85.0%; padding: 0cm 0cm 0cm 0cm" width="85%">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        <p class="style1">
+                            <strong>INFORMAÇÕES IMPORTANTES: </strong>
+                        </p>
+                        <p class="style1">
+                            &nbsp;O pagamento pode ser efetuado em qualquer banco até a data do vencimento.
+                        </p>
+                        <p class="style1">
+                            &nbsp;Para contatar-nos utilize o endereço @@EMAIL_CONTATO@@ ou fone(s): @@FONE_CONTATO@@.</p>
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%" colspan="2">
+                        <hr />
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%; text-align: center;" colspan="2"
+                        class="style1">
+                        <strong>@@EMPRESA@@</strong>
+                    </td>
+                </tr>
+                <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes">
+                    <td style="padding: 0cm 0cm 0cm 0cm; widht: 15%; text-align: right;" colspan="2"
+                        class="style2">
+                        <em>**Favor não responder esta mensagem</em>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+//using Microsoft.Reporting.WebForms;
+using System.Configuration;
+using System.Threading;
+using System.Globalization;
+
+public partial class Det02 : System.Web.UI.Page
+{
+    string select = "";
+ 
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("pt-BR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo culture = new CultureInfo("pt-BR");
+
+
+            if (!IsPostBack)
+            {              
+
+                decimal ItensCancelados = new SistranBLL.KPI().Form06("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+                decimal LinhasAtendidas = new SistranBLL.KPI().Form02("Todos", Request["ini"], Request["fim"] + " 23:59:59", ref select);
+
+                decimal LinhasSolicitadas = ItensCancelados + LinhasAtendidas;
+                lblSolicitados.Text = LinhasSolicitadas.ToString();
+                lblAtendidas.Text = LinhasAtendidas.ToString();
+
+                lblAtendidas.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det02a'); return false; ");
+                lblAtendidas.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+                lblAtendidas.ToolTip = "Clique para gerar o Excel";
+                //carregarGridAtendidas();
+                
+                lblSolicitados.Attributes.Add("OnClick", "javascript:window.open('gerarExcel.aspx?key=det02s'); return false; ");
+                lblSolicitados.Style.Add("HtmlTextWriterStyle.Cursor", "Hand");
+                lblSolicitados.ToolTip = "Clique para gerar o Excel";
+
+                if (LinhasSolicitadas > 0)
+                {
+                    lblResultado.Text = Convert.ToDecimal((LinhasAtendidas / LinhasSolicitadas) * 100).ToString("#0.00") + "%";
+                }
+                else
+                    lblResultado.Text = Convert.ToDecimal(0).ToString("#0.00") + "%";
+
+                carregarGridAtendidas();
+                carregarGridSolicitadas();
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(Master.FindControl("Up"), this.GetType(), "Alert", "alert('" + ex.Message.Replace("'", "´") + "')", true);
+        }
+
+    }   
+
+    private void carregarGridAtendidas()
+    {
+        string strsql = " SELECT NF.NUMERO PEDIDO,  NF.SERIE,   PC.CODIGO,  PC.DESCRICAO, GP.DESCRICAO GRUPO,  NFI.QUANTIDADE ";
+        strsql += " FROM  ";
+        strsql += " DOCUMENTO NF   ";
+        strsql += " INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)   ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)   ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)   ";
+        strsql += " INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (" + Sistran.Library.FuncoesUteis.retornarClientes() + ")     ";
+        strsql += " AND NF.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'   ";
+        strsql += " AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103)  AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+        strsql += " ORDER BY NF.NUMERO   ";
+
+        DataTable dtAtendidas = Sistran.Library.GetDataTables.RetornarDataTable(strsql); 
+        Session["det02a"] =  dtAtendidas;       
+
+        ReportViewer rw = new Microsoft.Reporting.WebForms.ReportViewer();
+        rw.Width = new Unit("100%");
+        rw.Height = 600;
+        rw.BackColor = System.Drawing.Color.WhiteSmoke;
+        rw.BorderStyle = System.Web.UI.WebControls.BorderStyle.Solid;
+        rw.BorderWidth = 0;
+        rw.LocalReport.DataSources.Clear();
+        rw.LocalReport.EnableHyperlinks = true;
+        ReportDataSource datasource = new ReportDataSource("dsKpi02_DT_ATENDIDOS", dtAtendidas);
+        rw.LocalReport.DataSources.Add(datasource);
+        rw.LocalReport.ReportPath = @"kpi\reports\kpi02Atendidas.rdlc";
+        rw.LocalReport.EnableExternalImages = true;
+        rw.LocalReport.Refresh();
+        pnlLinhasAtendidas.Controls.Add(rw);
+        pnlLinhasAtendidas.ScrollBars = ScrollBars.None;       
+    
+    }
+
+    private void carregarGridSolicitadas()
+    {
+        string strsql = " SELECT PD.NUMERO PEDIDO,  PD.SERIE,   PC.CODIGO,  PC.DESCRICAO, GP.DESCRICAO GRUPO,  PDI.QUANTIDADE from DOCUMENTO PD";                
+        strsql += " INNER JOIN DOCUMENTOITEM PDI ON (PDI.IDDOCUMENTO = PD.IDDOCUMENTO)   ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = PDI.IDPRODUTOEMBALAGEM)    ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)   INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO)     ";
+        strsql += " WHERE     PD.IDCLIENTE IN(" + Sistran.Library.FuncoesUteis.retornarClientes() + ")    AND PD.TIPODEDOCUMENTO = 'PEDIDO'       ";
+        strsql += " AND PD.ATIVO = 'NAO'     AND PD.ENTRADASAIDA = 'SAIDA'       ";
+        strsql += " AND PDI.STATUSDOITEM = 'CANCELADO'       ";
+        strsql += " AND PD.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103)  AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+        strsql += " UNION ALL  ";
+        strsql += " SELECT NF.NUMERO PEDIDO,  NF.SERIE,   PC.CODIGO,  PC.DESCRICAO, GP.DESCRICAO GRUPO,  NFI.QUANTIDADE  ";        
+        strsql += " FROM   ";
+        strsql += " DOCUMENTO NF    ";
+        strsql += " INNER JOIN DOCUMENTOITEM NFI ON (NFI.IDDOCUMENTO = NF.IDDOCUMENTO)    ";
+        strsql += " INNER JOIN PRODUTOEMBALAGEM PE ON (PE.IDPRODUTOEMBALAGEM = NFI.IDPRODUTOEMBALAGEM)    ";
+        strsql += " INNER JOIN PRODUTOCLIENTE PC ON (PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE)    ";
+        strsql += " INNER JOIN GRUPODEPRODUTO GP ON (GP.IDGRUPODEPRODUTO = PC.IDGRUPODEPRODUTO) WHERE  NF.IDCLIENTE IN (" + Sistran.Library.FuncoesUteis.retornarClientes() + ")      ";
+        strsql += " AND NF.TIPODEDOCUMENTO = 'PEDIDO'  AND NF.ATIVO = 'SIM'  AND NF.ENTRADASAIDA = 'SAIDA'    ";
+        strsql += " AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '" + Request["ini"] + "', 103) AND  CONVERT(DATETIME, '" + Request["fim"] + " 23:59:59', 103)   ";
+       
+
+        DataTable dtSolicitados = Sistran.Library.GetDataTables.RetornarDataTable(strsql);
+        Session["det02s"] = dtSolicitados;
+
+        ReportViewer rw2 = new Microsoft.Reporting.WebForms.ReportViewer();
+        rw2.Width = new Unit("100%");
+        rw2.Height = 600;
+        rw2.BackColor = System.Drawing.Color.WhiteSmoke;
+        rw2.BorderStyle = System.Web.UI.WebControls.BorderStyle.Solid;
+        rw2.BorderWidth = 0;
+        rw2.LocalReport.DataSources.Clear();
+        rw2.LocalReport.EnableHyperlinks = true;
+        ReportDataSource datasource = new ReportDataSource("dsKpi02_DT_SOLICITADAS", dtSolicitados);
+        rw2.LocalReport.DataSources.Add(datasource);
+        rw2.LocalReport.ReportPath = @"kpi\reports\kpi02Solicitadas.rdlc";
+        rw2.LocalReport.EnableExternalImages = true;
+        rw2.LocalReport.Refresh();
+        pnlLinhasSolicitadas.Controls.Add(rw2);
+        pnlLinhasSolicitadas.ScrollBars = ScrollBars.None;   
+    }
+
+
+
+  
+}

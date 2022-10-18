@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:track="http://www.accurate.com/acec/Tracking" xmlns:err="http://www.accurate.com/acec/ErrorLog" xmlns:ts="http://www.accurate.com/acec/TrackingServices" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.accurate.com/acec/TrackingServices" xmlns="http://www.w3.org/2001/XMLSchema">
+  <import schemaLocation="ErrorLog.xsd" namespace="http://www.accurate.com/acec/ErrorLog" />
+  <import schemaLocation="../../DataModel/AcecTracking.xsd" namespace="http://www.accurate.com/acec/Tracking" />
+  <element name="captureTrackingRequest">
+    <complexType>
+      <sequence>
+        <element ref="track:trackingList" />
+        <element minOccurs="1" name="storeId" type="string" />
+        <element minOccurs="0" name="generateEventsInSameTransaction" type="boolean" />
+      </sequence>
+    </complexType>
+  </element>
+  <element name="captureTrackingResponse">
+    <complexType>
+      <sequence>
+        <element minOccurs="1" maxOccurs="1" name="success" type="boolean" />
+      </sequence>
+    </complexType>
+  </element>
+</schema>

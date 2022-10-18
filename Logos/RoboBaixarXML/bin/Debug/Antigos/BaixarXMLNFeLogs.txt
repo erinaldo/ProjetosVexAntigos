@@ -1,0 +1,34 @@
+22/06/2017 10:03:50 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:03:50 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:03:51 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:03:51 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:10:23 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:10:24 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:10:24 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:10:25 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:16:39 Código da Imagem inválido. Tente novamente.
+22/06/2017 10:16:40 Código da Imagem inválido. Tente novamente.
+31/10/2017 09:07:06 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:09:32 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:09:44 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:10:25 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:11:23 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:13:07 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+31/10/2017 09:13:50 Não foi possivél obter o captcha na URL "http://www.nfe.fazenda.gov.br/portal/consulta.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8="
+Acesse a URL acima e teste a consulta. 
+Você também pode mudar a opção de "http" para "https"
+03/11/2017 15:06:12 O tempo limite da operação foi atingido - URL:http://www.nfe.fazenda.gov.br/portal/consultaResumoCompletaAntiga.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8%3d
+03/11/2017 15:06:21 Código da Imagem inválido. Tente novamente.
+03/11/2017 15:06:40 O tempo limite da operação foi atingido - URL:http://www.nfe.fazenda.gov.br/portal/consultaResumoCompletaAntiga.aspx?tipoConsulta=completa&tipoConteudo=XbSeqxE8pl8%3d

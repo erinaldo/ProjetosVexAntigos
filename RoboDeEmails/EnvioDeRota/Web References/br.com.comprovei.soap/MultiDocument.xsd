@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PosicaoType">
+    <xs:sequence>
+      <xs:element name="Latitude" type="xs:decimal" />
+      <xs:element name="Longitude" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoteType">
+    <xs:sequence>
+      <xs:element name="CodFabricante">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(\s*[^\s]\s*)+" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="NomeFabricante">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="(\s*[^\s]\s*)+" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DataFabricacao">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\s*|[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="DataValidade">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\s*|[0-9]{4}-[0-9]{2}-[0-9]{2}" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CodAnvisa">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\s*|[0-9]{13}|ISENTO" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="codigo" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\S+" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="VolumeType">
+    <xs:sequence>
+      <xs:element name="PesoBruto" type="xs:string" />
+      <xs:element name="PesoLiquido" type="xs:string" />
+      <xs:element name="Uom" type="xs:string" />
+      <xs:element name="Barcode" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="codigo" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="CamposLivresType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CampoLivre1" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoLivre2" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoLivre3" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoLivre4" type="xs:string" />
+      <xs:element minOccurs="0" name="CampoLivre5" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Documentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Documento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Tipo" type="xs:string" />
+              <xs:element name="TipoParada">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="E" />
+                    <xs:enumeration value="T" />
+                    <xs:enumeration value="C" />
+                    <xs:enumeration value="CA" />
+                    <xs:enumeration value="CA2" />
+                    <xs:enumeration value="CB" />
+                    <xs:enumeration value="CG" />
+                    <xs:enumeration value="CO" />
+                    <xs:enumeration value="CIE" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Modelo" type="xs:string" />
+              <xs:element name="Numero" type="xs:string" />
+              <xs:element minOccurs="0" name="Valor" type="xs:string" />
+              <xs:element name="Serie" type="xs:string" />
+              <xs:element name="Emissao" type="xs:string" />
+              <xs:element minOccurs="0" name="Atualizacao" type="xs:string" />
+              <xs:element name="Chave" type="xs:string" />
+              <xs:element name="cnpj">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d*|\s{0}" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="cnpjEmissor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d*|\s{0}" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="cnpjTransportador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d*|\s{0}" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="cnpjConsignatario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="\d*|\s{0}" />
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Romaneio" type="xs:string" />
+              <xs:element minOccurs="0" name="Remessa" type="xs:string" />
+              <xs:element minOccurs="0" name="Pedido" type="xs:string" />
+              <xs:element minOccurs="0" name="Placa" type="xs:string" />
+              <xs:element minOccurs="0" name="Filial" type="xs:string" />
+              <xs:element minOccurs="0" name="Peso" type="xs:string" />
+              <xs:element minOccurs="0" name="Cubagem" type="xs:string" />
+              <xs:element minOccurs="0" name="ONU" type="xs:string" />
+              <xs:element minOccurs="0" name="Anotacao" type="xs:string" />
+              <xs:element minOccurs="0" name="Agendamento" type="xs:string" />
+              <xs:element minOccurs="0" name="PesoLiquido" type="xs:string" />
+              <xs:element minOccurs="0" name="Volume" type="xs:string" />
+              <xs:element minOccurs="0" name="Rota">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nome" type="xs:string" />
+                    <xs:element name="Data" type="xs:string" />
+                    <xs:element name="Motorista" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Janela">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="DataHoraIni" type="xs:string" />
+                    <xs:element minOccurs="0" name="DataHoraFim" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TipoMaterial" type="xs:string" />
+              <xs:element minOccurs="0" name="Fornecimento" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoFrete" type="xs:string" />
+              <xs:element minOccurs="0" name="Modal" type="xs:string" />
+              <xs:element minOccurs="0" name="Sla">
+                <xs:complexType>
+                  <xs:choice>
+                    <xs:element default="0" name="DiasUteis" type="xs:integer" />
+                    <xs:element name="DataSla">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="8" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="InfosPedido">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="InfoPedido">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PedidoInterno" type="xs:string" />
+                          <xs:element name="PedidoCliente" type="xs:string" />
+                          <xs:element name="DataPedido" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Transportadora">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="cnpj">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="\d*|\s{0}" />
+                          <xs:maxLength value="14" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Nome" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Embarcador">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="cnpj">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="\d*|\s{0}" />
+                          <xs:maxLength value="14" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Nome" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CamposLivres" type="CamposLivresType" />
+              <xs:element name="Cliente">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Codigo" type="xs:string" />
+                    <xs:element minOccurs="0" name="codigointerno" type="xs:string" />
+                    <xs:element name="Contato" type="xs:string" />
+                    <xs:element name="Telefone" type="xs:string" />
+                    <xs:element name="Email" type="xs:string" />
+                    <xs:element name="Razao" type="xs:string" />
+                    <xs:element name="Endereco" type="xs:string" />
+                    <xs:element name="Bairro" type="xs:string" />
+                    <xs:element name="Cidade" type="xs:string" />
+                    <xs:element name="Estado" type="xs:string" />
+                    <xs:element name="Pais" type="xs:string" />
+                    <xs:element name="CEP" type="xs:string" />
+                    <xs:element minOccurs="0" name="Regiao" type="xs:string" />
+                    <xs:element minOccurs="0" name="TipoCliente" type="xs:string" />
+                    <xs:element minOccurs="0" name="Mensagem" type="xs:string" />
+                    <xs:element minOccurs="0" name="vendedorcodigo" type="xs:string" />
+                    <xs:element minOccurs="0" name="vendedornome" type="xs:string" />
+                    <xs:element minOccurs="0" name="vendedoremail" type="xs:string" />
+                    <xs:element minOccurs="0" name="vendedorcelular" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerentecodigo" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerentenome" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerenteemail" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerentecelular" type="xs:string" />
+                    <xs:element minOccurs="0" name="supervisorcodigo" type="xs:string" />
+                    <xs:element minOccurs="0" name="supervisornome" type="xs:string" />
+                    <xs:element minOccurs="0" name="supervisoremail" type="xs:string" />
+                    <xs:element minOccurs="0" name="supervisorcelular" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerenteseniorcodigo" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerenteseniornome" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerentesenioremail" type="xs:string" />
+                    <xs:element minOccurs="0" name="gerenteseniorcelular" type="xs:string" />
+                    <xs:element minOccurs="0" name="CodigoIBGE" type="xs:string" />
+                    <xs:element minOccurs="0" name="Posicao" type="PosicaoType" />
+                    <xs:element minOccurs="0" name="CodigoGrupo" type="xs:string" />
+                    <xs:element minOccurs="0" name="DescricaoGrupo" type="xs:string" />
+                    <xs:element minOccurs="0" name="CodigoTrajeto" type="xs:string" />
+                    <xs:element minOccurs="0" name="NomeTrajeto" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="danfes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="danfe">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="SerieDanfe" type="xs:string" />
+                          <xs:element name="chavedanfe" type="xs:string" />
+                          <xs:element name="dataemissaodanfe" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="NumDanfe" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SKUs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="SKU">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PesoBruto" type="xs:string" />
+                          <xs:element name="PesoLiquido" type="xs:string" />
+                          <xs:element name="Volumes" type="xs:string" />
+                          <xs:element name="Descricao" type="xs:string" />
+                          <xs:element name="Qde" type="xs:string" />
+                          <xs:element name="Uom" type="xs:string" />
+                          <xs:element name="Barcode" type="xs:string" />
+                          <xs:element minOccurs="0" name="Lote" type="LoteType" />
+                          <xs:element minOccurs="0" name="CodVolume" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="codigo" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Volumes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="Volume" type="VolumeType" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="Itinerario">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ChaveUnica">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Codigo">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="1" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element minOccurs="0" name="Descricao" type="xs:string" />
+                    <xs:element minOccurs="0" name="CodigoDeBarras" type="xs:string" />
+                    <xs:element minOccurs="0" name="Data" type="xs:string" />
+                    <xs:element minOccurs="0" name="Turno" type="xs:string" />
+                    <xs:element minOccurs="0" name="Prioridade" type="xs:string" />
+                    <xs:element minOccurs="0" name="Tipo" type="xs:string" />
+                    <xs:element minOccurs="0" name="PontoTransbordo1" type="xs:string" />
+                    <xs:element minOccurs="0" name="CnpjTransportador1" type="xs:string" />
+                    <xs:element minOccurs="0" name="NomeTransportador1" type="xs:string" />
+                    <xs:element minOccurs="0" name="Filial" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="replicate" type="xs:integer" />
+            <xs:attribute name="owner" type="xs:integer" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

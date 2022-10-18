@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Sistran.Login">
+</Property><Property Name="Arquivo de Solução" Value="C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Sistran.Login.sln">
+</Property><Property Name="Arquivo de Opções do usuário" Value="C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Sistran.Login.suo">
+</Property><Property Name="Date" Value="quinta-feira, 9 de junho de 2016">
+</Property><Property Name="Time" Value="10:40">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="Sistran.Login.sln" Description="O backup do arquivo como C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Sistran.Login.sln foi feito com êxito">
+</Event><Event ErrorLevel="0" Project="" Source="Sistran.Login.suo" Description="O backup do arquivo como C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Sistran.Login.suo foi feito com êxito">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Sistran.Login.csproj" Description="Project file successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Sistran.Login.csproj">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Sistran.Login.csproj.user" Description="Project user file successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Sistran.Login.csproj.user">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Bkank.master.cs" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Bkank.master.cs">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Default.aspx.cs" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Default.aspx.cs">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Default.aspx.designer.cs" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Default.aspx.designer.cs">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="LoginLogos.aspx.cs" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\LoginLogos.aspx.cs">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\Rastreamento.css.exclude" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\Rastreamento.css.exclude">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Default.aspx" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Default.aspx">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="LoginLogos.aspx" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\LoginLogos.aspx">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Web.config" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Bkank.master" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Bkank.master">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="js\HTMLPage.htm" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\js\HTMLPage.htm">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="js\jquery-1.4.4.min.js" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\js\jquery-1.4.4.min.js">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="js\jquery.meio.mask.js" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\js\jquery.meio.mask.js">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="js\utils.js" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\js\utils.js">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\estilos.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\estilos.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\grid.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\grid.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\Panel.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\Panel.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\Site.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\Site.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\StyleSheetSistranWeb.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\StyleSheetSistranWeb.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\tableless.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\tableless.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\testes.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\testes.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Styles\Toolkit.css" Description="File successfully backed up as C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\Backup\Styles\Toolkit.css">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Sistran.Login.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Sistran.Login" Source="Sistran.Login.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Sistran.Login.sln" Description="Solução convertida com êxito">
+</Event><Event ErrorLevel="3" Project="" Source="Sistran.Login.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Sistran.Login" Source="Sistran.Login.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6758C36B-B683-4A12-8103-DE5799A3224E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistecno.Web.Fatura</RootNamespace>
+    <AssemblyName>Sistecno.Web.Fatura</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Boleto.Net">
+      <HintPath>..\..\..\Referencias\Boleto.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\Referencias\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\Referencias\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\CamposReports.xml" />
+    <Content Include="Config\clienteslicdicate.xml" />
+    <Content Include="Config\Clientes\licdicate.xml" />
+    <Content Include="Config\ConfigLicense.xml" />
+    <Content Include="Config\ConfigLogo.xml" />
+    <Content Include="Config\ConfigRatreamento.xml" />
+    <Content Include="Config\Constantes.xml" />
+    <Content Include="Config\Copy of ConfigRatreamento.xml" />
+    <Content Include="download.jpg" />
+    <Content Include="downloadVermelho.jpg" />
+    <Content Include="frmBaixarTodosDactes.aspx" />
+    <Content Include="frmBaixarXMLDacte.aspx" />
+    <Content Include="frmEnviarFatura.aspx" />
+    <Content Include="IcoBradesco.jpg" />
+    <Content Include="LogoCliente\logoQuasar.jpg" />
+    <Content Include="LogoCliente\logoQuasar.png" />
+    <Content Include="LogoCliente\monel.gif" />
+    <Content Include="LogoCliente\Nasha.jpg" />
+    <Content Include="LogoCliente\Nasha_ols.jpg" />
+    <Content Include="LogoCliente\RedLog.png" />
+    <Content Include="PrintFatura.aspx" />
+    <Content Include="frmCriarZIPCompEntrega.aspx" />
+    <Content Include="frmComprovanteEntrega.aspx" />
+    <Content Include="frmGerarDocCob.aspx" />
+    <Content Include="frmGerarConemb.aspx" />
+    <Content Include="frmGerarOcoren.aspx" />
+    <Content Include="Correios\sro_remoto.htm" />
+    <Content Include="Fatura.aspx" />
+    <Content Include="fecharCinza.jpg" />
+    <Content Include="frmBaixarXML.aspx" />
+    <Content Include="GerarBoleto.aspx" />
+    <Content Include="Imagens\assinaturaEmitente.png" />
+    <Content Include="Imagens\Copy of LOGOS-LOGTRANSP-03.jpg" />
+    <Content Include="Imagens\index_01.jpg" />
+    <Content Include="Imagens\index_03.gif" />
+    <Content Include="Imagens\LOGOS-LOGTRANSP-03.jpg" />
+    <Content Include="Imagens\logo_rastreamento.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="index_03.gif" />
+    <Content Include="Rastreamento.css" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="frmCriarZIP.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\FuncoesGerais.cs" />
+    <Compile Include="frmBaixarTodosDactes.aspx.cs">
+      <DependentUpon>frmBaixarTodosDactes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBaixarTodosDactes.aspx.designer.cs">
+      <DependentUpon>frmBaixarTodosDactes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaixarXMLDacte.aspx.cs">
+      <DependentUpon>frmBaixarXMLDacte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBaixarXMLDacte.aspx.designer.cs">
+      <DependentUpon>frmBaixarXMLDacte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnviarFatura.aspx.cs">
+      <DependentUpon>frmEnviarFatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmEnviarFatura.aspx.designer.cs">
+      <DependentUpon>frmEnviarFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintFatura.aspx.cs">
+      <DependentUpon>PrintFatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintFatura.aspx.designer.cs">
+      <DependentUpon>PrintFatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCriarZIPCompEntrega.aspx.cs">
+      <DependentUpon>frmCriarZIPCompEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCriarZIPCompEntrega.aspx.designer.cs">
+      <DependentUpon>frmCriarZIPCompEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmComprovanteEntrega.aspx.cs">
+      <DependentUpon>frmComprovanteEntrega.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmComprovanteEntrega.aspx.designer.cs">
+      <DependentUpon>frmComprovanteEntrega.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerarDocCob.aspx.cs">
+      <DependentUpon>frmGerarDocCob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGerarDocCob.aspx.designer.cs">
+      <DependentUpon>frmGerarDocCob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerarConemb.aspx.cs">
+      <DependentUpon>frmGerarConemb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGerarConemb.aspx.designer.cs">
+      <DependentUpon>frmGerarConemb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGerarOcoren.aspx.cs">
+      <DependentUpon>frmGerarOcoren.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGerarOcoren.aspx.designer.cs">
+      <DependentUpon>frmGerarOcoren.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fatura.aspx.cs">
+      <DependentUpon>Fatura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fatura.aspx.designer.cs">
+      <DependentUpon>Fatura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaixarXML.aspx.cs">
+      <DependentUpon>frmBaixarXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmBaixarXML.aspx.designer.cs">
+      <DependentUpon>frmBaixarXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GerarBoleto.aspx.cs">
+      <DependentUpon>GerarBoleto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GerarBoleto.aspx.designer.cs">
+      <DependentUpon>GerarBoleto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PrintWeb.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmCriarZIP.aspx.cs">
+      <DependentUpon>frmCriarZIP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCriarZIP.aspx.designer.cs">
+      <DependentUpon>frmCriarZIP.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XmlGerados\" />
+    <Folder Include="ZipsGerados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\sistran\Sistram.Library\Sistram.Library\Sistran.Library.csproj">
+      <Project>{D6640122-F36D-4434-B722-7DF88F8A3ABE}</Project>
+      <Name>Sistran.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\appSettings.config.exclude" />
+    <None Include="Config\Configurations.xml.exclude" />
+    <None Include="Config\ConnectionStrings.config.exclude" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61118</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

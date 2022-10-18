@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Documentos>
+ <Documento>
+  <Tipo>NFE</Tipo>
+  <Modelo>55</Modelo>
+  <Numero>3135561</Numero>
+  <Serie>11</Serie>
+  <Emissao>2017-04-14 00:00:00</Emissao>
+  <Cnpj>08819185000172</Cnpj>
+  <Chave>35170493209765031772550110031355610000000000</Chave>
+  <Status>4 - Entregue SL</Status>
+  <Ocorrencias>
+   <Ocorrencia>
+    <Numero>2293504</Numero>
+    <Motivo>0 - Entrega realizada normalmente</Motivo>
+    <Data>2017-04-18 08:33:30</Data>
+    <Assinatura></Assinatura>
+    <Anotacao></Anotacao>
+    <Fotos>
+     <Foto>
+      <Comentario></Comentario>
+      <Dado><![CDATA[http://images.comprovei.com.br/knA0eKko+ybuNDhrki5hns+plEf6gU06OPqybKrdheXkL4jxiYq546xBqHjLT250QXx/JGS/4f/Me/MThvbpBu31yb5syIE=]]></Dado>
+     </Foto>
+    </Fotos>
+   </Ocorrencia>
+  </Ocorrencias>
+  <Itens>
+   <Item>
+    <Numero>1</Numero>
+    <Descricao>DANFE 3135561</Descricao>
+    <Barcode>35170493209765031772550110031355610000000000</Barcode>
+    <Quantidade>0/1</Quantidade>
+    <Foto/>
+    <Motivo></Motivo>
+   </Item>
+  </Itens>
+  <Danfes/>
+ </Documento>
+</Documentos>

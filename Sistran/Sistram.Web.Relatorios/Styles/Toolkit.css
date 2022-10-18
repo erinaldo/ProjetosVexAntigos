@@ -1,0 +1,73 @@
+﻿
+.demoarea {
+	padding:20px;
+	background:#FFF url(images/demotop.png) no-repeat left top;
+}
+
+/*Modal Popup*/
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	
+}
+
+.modalPopup {
+	     position: absolute; 
+	     width: 600px;
+	     height: 125px; 
+	     left: 490.5px; 
+	     top: 134px; 
+	     background: none repeat scroll 0% 0% rgb(239, 239, 239);
+	     
+}
+
+
+/*Popup Control*/
+.popupControl
+{
+    position:absolute;
+	background-color:White;
+	position:absolute;
+	visibility:hidden;
+}
+
+
+
+#programmaticPopupDragHandle
+{
+position: absolute; width: 600px; height: 120px; background: none repeat scroll 0% 0% rgb(239, 239, 239);
+}
+    
+#EscolhaClienteMsgs
+{
+        position: absolute; left: 1.5px; top: 21px; width: 99.5%; z-index: 2001; overflow-y: auto; overflow-x: hidden; height: 93px; visibility: visible;
+}
+
+#login_client_msg_grup
+{
+    position: absolute; top: 30px;
+}
+
+#UpdateProgress
+{
+    z-index:10000002
+}
+
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+
+.MaskedEditError
+{
+    background-color: #ffcccc;
+}
+
+.txtData
+{
+       width: 65px;
+       margin-left:5px;
+}
+

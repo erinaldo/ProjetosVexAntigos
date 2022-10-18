@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" elementFormDefault="qualified" targetNamespace="WebServiceComprovei:getImportProtocolStatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="getImportProtocolStatus">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="protocolo" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="getImportProtocolStatusResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="status" type="xsd:string" />
+        <xsd:element name="protocolo" type="xsd:string" />
+        <xsd:element name="metodo" type="xsd:string" />
+        <xsd:element name="dataCriacao" type="xsd:string" />
+        <xsd:element name="dataConclusao" type="xsd:string" />
+        <xsd:element name="processado" type="xsd:string" />
+        <xsd:element name="resultado" type="xsd:string" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

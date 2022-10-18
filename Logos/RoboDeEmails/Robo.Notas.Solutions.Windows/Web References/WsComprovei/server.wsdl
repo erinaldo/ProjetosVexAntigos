@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:WebServiceComprovei" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:WebServiceComprovei" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:WebServiceComprovei">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Assinatura">
+        <xsd:all>
+          <xsd:element name="Extensao" type="xsd:string" />
+          <xsd:element name="Nome" type="xsd:string" />
+          <xsd:element name="Dado" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Foto">
+        <xsd:all>
+          <xsd:element name="Extensao" type="xsd:string" />
+          <xsd:element name="Tipo" type="xsd:string" />
+          <xsd:element name="Comentario" type="xsd:string" />
+          <xsd:element name="Dado" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Anotacao">
+        <xsd:all>
+          <xsd:element name="Anotacao" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Ocorrencia">
+        <xsd:all>
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="Motivo" type="xsd:string" />
+          <xsd:element name="Data" type="xsd:string" />
+          <xsd:element name="Assinatura" type="tns:Assinatura" />
+          <xsd:element name="Anotacao" type="tns:Anotacao" />
+          <xsd:element name="Foto" type="tns:Foto" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfOcorrencias">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Ocorrencia[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Item">
+        <xsd:all>
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="Descricao" type="xsd:string" />
+          <xsd:element name="Barcode" type="xsd:string" />
+          <xsd:element name="Quantidade" type="xsd:string" />
+          <xsd:element name="Foto" type="tns:Foto" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfItems">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Item[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Parada">
+        <xsd:all>
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="Itens" type="tns:ArrayOfItems" />
+          <xsd:element name="Ocorrencias" type="tns:ArrayOfOcorrencias" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfParadas">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Parada[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Pausa">
+        <xsd:all>
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="DataHoraIni" type="xsd:string" />
+          <xsd:element name="DataHoraFim" type="xsd:string" />
+          <xsd:element name="Motivo" type="xsd:string" />
+          <xsd:element name="Foto" type="tns:Foto" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPausas">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Pausa[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Rota">
+        <xsd:all>
+          <xsd:element name="Erro" type="xsd:string" />
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="Data" type="xsd:string" />
+          <xsd:element name="Paradas" type="tns:ArrayOfParadas" />
+          <xsd:element name="Pausas" type="tns:ArrayOfPausas" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="StatusRota">
+        <xsd:all>
+          <xsd:element name="Erro" type="xsd:string" />
+          <xsd:element name="StatusRota" type="xsd:string" />
+          <xsd:element name="UltimaOcorrencia" type="tns:Evento" />
+          <xsd:element name="UltimoHistorico" type="tns:Historico" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Evento">
+        <xsd:all>
+          <xsd:element name="NumeroParada" type="xsd:string" />
+          <xsd:element name="StatusParada" type="xsd:string" />
+          <xsd:element name="TipoDocumento" type="xsd:string" />
+          <xsd:element name="NumeroDocumento" type="xsd:string" />
+          <xsd:element name="Cliente" type="tns:Cliente" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Historico">
+        <xsd:all>
+          <xsd:element name="DataHora" type="xsd:string" />
+          <xsd:element name="Evento" type="xsd:string" />
+          <xsd:element name="Complemento" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Cliente">
+        <xsd:all>
+          <xsd:element name="Nome" type="xsd:string" />
+          <xsd:element name="Rua" type="xsd:string" />
+          <xsd:element name="Cidade" type="xsd:string" />
+          <xsd:element name="Estado" type="xsd:string" />
+          <xsd:element name="CEP" type="xsd:string" />
+          <xsd:element name="Telefone" type="xsd:string" />
+          <xsd:element name="Email" type="xsd:string" />
+          <xsd:element name="Regiao" type="xsd:string" />
+          <xsd:element name="Contato" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="Documento">
+        <xsd:all>
+          <xsd:element name="Erro" type="xsd:string" />
+          <xsd:element name="Tipo" type="xsd:string" />
+          <xsd:element name="Modelo" type="xsd:string" />
+          <xsd:element name="Numero" type="xsd:string" />
+          <xsd:element name="Serie" type="xsd:string" />
+          <xsd:element name="Emissao" type="xsd:string" />
+          <xsd:element name="cnpj" type="xsd:string" />
+          <xsd:element name="Chave" type="xsd:string" />
+          <xsd:element name="Ocorrencias" type="tns:ArrayOfOcorrencias" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfDocumentos">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:Documento[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Documentos">
+        <xsd:all>
+          <xsd:element name="Erro" type="xsd:string" />
+          <xsd:element name="Documentos" type="tns:ArrayOfDocumentos" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="CancelDoc">
+        <xsd:all>
+          <xsd:element name="DocumentKey" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfCancelDocs">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="CancelDoc" type="tns:CancelDoc" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="sendDocsToPODRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendDocsToPODResponse">
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDocFromPODRequest">
+    <wsdl:part name="numeroRota" type="xsd:string" />
+    <wsdl:part name="dataRota" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDocFromPODResponse">
+    <wsdl:part name="Rota" type="tns:Rota" />
+  </wsdl:message>
+  <wsdl:message name="importDocsToPODRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="importDocsToPODResponse">
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendDocsOSToPODRequest">
+    <wsdl:part name="conteudoArquivo" type="xsd:string" />
+    <wsdl:part name="nomeArquivo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="sendDocsOSToPODResponse">
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getDocsOSToPODRequest" />
+  <wsdl:message name="getDocsOSToPODResponse">
+    <wsdl:part name="Retorno" type="tns:Documentos" />
+  </wsdl:message>
+  <wsdl:message name="getDocumentsFromPODRequest">
+    <wsdl:part name="qtdDocumentos" type="xsd:integer" />
+  </wsdl:message>
+  <wsdl:message name="getDocumentsFromPODResponse">
+    <wsdl:part name="Retorno" type="tns:Documentos" />
+  </wsdl:message>
+  <wsdl:message name="getADocumentFromPODRequest">
+    <wsdl:part name="key" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getADocumentFromPODResponse">
+    <wsdl:part name="Retorno" type="tns:Documento" />
+  </wsdl:message>
+  <wsdl:message name="cancelDocumentsRequest">
+    <wsdl:part name="batchOfCancelDocs" type="tns:ArrayOfCancelDocs" />
+  </wsdl:message>
+  <wsdl:message name="cancelDocumentsResponse">
+    <wsdl:part name="status" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getRouteStatusRequest">
+    <wsdl:part name="numeroRota" type="xsd:string" />
+    <wsdl:part name="dataRota" type="xsd:string" />
+    <wsdl:part name="codigoMotorista" type="xsd:string" />
+    <wsdl:part name="placa" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getRouteStatusResponse">
+    <wsdl:part name="Retorno" type="tns:StatusRota" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceComproveiPortType">
+    <wsdl:operation name="sendDocsToPOD">
+      <documentation>Faz o upload de planilhas de importacao para o servidor</documentation>
+      <wsdl:input message="tns:sendDocsToPODRequest" />
+      <wsdl:output message="tns:sendDocsToPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocFromPOD">
+      <documentation>Faz o download de todas as informacoes geradas pelo Comprovei para a rota dada</documentation>
+      <wsdl:input message="tns:getDocFromPODRequest" />
+      <wsdl:output message="tns:getDocFromPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="importDocsToPOD">
+      <documentation>Faz a importacao de documentos para o sistema</documentation>
+      <wsdl:input message="tns:importDocsToPODRequest" />
+      <wsdl:output message="tns:importDocsToPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="sendDocsOSToPOD">
+      <documentation>Faz a importacao de puxadas para o sistema</documentation>
+      <wsdl:input message="tns:sendDocsOSToPODRequest" />
+      <wsdl:output message="tns:sendDocsOSToPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocsOSToPOD">
+      <documentation>Faz o download de todas as OS concluÃ­das</documentation>
+      <wsdl:input message="tns:getDocsOSToPODRequest" />
+      <wsdl:output message="tns:getDocsOSToPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentsFromPOD">
+      <documentation>Faz o download de todas os documentos entregues</documentation>
+      <wsdl:input message="tns:getDocumentsFromPODRequest" />
+      <wsdl:output message="tns:getDocumentsFromPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getADocumentFromPOD">
+      <documentation>Faz o download de um documento entregue especifico</documentation>
+      <wsdl:input message="tns:getADocumentFromPODRequest" />
+      <wsdl:output message="tns:getADocumentFromPODResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelDocuments">
+      <documentation>Faz o cancelamento de 1 ou mais documentos</documentation>
+      <wsdl:input message="tns:cancelDocumentsRequest" />
+      <wsdl:output message="tns:cancelDocumentsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRouteStatus">
+      <documentation>Faz o donwload das informaÃ§Ãµes daquela rota naquele momento</documentation>
+      <wsdl:input message="tns:getRouteStatusRequest" />
+      <wsdl:output message="tns:getRouteStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceComproveiBinding" type="tns:WebServiceComproveiPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="sendDocsToPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#sendDocsToPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocFromPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#getDocFromPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="importDocsToPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#importDocsToPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendDocsOSToPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#sendDocsOSToPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocsOSToPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#getDocsOSToPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDocumentsFromPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#getDocumentsFromPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getADocumentFromPOD">
+      <soap:operation soapAction="urn:WebServiceComprovei#getADocumentFromPOD" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelDocuments">
+      <soap:operation soapAction="urn:WebServiceComprovei#cancelDocuments" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRouteStatus">
+      <soap:operation soapAction="urn:WebServiceComprovei#getRouteStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:WebServiceComprovei" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceComprovei">
+    <wsdl:port name="WebServiceComproveiPort" binding="tns:WebServiceComproveiBinding">
+      <soap:address location="http://54.221.129.119:85/WebServicePOD/server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

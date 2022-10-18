@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://soap.comprovei.com.br/exportQueue/v2/schemas/getExportProtocolStatus.xsd" filename="getExportProtocolStatus.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://soap.comprovei.com.br/exportQueue/v2/schemas/downloadDocumentsAWBs.xsd" filename="downloadDocumentsAWBs.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://soap.comprovei.com.br/exportQueue/v2/schemas/downloadDocumentsHistory.xsd" filename="downloadDocumentsHistory.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://soap.comprovei.com.br/exportQueue/v2/index.php?wsdl" filename="index.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

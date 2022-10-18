@@ -1,0 +1,708 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Meu Vivo</title><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skeletons/bighorn/css/layout.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skeletons/bighorn/msie/ielayout.css"><script src="/meuvivo/framework/skeletons/bighorn/js/buttons.js" type="text/javascript"></script><script src="/meuvivo/framework/skeletons/bighorn/js/util.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/colors.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/general.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/menu.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/window.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/wsrp.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/css/custom.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/msie/iecolors.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/msie/iemenu.css"><link rel="stylesheet" type="text/css" href="/meuvivo/framework/skins/bighorn/msie/iewindow.css"><style type="text/css">
+                    .wlp-bighorn-menu-menu-panel ul li,
+                    .wlp-bighorn-titlebar-button-panel a
+                    {
+                        behavior: url(/meuvivo/framework/skins/bighorn/msie/rollover.htc);
+                    }
+                </style><script src="/meuvivo/framework/skins/bighorn/msie/iemenu.js" type="text/javascript"></script></head><body onload="wlp_bighorn_initMenus();"><div id="vol-header" class="wlp-vol-header"><div><div></div><div id="headerLogado_2" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+<div id="areaImpressao">
+	<div class="popUpAlert msgAlert">
+	    <div>
+	    	<button id="btnFechar" type="button" title="Fechar" class="titulo fecharAlert png_bg" onclick="fechaPopUpAlert();">X</button>
+	    </div>
+	    <div class="bordaBrancaTopLeftTransp png_bg">
+	        <div class="mioloBordaBranca"></div>
+	    </div>
+	    <div class="bgBoxBrancoTransp">
+	        <div class="boxPopUpAlert"></div>
+	    </div>
+	    <div class="bordaBrancaBottomLeftTransp png_bg">
+	        <div class="bordaBrancaBottomRightTransp png_bg">
+	        	<div class="mioloBordaBranca"></div>
+	        </div>
+	     </div>
+	</div>
+	<div class="fundoPretoAlert"></div>
+</div>
+
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/meuvivo/js/jquery.js"></script>
+<script type="text/javascript" src="/meuvivo/js/jquery.maskedinput-1.2.2.min.js"></script>
+<script type="text/javascript" src="/meuvivo/framework/skins/bighorn/js/functions.js"></script>
+<script type="text/javascript" src="/meuvivo/js/jquery.aslideshow.pack.js"></script>
+
+<link href="/meuvivo/js/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="/meuvivo/js/jquery-ui.min.js"></script>
+ 
+	<link href="/meuvivo/framework/skins/bighorn/css/vivoon.css" rel="stylesheet" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var resizeVivoOn = function() {
+				var h = $('.rodapeLogin').position().top - $('.internaConteudo').position().top;
+				$('.internaConteudo').css('height', h+'px');
+			};
+			$('.internaConteudo').resize(function(){
+				var h = $('.internaConteudo').position().top + $('.internaConteudo').height();
+				$('.rodapeLogin').css('top', h+'px');
+			});
+		});
+	</script>
+
+<div netui:idScope="headerLogado_2" >
+<script type="text/javascript">
+	var contextoVol = '/meuvivo';	
+	$(document).ready(function() {
+		$(window).resize(function() {		
+			ajustaMenuApoio(2);
+		});
+		ajustaMenuApoio(2); 
+		$('#MySlideshow').css("display","");
+
+		$('#MySlideshow').slideshow({
+			width:704,
+			height:110,
+			play:true,
+			title:false,
+			playframe: false,
+			loadframe: false,
+			time: 5000,
+			controls :{
+				'hide':false,
+				'first':false,
+				'prev':true,
+				'play':true,
+				'next':true,
+				'last':false,
+				'help':false,
+				'counter':false
+			}
+		});
+
+		$("input#busca").blur(function()
+				{
+					if ($(this).attr('value').length == 0)
+						$(this).attr('value', 'Procurar');
+		});
+
+		$("input#busca").focus(function()
+				{
+					if ($(this).attr('value') == 'Procurar')
+						$(this).attr('value', '');
+		});
+		if ($.browser.msie) {
+			var version = new Number($.browser.version.substr(0,1));
+			if (version == 6)
+				DD_belatedPNG.fix('.png_bg');
+			if (version >= 7)
+				$("img").css("behavior", "url(/meuvivo/framework/skins/bighorn/js/iepngfix.htc)");
+		}
+		$("input#busca").autocomplete({
+		    source: function(req, add){ 
+		        $.getJSON("/meuvivo/servlets/BuscaSiteServlet?format=json&jsoncallback=?", req, function(data) {
+		            add(data);			        
+		        });
+		    },
+        	select: function(event, ui) {		        		    	 
+		        $.getJSON("/meuvivo/servlets/BuscaSiteServlet?format=json&jsoncallback=?&acao=action&id="+ui.item.id, function(data) {				       
+				        if (data == "true") {
+					        if(ui.item.tipo = 'SERVICO_INTERNO') {						        
+					    		var atalho = 'https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_homePre_page'.substring(0,'https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_homePre_page'.indexOf('pageLabel='))+'pageLabel='+ui.item.atalho+'&_nfls=false';		
+					    		atalho = atalho.replace('&amp;','&');			    		
+				        		location.href = atalho;
+					        } else {					        	
+					        	location.href = ui.item.atalho;
+					        };    
+				        };      
+			     });      
+		    }
+	    });
+	});
+	
+	function showPopUpOutroCelular(){
+		$('.popUpOutroCelular').attr('class','popUpOutroCelular popOutroCelular');		
+		var html = '';
+		html += '<div class="popConteudo">';
+		html += '	<div class="miolo">';
+		html += '		<div class="conteudo">';
+		html += '			<h5 class="titulo outroCelular png_bg">Outro Celular</h5>';
+		html += '			<div class="divHorPeq espacoBottom png_bg"></div>';
+		html += '			<form action="#" method="post" name="frmPopup"> ';
+		html += '			<div class="inputText floatLeft">';
+		html += '				<span class="inputLeft png_bg"></span>';
+		html += '				<span style="width: 45px;" class="inputCenter"><input type="text" name="ddd" class="dddPop" id="dddPop" autocomplete="false"/></span>';
+		html += '				<span class="inputRight png_bg"></span>';
+		html += '			</div>';
+		html += '			<div class="inputText floatLeft">';
+		html += '				<span class="inputLeft png_bg"></span>';
+		html += '				<span style="width: 90px;" class="inputCenter"><input type="text" class="linhaPop" name="linha" id="linhaPop" autocomplete="false"/></span>';
+		html += '				<span class="inputRight png_bg"></span>';
+		html += '			</div>';
+		html += '			<div class="clearLeft"></div>';
+		html += '			<div class="textCenter">';
+		html += '				<p class="espacoTop espacoBottom">Voc&ecirc; ser&aacute; redirecinado para a<br />p&aacute;gina de login.</p>';
+		html += '				<div class="divBotoes">';
+		html += '					<input type="button" class="titulo botOkAzul floatLeft" value="&nbsp;" onclick="javascript:validaForm(this.form.dddPop.value, this.form.linhaPop.value);">';
+		html += '				</div>';
+		html += '			</div>';
+		html += '			</form> ';
+		html += '		</div>';
+		html += '	</div>';
+		html += '</div>';		
+		
+		$('.boxPopUpOutroCelular').html(html);
+		abreOutroCelular();
+		posicaoPopUpOutroCelular();
+		abreFundoPretoOutroCelular();
+		$(".dddPop").mask("99");
+		$(".linhaPop").mask("99999999");
+	}
+	
+	function validaForm(dddPop, linhaPop) {
+		var scope = document.getElementById("spOutroCelular");
+		var form = document.getElementById(lookupNameByTagId("frmLogout",scope));		
+		
+		if (dddPop == "") {      		   
+	        msgAlert('Informe o código de área (DDD) de sua região.', "alert");
+	        fechaPopUpOutroCelular();
+	        return;
+        }
+
+        if (linhaPop == "") {            
+            msgAlert('Informe o número de seu celular.', "alert");
+            fechaPopUpOutroCelular();            
+            return;
+        }         
+        form.ddd.value = dddPop;
+        form.linha.value = linhaPop;
+		form.submit();         
+	}
+	function doHideSearch() {
+		//alert("asdasd");
+			
+		$('#divVertPeq1').hide();
+		$('#linkMeuVivo1').hide();
+		
+	}
+	function doSearch() {
+		var scope = document.getElementById("spBusca");
+		var form = document.getElementById(lookupNameByTagId("frmBusca",scope));
+		var busca = document.getElementById("busca").value;
+		var vSplit = busca.split("+");
+				
+		if (busca == "" || busca == 'Procurar') {			
+			msgAlert('Informe um valor para buscar.', "alert");
+		} else if (vSplit.length>4) {			
+			msgAlert('Termo inválido', "alert");
+		} else {
+			form.submit();
+		}		 
+	}
+</script>
+<!--[if IE 6]>
+<script src="/meuvivo/framework/skins/bighorn/js/DD_belatedPNG.js" type="text/javascript"></script>
+<![endif]-->
+<script>
+
+
+
+function escondeApoioAux(){	escondeApoio(2);
+}
+
+</script>
+	
+<div class="menuApoio" id="menu_apoio_2" onmouseover="mostraApoio(2);"  onmouseout="escondeApoioAux()">
+    <div class="bgBoxBranco semMargemBotom">
+        <ul>
+            <li class="bordaVerticalBottomCinza"><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_celulares1_page&_nfls=false">Celulares</a></li>
+            <li class="bordaVerticalTopBranca bordaVerticalBottomCinza"><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_planos1_page&_nfls=false">Planos</a></li>
+            <li class="bordaVerticalTopBranca bordaVerticalBottomCinza"><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_coberturaRoaming1_page&_nfls=false">Cobertura e Roaming</a></li> 
+            <li class="bordaVerticalTopBranca bordaVerticalBottomCinza"><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_ddd1_page&_nfls=false">DDD</a></li>
+            <li class="bordaVerticalTopBranca"><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_vivoInternet1_page&_nfls=false">Vivo Internet</a></li>
+        </ul>
+    </div>
+    <div class="bordaCinzaClaroBottomLeftTransp png_bg">
+        <div class="bordaCinzaClaroBottomRightTransp png_bg">
+        	<div class="mioloBordaCinzaClaro"></div>
+        </div>
+     </div>
+</div>
+
+<div class="popUpOutroCelular">		
+    <div>
+    	<button type="button" title="Fechar" class="titulo fecharOutroCelular png_bg" onclick="fechaPopUpOutroCelular();">X</button>
+    </div>
+    <div class="bordaBrancaTopLeftTransp png_bg">
+        <div class="mioloBordaBranca"></div>
+    </div>
+    <div class="bgBoxBrancoTransp">
+        
+        <div class="boxPopUpOutroCelular"></div>
+    </div>
+    <div class="bordaBrancaBottomLeftTransp png_bg">
+        <div class="bordaBrancaBottomRightTransp png_bg">
+        	<div class="mioloBordaBranca"></div>
+        </div>
+     </div>
+</div>
+<div class="fundoPretoOutroCelular"></div>
+
+<div class="topoInterna bgBoxBranco">
+        <div class="bordaBrancaBottomLeft">
+			<div class="bordaBrancaBottomRight">
+				<div class="topoInternaConteudo">
+                    <div class="floatLeft topoInternaLeft">
+                    	<h1 class="titulo logo png_bg" onclick="javascript:document.location='https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_homePre_page'" style="background:url(/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/IMG_PORTLET_LOGO_MEUVIVO) no-repeat; cursor:pointer;">Meu Vivo</h1>
+                    </div>
+                     <div class="menuTopo floatLeft">
+                    	<ul>                        	
+                            <li class="divVertPeq png_bg" id="divVertPeq1"></li>
+                            <li><a href="javascript:void(0);" onmouseover="mostraApoio(2);" onmouseout="escondeApoio(2);" id="linkMeuVivo1">Meu Vivo</a></li>
+                            <li class="divVertPeq png_bg" id="divVertPeq2"></li>
+                            <li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_mapaDoSite_page&_nfls=false">Mapa do Site</a></li>                            
+                        </ul>
+                    </div>
+                    <div class="topoBusca floatLeft">
+						<span id="spBusca">
+						 <form name="headerLogado_2.frmBusca" id="headerLogado_2.frmBusca" action="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_windowLabel=headerLogado_2&amp;headerLogado_2_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fvol%2Fportal%2Fheaderlogado%2FdoSearchComplete" method="post">
+	                            <div class="floatLeft inputText">
+	                                <span class="inputLeft png_bg"></span>
+	                                <span class="inputCenter" style="width:175px;">
+	                                	<input name="busca" type="text" id="busca" value="Procurar"/>
+	                                </span>
+	                                <span class="inputRight png_bg"></span>
+	                            </div>
+	                            <button type="button" id="btnBusca" class="titulo botBusca" onclick="javascript:doSearch();">OK</button> </form>
+                        </span>                        
+                    </div>
+                    <script>
+                    	doHideSearch();
+					</script>
+                    <div class="divSair floatRight">
+                    	
+                    	<button type="button" class="titulo botSair" onclick='javascript:document.location="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_logout_page&_nfls=false"'>
+                    		Sair
+                    	</button>
+                    </div>   
+              </div>
+			</div>
+        </div>
+    </div>
+	<div class="topoBanner">
+        <div class="boxDados bgBoxBranco floatLeft">
+            <div class="bordaBrancaBottomLeft">
+                <div class="bordaBrancaBottomRight">
+                    <div class="bordaBrancaTopLeft">
+                        <div class="bordaBrancaTopRight">
+                            <div class="boxDadosConteudo floatLeft">
+                                <span class="txtAzul tituloSaudacao">
+												<strong>Boa tarde, MOISES</strong>			  </span> <dl> <dt>Linha:</dt> <dd>(11) 6489-8293</dd>
+                                    <dd><button onclick="showPopUpOutroCelular();" class="titulo btOutroCelular png_bg" type="button">Outro Celular</button></dd> </dl> <dl> <dt>Plano:</dt> <dd>Vivo Toda Hora GSM</dd> </dl> <dl> <dt>Protocolo:</dt> <dd>20111090921853</dd> </dl> <dl> <dt>Último acesso:</dt> <dd> - </dd>
+                                </dl>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       	<div id="MySlideshow" class="banner floatRight" style="display: none;">
+       					<!--  -->																	
+		    							<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_NextBook_book&_nfls=false&idCampanhaBanner=&"><img  border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_000274"></a>																			
+		    							<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_servicos_book&_nfls=false&idCampanhaBanner=&"><img  border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_000157"></a>							 	
+        </div>
+    </div>
+    <span id="spOutroCelular">
+	    <form name="headerLogado_2.frmLogout" id="headerLogado_2.frmLogout" action="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_windowLabel=headerLogado_2&amp;headerLogado_2_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fvol%2Fportal%2Fheaderlogado%2FdoLogout" method="post">
+	    	<input type="hidden" name="ddd" id="ddd" value=""/>
+	    	<input type="hidden" name="linha" id="linha" value=""/>
+	    </form>	</span>
+</div><script language="JavaScript" type="text/JavaScript">
+<!--
+
+// **** Start the NetUI Framework Generated JavaScript ****
+
+// Build the netui_tagIdNameMap table to map the tagId attributes
+// to the real name written into the HTML
+if (netui_tagIdNameMap == null)
+   var netui_tagIdNameMap = new Object();
+netui_tagIdNameMap.headerLogado_2___frmLogout="headerLogado_2.frmLogout"
+netui_tagIdNameMap.headerLogado_2___frmBusca="headerLogado_2.frmBusca"
+
+
+// lookup by tagId to "real id"
+function lookupIdByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,".");
+   return (idScope == "") ? id : idScope + id;
+}
+
+// lookup by tagId to "real name"
+function lookupNameByTagId(id, tag)
+{
+   var idScope = lookupIdScope(tag,"_");
+   if (idScope == "")
+      return netui_tagIdNameMap[id];
+   else
+      return netui_tagIdNameMap[idScope  + "__" + id];
+}
+
+//Non-Legacy lookup method creating a fully qualified scope id
+function lookupIdScope(tag,sep)
+{
+   var val = "";
+   if (sep == null) sep = "";
+   while (tag != null && tag.getAttribute != null) {
+      try {
+         var attrVal = tag.getAttribute("netui:idScope");
+      } catch (e) { /* ignore, in IE6 calling on a table results in an exception */ }
+      if (attrVal != null)
+         val = attrVal + sep + val;
+      tag = tag.parentNode;
+   }
+   return val;
+}
+-->
+</script></div></div></div></div><div id="vol_portal_book_8" class="containerInterna"><div id="vol-menuPrincipal" class="menuPrincipal"><ul><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_meusCreditos_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_home_off.png" alt="Página Inicial" title="Página Inicial" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_home_off.png" alt="Página Inicial" title="Página Inicial" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_NextBook_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_vivoon_off.png" alt="Vivo On" title="Vivo On" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_vivoon_off.png" alt="Vivo On" title="Vivo On" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_recarga_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_recarga_off.png" alt="Recarga" title="Recarga" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_recarga_off.png" alt="Recarga" title="Recarga" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_pacotesVivo_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_pacotes_vivo_off.png" alt="Pacotes Vivo" title="Pacotes Vivo" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_pacotes_vivo_off.png" alt="Pacotes Vivo" title="Pacotes Vivo" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_servicos_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_servicos_off.png" alt="Serviços" title="Serviços" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_servicos.png" alt="Serviços" title="Serviços" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_informativos_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_informativos_off.png" alt="Informativos" title="Informativos" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_informativos_off.png" alt="Informativos" title="Informativos" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_atendimento_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_atendimento_off.png" alt="Atendimento" title="Atendimento" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_atendimento_off.png" alt="Atendimento" title="Atendimento" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_promocoes_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_promocoes_off.png" alt="Promoções" title="Promoções" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_promocoes_off.png" alt="Promoções" title="Promoções" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divMenu"/></li><li class=""><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_meusDados_book&_nfls=false"><img src="/meuvivo/framework/skins/images/menu_meus_dados_off.png" alt="Meus Dados" title="Meus Dados" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/menu_meus_dados_off.png" alt="Meus Dados" title="Meus Dados" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a></li></ul></div><div class="wlp-vol-book-content"><div id="books_servicos_book" class="containerInterna"><div id="vol-submenuPrincipal" class="submenuPrincipal"><div class="bordaMenuBottomLeft"><div class="bordaMenuBottomRight"><div class="bordaMenuTopLeft"><div class="bordaMenuTopRight"><ul><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_chamada_book&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_chamadas_off.png" alt="Chamadas" title="Chamadas" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_chamadas_off.png" alt="Chamadas" title="Chamadas" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenu"/></li><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_homeCaixaPostal_page&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_caixa_postal_off.png" alt="Caixa Postal" title="Caixa Postal" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_caixa_postal_off.png" alt="Caixa Postal" title="Caixa Postal" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenu"/></li><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_longaDistancia_book&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_longa_distancia_off.png" alt="Longa Distância" title="Longa Distância" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_longa_distancia_off.png" alt="Longa Distância" title="Longa Distância" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenu"/></li><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_outrasFacilidades_book&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_outras_facilidades_off.png" alt="Outras Facilidades" title="Outras Facilidades" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_outras_facilidades.png" alt="Outras Facilidades" title="Outras Facilidades" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenu"/></li><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_vivoAgenda_page&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_vivo_agenda_off.png" alt="Vivo Agenda" title="Vivo Agenda" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_vivo_agenda_off.png" alt="Vivo Agenda" title="Vivo Agenda" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenu"/></li><li><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_segurancaOnLine_book&_nfls=false"><img src="/meuvivo/framework/skins/images/submenu_seguranca_online_off.png" alt="Segurança Online" title="Segurança Online" class="wlp-bighorn-image-rollover png_bg" border="0"/><img src="/meuvivo/framework/skins/images/submenu_seguranca_online_off.png" alt="Segurança Online" title="Segurança Online" class="wlp-bighorn-image-nonrollover png_bg" border="0"/></a><span class="divSubMenuTransp"/></li></ul></div></div></div></div></div><div class="wlp-vol-book-content"><div id="books_outrasFacilidades_book" class="containerInterna"><div class="wlp-vol-book-content"><div id="pages_desbloqueioGSM_page" class="wlp-bighorn-page"><div><div></div><div id="breadCrumb_33" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="popUpBanner imgBanner">
+	    <div>
+	    	<button id="btnFechar" type="button" title="Fechar" class="titulo fecharBanner png_bg" onclick="fechaPopUpBanner();">X</button>
+	    </div>
+	    <div class="bordaBrancaTopLeftTransp png_bg">
+	        <div class="mioloBordaBranca"></div>
+	    </div>
+	    <div class="bgBoxBrancoTransp" >
+	        <div class="boxPopUpBanner"></div>
+	    </div>
+	    <div class="bordaBrancaBottomLeftTransp png_bg">
+	        <div class="bordaBrancaBottomRightTransp png_bg">
+	        	<div class="mioloBordaBranca"></div>
+	        </div>
+	     </div>
+	</div>
+
+	<script type="text/javascript"> 
+        function bannerFlutuante(link, dDocName, tipo){
+
+			$('.popUpBanner').attr('class','popUpBanner imgBanner');
+			$('select').css('visibility','hidden');
+			
+			PopUpBannerFlutuante(link, dDocName, tipo);
+		}		
+
+		function PopUpBannerFlutuante(link, dDocName, tipo){
+			var html = '';
+			if(tipo == 'SEMLINK'){
+				html += '		<img id=bImg border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/'+dDocName+'">';
+			}else if (tipo == 'INTERNO'){
+				html += '		<a href="'+link+'"><img id=bImg border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/'+dDocName+'"></a>';
+			}else if (tipo == 'EXTERNO') {
+				html += '		<a target="_blank" href="'+link+'"><img id=bImg border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/'+dDocName+'"></a>';
+			}else if (tipo == 'FLASH') {
+				html += '		<object height="150" width="425" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Banner" codebase="https://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab"> <param name="movie" value="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/'+dDocName+'" /> <param name="quality" value="high" /> <param name="play" value="true" /> <param name="loop" value="true" /> <param name="wmode" value="transparent" /> <param name="allowScriptAccess" value="sameDomain" /> <embed src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/'+dDocName+'" quality="high" wmode="transparent" name="Banner" height="150" width="425" align="middle" play="true" loop="true" quality="high" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="https://www.adobe.com/go/getflashplayer"></embed></object>';
+			}
+			
+   			$(document).ready(function() {
+				$(window).load(function() {
+					$('.boxPopUpBanner').html(html);
+					window.setTimeout(posicaoPopUpBanner, 1500);
+				});
+			});
+		}
+		
+	
+	</script>	
+
+ 
+
+					
+
+
+<div class="breadCrumb" id="vol-breadCrumb">	
+	<strong>Você está em:&nbsp;</strong><a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_homePre_page&_nfls=false">Página Inicial</a>  	
+    		»&nbsp;<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_servicos_book&_nfls=false">Serviços</a>	 	
+    		»&nbsp;<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=books_outrasFacilidades_book&_nfls=false">Outras Facilidades</a>	 	
+    			»&nbsp;<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_desbloqueioGSM_page&_nfls=false">Desbloqueio de Aparelho</a>		
+</div>
+</div></div></div><div class="internaConteudo"><div class="lateralEsquerda floatLeft"><div></div><div id="menuVertical_23" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+  
+	<div class="lateralEsquerda floatLeft">
+		<div class="bgBoxBranco">
+	          <div class="bordaBrancaBottomLeft">
+	             <div class="bordaBrancaBottomRight">
+	                 <div class="bordaBrancaTopLeft">
+	                     <div class="bordaBrancaTopRight">
+	                       <div class="boxConteudo">
+	                             	                             
+	                             <h4 class="titulo outrasFacilidades png_bg">Outras Facilidades</h4>	                             	                             
+	                             <div class="divHorPeq png_bg"></div>
+	                             <ul class="listaAzul">
+	                                  			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_vivoFotoNoticias_page&_nfls=false" title="Vivo Foto Notícias">Vivo Foto Notícias</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=P7200130241290530614409&_nfls=false" title="Vivo Som de Chamada">Vivo Som de Chamada</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_vivoTorpedoBackup_page&_nfls=false" title="Vivo Torpedo Center">Vivo Torpedo Center</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_migracaoDePlano_page&_nfls=false" title="Migração de Planos">Migração de Planos</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_nfe_page&_nfls=false" title="Nota Fiscal Eletrônica">Nota Fiscal Eletrônica</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_consultaSaldoZAPPre_page&_nfls=false" title="Consultar Tráfego de Dados">Consultar Tráfego de Dados</a>		</li>	 		 			 		<li>															
+		                               					<a href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_pageLabel=pages_aplicativosAtivos_page&_nfls=false" title="Assinatura de Aplicativos Ativos">Assinatura de Aplicativos Ativos</a>		</li>	 		 </ul> </div> </div> </div> </div> </div>	</div>	</div> </div></div></div><div class="lateralDireita floatRight"><div></div><div id="torpedoWebGratuito_14" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+				
+
+<div netui:idScope="torpedoWebGratuito_14" >
+	<script type="text/javascript">
+		function torpedoWebGratuito(anchor) {
+			var scope = document.getElementById("scopeTorpedoWebGratuito");
+			var img = document.getElementById("imgTorpedoWebGratuito");
+			var hdn = document.getElementById("hdnFirstClick");
+
+			if(hdn.value=="true") {
+				hdn.value = "false";
+				anchor.style.display = "none";
+				img.style.display = "block";
+				return true;
+			} else {
+				return false;
+			}
+		}
+	</script>
+	<span id="scopeTorpedoWebGratuito">
+		<form name="torpedoWebGratuito_14.frmTorpedo" id="torpedoWebGratuito_14.frmTorpedo" action="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_windowLabel=torpedoWebGratuito_14&amp;torpedoWebGratuito_14_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fvol%2Fportlets%2Ftorpedowebgratuito%2FtorpedoWebGratuito" method="post">		
+				<div class="bannerDireita bgBoxBranco">
+					<div class="bordaBrancaBottomLeft">
+						<div class="bordaBrancaBottomRight">
+							<div class="bordaBrancaTopLeft">
+								<div class="bordaBrancaTopRight">
+									<a id="torpedoWebGratuito_14.linkTorpedoWebGratuito" href="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_windowLabel=torpedoWebGratuito_14&amp;torpedoWebGratuito_14_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fvol%2Fportlets%2Ftorpedowebgratuito%2FtorpedoWebGratuito&amp;torpedoWebGratuito_14verForm=true" onclick="return torpedoWebGratuito(this);"><img src="/meuvivo/framework/skins/images/banner/banner_esquerda.png" border="0"></a>
+									<img src="/meuvivo/framework/skins/images/banner/banner_esquerda.png" border="0" style="display:none;" id="imgTorpedoWebGratuito">
+									<input type="hidden" name="hdnFirstClick" id="hdnFirstClick" value="true">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					</form>	</span>
+</div><script language="JavaScript" type="text/JavaScript">
+<!--
+
+// **** Start the NetUI Framework Generated JavaScript ****
+
+// Build the netui_tagIdNameMap table to map the tagId attributes
+// to the real name written into the HTML
+if (netui_tagIdNameMap == null)
+   var netui_tagIdNameMap = new Object();
+netui_tagIdNameMap.torpedoWebGratuito_14___frmTorpedo="torpedoWebGratuito_14.frmTorpedo"
+
+-->
+</script></div></div><div id="bannerLateralDireita_16" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+	
+
+																					
+		<div class="lateralEsquerda floatLeft">		
+			<div class="bannerDireita">
+				<div class="textCenter">
+													<img  border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/CONTRIB_000252">					</div>	</div>	</div>	
+
+</div></div></div><div class="conteudoCentral"><div></div><div id="desbloqueioGSM_1" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+<div class="bgBoxBranco">
+	<div class="bordaBrancaBottomLeft"> 
+		<div class="bordaBrancaBottomRight">
+			<div class="bordaBrancaTopLeft">
+				<div class="bordaBrancaTopRight">
+					<div class="boxConteudo">
+						<h4 class="titulo desbloqueioDeAparelhos png_bg">Desbloqueio de Aparelhos</h4>
+						<div class="divHorGde png_bg"></div>
+						<form action="https://servicos.vivo.com.br/meuvivo/appmanager/portal/vivo?_nfpb=true&amp;_windowLabel=desbloqueioGSM_1&amp;desbloqueioGSM_1_actionOverride=%2Fbr%2Fcom%2Fvivo%2Fvol%2Fportlets%2FdesbloqueioGSM%2Fbegin" method="post">
+							<div class="conteudoTrafego">
+								<p><strong>Modelo selecionado:</strong> Motorola V3C Rosa - Simples - CDMA</p>
+								<hr size="1" noshade="noshade" color="#ededed">
+								
+									<p><strong>Passo-a-passo para o desbloqueio do modelo selecionado:</strong></p>
+								
+								<dl class="detalhes_aparelho">
+									<dt><img class="png_bg" alt="" src="https://servicos.vivo.com.br/clippingportal/_sys/_srv/_produtos/_img/278portal.jpg"></dt>
+									<dd>
+										<div class="desbloqueio_procedimento_box">
+											<div class="background">
+												<div class="bordaCinzaClaroTopLeft">
+													<div class="bordaCinzaClaroTopRight">
+														<div class="bordaCinzaClaroBottomLeft">
+															<div class="bordaCinzaClaroBottomRight">
+																<div class="conteudo" style="height: 150px !important; width: 300px !important; overflow: auto !important;">
+																		<p><strong>Código de desbloqueio:</strong> 58038309</p>		<p>Não foi possível obter as instruções de desbloqueio para o modelo informado. Por favor, entre em contato com a central de atendimento informando o problema ocorrido ou procure o fabricante do aparelho.</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</dd>
+								</dl>
+
+								<hr size="1" noshade="noshade" color="#ededed">
+
+								<p>Atenção: Verifique se o código de desbloqueio digitado está correto. Após três tentativas sem sucesso, o aparelho será bloqueado e só poderá ser desbloqueado em uma assistência técnica autorizada.</p>
+
+								<hr size="1" noshade="noshade" color="#ededed">
+                                           
+								<div class="divBotoes">
+										<input type="button" class="titulo botVoltar png_bg floatLeft" value="&nbsp;" title="Voltar" onclick="history.back(1);">	</div>	</div>	</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	
+</script></div></div></div></div></div></div></div></div></div></div></div><script type="text/javascript">
+//verifica se existe a funcao de esconder as Divs do Portal
+if ('function' == typeof this.window['hiddenDivs']) {
+	//esconde as div do Portal
+	hiddenDivs();
+}
+</script><div id="vol-footer" class="wlp-vol-footer"><div><div></div><div id="footerLogado_2" class="wlp-bighorn-window  "><div class="wlp-bighorn-window-content">
+
+
+
+
+
+
+
+
+
+
+
+<script language="JavaScript">
+	function addBookmark(title, url){
+    	if (window.sidebar) {
+    		window.sidebar.addPanel(title, url,"");
+    	} else if (window.opera && window.print) {
+        	var mbm = document.createElement('a');
+        	mbm.setAttribute('rel','sidebar');
+        	mbm.setAttribute('href',url);
+        	mbm.setAttribute('title',title);
+        	mbm.click();
+    	} else {
+    		 if (document.all){
+    		 	window.external.AddFavorite(url, title);
+    		 } else {
+    		 	 msgAlert('Seu navegador não suporta essa ação. Favor adicionar manualmente.', "alert");
+    		 }
+    	}
+	}
+</script>
+    <div class="rodapeLogin bgBoxBranco">
+        <div class="bordaBrancaBottomLeft">
+            <div class="bordaBrancaBottomRight">
+                <div class="bordaBrancaTopLeft">
+                    <div class="bordaBrancaTopRight">
+                    
+                        <div class="rodapeConteudo">
+                            <div class="floatLeft">
+                                <ul>
+                                	<li><a href="javascript:addBookmark('Meu Vivo','https://servicos.vivo.com.br/meuvivo/');">Adicione o Meu Vivo aos seus Favoritos</a></li>	<li> | </li>	
+                                    <li><a href="/meuvivo/appmanager/portal/vivo?_nfpb=true&_pageLabel=pages_desbloqueioGSM_page#" target="_self">Desbloqueio de Aparelhos</a></li>
+                                    <li> | </li>
+                                    <li><a href="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/CODIGO_DEFESA_CONSUMIDOR" target="_blank">Código de Defesa do Consumidor</a></li>
+                                    <li> | </li>
+                                    <br/><br/>
+                                    <li><a href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_pageLabel=vivoVivoInstSegurancaInformacaoPage&_nfls=false" target="_blank">Segurança da Informação</a></li>
+                                    <li> | </li>
+                                    <li><a href="http://www.vivo.com.br/portalweb/appmanager/env/web?_nfpb=true&_pageLabel=vivoVivoInstPrivacidadePage&_nfls=false" target="_blank">Privacidade</a></li>
+								</ul>
+                            </div>
+                            <div class="floatRight" title="Vivo - Conexão como nenhuma outra">
+   	                        	<br><img  border="0" src="/meuvivo/ShowPropertyServlet?nodeId=/UCMRepository/IMG_PORTLET_ASSINATURA">
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+       Copyright ® Vivo 2011
+               <script type="text/javascript">
+
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-23670357-2']);
+					_gaq.push(['_setDomainName', '.vivo.com.br']);
+					_gaq.push(['_trackPageview']);
+					
+					(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				
+				</script>
+    </div>
+  </div></div></div><script type="text/javascript">
+//verifica se existe a funcao de esconder as Divs do Portal
+if ('function' == typeof this.window['hiddenDivs']) {
+	//esconde as div do Portal
+	hiddenDivs();
+}
+</script></div></body></html>

@@ -1,0 +1,730 @@
+"DeployProject"
+{
+"VSVersion" = "3:701"
+"ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
+"IsWebType" = "8:FALSE"
+"ProjectName" = "8:RSInstall"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"SccProjectName" = "8:"
+"SccLocalPath" = "8:"
+"SccAuxPath" = "8:"
+"SccProvider" = "8:"
+    "Hierarchy"
+    {
+        "Entry"
+        {
+        "MsmKey" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1B135C78C52D42E792E9C2E30AC27173"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_1B3FFD0A3DAB4D0D82E6AC13F78DDC00"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_27B8FC4EF9B64332A9DE9C6F46BDC161"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_457FD8BB0148C0589E847DEC02B41369"
+        "OwnerKey" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4E999D5E9C0D487EA043549E8BD3D323"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_574D678943314C97A0D1AF263EF19505"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_68F4684685424F07B405F48D9BEA3E91"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7F0E40A814A2478088A8914AA42FE92D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9985B821D2CD4B4100980371E311EF49"
+        "OwnerKey" = "8:_AC9FD8B40E3CEBAE984EC0B14532C5D3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9985B821D2CD4B4100980371E311EF49"
+        "OwnerKey" = "8:_457FD8BB0148C0589E847DEC02B41369"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9B993BBB14F542CF9FAD75FEE654C169"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC9FD8B40E3CEBAE984EC0B14532C5D3"
+        "OwnerKey" = "8:_E8CD33EA42B2E9FE0064BC39EA6E80EA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC9FD8B40E3CEBAE984EC0B14532C5D3"
+        "OwnerKey" = "8:_457FD8BB0148C0589E847DEC02B41369"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B7C4EBDCC74B45FCBF4FD51703667632"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C47628D0BBC14A718ECCB93EE081BC40"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CB2739BA1BB945C397FCF25E3EC5AB9C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CF2C0E1F7E5047CAA0A442645867EC2D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DB1B75D74A89420288280B374A9DAE20"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DD5FE01C38464646A2E518309C98576E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E55F8075B32DD3ECABBAA025549F9624"
+        "OwnerKey" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E8CD33EA42B2E9FE0064BC39EA6E80EA"
+        "OwnerKey" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+    }
+    "Configurations"
+    {
+        "Debug"
+        {
+        "DisplayName" = "8:Debug"
+        "IsDebugOnly" = "11:TRUE"
+        "IsReleaseOnly" = "11:FALSE"
+        "OutputFilename" = "8:Debug\\RSInstall.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+        "Release"
+        {
+        "DisplayName" = "8:Release"
+        "IsDebugOnly" = "11:FALSE"
+        "IsReleaseOnly" = "11:TRUE"
+        "OutputFilename" = "8:Release\\RSInstall.cab"
+        "PackageFileSize" = "3:-2147483648"
+        "CabType" = "3:1"
+        "SignOutput" = "11:FALSE"
+        "CertificateHash" = "8:"
+        "TimeStampServer" = "8:"
+        }
+    }
+    "Deployable"
+    {
+        "File"
+        {
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_0C1541ACDF58467496047A5DE2133ADF"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:RsMobile, Version=1.0.0.1, Culture=neutral"
+                "ScatterAssemblies"
+                {
+                    "_0C1541ACDF58467496047A5DE2133ADF"
+                    {
+                    "Name" = "8:RsMobile.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\RsMobile\\bin\\Debug\\RsMobile.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_1B135C78C52D42E792E9C2E30AC27173"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.ENU.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.ENU.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_1B3FFD0A3DAB4D0D82E6AC13F78DDC00"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.repl.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.repl.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_27B8FC4EF9B64332A9DE9C6F46BDC161"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.BR.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.BR.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_457FD8BB0148C0589E847DEC02B41369"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.Status, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_457FD8BB0148C0589E847DEC02B41369"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.Status.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.Status.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_4E999D5E9C0D487EA043549E8BD3D323"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.phone.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.phone.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_574D678943314C97A0D1AF263EF19505"
+            {
+            "SourcePath" = "8:..\\RsMobile\\bin\\Debug\\Transporte.sdf"
+            "TargetName" = "8:Transporte.sdf"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_68F4684685424F07B405F48D9BEA3E91"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.BR.phone.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.BR.phone.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_7F0E40A814A2478088A8914AA42FE92D"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.BR.ppc.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.BR.ppc.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_9985B821D2CD4B4100980371E311EF49"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_9985B821D2CD4B4100980371E311EF49"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_9B993BBB14F542CF9FAD75FEE654C169"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.repl.ppc.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.repl.ppc.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_AC9FD8B40E3CEBAE984EC0B14532C5D3"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_AC9FD8B40E3CEBAE984EC0B14532C5D3"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.PocketOutlook.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.PocketOutlook.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_B7C4EBDCC74B45FCBF4FD51703667632"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.ENU.ppc.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.ENU.ppc.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_C47628D0BBC14A718ECCB93EE081BC40"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.dev.ENU.phone.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.dev.ENU.phone.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_CB2739BA1BB945C397FCF25E3EC5AB9C"
+            {
+            "SourcePath" = "8:..\\RsMobile\\Imagens\\Sistecno.ico"
+            "TargetName" = "8:Sistecno.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_CF2C0E1F7E5047CAA0A442645867EC2D"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.repl.phone.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.repl.phone.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_DB1B75D74A89420288280B374A9DAE20"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{BA458234-9B71-4F46-8107-E91156377184}:_DD5FE01C38464646A2E518309C98576E"
+            {
+            "SourcePath" = "8:C:\\Program Files (x86)\\Microsoft SQL Server Compact Edition\\v3.5\\Devices\\wce500\\armv4i\\sqlce.ppc.wce5.armv4i.CAB"
+            "TargetName" = "8:sqlce.ppc.wce5.armv4i.CAB"
+            "Tag" = "8:"
+            "Folder" = "8:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_E55F8075B32DD3ECABBAA025549F9624"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3"
+                "ScatterAssemblies"
+                {
+                    "_E55F8075B32DD3ECABBAA025549F9624"
+                    {
+                    "Name" = "8:System.Data.SqlServerCe.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Data.SqlServerCe.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_E8CD33EA42B2E9FE0064BC39EA6E80EA"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_E8CD33EA42B2E9FE0064BC39EA6E80EA"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.Forms.DLL"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.Forms.DLL"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+        }
+        "Folder"
+        {
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_2D4B77ACE7744060A337FE23FF6996B3"
+            {
+            "Name" = "8:#1916"
+            "Condition" = "8:"
+            "Property" = "8:%CE11%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_404D290AF21B4BDEB3180142B81C4D7A"
+            {
+            "Name" = "8:#1919"
+            "Condition" = "8:"
+            "Property" = "8:%CE17%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_4FB1F9F73BE14A968D88D8169151E7F5"
+            {
+            "Name" = "8:#1911"
+            "Condition" = "8:"
+            "Property" = "8:%CE1%"
+                "Folders"
+                {
+                }
+            }
+            "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_CCD3A390D60649F2AF14C4683E50540D"
+            {
+            "DefaultLocation" = "8:%InstallDir%"
+            "Name" = "8:#1920"
+            "Condition" = "8:"
+            "Property" = "8:%InstallDir%"
+                "Folders"
+                {
+                    "{5943FCFD-5B64-4EE4-96C9-4618EC95352A}:_C29BA4E8356E49EEA69E11FC54D0E6EC"
+                    {
+                    "Name" = "8:Instal"
+                    "Condition" = "8:"
+                    "Property" = "8:_44A41F3776A24B9F80F05819A28B66DD"
+                        "Folders"
+                        {
+                        }
+                    }
+                }
+            }
+        }
+        "Product"
+        {
+        "Name" = "8:Microsoft Visual Studio"
+        "ProductName" = "8:RS Mobile"
+        "Manufacturer" = "8:RS Mobile"
+        "OSVersionMin" = "8:4.0"
+        "OSVersionMax" = "8:6.99"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:FALSE"
+        "CESetupDLL" = "8:"
+        }
+        "ProjectOutput"
+        {
+        }
+        "Registry"
+        {
+            "HKLM"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKCU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKCR"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKU"
+            {
+                "Keys"
+                {
+                }
+            }
+            "HKPU"
+            {
+                "Keys"
+                {
+                }
+            }
+        }
+        "Shortcut"
+        {
+            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_024A1C0B3DF64356A8BC1ACEE4D1E84A"
+            {
+            "Name" = "8:RsMobile.exe"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "Target" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+            "Folder" = "8:_2D4B77ACE7744060A337FE23FF6996B3"
+            "WorkingFolder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            }
+            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_552AA3E3403D40CAA022C9E173E2F68E"
+            {
+            "Name" = "8:RsMobile.exe"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "Target" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+            "Folder" = "8:_404D290AF21B4BDEB3180142B81C4D7A"
+            "WorkingFolder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            }
+            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_ECDDCE9409A7455FB2530891B4E889F4"
+            {
+            "Name" = "8:RsMobile.exe"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "Target" = "8:_0C1541ACDF58467496047A5DE2133ADF"
+            "Folder" = "8:_4FB1F9F73BE14A968D88D8169151E7F5"
+            "WorkingFolder" = "8:_CCD3A390D60649F2AF14C4683E50540D"
+            }
+        }
+    }
+}

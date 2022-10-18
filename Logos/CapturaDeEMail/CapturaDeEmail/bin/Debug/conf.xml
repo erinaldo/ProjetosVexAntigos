@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Email>moises@sistecno.com.br</Email>
+    <Senha>@oncetsis14</Senha>
+    <Pop>mail.sistecno.com.br</Pop>
+    <TipoDeArquivos>.xml,.jpg,</TipoDeArquivos>
+    <EmailRemetente>moises@sistecno.com.br</EmailRemetente>
+    <Assunto>xml</Assunto>
+    <TempoDeExecucao>5</TempoDeExecucao>
+    <PastaDestino>c:\temp</PastaDestino>
+  </Table1>
+</NewDataSet>

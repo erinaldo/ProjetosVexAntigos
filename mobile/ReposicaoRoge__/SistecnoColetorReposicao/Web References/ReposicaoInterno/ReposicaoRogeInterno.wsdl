@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ReceberVolumes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoDeBarras" type="tns:ArrayOfVol" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdGaiola" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="vol" nillable="true" type="tns:vol" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="vol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pertence" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReceberVolumesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceberVolumesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarBandeira">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoDeBarrasBandira" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChecarBandeiraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChecarBandeiraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarGaiola">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CodigoBarrasVolume" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarGaiolaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarGaiolaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarUnidadeDeVenda">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetornarUnidadeDeVendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarUnidadeDeVendaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetornarUnidadeDeVendaClassificado">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetornarUnidadeDeVendaClassificadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetornarUnidadeDeVendaClassificadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConferenciaAprovador">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nota" type="tns:NotaFiscal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NotaFiscal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdNotaFiscal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Chave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Volumes" type="tns:ArrayOfVol1" />
+          <s:element minOccurs="0" maxOccurs="1" name="Itens" type="tns:ArrayOfIT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVol1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Vol" nillable="true" type="tns:Vol" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Vol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdVolume" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDeBarras" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfIT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="It" nillable="true" type="tns:It" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="It">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IdItem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDeBarras" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoRoge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PertenceAnota" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarConferenciaAprovadorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarConferenciaAprovadorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConferenciaAprovador_Cega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nota" type="tns:NotaFiscal" />
+            <s:element minOccurs="0" maxOccurs="1" name="confCega" type="tns:ArrayOfConferenciaCega" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfConferenciaCega">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConferenciaCega" nillable="true" type="tns:ConferenciaCega" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConferenciaCega">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoRoge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdConferenciaItem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoDeBarrasLido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PertenceANota" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarConferenciaAprovador_CegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarConferenciaAprovador_CegaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceberVolumesSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceberVolumes" />
+  </wsdl:message>
+  <wsdl:message name="ReceberVolumesSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceberVolumesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChecarBandeiraSoapIn">
+    <wsdl:part name="parameters" element="tns:ChecarBandeira" />
+  </wsdl:message>
+  <wsdl:message name="ChecarBandeiraSoapOut">
+    <wsdl:part name="parameters" element="tns:ChecarBandeiraResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarGaiolaSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarGaiola" />
+  </wsdl:message>
+  <wsdl:message name="CriarGaiolaSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarGaiolaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarUnidadeDeVendaSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarUnidadeDeVenda" />
+  </wsdl:message>
+  <wsdl:message name="RetornarUnidadeDeVendaSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarUnidadeDeVendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetornarUnidadeDeVendaClassificadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RetornarUnidadeDeVendaClassificado" />
+  </wsdl:message>
+  <wsdl:message name="RetornarUnidadeDeVendaClassificadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RetornarUnidadeDeVendaClassificadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConferenciaAprovadorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarConferenciaAprovador" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConferenciaAprovadorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarConferenciaAprovadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConferenciaAprovador_CegaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarConferenciaAprovador_Cega" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConferenciaAprovador_CegaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarConferenciaAprovador_CegaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReposicaoRogeInternoSoap">
+    <wsdl:operation name="ReceberVolumes">
+      <wsdl:input message="tns:ReceberVolumesSoapIn" />
+      <wsdl:output message="tns:ReceberVolumesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChecarBandeira">
+      <wsdl:input message="tns:ChecarBandeiraSoapIn" />
+      <wsdl:output message="tns:ChecarBandeiraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarGaiola">
+      <wsdl:input message="tns:CriarGaiolaSoapIn" />
+      <wsdl:output message="tns:CriarGaiolaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVenda">
+      <wsdl:input message="tns:RetornarUnidadeDeVendaSoapIn" />
+      <wsdl:output message="tns:RetornarUnidadeDeVendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVendaClassificado">
+      <wsdl:input message="tns:RetornarUnidadeDeVendaClassificadoSoapIn" />
+      <wsdl:output message="tns:RetornarUnidadeDeVendaClassificadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador">
+      <wsdl:input message="tns:EnviarConferenciaAprovadorSoapIn" />
+      <wsdl:output message="tns:EnviarConferenciaAprovadorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador_Cega">
+      <wsdl:input message="tns:EnviarConferenciaAprovador_CegaSoapIn" />
+      <wsdl:output message="tns:EnviarConferenciaAprovador_CegaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReposicaoRogeInternoSoap" type="tns:ReposicaoRogeInternoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReceberVolumes">
+      <soap:operation soapAction="http://tempuri.org/ReceberVolumes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarBandeira">
+      <soap:operation soapAction="http://tempuri.org/ChecarBandeira" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarGaiola">
+      <soap:operation soapAction="http://tempuri.org/CriarGaiola" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVenda">
+      <soap:operation soapAction="http://tempuri.org/RetornarUnidadeDeVenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVendaClassificado">
+      <soap:operation soapAction="http://tempuri.org/RetornarUnidadeDeVendaClassificado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador">
+      <soap:operation soapAction="http://tempuri.org/EnviarConferenciaAprovador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador_Cega">
+      <soap:operation soapAction="http://tempuri.org/EnviarConferenciaAprovador_Cega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReposicaoRogeInternoSoap12" type="tns:ReposicaoRogeInternoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReceberVolumes">
+      <soap12:operation soapAction="http://tempuri.org/ReceberVolumes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChecarBandeira">
+      <soap12:operation soapAction="http://tempuri.org/ChecarBandeira" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarGaiola">
+      <soap12:operation soapAction="http://tempuri.org/CriarGaiola" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVenda">
+      <soap12:operation soapAction="http://tempuri.org/RetornarUnidadeDeVenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetornarUnidadeDeVendaClassificado">
+      <soap12:operation soapAction="http://tempuri.org/RetornarUnidadeDeVendaClassificado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador">
+      <soap12:operation soapAction="http://tempuri.org/EnviarConferenciaAprovador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConferenciaAprovador_Cega">
+      <soap12:operation soapAction="http://tempuri.org/EnviarConferenciaAprovador_Cega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReposicaoRogeInterno">
+    <wsdl:port name="ReposicaoRogeInternoSoap" binding="tns:ReposicaoRogeInternoSoap">
+      <soap:address location="http://www.grupologos.com.br/wss/ReposicaoRogeInterno.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReposicaoRogeInternoSoap12" binding="tns:ReposicaoRogeInternoSoap12">
+      <soap12:address location="http://www.grupologos.com.br/wss/ReposicaoRogeInterno.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

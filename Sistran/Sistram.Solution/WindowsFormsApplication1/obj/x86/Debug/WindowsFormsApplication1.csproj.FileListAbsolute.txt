@@ -1,0 +1,8 @@
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistram.Solution\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

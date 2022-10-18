@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="a6e8c7b5-d78a-4442-b5b4-d8907a5d4e56">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>../Robo.Email.Notas.Solutions.Windows/Form1.cs</FileRelativePath>
+        <ProjectRelativePath>../Robo.Email.Notas.Solutions.Windows/Robo.Email.Notas.Solutions.Windows.Testes.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>17524514388989379130</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>12682167575038829014</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>14240727191090358791</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>../../Sistran/Sistram.Web.Relatorios/Styles/StyleSheetSistranWeb.css</FileRelativePath>
+        <ProjectRelativePath>../../Sistran/Sistram.Web.Relatorios/</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>10928695208888560664</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>8660702424123340171</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>14730176038657386561</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>15062585809808795169</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>3757131460277326774</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>3268270098502967470</TextualIdentifier>
+        </IgnoredElement>
+        <IgnoredElement>
+          <TextualIdentifier>11298250819099843348</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>../../Sistran/Sistram.Web.Relatorios/frmEntregas.aspx</FileRelativePath>
+        <ProjectRelativePath>../../Sistran/Sistram.Web.Relatorios/</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>477872814872901701</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

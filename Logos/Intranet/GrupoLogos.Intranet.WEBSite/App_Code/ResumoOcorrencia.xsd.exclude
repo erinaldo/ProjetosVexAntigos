@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ResumoOcorrencia" targetNamespace="http://tempuri.org/ResumoOcorrencia.xsd" xmlns:mstns="http://tempuri.org/ResumoOcorrencia.xsd" xmlns="http://tempuri.org/ResumoOcorrencia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ocoTableAdapter" GeneratorDataComponentClassName="ocoTableAdapter" Name="oco" UserDataComponentName="ocoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogos.dbo.Ocorrencia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT DISTINCT  OCO.CODIGO, LTRIM(RTRIM(OCO.NOME)) NOME, COUNT(*) Notas       FROM DOCUMENTO DOC WITH(NOLOCK)        LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)        LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)        WHERE (DOC.IDREMETENTE in(444,446,445) OR DOC.IDCLIENTE IN(444,446,445) OR DOC.IDDESTINATARIO IN(444,446,445))     AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'  AND NOT DOC.DATADEENTRADA IS NULL      AND DOC.CODIGODORECEXP IS NOT NULL  AND DOC.DATADECONCLUSAO IS NULL       AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL        AND OCO.NOME IS NOT NULL AND OCO.CODIGO &lt;&gt;'01'        
+ GROUP BY OCO.CODIGO, OCO.Nome     ORDER BY OCO.CODIGO, OCO.Nome    </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="Notas" DataSetColumn="Notas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialTableAdapter" GeneratorDataComponentClassName="FilialTableAdapter" Name="Filial" UserDataComponentName="FilialTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Filial" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT    FL.IDFILIAL, FL.NOME,  COUNT(*) NOTAS   FROM DOCUMENTO DOC WITH(NOLOCK)         LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)         LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)         INNER JOIN FILIAL FL ON FL.IDFILIAL=DOC.IDFILIAL WHERE  DOC.TIPODEDOCUMENTO = 'NOTA FISCAL' AND (DOC.IDREMETENTE IN(444,446,445,62694) OR DOC.IDCLIENTE IN(444,446,445,62694) OR DOC.IDDESTINATARIO IN(444,446,445,62694)) AND NOT DOC.DATADEENTRADA IS NULL   AND DOC.CODIGODORECEXP IS NOT NULL  AND DOC.DATADECONCLUSAO IS NULL  AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL  AND OCO.NOME IS NOT NULL  AND OCO.CODIGO &lt;&gt;'01'  GROUP BY FL.IDFILIAL,  FL.NOME  ORDER BY COUNT(*) DESC </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDFILIAL" DataSetColumn="IDFILIAL" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialResponsavelClienteTableAdapter" GeneratorDataComponentClassName="FilialResponsavelClienteTableAdapter" Name="FilialResponsavelCliente" UserDataComponentName="FilialResponsavelClienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Ocorrencia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OCO.CODIGO,     LTRIM(RTRIM(OCO.NOME)) NOME,    COUNT(*) NOTAS,   OCO.RESPONSABILIDADE         FROM DOCUMENTO DOC WITH(NOLOCK)    LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)           LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)           WHERE (DOC.IDREMETENTE IN(444,446,445,62694) OR DOC.IDCLIENTE IN(444,446,445,62694) OR DOC.IDDESTINATARIO IN(444,446,445,62694))        AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'     AND NOT DOC.DATADEENTRADA IS NULL         AND DOC.CODIGODORECEXP IS NOT NULL     AND DOC.DATADECONCLUSAO IS NULL          AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL     AND OCO.NOME IS NOT NULL    AND OCO.CODIGO &lt;&gt;'01'           GROUP BY OCO.CODIGO, OCO.NOME, OCO.RESPONSABILIDADE   ORDER BY OCO.RESPONSABILIDADE, COUNT(*) DESC     </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RESPONSABILIDADE" DataSetColumn="RESPONSABILIDADE" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialResponsavelTransporteTableAdapter" GeneratorDataComponentClassName="FilialResponsavelTransporteTableAdapter" Name="FilialResponsavelTransporte" UserDataComponentName="FilialResponsavelTransporteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Ocorrencia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT OCO.CODIGO,     LTRIM(RTRIM(OCO.NOME)) NOME,    COUNT(*) NOTAS,   OCO.RESPONSABILIDADE         FROM DOCUMENTO DOC WITH(NOLOCK)    LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)           LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)           WHERE (DOC.IDREMETENTE IN(444,446,445,62694) OR DOC.IDCLIENTE IN(444,446,445,62694) OR DOC.IDDESTINATARIO IN(444,446,445,62694))        AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'     AND NOT DOC.DATADEENTRADA IS NULL         AND DOC.CODIGODORECEXP IS NOT NULL     AND DOC.DATADECONCLUSAO IS NULL          AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL     AND OCO.NOME IS NOT NULL    AND OCO.CODIGO &lt;&gt;'01'           GROUP BY OCO.CODIGO, OCO.NOME, OCO.RESPONSABILIDADE   ORDER BY OCO.RESPONSABILIDADE, COUNT(*) DESC     </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RESPONSABILIDADE" DataSetColumn="RESPONSABILIDADE" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialResponsavelClienteFilialTableAdapter" GeneratorDataComponentClassName="FilialResponsavelClienteFilialTableAdapter" Name="FilialResponsavelClienteFilial" UserDataComponentName="FilialResponsavelClienteFilialTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Ocorrencia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT OCO.CODIGO,     LTRIM(RTRIM(OCO.NOME)) NOME,    COUNT(*) NOTAS,   OCO.RESPONSABILIDADE         FROM DOCUMENTO DOC WITH(NOLOCK)    LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)           LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)           WHERE (DOC.IDREMETENTE IN(444,446,445,62694) OR DOC.IDCLIENTE IN(444,446,445,62694) OR DOC.IDDESTINATARIO IN(444,446,445,62694))        AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'     AND NOT DOC.DATADEENTRADA IS NULL         AND DOC.CODIGODORECEXP IS NOT NULL     AND DOC.DATADECONCLUSAO IS NULL          AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL     AND OCO.NOME IS NOT NULL    AND OCO.CODIGO &lt;&gt;'01'           GROUP BY OCO.CODIGO, OCO.NOME, OCO.RESPONSABILIDADE   ORDER BY OCO.RESPONSABILIDADE, COUNT(*) DESC     </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RESPONSABILIDADE" DataSetColumn="RESPONSABILIDADE" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="IDFILIAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FilialResponsavelTransporteFilialTableAdapter" GeneratorDataComponentClassName="FilialResponsavelTransporteFilialTableAdapter" Name="FilialResponsavelTransporteFilial" UserDataComponentName="FilialResponsavelTransporteFilialTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Ocorrencia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT OCO.CODIGO,     LTRIM(RTRIM(OCO.NOME)) NOME,    COUNT(*) NOTAS,   OCO.RESPONSABILIDADE         FROM DOCUMENTO DOC WITH(NOLOCK)    LEFT JOIN DOCUMENTOOCORRENCIA DOCOCO WITH(NOLOCK) ON(DOCOCO.IDDOCUMENTOOCORRENCIA = DOC.IDDOCUMENTOOCORRENCIA)           LEFT JOIN OCORRENCIA OCO WITH(NOLOCK) ON(DOCOCO.IDOCORRENCIA = OCO.IDOCORRENCIA)           WHERE (DOC.IDREMETENTE IN(444,446,445,62694) OR DOC.IDCLIENTE IN(444,446,445,62694) OR DOC.IDDESTINATARIO IN(444,446,445,62694))        AND DOC.TIPODEDOCUMENTO = 'NOTA FISCAL'     AND NOT DOC.DATADEENTRADA IS NULL         AND DOC.CODIGODORECEXP IS NOT NULL     AND DOC.DATADECONCLUSAO IS NULL          AND DOC.IDDOCUMENTOOCORRENCIA IS NOT NULL     AND OCO.NOME IS NOT NULL    AND OCO.CODIGO &lt;&gt;'01'           GROUP BY OCO.CODIGO, OCO.NOME, OCO.RESPONSABILIDADE   ORDER BY OCO.RESPONSABILIDADE, COUNT(*) DESC     </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RESPONSABILIDADE" DataSetColumn="RESPONSABILIDADE" />
+              <Mapping SourceColumn="NOME" DataSetColumn="NOME" />
+              <Mapping SourceColumn="NOTAS" DataSetColumn="NOTAS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="IDFILIAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ResumoOcorrencia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ResumoOcorrencia" msprop:Generator_DataSetName="ResumoOcorrencia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="oco" msprop:Generator_UserTableName="oco" msprop:Generator_RowDeletedName="ocoRowDeleted" msprop:Generator_RowChangedName="ocoRowChanged" msprop:Generator_RowClassName="ocoRow" msprop:Generator_RowChangingName="ocoRowChanging" msprop:Generator_RowEvArgName="ocoRowChangeEvent" msprop:Generator_RowEvHandlerName="ocoRowChangeEventHandler" msprop:Generator_TableClassName="ocoDataTable" msprop:Generator_TableVarName="tableoco" msprop:Generator_RowDeletingName="ocoRowDeleting" msprop:Generator_TablePropName="oco">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notas" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Notas" msprop:Generator_ColumnPropNameInRow="Notas" msprop:Generator_ColumnVarNameInTable="columnNotas" msprop:Generator_ColumnPropNameInTable="NotasColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Filial" msprop:Generator_UserTableName="Filial" msprop:Generator_RowDeletedName="FilialRowDeleted" msprop:Generator_RowChangedName="FilialRowChanged" msprop:Generator_RowClassName="FilialRow" msprop:Generator_RowChangingName="FilialRowChanging" msprop:Generator_RowEvArgName="FilialRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialRowChangeEventHandler" msprop:Generator_TableClassName="FilialDataTable" msprop:Generator_TableVarName="tableFilial" msprop:Generator_RowDeletingName="FilialRowDeleting" msprop:Generator_TablePropName="Filial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFILIAL" msprop:Generator_UserColumnName="IDFILIAL" msprop:Generator_ColumnVarNameInTable="columnIDFILIAL" msprop:Generator_ColumnPropNameInRow="IDFILIAL" msprop:Generator_ColumnPropNameInTable="IDFILIALColumn" type="xs:int" />
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FilialResponsavelCliente" msprop:Generator_UserTableName="FilialResponsavelCliente" msprop:Generator_RowDeletedName="FilialResponsavelClienteRowDeleted" msprop:Generator_RowChangedName="FilialResponsavelClienteRowChanged" msprop:Generator_RowClassName="FilialResponsavelClienteRow" msprop:Generator_RowChangingName="FilialResponsavelClienteRowChanging" msprop:Generator_RowEvArgName="FilialResponsavelClienteRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialResponsavelClienteRowChangeEventHandler" msprop:Generator_TableClassName="FilialResponsavelClienteDataTable" msprop:Generator_TableVarName="tableFilialResponsavelCliente" msprop:Generator_RowDeletingName="FilialResponsavelClienteRowDeleting" msprop:Generator_TablePropName="FilialResponsavelCliente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESPONSABILIDADE" msprop:Generator_UserColumnName="RESPONSABILIDADE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABILIDADE" msprop:Generator_ColumnPropNameInRow="RESPONSABILIDADE" msprop:Generator_ColumnPropNameInTable="RESPONSABILIDADEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FilialResponsavelTransporte" msprop:Generator_UserTableName="FilialResponsavelTransporte" msprop:Generator_RowDeletedName="FilialResponsavelTransporteRowDeleted" msprop:Generator_RowChangedName="FilialResponsavelTransporteRowChanged" msprop:Generator_RowClassName="FilialResponsavelTransporteRow" msprop:Generator_RowChangingName="FilialResponsavelTransporteRowChanging" msprop:Generator_RowEvArgName="FilialResponsavelTransporteRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialResponsavelTransporteRowChangeEventHandler" msprop:Generator_TableClassName="FilialResponsavelTransporteDataTable" msprop:Generator_TableVarName="tableFilialResponsavelTransporte" msprop:Generator_RowDeletingName="FilialResponsavelTransporteRowDeleting" msprop:Generator_TablePropName="FilialResponsavelTransporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESPONSABILIDADE" msprop:Generator_UserColumnName="RESPONSABILIDADE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABILIDADE" msprop:Generator_ColumnPropNameInRow="RESPONSABILIDADE" msprop:Generator_ColumnPropNameInTable="RESPONSABILIDADEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CODIGO" msprop:Generator_UserColumnName="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FilialResponsavelClienteFilial" msprop:Generator_UserTableName="FilialResponsavelClienteFilial" msprop:Generator_RowDeletedName="FilialResponsavelClienteFilialRowDeleted" msprop:Generator_TableClassName="FilialResponsavelClienteFilialDataTable" msprop:Generator_RowChangedName="FilialResponsavelClienteFilialRowChanged" msprop:Generator_RowClassName="FilialResponsavelClienteFilialRow" msprop:Generator_RowChangingName="FilialResponsavelClienteFilialRowChanging" msprop:Generator_RowEvArgName="FilialResponsavelClienteFilialRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialResponsavelClienteFilialRowChangeEventHandler" msprop:Generator_TablePropName="FilialResponsavelClienteFilial" msprop:Generator_TableVarName="tableFilialResponsavelClienteFilial" msprop:Generator_RowDeletingName="FilialResponsavelClienteFilialRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESPONSABILIDADE" msprop:Generator_UserColumnName="RESPONSABILIDADE" msprop:Generator_ColumnPropNameInRow="RESPONSABILIDADE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABILIDADE" msprop:Generator_ColumnPropNameInTable="RESPONSABILIDADEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDFILIAL" msdata:Caption="CODIGO" msprop:Generator_UserColumnName="IDFILIAL" msprop:Generator_ColumnPropNameInRow="IDFILIAL" msprop:Generator_ColumnVarNameInTable="columnIDFILIAL" msprop:Generator_ColumnPropNameInTable="IDFILIALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FilialResponsavelTransporteFilial" msprop:Generator_UserTableName="FilialResponsavelTransporteFilial" msprop:Generator_RowDeletedName="FilialResponsavelTransporteFilialRowDeleted" msprop:Generator_TableClassName="FilialResponsavelTransporteFilialDataTable" msprop:Generator_RowChangedName="FilialResponsavelTransporteFilialRowChanged" msprop:Generator_RowClassName="FilialResponsavelTransporteFilialRow" msprop:Generator_RowChangingName="FilialResponsavelTransporteFilialRowChanging" msprop:Generator_RowEvArgName="FilialResponsavelTransporteFilialRowChangeEvent" msprop:Generator_RowEvHandlerName="FilialResponsavelTransporteFilialRowChangeEventHandler" msprop:Generator_TablePropName="FilialResponsavelTransporteFilial" msprop:Generator_TableVarName="tableFilialResponsavelTransporteFilial" msprop:Generator_RowDeletingName="FilialResponsavelTransporteFilialRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RESPONSABILIDADE" msprop:Generator_UserColumnName="RESPONSABILIDADE" msprop:Generator_ColumnPropNameInRow="RESPONSABILIDADE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABILIDADE" msprop:Generator_ColumnPropNameInTable="RESPONSABILIDADEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME" msprop:Generator_UserColumnName="NOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOTAS" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTAS" msprop:Generator_ColumnPropNameInRow="NOTAS" msprop:Generator_ColumnVarNameInTable="columnNOTAS" msprop:Generator_ColumnPropNameInTable="NOTASColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDFILIAL" msdata:Caption="CODIGO" msprop:Generator_UserColumnName="IDFILIAL" msprop:Generator_ColumnPropNameInRow="IDFILIAL" msprop:Generator_ColumnVarNameInTable="columnIDFILIAL" msprop:Generator_ColumnPropNameInTable="IDFILIALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Filial" />
+      <xs:field xpath="mstns:IDFILIAL" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

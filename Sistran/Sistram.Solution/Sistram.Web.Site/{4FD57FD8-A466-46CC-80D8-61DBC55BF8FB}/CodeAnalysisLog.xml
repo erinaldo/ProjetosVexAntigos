@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2019\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="16.0">
+ <Targets>
+  <Target Name="C:\Users\Moises\AppData\Local\Temp\tmpA23F.tmp.cadir\bin\App_Web_ao5ti3bi.dll">
+   <Modules>
+    <Module Name="app_web_ao5ti3bi.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmaprovarCotacao" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#carregar()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site\Cotacao" File="frmaprovarCotacao.aspx.cs" Line="161">'frmaprovarCotacao.carregar()' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmaprovarPedidoDeCompra" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#carregar()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site\Cotacao" File="frmaprovarPedidoDeCompra.aspx.cs" Line="149">'frmaprovarPedidoDeCompra.carregar()' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Moises\AppData\Local\Temp\tmpA23F.tmp.cadir\bin\App_Web_bbz00fus.dll">
+   <Modules>
+    <Module Name="app_web_bbz00fus.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="UserControls_MapaDT" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#montarMapaTodasDTS()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site\UserControls" File="MapaDT.ascx.cs" Line="67">'UserControls_MapaDT.montarMapaTodasDTS()' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Moises\AppData\Local\Temp\tmpA23F.tmp.cadir\bin\App_Web_be1mhj5u.dll">
+   <Modules>
+    <Module Name="app_web_be1mhj5u.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmLogin" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLogin.aspx.cs" Line="46">'frmLogin.Criptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLogin.aspx.cs" Line="74">'frmLogin.Descriptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmLoginGrupoLogos" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginGrupoLogos.aspx.cs" Line="46">'frmLoginGrupoLogos.Criptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginGrupoLogos.aspx.cs" Line="74">'frmLoginGrupoLogos.Descriptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+  <Target Name="C:\Users\Moises\AppData\Local\Temp\tmpA23F.tmp.cadir\bin\App_Web_y1augjf1.dll">
+   <Modules>
+    <Module Name="app_web_y1augjf1.dll">
+     <Namespaces>
+      <Namespace Name="">
+       <Types>
+        <Type Name="frmLoginNasha" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginNasha.aspx.cs" Line="46">'frmLoginNasha.Criptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginNasha.aspx.cs" Line="74">'frmLoginNasha.Descriptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmLoginSistecno" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Criptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginSistecno.aspx.cs" Line="46">'frmLoginSistecno.Criptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Descriptografar(System.String,System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2019-11-13 18:11:12Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="d:\Projetos\LogosSVN\Sistran\Sistram.Web.Site" File="frmLoginSistecno.aspx.cs" Line="74">'frmLoginSistecno.Descriptografar(string, string)' relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Relançar para preservar detalhes da pilha</Name>
+   <Description>Use a instrução IL rethrow para preservar os detalhes da pilha original ao reacionar uma exceção capturada.</Description>
+   <Resolution Name="Default">{0} relança uma exceção capturada e a especifica explicitamente como um argumento. Em vez disso, use 'throw' sem um argumento a fim de preservar o local da pilha em que a exceção foi inicialmente gerada.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="16.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Categoria</String>
+  <String Key="Certainty">Certeza</String>
+  <String Key="CollapseAll">Recolher Tudo</String>
+  <String Key="CheckId">Verificar ID</String>
+  <String Key="Error">Erro</String>
+  <String Key="Errors">erro(s)</String>
+  <String Key="ExpandAll">Expandir Tudo</String>
+  <String Key="Help">Ajuda</String>
+  <String Key="Line">Linha</String>
+  <String Key="Messages">mensagem(ns)</String>
+  <String Key="LocationNotStoredInPdb">[Local não armazenado em Pdb]</String>
+  <String Key="Project">Projeto</String>
+  <String Key="Resolution">Resolução</String>
+  <String Key="Rule">Regra</String>
+  <String Key="RuleFile">Arquivo de Regra</String>
+  <String Key="RuleDescription">Descrição da Regra</String>
+  <String Key="Source">Origem</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Destino</String>
+  <String Key="Warning">Aviso</String>
+  <String Key="Warnings">aviso(s)</String>
+  <String Key="ReportTitle">Relatório de Análise de Código</String>
+ </Localized>
+</FxCopReport>

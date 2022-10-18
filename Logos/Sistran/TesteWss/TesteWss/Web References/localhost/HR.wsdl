@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ReceberXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Chave" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="EntradaSaida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceberXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceberXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Entradas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataInicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DataFinal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EntradasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EntradasResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaldoAtual">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaldoAtualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaldoAtualResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelarPedidos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedidoCancelar" type="tns:PedidoCancelado" />
+            <s:element minOccurs="0" maxOccurs="1" name="prod_hom" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PedidoCancelado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente_CNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_CNPJCPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompraVenda" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CancelarPedidosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelarPedidosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceberPedidosStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="tns:ArrayOfPedido" />
+            <s:element minOccurs="0" maxOccurs="1" name="prod_hom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoDePedido" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPedido">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Pedido" nillable="true" type="tns:Pedido" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Pedido">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente_CNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDeDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataDeEmissao" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Serie" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_CNPJCPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_IERG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_RAZAOSOCIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_FANTASIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENDERECO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_NUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_COMPLEMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_BAIRRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_COD_IBGE_CIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_CIDADE_NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_CEP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_CEP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_ENDERECO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_NUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_COMPLEMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_BAIRRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_ENTREGA_COD_IBGE_CIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dest_Telefone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataParaEntrega" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompraVenda" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PeriodoDeEntregaInicio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PeriodoDeEntregaFim" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itens" type="tns:ArrayOfItens" />
+          <s:element minOccurs="0" maxOccurs="1" name="OcorrenciasPedidosAnteriores" type="tns:ArrayOfString" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimeiraEntrega" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItens">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Itens" nillable="true" type="tns:Itens" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Itens">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SKU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoNCM" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantidade" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorUnitario" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PesoLiquido" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReceberPedidosStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceberPedidosStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PosicaoEstoque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PosicaoEstoqueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PosicaoEstoqueResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProdutosAtivos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProdutosAtivosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProdutosAtivosResult" type="tns:ArrayOfProduto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProduto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Produto" nillable="true" type="tns:Produto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Produto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPRODUTOCLIENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGONCM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGODEBARRA" type="tns:ArrayOfCodigoDeBarras" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCodigoDeBarras">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CodigoDeBarras" nillable="true" type="tns:CodigoDeBarras" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CodigoDeBarras">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGODEBARRAS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceberXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceberXml" />
+  </wsdl:message>
+  <wsdl:message name="ReceberXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceberXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="EntradasSoapIn">
+    <wsdl:part name="parameters" element="tns:Entradas" />
+  </wsdl:message>
+  <wsdl:message name="EntradasSoapOut">
+    <wsdl:part name="parameters" element="tns:EntradasResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaldoAtualSoapIn">
+    <wsdl:part name="parameters" element="tns:SaldoAtual" />
+  </wsdl:message>
+  <wsdl:message name="SaldoAtualSoapOut">
+    <wsdl:part name="parameters" element="tns:SaldoAtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelarPedidosSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelarPedidos" />
+  </wsdl:message>
+  <wsdl:message name="CancelarPedidosSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelarPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceberPedidosStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceberPedidosStatus" />
+  </wsdl:message>
+  <wsdl:message name="ReceberPedidosStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceberPedidosStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="PosicaoEstoqueSoapIn">
+    <wsdl:part name="parameters" element="tns:PosicaoEstoque" />
+  </wsdl:message>
+  <wsdl:message name="PosicaoEstoqueSoapOut">
+    <wsdl:part name="parameters" element="tns:PosicaoEstoqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProdutosAtivosSoapIn">
+    <wsdl:part name="parameters" element="tns:ProdutosAtivos" />
+  </wsdl:message>
+  <wsdl:message name="ProdutosAtivosSoapOut">
+    <wsdl:part name="parameters" element="tns:ProdutosAtivosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HRSoap">
+    <wsdl:operation name="ReceberXml">
+      <wsdl:input message="tns:ReceberXmlSoapIn" />
+      <wsdl:output message="tns:ReceberXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Entradas">
+      <wsdl:input message="tns:EntradasSoapIn" />
+      <wsdl:output message="tns:EntradasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaldoAtual">
+      <wsdl:input message="tns:SaldoAtualSoapIn" />
+      <wsdl:output message="tns:SaldoAtualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarPedidos">
+      <wsdl:input message="tns:CancelarPedidosSoapIn" />
+      <wsdl:output message="tns:CancelarPedidosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceberPedidosStatus">
+      <wsdl:input message="tns:ReceberPedidosStatusSoapIn" />
+      <wsdl:output message="tns:ReceberPedidosStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PosicaoEstoque">
+      <wsdl:input message="tns:PosicaoEstoqueSoapIn" />
+      <wsdl:output message="tns:PosicaoEstoqueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProdutosAtivos">
+      <wsdl:input message="tns:ProdutosAtivosSoapIn" />
+      <wsdl:output message="tns:ProdutosAtivosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HRSoap" type="tns:HRSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReceberXml">
+      <soap:operation soapAction="http://tempuri.org/ReceberXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entradas">
+      <soap:operation soapAction="http://tempuri.org/Entradas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoAtual">
+      <soap:operation soapAction="http://tempuri.org/SaldoAtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarPedidos">
+      <soap:operation soapAction="http://tempuri.org/CancelarPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceberPedidosStatus">
+      <soap:operation soapAction="http://tempuri.org/ReceberPedidosStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosicaoEstoque">
+      <soap:operation soapAction="http://tempuri.org/PosicaoEstoque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProdutosAtivos">
+      <soap:operation soapAction="http://tempuri.org/ProdutosAtivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HRSoap12" type="tns:HRSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ReceberXml">
+      <soap12:operation soapAction="http://tempuri.org/ReceberXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Entradas">
+      <soap12:operation soapAction="http://tempuri.org/Entradas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoAtual">
+      <soap12:operation soapAction="http://tempuri.org/SaldoAtual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarPedidos">
+      <soap12:operation soapAction="http://tempuri.org/CancelarPedidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceberPedidosStatus">
+      <soap12:operation soapAction="http://tempuri.org/ReceberPedidosStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PosicaoEstoque">
+      <soap12:operation soapAction="http://tempuri.org/PosicaoEstoque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProdutosAtivos">
+      <soap12:operation soapAction="http://tempuri.org/ProdutosAtivos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HR">
+    <wsdl:port name="HRSoap" binding="tns:HRSoap">
+      <soap:address location="http://www2.logoslogistica.com.br/wss/homerefill/hr.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HRSoap12" binding="tns:HRSoap12">
+      <soap12:address location="http://www2.logoslogistica.com.br/wss/homerefill/hr.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

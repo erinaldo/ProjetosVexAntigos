@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Moises\Desktop\pubFatura</_PublishTargetUrl>
+    <History>True|2022-10-10T14:02:03.3146910Z;True|2021-06-18T15:38:36.2647762-03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Boleto.Net.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ServiceLocation.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.Interception.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="bin/Sistecno.Web.Fatura.dll">
+      <publishTime>10/10/2022 11:02:01</publishTime>
+    </File>
+    <File Include="bin/Sistecno.Web.Fatura.pdb">
+      <publishTime>10/10/2022 11:02:01</publishTime>
+    </File>
+    <File Include="bin/Sistran.Library.dll">
+      <publishTime>10/10/2022 11:01:59</publishTime>
+    </File>
+    <File Include="bin/Sistran.Library.dll.config">
+      <publishTime>09/26/2022 21:53:48</publishTime>
+    </File>
+    <File Include="bin/Sistran.Library.pdb">
+      <publishTime>10/10/2022 11:01:59</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>02/20/2019 14:04:00</publishTime>
+    </File>
+    <File Include="Config/CamposReports.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/Clientes/licdicate.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/clienteslicdicate.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/ConfigLicense.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/ConfigLogo.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/ConfigRatreamento.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/Constantes.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Config/Copy of ConfigRatreamento.xml">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Correios/sro_remoto.htm">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="download.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="downloadVermelho.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Fatura.aspx">
+      <publishTime>09/29/2022 12:40:50</publishTime>
+    </File>
+    <File Include="fecharCinza.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmBaixarTodosDactes.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmBaixarXML.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmBaixarXMLDacte.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmComprovanteEntrega.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmCriarZIP.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmCriarZIPCompEntrega.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmEnviarFatura.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmGerarConemb.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmGerarDocCob.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="frmGerarOcoren.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="GerarBoleto.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="IcoBradesco.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/assinaturaEmitente.png">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/Copy of LOGOS-LOGTRANSP-03.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/index_01.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/index_03.gif">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/LOGOS-LOGTRANSP-03.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Imagens/logo_rastreamento.gif">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Index.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="index_03.gif">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/logoQuasar.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/logoQuasar.png">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/monel.gif">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/Nasha.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/Nasha_ols.jpg">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="LogoCliente/RedLog.png">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="MasterPage.Master">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="PrintFatura.aspx">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Rastreamento.css">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>02/20/2019 14:03:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/26/2019 14:11:59</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

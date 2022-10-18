@@ -1,0 +1,17 @@
+﻿body 
+{
+    font-family:@Arial Unicode MS;
+    color: #333333;
+}
+
+.titulo
+{
+    
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-align: center;
+}

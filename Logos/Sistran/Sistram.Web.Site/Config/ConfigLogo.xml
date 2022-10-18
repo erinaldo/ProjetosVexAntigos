@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ImagensClientes>
+  <ImagensClientes id="Conn3" key="Conn3" Imagem="fitlog.jpg"  />
+  <ImagensClientes id="Conn4" key="Conn4" Imagem="RedLog.png" />
+  <ImagensClientes id="Conn1" key="Conn1" Imagem="monel.gif" />
+  <ImagensClientes id="Conn8" key="Conn5" Imagem="logoQuasar.jpg" />
+  <ImagensClientes id="Conn7" key="Conn7" Imagem="ana.png" />  
+  <ImagensClientes id="Conn8" key="Conn8" Imagem="calog.gif" />
+  <ImagensClientes id="Conn9" key="Conn9" Imagem="HRJ.png" />
+  <ImagensClientes id="Conn11" key="Conn11" Imagem="Transmassa.jpg" />
+  <ImagensClientes id="Conn13" key="Conn11" Imagem="jjr.PNG" />  
+</ImagensClientes>

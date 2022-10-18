@@ -1,0 +1,12 @@
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\obj\Debug\ResolveAssemblyReference.cache
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\bin\Sistran.Login.dll
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\bin\Sistran.Login.pdb
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\bin\Telerik.Web.UI.dll
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\bin\Telerik.Web.UI.xml
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\obj\Debug\Sistran.Login.dll
+D:\Projetos\sistran\Sistran.Login\Sistran.Login\obj\Debug\Sistran.Login.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\bin\Sistran.Login.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\bin\Sistran.Login.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\obj\Debug\Sistran.Login.dll
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\obj\Debug\Sistran.Login.pdb
+C:\DESENVOLVIMENTO\Projetos\Logos\Sistran\Sistran.Login\Sistran.Login\obj\Debug\Sistran.Login.csprojResolveAssemblyReference.cache

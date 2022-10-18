@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/v2/schemas/getImportProtocolStatus.xsd" filename="getImportProtocolStatus.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadRouteUsingDocumentKey.xsd" filename="uploadRouteUsingDocumentKey.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://soap.comprovei.com.br/importQueue/v2/index.php?wsdl" filename="index.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadRoute.xsd" filename="uploadRoute.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/v2/schemas/uploadDocuments.xsd" filename="uploadDocuments.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/schemas/MultiDocument.xsd" filename="MultiDocument.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/schemas/Planilha.xsd" filename="Planilha.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://soap.comprovei.com.br/importQueue/schemas/WS012.xsd" filename="WS012.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,315 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeFile="frmCadMotorista.aspx.cs" Inherits="Intranet_frmCadMotorista" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphMain" runat="Server">
+    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="background-image: url('../Images/skins/primeiro/img/menu_3_2.jpg'); height: 25px">
+                <asp:Label ID="lblTitulo" runat="server" Text="Cadastro de Motorista" Font-Bold="True"
+                    Font-Size="14px"></asp:Label>
+                <asp:Label ID="lblId" runat="server" Text="0" Visible="False"></asp:Label>
+            </td>
+        </tr>
+    </table>
+    <table cellpadding="2" cellspacing="1" class="table" style="width: 100%" border="0">
+        <tr>
+            <td class="tdp" nowrap="nowrap" width="1%">
+            </td>
+            <td class="tdp" nowrap="nowrap" width="30%">
+                <asp:CheckBox ID="chkAtivo" runat="server" Font-Bold="True" Text="ATIVO" />
+            </td>
+            <td class="tdp" nowrap="nowrap" width="1%">
+            </td>
+            <td class="tdp" nowrap="nowrap" width="30%">
+                <asp:CheckBox ID="chkLiberado" runat="server" Font-Bold="True" Text="Liberado" 
+                    Enabled="False" EnableTheming="True" />
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                CPF/CNPJ:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtcpfcnpj" runat="server" CssClass="txt" Width="95%" OnTextChanged="txtcpfcnpj_TextChanged"
+                    AutoPostBack="True" MaxLength="18"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtcpfcnpj"
+                    ErrorMessage="Informe o CNPJ / CPF" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Nome/Razão Social:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtRazao" runat="server" CssClass="txt" Width="95%" MaxLength="60"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtRazao"
+                    ErrorMessage="Informe a Razão Social" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                IE/RG:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtIE" runat="server" CssClass="txt" Width="95%" MaxLength="18"></asp:TextBox>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Fantasia/Apelido &nbsp;
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtFantasiaApelido" runat="server" CssClass="txt" Width="95%" MaxLength="60"></asp:TextBox>
+            </td>
+        </tr>
+        <tr style="background-color: Silver;">
+            <td colspan="4" height="1">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                CEP:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtCEP" runat="server" CssClass="txt" MaxLength="8" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCEP"
+                    ErrorMessage="Informe o CEP" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Endereço:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtEndereco" runat="server" CssClass="txt" Width="95%" MaxLength="60"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEndereco"
+                    ErrorMessage="Informe endereço." SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Número:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtNumero" runat="server" CssClass="txt" MaxLength="10" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtNumero"
+                    ErrorMessage="Informe o número" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Complemento:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtComplemento" runat="server" CssClass="txt" Width="95%" MaxLength="60"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Estado:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:DropDownList ID="cboEstado" runat="server" AutoPostBack="True" CssClass="cbo"
+                    OnSelectedIndexChanged="cboEstado_SelectedIndexChanged" Width="96%">
+                </asp:DropDownList>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Cidade:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:DropDownList ID="cboCidade" runat="server" CssClass="cbo" Enabled="False" Width="96%">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr style="background-color: Silver;">
+            <td colspan="4" height="1">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Estado Nascimento:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:DropDownList ID="cboEstadoNascimento" runat="server" AutoPostBack="True" CssClass="cbo"
+                    OnSelectedIndexChanged="cboEstadoNascimento_SelectedIndexChanged" Width="96%" />
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Cidade Nascimento:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:DropDownList ID="cboCidadeNascimento" runat="server" CssClass="cbo" Enabled="False"
+                    Width="96%">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Data de Nascimento:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtDataNascimento" runat="server" CssClass="txt" Width="100px"></asp:TextBox>
+                <asp:MaskedEditExtender ID="MaskedEditExtenderS1" runat="server" CultureAMPMPlaceholder=""
+                    CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder=""
+                    CultureDecimalPlaceholder="" CultureName="pt-BR" CultureThousandsPlaceholder=""
+                    CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" MaskType="Date" TargetControlID="txtDataNascimento"
+                    UserDateFormat="DayMonthYear">
+                </asp:MaskedEditExtender>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtDataNascimento"
+                    ErrorMessage="Informe a Data de Nascimento">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                &nbsp;
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Nome Pai:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtNomePai" runat="server" CssClass="txt" Width="95%"></asp:TextBox>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Nome Mãe:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtNomeMae" runat="server" CssClass="txt" Width="95%"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Estado Civil:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtEstacocivil" runat="server" CssClass="txt" MaxLength="20" Width="95%"></asp:TextBox>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Conjuge:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtNomeConjuge" runat="server" CssClass="txt" Width="95%"></asp:TextBox>
+            </td>
+        </tr>
+        <tr style="background-color: Silver;">
+            <td colspan="4" height="1">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Primeira Habilitação
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtPrimaHabilitacao" runat="server" CssClass="txt" Width="100px"></asp:TextBox>
+                <asp:MaskedEditExtender ID="MaskedEditExtender1S" runat="server" CultureAMPMPlaceholder=""
+                    CultureCurrencySymbolPlaceholder="" CultureDateFormat="" CultureDatePlaceholder=""
+                    CultureDecimalPlaceholder="" CultureName="pt-BR" CultureThousandsPlaceholder=""
+                    CultureTimePlaceholder="" Enabled="True" Mask="99/99/9999" MaskType="Date" TargetControlID="txtPrimaHabilitacao"
+                    UserDateFormat="DayMonthYear">
+                </asp:MaskedEditExtender>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtPrimaHabilitacao"
+                    ErrorMessage="Informe a Data da Primeira Habilitação" 
+                    SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Carteira de Habilitação:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtCarteiraHabilitacao" runat="server" CssClass="txt" 
+                    Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtCarteiraHabilitacao"
+                    ErrorMessage="Informe ao Número da Carteira de Habilitação" 
+                    SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Categotia:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtCategoriaHabilitacao" runat="server" CssClass="txt" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="txtCategoriaHabilitacao"
+                    ErrorMessage="Informe a Categoria da Habilitação" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Validade:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtValidade" runat="server" CssClass="txt" Width="100px"></asp:TextBox>
+                                     <asp:MaskedEditExtender ID="MaskedEditExtender1X" runat="server" 
+                    CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" 
+                    CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" 
+                    CultureName="pt-BR" CultureThousandsPlaceholder="" CultureTimePlaceholder="" 
+                    Enabled="True" Mask="99/99/9999" MaskType="Date" TargetControlID="txtValidade" 
+                    UserDateFormat="DayMonthYear">
+                </asp:MaskedEditExtender>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtValidade"
+                    ErrorMessage="Informe a Validade">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr style="background-color: Silver;">
+            <td colspan="4" height="1">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Roubo:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtRoubo" runat="server" CssClass="txtValor" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="txtRoubo"
+                    ErrorMessage="Informe quantas vezes foi vitima de roubo" 
+                    SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Acidente:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtAcidente" runat="server" CssClass="txtValor" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ControlToValidate="txtAcidente"
+                    ErrorMessage="Informe quntas vezes foi vitima de acidente" 
+                    SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                Alíquota Sest/Senat:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtAliquota" runat="server" CssClass="txtValor" Width="100px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="txtAliquota"
+                    ErrorMessage="Informe a aliquita" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                Venct. Gerenc. Risco:
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:TextBox ID="txtRisco" runat="server" CssClass="txt" Width="100px"></asp:TextBox>
+                
+                <asp:MaskedEditExtender ID="MaskedEditExtender2" runat="server" 
+                    CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="" 
+                    CultureDateFormat="" CultureDatePlaceholder="" CultureDecimalPlaceholder="" 
+                    CultureName="pt-BR" CultureThousandsPlaceholder="" CultureTimePlaceholder="" 
+                    Enabled="True" Mask="99/99/9999" MaskType="Date" TargetControlID="txtRisco" 
+                    UserDateFormat="DayMonthYear" />
+                
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtRisco"
+                    ErrorMessage="Informe a Data Venct. Gerenc. Risco" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="tdp" nowrap="nowrap">
+                <asp:Label ID="lblCodEstado" runat="server" Visible="False"></asp:Label>
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:Label ID="lblCodCidadeNascimeto" runat="server" Visible="False"></asp:Label>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True"
+                    ShowSummary="False" />
+            </td>
+            <td class="tdp" nowrap="nowrap">
+                <asp:Label ID="lblCodEstadoNascimento" runat="server" Visible="False"></asp:Label>
+            </td>
+            <td class="tdpR" nowrap="nowrap">
+                <asp:Button ID="Button3" runat="server" CssClass="button" OnClick="Button3_Click"
+                    Text="Confirmar" />
+                &nbsp;<asp:Button ID="btnCancelar" runat="server" CausesValidation="False" CssClass="button"
+                    OnClientClick="javascript:history.back(-1);" Text="Voltar" />
+                <asp:Label ID="lblCodCidade" runat="server" Visible="False"></asp:Label>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

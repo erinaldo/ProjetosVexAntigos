@@ -1,0 +1,9 @@
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.dll.config
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.dll
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\Sistecno.DAL.pdb
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.dll
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.xml
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.dll
+C:\DESENVOLVIMENTO\Projetos\Sistecno\NovaVersao\Sistecno.DAL\Sistecno.DAL\obj\Debug\Sistecno.DAL.pdb

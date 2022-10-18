@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="110dp"        
+    android:orientation="vertical"
+    android:background="#0000FF"
+    >
+  
+    <TextView android:id="@+id/txtId" 
+    android:text="id" 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:textColor="@android:color/white"
+    android:textSize="50px"
+    >
+    </TextView>
+    
+    <TextView android:id="@+id/txtRemetente" 
+    android:text="Remetente" 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:textColor="@android:color/white"
+    android:textSize="50px"
+    >
+    </TextView>
+    
+    <TextView android:id="@+id/txtDestinatario" 
+    android:text="Destinatario" 
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content"
+    android:textColor="@android:color/white"
+    android:textSize="50px"
+    >
+    </TextView>
+    
+   
+</LinearLayout>

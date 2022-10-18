@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DT" targetNamespace="http://tempuri.org/DT.xsd" xmlns:mstns="http://tempuri.org/DT.xsd" xmlns="http://tempuri.org/DT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DTTableAdapter" GeneratorDataComponentClassName="DTTableAdapter" Name="DT" UserDataComponentName="DTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        DT.IDDT, DT.Numero, DT.Emissao, DT.Andamento, DT.IDTransportadora, DT.IDFilial, FIL.Nome AS FILIAL, CADTRANS.RazaoSocialNome AS TRANSPORTADORA, 
+                         DT.IDPrimeiroMotorista, CADMOT.RazaoSocialNome AS MOTORISTA, 0 'IDagregado', CADAGR.RazaoSocialNome AS AGREGADO, DT.IDPrimeiroVeiculo, 
+                         Veiculo.Placa
+FROM            DT INNER JOIN
+                         Cadastro AS CADTRANS ON CADTRANS.IDCadastro = DT.IDTransportadora INNER JOIN
+                         Filial AS FIL ON FIL.IDFilial = DT.IDFilial LEFT OUTER JOIN
+                         Cadastro AS CADMOT ON CADMOT.IDCadastro = DT.IDPrimeiroMotorista LEFT OUTER JOIN
+                         Cadastro AS CADAGR ON CADAGR.IDCadastro = 1 LEFT OUTER JOIN
+                         Veiculo ON Veiculo.IDVeiculo = DT.IDPrimeiroVeiculo
+WHERE        (DT.IDTransportadora IN (100140)) AND (DT.Emissao BETWEEN CONVERT(DATETIME, '01/05/2011 00:00:00', 103) AND CONVERT(DATETIME, '26/05/2011 00:00:00', 
+                         103))
+ORDER BY DT.Numero</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDDT" DataSetColumn="IDDT" />
+              <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
+              <Mapping SourceColumn="Emissao" DataSetColumn="Emissao" />
+              <Mapping SourceColumn="Andamento" DataSetColumn="Andamento" />
+              <Mapping SourceColumn="IDTransportadora" DataSetColumn="IDTransportadora" />
+              <Mapping SourceColumn="IDFilial" DataSetColumn="IDFilial" />
+              <Mapping SourceColumn="FILIAL" DataSetColumn="FILIAL" />
+              <Mapping SourceColumn="TRANSPORTADORA" DataSetColumn="TRANSPORTADORA" />
+              <Mapping SourceColumn="IDPrimeiroMotorista" DataSetColumn="IDPrimeiroMotorista" />
+              <Mapping SourceColumn="MOTORISTA" DataSetColumn="MOTORISTA" />
+              <Mapping SourceColumn="IDagregado" DataSetColumn="IDagregado" />
+              <Mapping SourceColumn="AGREGADO" DataSetColumn="AGREGADO" />
+              <Mapping SourceColumn="IDPrimeiroVeiculo" DataSetColumn="IDPrimeiroVeiculo" />
+              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DT" msprop:Generator_DataSetName="DT">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DT" msprop:Generator_UserTableName="DT" msprop:Generator_RowDeletedName="DTRowDeleted" msprop:Generator_TableClassName="DTDataTable" msprop:Generator_RowChangedName="DTRowChanged" msprop:Generator_RowClassName="DTRow" msprop:Generator_RowChangingName="DTRowChanging" msprop:Generator_RowEvArgName="DTRowChangeEvent" msprop:Generator_RowEvHandlerName="DTRowChangeEventHandler" msprop:Generator_TablePropName="_DT" msprop:Generator_TableVarName="tableDT" msprop:Generator_RowDeletingName="DTRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDT" msprop:Generator_UserColumnName="IDDT" msprop:Generator_ColumnPropNameInRow="IDDT" msprop:Generator_ColumnVarNameInTable="columnIDDT" msprop:Generator_ColumnPropNameInTable="IDDTColumn" type="xs:int" />
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:int" />
+              <xs:element name="Emissao" msprop:Generator_UserColumnName="Emissao" msprop:Generator_ColumnPropNameInRow="Emissao" msprop:Generator_ColumnVarNameInTable="columnEmissao" msprop:Generator_ColumnPropNameInTable="EmissaoColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Andamento" msprop:Generator_UserColumnName="Andamento" msprop:Generator_ColumnPropNameInRow="Andamento" msprop:Generator_ColumnVarNameInTable="columnAndamento" msprop:Generator_ColumnPropNameInTable="AndamentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTransportadora" msprop:Generator_UserColumnName="IDTransportadora" msprop:Generator_ColumnPropNameInRow="IDTransportadora" msprop:Generator_ColumnVarNameInTable="columnIDTransportadora" msprop:Generator_ColumnPropNameInTable="IDTransportadoraColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IDFilial" msprop:Generator_UserColumnName="IDFilial" msprop:Generator_ColumnPropNameInRow="IDFilial" msprop:Generator_ColumnVarNameInTable="columnIDFilial" msprop:Generator_ColumnPropNameInTable="IDFilialColumn" type="xs:int" />
+              <xs:element name="FILIAL" msprop:Generator_UserColumnName="FILIAL" msprop:Generator_ColumnPropNameInRow="FILIAL" msprop:Generator_ColumnVarNameInTable="columnFILIAL" msprop:Generator_ColumnPropNameInTable="FILIALColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANSPORTADORA" msprop:Generator_UserColumnName="TRANSPORTADORA" msprop:Generator_ColumnPropNameInRow="TRANSPORTADORA" msprop:Generator_ColumnVarNameInTable="columnTRANSPORTADORA" msprop:Generator_ColumnPropNameInTable="TRANSPORTADORAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDPrimeiroMotorista" msprop:Generator_UserColumnName="IDPrimeiroMotorista" msprop:Generator_ColumnPropNameInRow="IDPrimeiroMotorista" msprop:Generator_ColumnVarNameInTable="columnIDPrimeiroMotorista" msprop:Generator_ColumnPropNameInTable="IDPrimeiroMotoristaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MOTORISTA" msprop:Generator_UserColumnName="MOTORISTA" msprop:Generator_ColumnPropNameInRow="MOTORISTA" msprop:Generator_ColumnVarNameInTable="columnMOTORISTA" msprop:Generator_ColumnPropNameInTable="MOTORISTAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDagregado" msdata:ReadOnly="true" msprop:Generator_UserColumnName="IDagregado" msprop:Generator_ColumnPropNameInRow="IDagregado" msprop:Generator_ColumnVarNameInTable="columnIDagregado" msprop:Generator_ColumnPropNameInTable="IDagregadoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AGREGADO" msprop:Generator_UserColumnName="AGREGADO" msprop:Generator_ColumnPropNameInRow="AGREGADO" msprop:Generator_ColumnVarNameInTable="columnAGREGADO" msprop:Generator_ColumnPropNameInTable="AGREGADOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDPrimeiroVeiculo" msprop:Generator_UserColumnName="IDPrimeiroVeiculo" msprop:Generator_ColumnPropNameInRow="IDPrimeiroVeiculo" msprop:Generator_ColumnVarNameInTable="columnIDPrimeiroVeiculo" msprop:Generator_ColumnPropNameInTable="IDPrimeiroVeiculoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Placa" msprop:Generator_UserColumnName="Placa" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInTable="PlacaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DT" />
+      <xs:field xpath="mstns:IDDT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

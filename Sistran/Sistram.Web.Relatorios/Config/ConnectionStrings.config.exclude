@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<connectionStrings>
+  <add name="SistranWebGrupoLogos" connectionString="Data Source=192.168.10.10;Initial Catalog=GrupoLogos;User ID=site_ASP;Password=asp7998;" providerName="System.Data.SqlClient"/>
+  <add name="SistranWebLogosMakro" connectionString="Data Source=192.168.15.251;Initial Catalog=LogosMakro;User ID=site_ASP;Password=$srvbd;" providerName="System.Data.SqlClient"/>
+  <add name="ApplicationServices" connectionString="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true" providerName="System.Data.SqlClient"/>
+</connectionStrings>

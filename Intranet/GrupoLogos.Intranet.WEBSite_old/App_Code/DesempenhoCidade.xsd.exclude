@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DesempenhoCidade" targetNamespace="http://tempuri.org/DesempenhoCidade.xsd" xmlns:mstns="http://tempuri.org/DesempenhoCidade.xsd" xmlns="http://tempuri.org/DesempenhoCidade.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CidadeTableAdapter" GeneratorDataComponentClassName="CidadeTableAdapter" Name="Cidade" UserDataComponentName="CidadeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT   
+ DESTCID.NOME AS DESTINATARIOCIDADE,   
+ DESTEST.UF DESTINATARIOUF, 
+ FL.NOME FILIAL,  
+ ISNULL(ST.NOME,'') SETOR,
+ AVG(ISNULL(NF.PRAZOUTILIZADO,0))  AS MEDIA ,
+ SUM(CASE WHEN  (NF.DATADECONCLUSAO IS NOT NULL)  THEN 1 ELSE 0 END) NOTASFISCAIS_ENTREGUE,  
+ SUM(CASE WHEN (NF.DATADECONCLUSAO IS NULL)   THEN 1 ELSE 0 END) NOTASFISCAIS_NAO_ENTREGUE 
+ FROM DOCUMENTO NF  
+ INNER JOIN CADASTRO REME ON (REME.IDCADASTRO = NF.IDREMETENTE)   
+ INNER JOIN CADASTRO DEST ON (DEST.IDCADASTRO = NF.IDDESTINATARIO)    
+ INNER JOIN CIDADE DESTCID ON (DESTCID.IDCIDADE = DEST.IDCIDADE)   
+ INNER JOIN ESTADO DESTEST ON (DESTEST.IDESTADO = DESTCID.IDESTADO)   
+ LEFT JOIN FILIALCIDADESETOR  FCS ON (FCS.IDCIDADE= DEST.IDCIDADE)
+ LEFT JOIN FILIAL FL ON(FL.IDFILIAL = FCS.IDFILIAL)
+ LEFT JOIN SETOR ST ON(ST.IDSETOR=FCS.IDSETOR)
+ WHERE   NF.TIPODEDOCUMENTO = 'NOTA FISCAL' AND NF.ATIVO='SIM' 
+ AND NF.DATADEEMISSAO BETWEEN CONVERT(DATETIME, '01/03/2011 00:00:00', 103) 
+ AND CONVERT(DATETIME, '31/03/2011 00:00:00', 103)  
+ AND (NF.IDREMETENTE IN (444,446,445,62694) OR NF.IDDESTINATARIO IN (444,446,445,62694)  OR NF.IDCLIENTE IN (444,446,445,62694) )  
+ GROUP BY  DESTCID.NOME , DESTEST.UF, FL.NOME , ST.NOME   
+ ORDER BY   AVG(ISNULL(NF.PRAZOUTILIZADO,0)) 
+ 
+ </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DESTINATARIOCIDADE" DataSetColumn="DESTINATARIOCIDADE" />
+              <Mapping SourceColumn="DESTINATARIOUF" DataSetColumn="DESTINATARIOUF" />
+              <Mapping SourceColumn="FILIAL" DataSetColumn="FILIAL" />
+              <Mapping SourceColumn="SETOR" DataSetColumn="SETOR" />
+              <Mapping SourceColumn="MEDIA" DataSetColumn="MEDIA" />
+              <Mapping SourceColumn="NOTASFISCAIS_ENTREGUE" DataSetColumn="NOTASFISCAIS_ENTREGUE" />
+              <Mapping SourceColumn="NOTASFISCAIS_NAO_ENTREGUE" DataSetColumn="NOTASFISCAIS_NAO_ENTREGUE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DesempenhoCidade" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DesempenhoCidade" msprop:Generator_DataSetName="DesempenhoCidade">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Cidade" msprop:Generator_UserTableName="Cidade" msprop:Generator_RowDeletedName="CidadeRowDeleted" msprop:Generator_RowChangedName="CidadeRowChanged" msprop:Generator_RowClassName="CidadeRow" msprop:Generator_RowChangingName="CidadeRowChanging" msprop:Generator_RowEvArgName="CidadeRowChangeEvent" msprop:Generator_RowEvHandlerName="CidadeRowChangeEventHandler" msprop:Generator_TableClassName="CidadeDataTable" msprop:Generator_TableVarName="tableCidade" msprop:Generator_RowDeletingName="CidadeRowDeleting" msprop:Generator_TablePropName="Cidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acumulado" msprop:Generator_UserColumnName="acumulado" msprop:Generator_ColumnVarNameInTable="columnacumulado" msprop:Generator_ColumnPropNameInRow="acumulado" msprop:Generator_ColumnPropNameInTable="acumuladoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="nfacumulado" msprop:Generator_UserColumnName="nfacumulado" msprop:Generator_ColumnVarNameInTable="columnnfacumulado" msprop:Generator_ColumnPropNameInRow="nfacumulado" msprop:Generator_ColumnPropNameInTable="nfacumuladoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="perc" msprop:Generator_UserColumnName="perc" msprop:Generator_ColumnVarNameInTable="columnperc" msprop:Generator_ColumnPropNameInRow="perc" msprop:Generator_ColumnPropNameInTable="percColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DESTINATARIOCIDADE" msprop:Generator_UserColumnName="DESTINATARIOCIDADE" msprop:Generator_ColumnPropNameInRow="DESTINATARIOCIDADE" msprop:Generator_ColumnVarNameInTable="columnDESTINATARIOCIDADE" msprop:Generator_ColumnPropNameInTable="DESTINATARIOCIDADEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESTINATARIOUF" msprop:Generator_UserColumnName="DESTINATARIOUF" msprop:Generator_ColumnPropNameInRow="DESTINATARIOUF" msprop:Generator_ColumnVarNameInTable="columnDESTINATARIOUF" msprop:Generator_ColumnPropNameInTable="DESTINATARIOUFColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILIAL" msprop:Generator_UserColumnName="FILIAL" msprop:Generator_ColumnPropNameInRow="FILIAL" msprop:Generator_ColumnVarNameInTable="columnFILIAL" msprop:Generator_ColumnPropNameInTable="FILIALColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SETOR" msdata:ReadOnly="true" msprop:Generator_UserColumnName="SETOR" msprop:Generator_ColumnPropNameInRow="SETOR" msprop:Generator_ColumnVarNameInTable="columnSETOR" msprop:Generator_ColumnPropNameInTable="SETORColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MEDIA" msdata:ReadOnly="true" msprop:Generator_UserColumnName="MEDIA" msprop:Generator_ColumnPropNameInRow="MEDIA" msprop:Generator_ColumnVarNameInTable="columnMEDIA" msprop:Generator_ColumnPropNameInTable="MEDIAColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NOTASFISCAIS_ENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_ENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_ENTREGUEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NOTASFISCAIS_NAO_ENTREGUE" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInRow="NOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnVarNameInTable="columnNOTASFISCAIS_NAO_ENTREGUE" msprop:Generator_ColumnPropNameInTable="NOTASFISCAIS_NAO_ENTREGUEColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

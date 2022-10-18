@@ -1,0 +1,5 @@
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Release\MigracaoOcorrencias.ClassLibrary.dll
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\bin\Release\MigracaoOcorrencias.ClassLibrary.pdb
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Release\ResolveAssemblyReference.cache
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Release\MigracaoOcorrencias.ClassLibrary.dll
+D:\Projetos\MigracaoOcorrencias\MigracaoOcorrencias.Solution\MigracaoOcorrencias.ClassLibrary\obj\Release\MigracaoOcorrencias.ClassLibrary.pdb

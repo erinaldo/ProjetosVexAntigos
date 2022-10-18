@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsKpi01" targetNamespace="http://tempuri.org/dsKpi01.xsd" xmlns:mstns="http://tempuri.org/dsKpi01.xsd" xmlns="http://tempuri.org/dsKpi01.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="SistranWebGrupoLogos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SistranWebGrupoLogos (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.SistranWebGrupoLogos.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PortariaTableAdapter" GeneratorDataComponentClassName="PortariaTableAdapter" Name="Portaria" UserDataComponentName="PortariaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SistranWebGrupoLogos (Web.config)" DbObjectName="GrupoLogosTeste.dbo.Portaria" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT DISTINCT PLACA, PORT.DATAHORADEENTRADA, PORT.DATAHORADESAIDA
+ FROM ROMANEIO ROM    
+ INNER JOIN ROMANEIODOCUMENTO ROMDOC ON ROMDOC.IDROMANEIO = ROM.IDROMANEIO    
+ INNER JOIN DOCUMENTO DOC ON DOC.IDDOCUMENTO = ROMDOC.IDDOCUMENTO    
+ INNER JOIN DOCUMENTOITEM DI ON DI.IDDOCUMENTO = DOC.IDDOCUMENTO    
+ INNER JOIN PORTARIA PORT ON PORT.IDFILIAL = DOC.IDFILIAL    
+ INNER JOIN PRODUTOEMBALAGEM PE ON PE.IDPRODUTOEMBALAGEM = DI.IDPRODUTOEMBALAGEM    
+ INNER JOIN PRODUTOCLIENTE PC ON PC.IDPRODUTOCLIENTE = PE.IDPRODUTOCLIENTE      
+ WHERE ROM.TIPO='ENTRADA'  AND DOC.IDCLIENTE IN (126816,6915)    
+ AND PORT.DATAHORADEENTRADA BETWEEN CONVERT(DATETIME, '01/09/2011', 103)   
+ AND CONVERT(DATETIME, '09/09/2011 23:59:59', 103)    
+ AND PORT.DATAHORADESAIDA IS NOT NULL   
+ ORDER BY PLACA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PLACA" DataSetColumn="PLACA" />
+              <Mapping SourceColumn="DATAHORADEENTRADA" DataSetColumn="DATAHORADEENTRADA" />
+              <Mapping SourceColumn="DATAHORADESAIDA" DataSetColumn="DATAHORADESAIDA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsKpi01" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsKpi01" msprop:Generator_DataSetName="dsKpi01">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Portaria" msprop:Generator_UserTableName="Portaria" msprop:Generator_RowDeletedName="PortariaRowDeleted" msprop:Generator_RowChangedName="PortariaRowChanged" msprop:Generator_RowClassName="PortariaRow" msprop:Generator_RowChangingName="PortariaRowChanging" msprop:Generator_RowEvArgName="PortariaRowChangeEvent" msprop:Generator_RowEvHandlerName="PortariaRowChangeEventHandler" msprop:Generator_TableClassName="PortariaDataTable" msprop:Generator_TableVarName="tablePortaria" msprop:Generator_RowDeletingName="PortariaRowDeleting" msprop:Generator_TablePropName="Portaria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PLACA" msprop:Generator_UserColumnName="PLACA" msprop:Generator_ColumnPropNameInRow="PLACA" msprop:Generator_ColumnVarNameInTable="columnPLACA" msprop:Generator_ColumnPropNameInTable="PLACAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DATAHORADEENTRADA" msprop:Generator_UserColumnName="DATAHORADEENTRADA" msprop:Generator_ColumnPropNameInRow="DATAHORADEENTRADA" msprop:Generator_ColumnVarNameInTable="columnDATAHORADEENTRADA" msprop:Generator_ColumnPropNameInTable="DATAHORADEENTRADAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DATAHORADESAIDA" msprop:Generator_UserColumnName="DATAHORADESAIDA" msprop:Generator_ColumnPropNameInRow="DATAHORADESAIDA" msprop:Generator_ColumnVarNameInTable="columnDATAHORADESAIDA" msprop:Generator_ColumnPropNameInTable="DATAHORADESAIDAColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PERMANENCIA" msprop:Generator_UserColumnName="PERMANENCIA" msprop:Generator_ColumnVarNameInTable="columnPERMANENCIA" msprop:Generator_ColumnPropNameInRow="PERMANENCIA" msprop:Generator_ColumnPropNameInTable="PERMANENCIAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TRANSPORTADORA" msprop:Generator_UserColumnName="TRANSPORTADORA" msprop:Generator_ColumnPropNameInRow="TRANSPORTADORA" msprop:Generator_ColumnVarNameInTable="columnTRANSPORTADORA" msprop:Generator_ColumnPropNameInTable="TRANSPORTADORAColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
